@@ -1,1 +1,1 @@
-# STAT101.pl
+# STAT101 [PL]
