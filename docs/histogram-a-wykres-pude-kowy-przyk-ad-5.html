@@ -301,7 +301,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb22-1"></a><span class="co"># Dla tych samych danych, dla porównania, rysujemy histogram i krzywe gęstości</span></span>
 <span id="cb22-2"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb22-2"></a>hist &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>( <span class="kw">aes</span>( <span class="dt">x =</span> wzrost, <span class="dt">y =</span> ..density.., <span class="dt">fill =</span> plec ), <span class="dt">bins =</span> <span class="dv">6</span>, <span class="dt">alpha =</span> <span class="fl">0.7</span> ) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>( <span class="kw">aes</span>( <span class="dt">x =</span> wzrost, <span class="dt">y =</span> ..density.., <span class="dt">colour =</span> plec ) ) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="co"># Rysuje histogram</span></span>
 <span id="cb22-3"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb22-3"></a><span class="kw">print</span>(hist)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="384" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.svg" width="384" /></p>
 </div>
             </section>
 
