@@ -1,10 +1,79 @@
-/* Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700&display=swap');
 
+/*------------- Body and header text---------------- */
 
-/*------------- Whole Document---------------- */
-
-body {
-    font-family: 'Muli';
+.book.font-family-1 {
+  font-family: 'Lato', sans-serif;
 }
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', serif;
+  color: #2f5275;
+}
+
+.title {
+  font-family: 'Montserrat', serif;
+  font-size: 3em !important;
+  color: #5699cc;
+ }
+
+.subtitle {
+  font-family: 'Montserrat', serif;
+  color: #2c6793;
+}
+
+
+
+/*----------------- links ---------------------*/
+
+a { 
+  color: #4e89bf;
+}
+
+a:hover {
+  color: #396892; /* darker color when hovering */
+}
+
+
+
+
+/* -----------Question counter ---------*/
+
+  body {
+    counter-reset: li;
+  }
+
+  .question ol {
+    /* Remove the default left padding */
+    padding-left: 0;
+  }
+
+  .question ol>li {
+    /* Create a positioning context */
+    position: relative;
+    /* Disable the normal item numbering */
+    list-style: none;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 120px;
+  }
+
+  .question ol>li:before,
+  .question ol>p>li:before{
+    /* Use the counter as content */
+    content: "Question " counter(li) ": ";
+    /* Increment the counter by 1 */
+    counter-increment: li;
+    position: absolute;
+    color: #5ebccf;
+    left: -0.5px;
+    font-weight: bold;
+  }
+
+  .question ol ol {
+    counter-reset: subitem;
+  }
