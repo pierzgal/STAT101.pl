@@ -118,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -130,7 +131,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [“book.bib”, “packages.bib”]</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Opis zajec i warunki zaliczenia</a><ul>
 <li class="chapter" data-level="1.1" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>1.1</b> (1)</a></li>
 <li class="chapter" data-level="1.2" data-path="section-1.html"><a href="section-1.html"><i class="fa fa-check"></i><b>1.2</b> (2)</a></li>
 <li class="chapter" data-level="1.3" data-path="section-2.html"><a href="section-2.html"><i class="fa fa-check"></i><b>1.3</b> (3)</a></li>
@@ -206,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.18" data-path="histogram-cz-sto-ci-bezwzgl-dnych.html"><a href="histogram-cz-sto-ci-bezwzgl-dnych.html"><i class="fa fa-check"></i><b>4.18</b> Histogram częstości bezwzględnych</a></li>
 <li class="chapter" data-level="4.19" data-path="histogram-cz-sto-ci-wzgl-dnych.html"><a href="histogram-cz-sto-ci-wzgl-dnych.html"><i class="fa fa-check"></i><b>4.19</b> Histogram częstości względnych</a></li>
 <li class="chapter" data-level="4.20" data-path="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"><i class="fa fa-check"></i><b>4.20</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
-<li class="chapter" data-level="4.21" data-path="section.html"><a href="section.html#section"><i class="fa fa-check"></i><b>4.21</b> … (2)</a></li>
+<li class="chapter" data-level="4.21" data-path="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html"><i class="fa fa-check"></i><b>4.21</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
 <li class="chapter" data-level="4.22" data-path="wykres-pude-kowy.html"><a href="wykres-pude-kowy.html"><i class="fa fa-check"></i><b>4.22</b> Wykres pudełkowy</a></li>
 <li class="chapter" data-level="4.23" data-path="wykres-pude-kowy-przyk-ad-1.html"><a href="wykres-pude-kowy-przyk-ad-1.html"><i class="fa fa-check"></i><b>4.23</b> Wykres pudełkowy - przykład (1)</a></li>
 <li class="chapter" data-level="4.24" data-path="wykres-pude-kowy-przyk-ad-2.html"><a href="wykres-pude-kowy-przyk-ad-2.html"><i class="fa fa-check"></i><b>4.24</b> Wykres pudełkowy - przykład (2)</a></li>
@@ -299,9 +300,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="wykres-pudełkowy---przykład-3" class="section level2">
 <h2><span class="header-section-number">4.25</span> Wykres pudełkowy - przykład (3)</h2>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="wykres-pude-kowy-przyk-ad-3.html#cb21-1"></a>box &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>( <span class="kw">aes</span>( <span class="dt">x =</span> plec, <span class="dt">y =</span> wzrost ) ) <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>() <span class="co"># Rysuje wykres pudełkowy</span></span>
-<span id="cb21-2"><a href="wykres-pude-kowy-przyk-ad-3.html#cb21-2"></a></span>
-<span id="cb21-3"><a href="wykres-pude-kowy-przyk-ad-3.html#cb21-3"></a><span class="kw">print</span>(box) <span class="co"># Wyświetla wykres</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="wykres-pude-kowy-przyk-ad-3.html#cb18-1"></a>box &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>( <span class="kw">aes</span>( <span class="dt">x =</span> plec, <span class="dt">y =</span> wzrost ) ) <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>() <span class="co"># Rysuje wykres pudełkowy</span></span>
+<span id="cb18-2"><a href="wykres-pude-kowy-przyk-ad-3.html#cb18-2"></a></span>
+<span id="cb18-3"><a href="wykres-pude-kowy-przyk-ad-3.html#cb18-3"></a><span class="kw">print</span>(box) <span class="co"># Wyświetla wykres</span></span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-14-1.svg" width="768" /></p>
 </div>
             </section>

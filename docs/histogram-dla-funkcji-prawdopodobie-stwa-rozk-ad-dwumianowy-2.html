@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Wykład 3 | STAT 101 [WSMiP | PL]</title>
-  <meta name="description" content="4 Wykład 3 | STAT 101 [WSMiP | PL]" />
+  <title>4.21 Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2) | STAT 101 [WSMiP | PL]</title>
+  <meta name="description" content="4.21 Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2) | STAT 101 [WSMiP | PL]" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Wykład 3 | STAT 101 [WSMiP | PL]" />
+  <meta property="og:title" content="4.21 Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2) | STAT 101 [WSMiP | PL]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Wykład 3 | STAT 101 [WSMiP | PL]" />
+  <meta name="twitter:title" content="4.21 Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2) | STAT 101 [WSMiP | PL]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="zmienne-dyskretne-i-ci-g-e.html"/>
-<link rel="next" href="tabelaryczna-prezentacja-rozk-adów-danych.html"/>
+<link rel="prev" href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"/>
+<link rel="next" href="wykres-pude-kowy.html"/>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -118,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -130,7 +131,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [“book.bib”, “packages.bib”]</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Opis zajec i warunki zaliczenia</a><ul>
 <li class="chapter" data-level="1.1" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>1.1</b> (1)</a></li>
 <li class="chapter" data-level="1.2" data-path="section-1.html"><a href="section-1.html"><i class="fa fa-check"></i><b>1.2</b> (2)</a></li>
 <li class="chapter" data-level="1.3" data-path="section-2.html"><a href="section-2.html"><i class="fa fa-check"></i><b>1.3</b> (3)</a></li>
@@ -185,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.7" data-path="poziomy-pomiaru-4.html"><a href="poziomy-pomiaru-4.html"><i class="fa fa-check"></i><b>3.7</b> Poziomy pomiaru (4)</a></li>
 <li class="chapter" data-level="3.8" data-path="zmienne-dyskretne-i-ci-g-e.html"><a href="zmienne-dyskretne-i-ci-g-e.html"><i class="fa fa-check"></i><b>3.8</b> Zmienne dyskretne i ciągłe</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="wyk-ad-3.html"><a href="wyk-ad-3.html"><i class="fa fa-check"></i><b>4</b> Wykład 3</a><ul>
+<li class="chapter" data-level="4" data-path="wyk-ad-3-rozklady-danych.html"><a href="wyk-ad-3-rozklady-danych.html"><i class="fa fa-check"></i><b>4</b> Wykład 3: Rozklady danych</a><ul>
 <li class="chapter" data-level="4.1" data-path="tabelaryczna-prezentacja-rozk-adów-danych.html"><a href="tabelaryczna-prezentacja-rozk-adów-danych.html"><i class="fa fa-check"></i><b>4.1</b> Tabelaryczna prezentacja rozkładów danych</a></li>
 <li class="chapter" data-level="4.2" data-path="szereg-prosty.html"><a href="szereg-prosty.html"><i class="fa fa-check"></i><b>4.2</b> Szereg prosty</a></li>
 <li class="chapter" data-level="4.3" data-path="szereg-rozdzielczy-punktowy.html"><a href="szereg-rozdzielczy-punktowy.html"><i class="fa fa-check"></i><b>4.3</b> Szereg rozdzielczy <em>punktowy</em></a></li>
@@ -206,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.18" data-path="histogram-cz-sto-ci-bezwzgl-dnych.html"><a href="histogram-cz-sto-ci-bezwzgl-dnych.html"><i class="fa fa-check"></i><b>4.18</b> Histogram częstości bezwzględnych</a></li>
 <li class="chapter" data-level="4.19" data-path="histogram-cz-sto-ci-wzgl-dnych.html"><a href="histogram-cz-sto-ci-wzgl-dnych.html"><i class="fa fa-check"></i><b>4.19</b> Histogram częstości względnych</a></li>
 <li class="chapter" data-level="4.20" data-path="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"><i class="fa fa-check"></i><b>4.20</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
-<li class="chapter" data-level="4.21" data-path="section.html"><a href="section.html#section"><i class="fa fa-check"></i><b>4.21</b> … (2)</a></li>
+<li class="chapter" data-level="4.21" data-path="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html"><i class="fa fa-check"></i><b>4.21</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
 <li class="chapter" data-level="4.22" data-path="wykres-pude-kowy.html"><a href="wykres-pude-kowy.html"><i class="fa fa-check"></i><b>4.22</b> Wykres pudełkowy</a></li>
 <li class="chapter" data-level="4.23" data-path="wykres-pude-kowy-przyk-ad-1.html"><a href="wykres-pude-kowy-przyk-ad-1.html"><i class="fa fa-check"></i><b>4.23</b> Wykres pudełkowy - przykład (1)</a></li>
 <li class="chapter" data-level="4.24" data-path="wykres-pude-kowy-przyk-ad-2.html"><a href="wykres-pude-kowy-przyk-ad-2.html"><i class="fa fa-check"></i><b>4.24</b> Wykres pudełkowy - przykład (2)</a></li>
@@ -220,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.32" data-path="wykres-pude-kowy-a-histogram-1.html"><a href="wykres-pude-kowy-a-histogram-1.html"><i class="fa fa-check"></i><b>4.32</b> Wykres pudełkowy a histogram (1)</a></li>
 <li class="chapter" data-level="4.33" data-path="wykres-pude-kowy-a-histogram-2.html"><a href="wykres-pude-kowy-a-histogram-2.html"><i class="fa fa-check"></i><b>4.33</b> Wykres pudełkowy a histogram (2)</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="wyk-ad-4.html"><a href="wyk-ad-4.html"><i class="fa fa-check"></i><b>5</b> Wykład 4</a><ul>
+<li class="chapter" data-level="5" data-path="wyk-ad-4-podstawowe-miary-opisowe.html"><a href="wyk-ad-4-podstawowe-miary-opisowe.html"><i class="fa fa-check"></i><b>5</b> Wykład 4: Podstawowe miary opisowe</a><ul>
 <li class="chapter" data-level="5.1" data-path="-rednia-interpretacja.html"><a href="-rednia-interpretacja.html"><i class="fa fa-check"></i><b>5.1</b> Średnia - interpretacja</a></li>
 <li class="chapter" data-level="5.2" data-path="odchylenie-standardowe-interpretacja.html"><a href="odchylenie-standardowe-interpretacja.html"><i class="fa fa-check"></i><b>5.2</b> Odchylenie standardowe - interpretacja</a></li>
 <li class="chapter" data-level="5.3" data-path="odchylenie-standardowe-interpretacja-2.html"><a href="odchylenie-standardowe-interpretacja-2.html"><i class="fa fa-check"></i><b>5.3</b> Odchylenie standardowe - interpretacja (2)</a></li>
@@ -297,16 +298,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wykład-3" class="section level1">
-<h1><span class="header-section-number">4</span> Wykład 3</h1>
+<div id="histogram-dla-funkcji-prawdopodobieństwa---rozkład-dwumianowy-2" class="section level2">
+<h2><span class="header-section-number">4.21</span> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html#cb12-1"></a><span class="co"># Rysyjemy rozkład</span></span>
+<span id="cb12-2"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html#cb12-2"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> binom_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>( <span class="kw">aes</span>(<span class="dt">x =</span> Z, <span class="dt">y =</span> P), <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span> )</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.svg" width="384" /></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="zmienne-dyskretne-i-ci-g-e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tabelaryczna-prezentacja-rozk-adów-danych.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wykres-pude-kowy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

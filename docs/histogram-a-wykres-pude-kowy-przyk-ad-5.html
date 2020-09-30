@@ -118,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -130,7 +131,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [“book.bib”, “packages.bib”]</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Opis zajec i warunki zaliczenia</a><ul>
 <li class="chapter" data-level="1.1" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>1.1</b> (1)</a></li>
 <li class="chapter" data-level="1.2" data-path="section-1.html"><a href="section-1.html"><i class="fa fa-check"></i><b>1.2</b> (2)</a></li>
 <li class="chapter" data-level="1.3" data-path="section-2.html"><a href="section-2.html"><i class="fa fa-check"></i><b>1.3</b> (3)</a></li>
@@ -206,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.18" data-path="histogram-cz-sto-ci-bezwzgl-dnych.html"><a href="histogram-cz-sto-ci-bezwzgl-dnych.html"><i class="fa fa-check"></i><b>4.18</b> Histogram częstości bezwzględnych</a></li>
 <li class="chapter" data-level="4.19" data-path="histogram-cz-sto-ci-wzgl-dnych.html"><a href="histogram-cz-sto-ci-wzgl-dnych.html"><i class="fa fa-check"></i><b>4.19</b> Histogram częstości względnych</a></li>
 <li class="chapter" data-level="4.20" data-path="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-1.html"><i class="fa fa-check"></i><b>4.20</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
-<li class="chapter" data-level="4.21" data-path="section.html"><a href="section.html#section"><i class="fa fa-check"></i><b>4.21</b> … (2)</a></li>
+<li class="chapter" data-level="4.21" data-path="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobie-stwa-rozk-ad-dwumianowy-2.html"><i class="fa fa-check"></i><b>4.21</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
 <li class="chapter" data-level="4.22" data-path="wykres-pude-kowy.html"><a href="wykres-pude-kowy.html"><i class="fa fa-check"></i><b>4.22</b> Wykres pudełkowy</a></li>
 <li class="chapter" data-level="4.23" data-path="wykres-pude-kowy-przyk-ad-1.html"><a href="wykres-pude-kowy-przyk-ad-1.html"><i class="fa fa-check"></i><b>4.23</b> Wykres pudełkowy - przykład (1)</a></li>
 <li class="chapter" data-level="4.24" data-path="wykres-pude-kowy-przyk-ad-2.html"><a href="wykres-pude-kowy-przyk-ad-2.html"><i class="fa fa-check"></i><b>4.24</b> Wykres pudełkowy - przykład (2)</a></li>
@@ -299,9 +300,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="histogram-a-wykres-pudełkowy---przykład-5" class="section level2">
 <h2><span class="header-section-number">4.27</span> Histogram a wykres pudełkowy - przykład (5)</h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb22-1"></a><span class="co"># Dla tych samych danych, dla porównania, rysujemy histogram i krzywe gęstości</span></span>
-<span id="cb22-2"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb22-2"></a>hist &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>( <span class="kw">aes</span>( <span class="dt">x =</span> wzrost, <span class="dt">y =</span> ..density.., <span class="dt">fill =</span> plec ), <span class="dt">bins =</span> <span class="dv">6</span>, <span class="dt">alpha =</span> <span class="fl">0.7</span> ) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>( <span class="kw">aes</span>( <span class="dt">x =</span> wzrost, <span class="dt">y =</span> ..density.., <span class="dt">colour =</span> plec ) ) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="co"># Rysuje histogram</span></span>
-<span id="cb22-3"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb22-3"></a><span class="kw">print</span>(hist)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb19-1"></a><span class="co"># Dla tych samych danych, dla porównania, rysujemy histogram i krzywe gęstości</span></span>
+<span id="cb19-2"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb19-2"></a>hist &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>( <span class="kw">aes</span>( <span class="dt">x =</span> wzrost, <span class="dt">y =</span> ..density.., <span class="dt">fill =</span> plec ), <span class="dt">bins =</span> <span class="dv">6</span>, <span class="dt">alpha =</span> <span class="fl">0.7</span> ) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>( <span class="kw">aes</span>( <span class="dt">x =</span> wzrost, <span class="dt">y =</span> ..density.., <span class="dt">colour =</span> plec ) ) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>() <span class="co"># Rysuje histogram</span></span>
+<span id="cb19-3"><a href="histogram-a-wykres-pude-kowy-przyk-ad-5.html#cb19-3"></a><span class="kw">print</span>(hist)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-15-1.svg" width="384" /></p>
 </div>
             </section>
