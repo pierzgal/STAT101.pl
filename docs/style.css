@@ -11,18 +11,18 @@
 
 h1, h2, h3, h4 {
   font-family: 'Raleway', serif;
-  color: #344955;
+  color: #607D8B;
 }
 
 .title {
   font-family: 'Raleway', serif;
   font-size: 3em !important;
-  color: #344955;
+  color: #607D8B;
  }
 
 .subtitle {
   font-family: 'Raleway', serif;
-  color: #344955;
+  color: #607D8B;
 }
 
 
@@ -37,7 +37,6 @@ h1, h2, h3, h4 {
 color: #1f5386; /* darker color when hovering */
 text-decoration: none;
 }
-
 
 
 
@@ -65,7 +64,7 @@ font-family: 'Lato', sans-serif;
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
   color: #778ca5 !important;
   border-left: solid 4px;
-  border-color: #5699cc;
+  border-color: #f9aa33;
   padding-left: 11px !important;
 }  
 
