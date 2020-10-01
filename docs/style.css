@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
 /*------------- Body and header text---------------- */
@@ -9,19 +10,19 @@
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', serif;
-  color: #2f5275;
+  font-family: 'Raleway', serif;
+  color: #01579B;
 }
 
 .title {
-  font-family: 'Montserrat', serif;
+  font-family: 'Raleway', serif;
   font-size: 3em !important;
-  color: #5699cc;
+  color: #01579B;
  }
 
 .subtitle {
-  font-family: 'Montserrat', serif;
-  color: #2c6793;
+  font-family: 'Raleway', serif;
+  color: #01579B;
 }
 
 
@@ -65,11 +66,11 @@ a:hover {
   .question ol>li:before,
   .question ol>p>li:before{
     /* Use the counter as content */
-    content: "Question " counter(li) ": ";
+    content: "Pytanie " counter(li) ": ";
     /* Increment the counter by 1 */
     counter-increment: li;
     position: absolute;
-    color: #5ebccf;
+    color: #304FFE;
     left: -0.5px;
     font-weight: bold;
   }
