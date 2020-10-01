@@ -11,32 +11,63 @@
 
 h1, h2, h3, h4 {
   font-family: 'Raleway', serif;
-  color: #0091EA;
+  color: #344955;
 }
 
 .title {
   font-family: 'Raleway', serif;
   font-size: 3em !important;
-  color: #0091EA;
+  color: #344955;
  }
 
 .subtitle {
   font-family: 'Raleway', serif;
-  color: #0091EA;
+  color: #344955;
 }
 
 
 
-/*----------------- links ---------------------*/
+/*-----Body Links-------*/
 
-a { 
-  color: #4e89bf;
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: #3f88ca;
 }
 
-a:hover {
-  color: #396892; /* darker color when hovering */
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+color: #1f5386; /* darker color when hovering */
+text-decoration: none;
 }
 
+
+
+
+
+/* all TOC list items, basically */
+  
+.summary{
+font-family: 'Lato', sans-serif;
+}
+
+.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #2f5175;
+}
+
+
+.summary a:hover {
+  color: #778ca5 !important;
+}
+
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #778ca5 !important;
+  border-left: solid 4px;
+  border-color: #5699cc;
+  padding-left: 11px !important;
+}  
 
 
 
