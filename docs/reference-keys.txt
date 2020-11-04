@@ -48,8 +48,8 @@ rozkłady-danych
 podstawowe-etapy-badania-społecznegowyklad-24
 badanie-statystyczne---niezbędne-kroki
 badania-obserwacyjne-i-eksperymentalnewyklad-25
-statystyczny-projekt-badań---przykład-prostego-eksperymentu-wyklad-25a
-projekt-eksperymentu-wyklad-26
+statystyczny-projekt-badań---przykład-prostego-eksperymentu-wyklad-26
+projekt-eksperymentu-wyklad-27
 związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi
 przykład
 zmienne-zakłócające-confounding-lub-lurking-variables
