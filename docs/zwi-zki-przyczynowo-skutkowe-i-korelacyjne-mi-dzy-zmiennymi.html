@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101</title>
-  <meta name="description" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <title>2.14 Związki przyczynowo-skutkowe i korelacyjne między zmiennymi | STAT 101</title>
+  <meta name="description" content="2.14 Związki przyczynowo-skutkowe i korelacyjne między zmiennymi | STAT 101" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <meta property="og:title" content="2.14 Związki przyczynowo-skutkowe i korelacyjne między zmiennymi | STAT 101" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <meta name="twitter:title" content="2.14 Związki przyczynowo-skutkowe i korelacyjne między zmiennymi | STAT 101" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="eksperyment.html"/>
-<link rel="next" href="przyk-ady-badanie-4.html"/>
+<link rel="prev" href="projekt-eksperymentu-wyklad-26.html"/>
+<link rel="next" href="pomiar-definicja.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -169,42 +169,23 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="badania-quasi-eksperymentalne-eksperymenty-naturalne" class="section level2" number="2.23">
-<h2><span class="header-section-number">2.23</span> Badania <em>quasi</em>-eksperymentalne (<em>eksperymenty naturalne</em>)</h2>
-<div id="przykład-tzw.-efekt-behawioralny-systemu-wyborczego" class="section level4" number="2.23.0.1">
-<h4><span class="header-section-number">2.23.0.1</span> <span style="color:#009688">Przykład</span>: tzw. efekt behawioralny systemu wyborczego</h4>
+<div id="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi" class="section level2" number="2.14">
+<h2><span class="header-section-number">2.14</span> Związki przyczynowo-skutkowe i korelacyjne między zmiennymi</h2>
+<p>Korelacja (współwystępowanie dwóch zmiennych) to nie to samo co przyczynowość (coś wynika z czegoś). Nie ma przyczynowości bez korelacji, ale korelacja nie oznacza jeszcze przyczynowości.</p>
+<div id="przykład" class="section level4" number="2.14.0.1">
+<h4><span class="header-section-number">2.14.0.1</span> Przykład</h4>
+<p>“<strong>W zimie obserwujemy więcej infekcji wirusowych.</strong> Kiedyś uważano wręcz, że to wyziębienie („przeziębienie”) po prostu powoduje chorobę. Dzisiaj wiemy, że przyczyną są infekcje (głównie wirusowe). Ale czy wyziębienie ułatwia zachorowanie? To wydaje się logiczne, ale może w zimie ludzie przebywają więcej w pomieszczeniach, często w grupach, co ułatwia transfer patogenów. Większą zachorowalność na grypę obserwuje się w rejonach tropikalnych podczas pory deszczowej, a jest tam przecież bardzo ciepło. Albo wysuszone zimnym powietrzem błony śluzowe są bardziej narażone na atak wirusa?" (Źródło: <a href="https://www.damianparol.com/czy-rekiny-jedza-lody-czyli-korelacja-a-przyczynowosc/" class="uri">https://www.damianparol.com/czy-rekiny-jedza-lody-czyli-korelacja-a-przyczynowosc/</a>)</p>
+<div class="figure">
+<img src="images/causal-reasoning.png" alt="" />
+<p class="caption">Źródło: Introduction to Statistics and Data Analysis, Roxy Peck, Chris Olsen, Jay L. Devore (2016)</p>
 </div>
-<div id="pretest" class="section level4" number="2.23.0.2">
-<h4><span class="header-section-number">2.23.0.2</span> <em>Pretest</em></h4>
-<p>Analiza rozkładów wartości:</p>
-<ol style="list-style-type: decimal">
-<li>wskaźników strategicznego zachowania takich jak: (‘the vote share of the non-top-two parties’, lub ‘the Effective Number of Electoral Parties (ENEP)’), oraz</li>
-<li>frekwencji wyborczej</li>
-</ol>
-<p>w gminach, w których stosowano: 1) <em>SMD</em>, 2) <em>MMD</em> lub 3) <em>OLPR</em>.</p>
-<p><span style="color:#009688">TREATMENT</span>: Zmiana prawa wyborczego w 2011 pociągająca za sobą wprowadzenie SMD we wszystkich gminach niebędących miastami na prawach powiatu.</p>
 </div>
-<div id="posttest" class="section level4" number="2.23.0.3">
-<h4><span class="header-section-number">2.23.0.3</span> <em>Posttest</em></h4>
-<p>Analiza rozkładów wartości badanych wskaźników w gminach, w których:</p>
-<ul>
-<li>SMD <span class="math inline">\(\rightarrow\)</span> SMD</li>
-<li>MMD <span class="math inline">\(\rightarrow\)</span> SMD</li>
-</ul>
-<p>lub</p>
-<ul>
-<li>SMD/MMD <span class="math inline">\(\rightarrow\)</span> SMD/MMD</li>
-<li>SMD/MMD <span class="math inline">\(\rightarrow\)</span> OLPR</li>
-</ul>
-<p>albo</p>
-<ul>
-<li>OLPR <span class="math inline">\(\rightarrow\)</span> OLPR</li>
-<li>OLPR <span class="math inline">\(\rightarrow\)</span> SMD</li>
-</ul>
+<div id="zmienne-zakłócające-confounding-lub-lurking-variables" class="section level3" number="2.14.1">
+<h3><span class="header-section-number">2.14.1</span> Zmienne zakłócające (‘confounding lub lurking’ variables)</h3>
+<div class="figure">
+<img src="images/sunCausesCancer.png" alt="" />
+<p class="caption">Źródło: <a href="https://spot.pcc.edu/~evega/section-4.html" class="uri">https://spot.pcc.edu/~evega/section-4.html</a></p>
 </div>
-<div id="analiza-wyników" class="section level4" number="2.23.0.4">
-<h4><span class="header-section-number">2.23.0.4</span> Analiza wyników</h4>
-<p>Porównanie zmiany (<em>pretest – posttest</em>) w grupach kontrolnej i eksperymentalnej.</p>
 </div>
 </div>
             </section>
@@ -212,8 +193,8 @@
           </div>
         </div>
       </div>
-<a href="eksperyment.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="przyk-ady-badanie-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="projekt-eksperymentu-wyklad-26.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pomiar-definicja.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

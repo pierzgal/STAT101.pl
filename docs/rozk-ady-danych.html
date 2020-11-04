@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101</title>
-  <meta name="description" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <title>2.8 Rozkłady danych | STAT 101</title>
+  <meta name="description" content="2.8 Rozkłady danych | STAT 101" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <meta property="og:title" content="2.8 Rozkłady danych | STAT 101" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <meta name="twitter:title" content="2.8 Rozkłady danych | STAT 101" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="eksperyment.html"/>
-<link rel="next" href="przyk-ady-badanie-4.html"/>
+<link rel="prev" href="próba-losowa-wyklad-23.html"/>
+<link rel="next" href="podstawowe-etapy-badania-spo-ecznegowyklad-24.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -169,51 +169,27 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="badania-quasi-eksperymentalne-eksperymenty-naturalne" class="section level2" number="2.23">
-<h2><span class="header-section-number">2.23</span> Badania <em>quasi</em>-eksperymentalne (<em>eksperymenty naturalne</em>)</h2>
-<div id="przykład-tzw.-efekt-behawioralny-systemu-wyborczego" class="section level4" number="2.23.0.1">
-<h4><span class="header-section-number">2.23.0.1</span> <span style="color:#009688">Przykład</span>: tzw. efekt behawioralny systemu wyborczego</h4>
-</div>
-<div id="pretest" class="section level4" number="2.23.0.2">
-<h4><span class="header-section-number">2.23.0.2</span> <em>Pretest</em></h4>
-<p>Analiza rozkładów wartości:</p>
+<div id="rozkłady-danych" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Rozkłady danych</h2>
+<p>Pierwszym krokiem w analizie danych zebranych na temat zmiennej jest przyjrzenie się obserwowanym wartościom za pomocą wykresów i podsumowań liczbowych. Celem jest opisanie kluczowych cech rozkładu zmiennej. Najważniejszym krokiem eksploracyjnej analizy danych jest <strong>oszacowanie rozkładu obserwacji na zmiennej</strong>.</p>
+<p><strong>Rozkład zmiennej opisuje, jak obserwacje mieszczą się (rozkładają) w zakresie możliwych wartości</strong>.</p>
+<p><strong>Rozkład zbioru danych to tabela, wykres lub formuła, która zawiera wartości obserwacji i częstotliwość ich występowania.</strong></p>
+<p>Ważną cechą rozkładu danych jest jego <strong>kształt</strong>. Kształt rozkładu często odgrywa rolę w określaniu odpowiedniej metody analizy statystycznej. Do oszacowania rozkładu danych wykorzystujemy narzędzia do wizualizacji danych takie jak <strong>histogram</strong> lub <strong>wykres pudełkowy</strong>.</p>
+<p>Rozkład częstości to zbiór obserwacji uzyskanych poprzez posortowanie obserwacji w klasy i pokazanie ich częstotliwości występowania w każdej z klas:</p>
 <ol style="list-style-type: decimal">
-<li>wskaźników strategicznego zachowania takich jak: (‘the vote share of the non-top-two parties’, lub ‘the Effective Number of Electoral Parties (ENEP)’), oraz</li>
-<li>frekwencji wyborczej</li>
+<li>Rozkład (częstość) danych - określa możliwe obserwacje (liczby, kategorie) i wskazuje, jak często występują. Rozkład częstości to tabela podsumowująca, w której dane są uporządkowane liczbowo w klasach lub przedziałach.</li>
+<li>Rozkład częstotliwości względnych uzyskuje się, dzieląc częstotliwość absolutne w każdej klasie przez całkowitą sumę wartości. Z tego można uzyskać rozkład procentowy mnożąc każdą względną częstotliwość przez 100%.</li>
 </ol>
-<p>w gminach, w których stosowano: 1) <em>SMD</em>, 2) <em>MMD</em> lub 3) <em>OLPR</em>.</p>
-<p><span style="color:#009688">TREATMENT</span>: Zmiana prawa wyborczego w 2011 pociągająca za sobą wprowadzenie SMD we wszystkich gminach niebędących miastami na prawach powiatu.</p>
-</div>
-<div id="posttest" class="section level4" number="2.23.0.3">
-<h4><span class="header-section-number">2.23.0.3</span> <em>Posttest</em></h4>
-<p>Analiza rozkładów wartości badanych wskaźników w gminach, w których:</p>
-<ul>
-<li>SMD <span class="math inline">\(\rightarrow\)</span> SMD</li>
-<li>MMD <span class="math inline">\(\rightarrow\)</span> SMD</li>
-</ul>
-<p>lub</p>
-<ul>
-<li>SMD/MMD <span class="math inline">\(\rightarrow\)</span> SMD/MMD</li>
-<li>SMD/MMD <span class="math inline">\(\rightarrow\)</span> OLPR</li>
-</ul>
-<p>albo</p>
-<ul>
-<li>OLPR <span class="math inline">\(\rightarrow\)</span> OLPR</li>
-<li>OLPR <span class="math inline">\(\rightarrow\)</span> SMD</li>
-</ul>
-</div>
-<div id="analiza-wyników" class="section level4" number="2.23.0.4">
-<h4><span class="header-section-number">2.23.0.4</span> Analiza wyników</h4>
-<p>Porównanie zmiany (<em>pretest – posttest</em>) w grupach kontrolnej i eksperymentalnej.</p>
-</div>
+<p><strong>Rozkład częstości dla danych kategorialnych</strong> (jakościowych): Tabela, która wyświetla możliwe kategorie wraz z powiązanymi częstotliwościami i/lub częstotliwościami względnymi.</p>
+<p><strong>Częstość</strong>: częstość dla określonej kategorii to liczba przypadków, w których kategoria pojawia się w zbiorze danych. Względna częstotliwość dla określonej kategorii to odsetek obserwacji należących do tej kategorii.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="eksperyment.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="przyk-ady-badanie-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="próba-losowa-wyklad-23.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="podstawowe-etapy-badania-spo-ecznegowyklad-24.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

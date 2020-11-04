@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101</title>
-  <meta name="description" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <title>2.7 Próba losowa 12 | STAT 101</title>
+  <meta name="description" content="2.7 Próba losowa 12 | STAT 101" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <meta property="og:title" content="2.7 Próba losowa 12 | STAT 101" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.23 Badania quasi-eksperymentalne (eksperymenty naturalne) | STAT 101" />
+  <meta name="twitter:title" content="2.7 Próba losowa 12 | STAT 101" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="eksperyment.html"/>
-<link rel="next" href="przyk-ady-badanie-4.html"/>
+<link rel="prev" href="badania-na-próbie.html"/>
+<link rel="next" href="rozk-ady-danych.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -169,51 +169,48 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="badania-quasi-eksperymentalne-eksperymenty-naturalne" class="section level2" number="2.23">
-<h2><span class="header-section-number">2.23</span> Badania <em>quasi</em>-eksperymentalne (<em>eksperymenty naturalne</em>)</h2>
-<div id="przykład-tzw.-efekt-behawioralny-systemu-wyborczego" class="section level4" number="2.23.0.1">
-<h4><span class="header-section-number">2.23.0.1</span> <span style="color:#009688">Przykład</span>: tzw. efekt behawioralny systemu wyborczego</h4>
-</div>
-<div id="pretest" class="section level4" number="2.23.0.2">
-<h4><span class="header-section-number">2.23.0.2</span> <em>Pretest</em></h4>
-<p>Analiza rozkładów wartości:</p>
+<div id="próba-losowa-wyklad-23" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Próba losowa <a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></h2>
+<p>Przy doborze próby nie można przecenić znaczenia losowości. W myśleniu statystycznym oczekujemy, że losowa próbka będzie miała w przybliżeniu te same właściwości co populacja. Ponadto, zwykle im większy rozmiar próbki, tym bardziej właściwości próbki są zbliżone do właściwości populacji.</p>
+<p>Na przykład, aby oszacować średni wzrost dorosłych mężczyzn, wybranie próby spośród graczy NBA byłoby wysoce stronnicze. Generalnie próbki nielosowe są generowane, gdy w procesie selekcji występuje błąd. Takie próbki są bezużyteczne do celów statystycznych, ponieważ próbka nie jest reprezentatywna dla populacji. Prosta próba losowa to taka, w której każdy osobnik w populacji ma takie samo prawdopodobieństwo wyboru. Aby spełnić ten wymóg, stosowana metoda pobierania próbek musi być wolna od błędów w odniesieniu do mierzonej właściwości. Liczby losowe generowane komputerowo (zwane również liczbami pseudolosowymi) mogą być używane do wybierania losowych próbek: najpierw przypisujemy liczbę do każdej osoby w populacji, a następnie używamy komputerowego generatora liczb losowych, aby wybrać próbę. Poniżej przedstawiono typowe typy błędów próbkowania.</p>
+<div id="obciążenie-badania-bias---błędy-próbkowania-i-błędy-systematyczne" class="section level3" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Obciążenie badania (<em>bias</em>) - błędy próbkowania i błędy systematyczne</h3>
+<p>W statystyce błędy próbkowania powstają, gdy charakterystyka statystyczna populacji jest szacowana na podstawie podzbioru lub próby tej populacji. Ponieważ próba nie obejmuje wszystkich członków populacji, statystyki dotyczące próby, takie jak średnie i kwartyle, zasadniczo różnią się od charakterystyk całej populacji, które są znane jako parametry. Na przykład, jeśli mierzy się wzrost tysiąca osób z kraju liczącego milion osób, średni wzrost tysiąca zwykle nie jest taki sam, jak średni wzrost wszystkich miliona ludzi w kraju. Ponieważ pobieranie próbek jest zwykle wykonywane w celu określenia cech całej populacji, różnica między próbą a wartościami populacji jest uważana za błąd.</p>
+<p>Systematyczny błąd jest przewidywalny i zwykle stały lub proporcjonalny do prawdziwej wartości. Jeśli można zidentyfikować przyczynę systematycznego błędu, zwykle można ją wyeliminować. Systematyczne błędy wynikają z niedoskonałej kalibracji przyrządów pomiarowych lub niedoskonałych metod obserwacji lub ingerencji środowiska w proces pomiarowy i zawsze wpływają na wyniki eksperymentu w przewidywalnym kierunku.</p>
+<div id="wybrane-źródła-błędów-w-badaniach-statystycznych" class="section level4" number="2.7.1.1">
+<h4><span class="header-section-number">2.7.1.1</span> Wybrane źródła błędów w badaniach statystycznych</h4>
 <ol style="list-style-type: decimal">
-<li>wskaźników strategicznego zachowania takich jak: (‘the vote share of the non-top-two parties’, lub ‘the Effective Number of Electoral Parties (ENEP)’), oraz</li>
-<li>frekwencji wyborczej</li>
+<li>Błąd wykluczenia, gdy część populacji jest wykluczona z procesu pobierania próbek.</li>
+<li>Stronniczość odpowiedzi, w której sformułowanie kwestionariusza nie jest neutralne, ale raczej sugeruje lub prowokuje określoną odpowiedź.</li>
+<li>Błąd braku odpowiedzi, w którym osoby o wspólnej charakterystyce niechętnie udzielają odpowiedź na pytania (Zauważ, że nie jest to przeciwieństwo błędu odpowiedzi).</li>
+<li>Błąd samoselekcji (lub błąd dobrowolnej odpowiedzi), w którym osoby wybierają siebie (lub zgłaszają się na ochotnika) do próby. Wiele z tych błędów wynika z wygodnego pobierania próbek, w którym próbki są pobierane od osób tylko dlatego, że znajdują się w pobliżu lub są łatwo dostępne.</li>
+<li><em>Selection bias</em>, tj. błąd selekcji - jest to błąd wynikający z selekcji osób, grup lub danych do analizy w taki sposób, że nie jest osiągnięty wystarczający poziom losowości, co powoduje, że uzyskana próba nie jest reprezentatywna dla populacji, która ma być analizowana. Czasami nazywa się to efektem selekcji. Sformułowanie „błąd selekcji" najczęściej odnosi się do zniekształcenia analizy statystycznej, wynikającego ze sposobu zbierania próbek. Jeśli nie weźmie się pod uwagę błędu selekcji, niektóre wnioski z badania mogą być fałszywe.</li>
 </ol>
-<p>w gminach, w których stosowano: 1) <em>SMD</em>, 2) <em>MMD</em> lub 3) <em>OLPR</em>.</p>
-<p><span style="color:#009688">TREATMENT</span>: Zmiana prawa wyborczego w 2011 pociągająca za sobą wprowadzenie SMD we wszystkich gminach niebędących miastami na prawach powiatu.</p>
 </div>
-<div id="posttest" class="section level4" number="2.23.0.3">
-<h4><span class="header-section-number">2.23.0.3</span> <em>Posttest</em></h4>
-<p>Analiza rozkładów wartości badanych wskaźników w gminach, w których:</p>
-<ul>
-<li>SMD <span class="math inline">\(\rightarrow\)</span> SMD</li>
-<li>MMD <span class="math inline">\(\rightarrow\)</span> SMD</li>
-</ul>
-<p>lub</p>
-<ul>
-<li>SMD/MMD <span class="math inline">\(\rightarrow\)</span> SMD/MMD</li>
-<li>SMD/MMD <span class="math inline">\(\rightarrow\)</span> OLPR</li>
-</ul>
-<p>albo</p>
-<ul>
-<li>OLPR <span class="math inline">\(\rightarrow\)</span> OLPR</li>
-<li>OLPR <span class="math inline">\(\rightarrow\)</span> SMD</li>
-</ul>
 </div>
-<div id="analiza-wyników" class="section level4" number="2.23.0.4">
-<h4><span class="header-section-number">2.23.0.4</span> Analiza wyników</h4>
-<p>Porównanie zmiany (<em>pretest – posttest</em>) w grupach kontrolnej i eksperymentalnej.</p>
+<div id="dobór-próby" class="section level3" number="2.7.2">
+<h3><span class="header-section-number">2.7.2</span> Dobór próby</h3>
+<p>W praktyce trudno jest zapewnić dobór próby losowej. Opracowano kilka metod pobierania próbek w określonych sytuacjach. Oto niektóre z najczęstszych.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Systematyczne pobieranie próbek</strong>: W systematycznym pobieraniu próbek próbka jest systematycznie wybierana z listy. Na przykład możemy wybrać co setne nazwisko w książce telefonicznej.</li>
+<li><strong>Próbkowanie warstwowe</strong>: W próbkowaniu warstwowym populacja jest najpierw dzielona na nienakładające się (rozłączne) grupy (lub warstwy), a następnie próbka jest wybierana proporcjonalnie z każdej grupy. Na przykład, aby wybrać próbkę zarejestrowanych wyborców, możemy podzielić populację na grupy - biali, Afroamerykanie, Latynosi i inni - a następnie losowo wybrać zarejestrowanych wyborców, wybierając z każdej grupy liczbę proporcjonalną do wielkość tej grupy w populacji.</li>
+<li><strong>Próbkowanie klastrowe</strong>: W losowaniu klastrów populacja jest dzielona na grupy (lub klastry), a następnie wybierana jest próba losowa klastrów. Na przykład, aby przeprowadzić ankietę wśród mieszkańców Los Angeles, najpierw losowo wybieramy zbiór budynków mieszkalnych (grupy), a następnie przeprowadzamy wywiady z każdym mieszkańcem wybranych budynków. Ten rodzaj pobierania próbek zmniejsza czas i koszty ankietera w podróży z miejsca na miejsce.</li>
+</ol>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="12">
+<li id="fn12"><p>Pobrane z: Stewart, J., Redlin, L. and Watson, S., 2013. Precalculus. Cengage Learning.<a href="próba-losowa-wyklad-23.html#fnref12" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="eksperyment.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="przyk-ady-badanie-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="badania-na-próbie.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rozk-ady-danych.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
