@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*------------- Body and header text---------------- */
+
+.book.font-family-1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', serif;
+  color: #455A64;
+}
+
+.title {
+  font-family: 'Poppins', serif;
+  font-size: 3em !important;
+  color: #455A64;
+ }
+
+.subtitle {
+  font-family: 'Poppins', serif;
+  color: #455A64;
+}
+
+
+
+/*-----Body Links-------*/
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: #3f88ca;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+color: #1f5386; /* darker color when hovering */
+text-decoration: none;
+}
+
+
+
+
+/* all TOC list items, basically */
+  
+.summary{
+font-family: 'Roboto', sans-serif;
+}
+
+.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #455A64;
+}
+
+
+.summary a:hover {
+  color: #78909C !important;
+}
+
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #37474F !important;
+  border-left: solid 4px;
+  border-color: #f9aa33;
+  padding-left: 11px !important;
+}  
+
+
+
+/* -----------Question counter ---------*/
+
+  body {
+    counter-reset: li;
+  }
+
+  .question ol {
+    /* Remove the default left padding */
+    padding-left: 0;
+  }
+
+  .question ol>li {
+    /* Create a positioning context */
+    position: relative;
+    /* Disable the normal item numbering */
+    list-style: none;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 120px;
+  }
+
+  .question ol>li:before,
+  .question ol>p>li:before{
+    /* Use the counter as content */
+    content: "Pytanie " counter(li) ": ";
+    /* Increment the counter by 1 */
+    counter-increment: li;
+    position: absolute;
+    color: #304FFE;
+    left: -0.5px;
+    font-weight: bold;
+  }
+
+  .question ol ol {
+    counter-reset: subitem;
+  }
