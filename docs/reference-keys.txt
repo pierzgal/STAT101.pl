@@ -114,7 +114,6 @@ histogram
 używa-się-trzech-typów-histogramów
 histogram-gęstości
 konstrukcja-histogramu-gęstości-1
-konstrukcja-histogramu-gęstości-2
 histogram-częstości-bezwzględnych
 histogram-częstości-względnych
 histogram-dla-funkcji-prawdopodobieństwa---rozkład-dwumianowy-1
@@ -122,9 +121,7 @@ histogram-dla-funkcji-prawdopodobieństwa---rozkład-dwumianowy-2
 wykres-pudełkowy
 wykres-pudełkowy---przykład-1
 wykres-pudełkowy---przykład-2
-wykres-pudełkowy---przykład-3
-wykres-pudełkowy---przykład-4
-histogram-a-wykres-pudełkowy---przykład-5
+histogram-a-wykres-pudełkowy---przykład-3
 wykres-pudełkowy---jeszcze-jeden-przykład
 wykres-pudełkowy-a-histogram
 skośnośćasymetria-rozkładu-skewness---rozkłady-lewostronnie-i-prawostronnie-asymetryczne

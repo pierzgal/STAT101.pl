@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.11 Poziom pomiaru (2) | STAT 101</title>
-  <meta name="description" content="3.11 Poziom pomiaru (2) | STAT 101" />
+  <title>3.44 Histogram a wykres pudełkowy - przykład (3) | STAT 101</title>
+  <meta name="description" content="3.44 Histogram a wykres pudełkowy - przykład (3) | STAT 101" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.11 Poziom pomiaru (2) | STAT 101" />
+  <meta property="og:title" content="3.44 Histogram a wykres pudełkowy - przykład (3) | STAT 101" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.11 Poziom pomiaru (2) | STAT 101" />
+  <meta name="twitter:title" content="3.44 Histogram a wykres pudełkowy - przykład (3) | STAT 101" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"/>
-<link rel="next" href="poziom-pomiaru-3.html"/>
+<link rel="prev" href="wykres-pudełkowy-przykład-2.html"/>
+<link rel="next" href="wykres-pudełkowy-jeszcze-jeden-przykład.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -299,23 +299,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="poziom-pomiaru-2" class="section level2" number="3.11">
-<h2><span class="header-section-number">3.11</span> Poziom pomiaru (2)</h2>
-<p>Typ zmiennej wpływa na wybór mierników statystycznych.</p>
-<p>Jeśli chodzi o miary tendencji centralnej i miary rozproszenia:</p>
-<ul>
-<li>zmienne nomianalne (można wyzanczyć tylko <strong>dominantę</strong>);</li>
-<li>zmienne porządkowe (<strong>dominanta</strong>, <strong>mediana</strong>, <strong>rozstęp międzykwartylowy</strong>)</li>
-<li>zmienne ilościowe (<strong>dominanta</strong>, <strong>mediana</strong>, <strong>rozstęp międzykwartylowy</strong>, <strong>średnie</strong>, <strong>odchylenie standardowe</strong>)</li>
-</ul>
+<div id="histogram-a-wykres-pudełkowy---przykład-3" class="section level2" number="3.44">
+<h2><span class="header-section-number">3.44</span> Histogram a wykres pudełkowy - przykład (3)</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="histogram-a-wykres-pudełkowy-przykład-3.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dla tych samych danych, dla porównania, rysujemy histogram i krzywe gęstości</span></span>
+<span id="cb17-2"><a href="histogram-a-wykres-pudełkowy-przykład-3.html#cb17-2" aria-hidden="true" tabindex="-1"></a>hist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> data) <span class="sc">+</span> <span class="fu">geom_histogram</span>( <span class="fu">aes</span>( <span class="at">x =</span> wzrost, <span class="at">y =</span> ..density.., <span class="at">fill =</span> plec ), <span class="at">bins =</span> <span class="dv">6</span>, <span class="at">alpha =</span> <span class="fl">0.7</span> ) <span class="sc">+</span> <span class="fu">geom_density</span>( <span class="fu">aes</span>( <span class="at">x =</span> wzrost, <span class="at">y =</span> ..density.., <span class="at">colour =</span> plec ) ) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="co"># Rysuje histogram</span></span>
+<span id="cb17-3"><a href="histogram-a-wykres-pudełkowy-przykład-3.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(hist)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.svg" width="384" /></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="poziom-pomiaru-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="wykres-pudełkowy-przykład-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wykres-pudełkowy-jeszcze-jeden-przykład.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
