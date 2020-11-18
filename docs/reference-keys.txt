@@ -103,7 +103,7 @@ miary-pozycji-względnej
 percentyl-i-pozycjaranga-percentylowa-centylowa
 wynik-standardowy-z-score-standaryzacja-zmiennych
 z-score-jako-miara-względnej-pozycji
-wykład-4-cz.-1.-wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe
+wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe
 ważne-typy-wykresów-statystycznych
 wykres-słupkowy
 wykres-słupkowy-2
