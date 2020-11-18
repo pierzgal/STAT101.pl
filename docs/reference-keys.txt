@@ -113,7 +113,7 @@ szereg-rozdzielczy-i-histogram
 histogram
 używa-się-trzech-typów-histogramów
 histogram-gęstości
-konstrukcja-histogramu-gęstości-1
+konstrukcja-histogramu
 histogram-częstości-bezwzględnych
 histogram-częstości-względnych
 histogram-dla-funkcji-prawdopodobieństwa---rozkład-dwumianowy-1

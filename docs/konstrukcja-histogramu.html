@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.45 Wykres pudełkowy - przykład (3) | STAT 101</title>
-  <meta name="description" content="3.45 Wykres pudełkowy - przykład (3) | STAT 101" />
+  <title>3.36 Konstrukcja histogramu | STAT 101</title>
+  <meta name="description" content="3.36 Konstrukcja histogramu | STAT 101" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.45 Wykres pudełkowy - przykład (3) | STAT 101" />
+  <meta property="og:title" content="3.36 Konstrukcja histogramu | STAT 101" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.45 Wykres pudełkowy - przykład (3) | STAT 101" />
+  <meta name="twitter:title" content="3.36 Konstrukcja histogramu | STAT 101" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wykres-pudełkowy-przykład-2.html"/>
-<link rel="next" href="wykres-pudełkowy-przykład-4.html"/>
+<link rel="prev" href="histogram-gęstości.html"/>
+<link rel="next" href="histogram-częstości-bezwzględnych.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,71 +55,7 @@
 <script src="assets/anchor-sections-1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -264,25 +200,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.33" data-path="szereg-rozdzielczy-i-histogram.html"><a href="szereg-rozdzielczy-i-histogram.html"><i class="fa fa-check"></i><b>3.33</b> Szereg rozdzielczy i histogram</a></li>
 <li class="chapter" data-level="3.34" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>3.34</b> Histogram</a></li>
 <li class="chapter" data-level="3.35" data-path="histogram-gęstości.html"><a href="histogram-gęstości.html"><i class="fa fa-check"></i><b>3.35</b> Histogram gęstości</a></li>
-<li class="chapter" data-level="3.36" data-path="konstrukcja-histogramu-gęstości-1.html"><a href="konstrukcja-histogramu-gęstości-1.html"><i class="fa fa-check"></i><b>3.36</b> Konstrukcja histogramu gęstości (1)</a></li>
-<li class="chapter" data-level="3.37" data-path="konstrukcja-histogramu-gęstości-2.html"><a href="konstrukcja-histogramu-gęstości-2.html"><i class="fa fa-check"></i><b>3.37</b> Konstrukcja histogramu gęstości (2)</a></li>
-<li class="chapter" data-level="3.38" data-path="histogram-częstości-bezwzględnych.html"><a href="histogram-częstości-bezwzględnych.html"><i class="fa fa-check"></i><b>3.38</b> Histogram częstości bezwzględnych</a></li>
-<li class="chapter" data-level="3.39" data-path="histogram-częstości-względnych.html"><a href="histogram-częstości-względnych.html"><i class="fa fa-check"></i><b>3.39</b> Histogram częstości względnych</a></li>
-<li class="chapter" data-level="3.40" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><i class="fa fa-check"></i><b>3.40</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
-<li class="chapter" data-level="3.41" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><i class="fa fa-check"></i><b>3.41</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
-<li class="chapter" data-level="3.42" data-path="wykres-pudełkowy.html"><a href="wykres-pudełkowy.html"><i class="fa fa-check"></i><b>3.42</b> Wykres pudełkowy</a></li>
-<li class="chapter" data-level="3.43" data-path="wykres-pudełkowy-przykład-1.html"><a href="wykres-pudełkowy-przykład-1.html"><i class="fa fa-check"></i><b>3.43</b> Wykres pudełkowy - przykład (1)</a></li>
-<li class="chapter" data-level="3.44" data-path="wykres-pudełkowy-przykład-2.html"><a href="wykres-pudełkowy-przykład-2.html"><i class="fa fa-check"></i><b>3.44</b> Wykres pudełkowy - przykład (2)</a></li>
-<li class="chapter" data-level="3.45" data-path="wykres-pudełkowy-przykład-3.html"><a href="wykres-pudełkowy-przykład-3.html"><i class="fa fa-check"></i><b>3.45</b> Wykres pudełkowy - przykład (3)</a></li>
-<li class="chapter" data-level="3.46" data-path="wykres-pudełkowy-przykład-4.html"><a href="wykres-pudełkowy-przykład-4.html"><i class="fa fa-check"></i><b>3.46</b> Wykres pudełkowy - przykład (4)</a></li>
-<li class="chapter" data-level="3.47" data-path="histogram-a-wykres-pudełkowy-przykład-5.html"><a href="histogram-a-wykres-pudełkowy-przykład-5.html"><i class="fa fa-check"></i><b>3.47</b> Histogram a wykres pudełkowy - przykład (5)</a></li>
-<li class="chapter" data-level="3.48" data-path="wykres-pudełkowy-jeszcze-jeden-przykład.html"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html"><i class="fa fa-check"></i><b>3.48</b> Wykres pudełkowy - jeszcze jeden przykład</a></li>
-<li class="chapter" data-level="3.49" data-path="wykres-pudełkowy-a-histogram.html"><a href="wykres-pudełkowy-a-histogram.html"><i class="fa fa-check"></i><b>3.49</b> Wykres pudełkowy a histogram</a></li>
-<li class="chapter" data-level="3.50" data-path="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><a href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><i class="fa fa-check"></i><b>3.50</b> Skośność/asymetria rozkładu (skewness) - rozkłady lewostronnie i prawostronnie asymetryczne</a></li>
-<li class="chapter" data-level="3.51" data-path="miary-korelacji.html"><a href="miary-korelacji.html"><i class="fa fa-check"></i><b>3.51</b> Miary korelacji</a>
+<li class="chapter" data-level="3.36" data-path="konstrukcja-histogramu.html"><a href="konstrukcja-histogramu.html"><i class="fa fa-check"></i><b>3.36</b> Konstrukcja histogramu</a></li>
+<li class="chapter" data-level="3.37" data-path="histogram-częstości-bezwzględnych.html"><a href="histogram-częstości-bezwzględnych.html"><i class="fa fa-check"></i><b>3.37</b> Histogram częstości bezwzględnych</a></li>
+<li class="chapter" data-level="3.38" data-path="histogram-częstości-względnych.html"><a href="histogram-częstości-względnych.html"><i class="fa fa-check"></i><b>3.38</b> Histogram częstości względnych</a></li>
+<li class="chapter" data-level="3.39" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><i class="fa fa-check"></i><b>3.39</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
+<li class="chapter" data-level="3.40" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><i class="fa fa-check"></i><b>3.40</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
+<li class="chapter" data-level="3.41" data-path="wykres-pudełkowy.html"><a href="wykres-pudełkowy.html"><i class="fa fa-check"></i><b>3.41</b> Wykres pudełkowy</a></li>
+<li class="chapter" data-level="3.42" data-path="wykres-pudełkowy-przykład-1.html"><a href="wykres-pudełkowy-przykład-1.html"><i class="fa fa-check"></i><b>3.42</b> Wykres pudełkowy - przykład (1)</a></li>
+<li class="chapter" data-level="3.43" data-path="wykres-pudełkowy-przykład-2.html"><a href="wykres-pudełkowy-przykład-2.html"><i class="fa fa-check"></i><b>3.43</b> Wykres pudełkowy - przykład (2)</a></li>
+<li class="chapter" data-level="3.44" data-path="histogram-a-wykres-pudełkowy-przykład-3.html"><a href="histogram-a-wykres-pudełkowy-przykład-3.html"><i class="fa fa-check"></i><b>3.44</b> Histogram a wykres pudełkowy - przykład (3)</a></li>
+<li class="chapter" data-level="3.45" data-path="wykres-pudełkowy-jeszcze-jeden-przykład.html"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html"><i class="fa fa-check"></i><b>3.45</b> Wykres pudełkowy - jeszcze jeden przykład</a></li>
+<li class="chapter" data-level="3.46" data-path="wykres-pudełkowy-a-histogram.html"><a href="wykres-pudełkowy-a-histogram.html"><i class="fa fa-check"></i><b>3.46</b> Wykres pudełkowy a histogram</a></li>
+<li class="chapter" data-level="3.47" data-path="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><a href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><i class="fa fa-check"></i><b>3.47</b> Skośność/asymetria rozkładu (skewness) - rozkłady lewostronnie i prawostronnie asymetryczne</a></li>
+<li class="chapter" data-level="3.48" data-path="miary-korelacji.html"><a href="miary-korelacji.html"><i class="fa fa-check"></i><b>3.48</b> Miary korelacji</a>
 <ul>
-<li class="chapter" data-level="3.51.1" data-path="miary-korelacji.html"><a href="miary-korelacji.html#współczynnik-korelacji-liniowej-rho-pearsona"><i class="fa fa-check"></i><b>3.51.1</b> Współczynnik korelacji liniowej <span class="math inline">\(\rho\)</span> Pearsona</a></li>
-<li class="chapter" data-level="3.51.2" data-path="miary-korelacji.html"><a href="miary-korelacji.html#test-niezależności-chi-kwadrat-chi2"><i class="fa fa-check"></i><b>3.51.2</b> Test niezależności chi-kwadrat <span class="math inline">\(\chi^2\)</span></a></li>
+<li class="chapter" data-level="3.48.1" data-path="miary-korelacji.html"><a href="miary-korelacji.html#współczynnik-korelacji-liniowej-rho-pearsona"><i class="fa fa-check"></i><b>3.48.1</b> Współczynnik korelacji liniowej <span class="math inline">\(\rho\)</span> Pearsona</a></li>
+<li class="chapter" data-level="3.48.2" data-path="miary-korelacji.html"><a href="miary-korelacji.html#test-niezależności-chi-kwadrat-chi2"><i class="fa fa-check"></i><b>3.48.2</b> Test niezależności chi-kwadrat <span class="math inline">\(\chi^2\)</span></a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -302,20 +235,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wykres-pudełkowy---przykład-3" class="section level2" number="3.45">
-<h2><span class="header-section-number">3.45</span> Wykres pudełkowy - przykład (3)</h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="wykres-pudełkowy-przykład-3.html#cb18-1" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> data) <span class="sc">+</span> <span class="fu">geom_boxplot</span>( <span class="fu">aes</span>( <span class="at">x =</span> plec, <span class="at">y =</span> wzrost ) ) <span class="sc">+</span> <span class="fu">coord_flip</span>() <span class="co"># Rysuje wykres pudełkowy</span></span>
-<span id="cb18-2"><a href="wykres-pudełkowy-przykład-3.html#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="wykres-pudełkowy-przykład-3.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(box) <span class="co"># Wyświetla wykres</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="768" /></p>
+<div id="konstrukcja-histogramu" class="section level2" number="3.36">
+<h2><span class="header-section-number">3.36</span> Konstrukcja histogramu</h2>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.svg" width="384" /></p>
+<pre><code>## [1] 140 180 220 260 300 340</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="wykres-pudełkowy-przykład-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="wykres-pudełkowy-przykład-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="histogram-gęstości.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="histogram-częstości-bezwzględnych.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
