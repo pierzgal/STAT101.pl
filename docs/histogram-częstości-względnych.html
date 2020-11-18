@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.12 Histogram częstości względnych | STAT 101</title>
+  <meta name="description" content="4.12 Histogram częstości względnych | STAT 101" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.12 Histogram częstości względnych | STAT 101" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.12 Histogram częstości względnych | STAT 101" />
+  
+  
+  
+
+<meta name="author" content="Michał Pierzgalski" />
+
+
+<meta name="date" content="2020-11-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="histogram-częstości-bezwzględnych.html"/>
+<link rel="next" href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"/>
+<script src="assets/header-attrs-2.5/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Opis kursu</a></li>
+<li class="chapter" data-level="" data-path="o-mnie.html"><a href="o-mnie.html"><i class="fa fa-check"></i>O mnie</a>
+<ul>
+<li class="chapter" data-level="" data-path="kontakt.html"><a href="kontakt.html"><i class="fa fa-check"></i>Kontakt</a>
+<ul>
+<li class="chapter" data-level="" data-path="kontakt.html"><a href="kontakt.html#dyżur-dla-studentów-20202021"><i class="fa fa-check"></i>Dyżur dla studentów (2020/2021)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="uwagi.html"><a href="uwagi.html"><i class="fa fa-check"></i>Uwagi</a>
+<ul>
+<li class="chapter" data-level="" data-path="uwaga-dotycząca-kalkulatorów-1.html"><a href="uwaga-dotycząca-kalkulatorów-1.html"><i class="fa fa-check"></i>UWAGA dotycząca kalkulatorów (1)</a></li>
+<li class="chapter" data-level="" data-path="uwaga-dotycząca-kalkulatorów-2.html"><a href="uwaga-dotycząca-kalkulatorów-2.html"><i class="fa fa-check"></i>UWAGA dotycząca kalkulatorów (2)</a></li>
+<li class="chapter" data-level="" data-path="uwaga-dotycząca-zapisu-ułamków-dziesiętnych.html"><a href="uwaga-dotycząca-zapisu-ułamków-dziesiętnych.html"><i class="fa fa-check"></i>UWAGA dotycząca zapisu ułamków dziesiętnych</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="wykład-1-wprowadzenie.html"><a href="wykład-1-wprowadzenie.html"><i class="fa fa-check"></i><b>1</b> Wykład 1. Wprowadzenie</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="co-to-jest-statystyka.html"><a href="co-to-jest-statystyka.html"><i class="fa fa-check"></i><b>1.1</b> Co to jest statystyka?</a></li>
+<li class="chapter" data-level="1.2" data-path="motywacja-dwa-powody-dla-których-warto-uczyć-się-statystyki-i-metod-analizy-danych.html"><a href="motywacja-dwa-powody-dla-których-warto-uczyć-się-statystyki-i-metod-analizy-danych.html"><i class="fa fa-check"></i><b>1.2</b> Motywacja - dwa powody, dla których warto uczyć się statystyki i metod analizy danych?</a></li>
+<li class="chapter" data-level="1.3" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html"><i class="fa fa-check"></i><b>1.3</b> Przypomnienie niektórych pojęć z matematyki</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#przegląd-elementów-algebry"><i class="fa fa-check"></i><b>1.3.1</b> Przegląd elementów algebry</a></li>
+<li class="chapter" data-level="1.3.2" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#funkcje"><i class="fa fa-check"></i><b>1.3.2</b> Funkcje</a></li>
+<li class="chapter" data-level="1.3.3" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#elementy-teorii-zbiorów"><i class="fa fa-check"></i><b>1.3.3</b> Elementy teorii zbiorów</a></li>
+<li class="chapter" data-level="1.3.4" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#trzy-podstawowe-pojęcia-rachunku-różniczkowego"><i class="fa fa-check"></i><b>1.3.4</b> Trzy podstawowe pojęcia rachunku różniczkowego</a></li>
+<li class="chapter" data-level="1.3.5" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#granica-funkcji"><i class="fa fa-check"></i><b>1.3.5</b> Granica funkcji</a></li>
+<li class="chapter" data-level="1.3.6" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#pochodna-funkcji"><i class="fa fa-check"></i><b>1.3.6</b> Pochodna funkcji</a></li>
+<li class="chapter" data-level="1.3.7" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#całka-funkcji"><i class="fa fa-check"></i><b>1.3.7</b> Całka funkcji</a></li>
+<li class="chapter" data-level="1.3.8" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#całka-jako-pole---intuicyjne-wyjaśnienie"><i class="fa fa-check"></i><b>1.3.8</b> Całka jako pole - intuicyjne wyjaśnienie</a></li>
+<li class="chapter" data-level="1.3.9" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#prawdopodobieństwo"><i class="fa fa-check"></i><b>1.3.9</b> Prawdopodobieństwo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="wykład-2-wstęp-do-badań-ilościowych.html"><a href="wykład-2-wstęp-do-badań-ilościowych.html"><i class="fa fa-check"></i><b>2</b> Wykład 2. Wstęp do badań ilościowych</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="myślenie-krytyczne.html"><a href="myślenie-krytyczne.html"><i class="fa fa-check"></i><b>2.1</b> Myślenie krytyczne</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="myślenie-krytyczne.html"><a href="myślenie-krytyczne.html#myślenie-krytyczne-1"><i class="fa fa-check"></i><b>2.1.1</b> Myślenie krytyczne:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="pytanie-badawcze-i-hipotezy.html"><a href="pytanie-badawcze-i-hipotezy.html"><i class="fa fa-check"></i><b>2.2</b> Pytanie badawcze i hipotezy</a></li>
+<li class="chapter" data-level="2.3" data-path="podstawowe-pojęcia.html"><a href="podstawowe-pojęcia.html"><i class="fa fa-check"></i><b>2.3</b> Podstawowe pojęcia</a></li>
+<li class="chapter" data-level="2.4" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><i class="fa fa-check"></i><b>2.4</b> Statystyki opisowe i wnioskowanie statystyczne</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#zmienne-i-stałe"><i class="fa fa-check"></i><b>2.4.1</b> Zmienne i stałe</a></li>
+<li class="chapter" data-level="2.4.2" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#konstrukty-i-definicje-operacyjne-wyklad-21"><i class="fa fa-check"></i><b>2.4.2</b> Konstrukty i definicje operacyjne </a></li>
+<li class="chapter" data-level="2.4.3" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#zbieranie-danych"><i class="fa fa-check"></i><b>2.4.3</b> Zbieranie danych</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="metody-doboru-próbywyklad-22.html"><a href="metody-doboru-próbywyklad-22.html"><i class="fa fa-check"></i><b>2.5</b> Metody doboru próby</a></li>
+<li class="chapter" data-level="2.6" data-path="badania-na-próbie.html"><a href="badania-na-próbie.html"><i class="fa fa-check"></i><b>2.6</b> Badania na próbie</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="badania-na-próbie.html"><a href="badania-na-próbie.html#próba-losowa-prosta-próba-reprezentatywna"><i class="fa fa-check"></i><b>2.6.1</b> Próba losowa prosta (próba reprezentatywna)</a></li>
+<li class="chapter" data-level="2.6.2" data-path="badania-na-próbie.html"><a href="badania-na-próbie.html#podstawowe-typy-próbkowania-random-sampling"><i class="fa fa-check"></i><b>2.6.2</b> Podstawowe typy ‘próbkowania’ (random sampling)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="próba-losowa-wyklad-23.html"><a href="próba-losowa-wyklad-23.html"><i class="fa fa-check"></i><b>2.7</b> Próba losowa </a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="próba-losowa-wyklad-23.html"><a href="próba-losowa-wyklad-23.html#obciążenie-badania-bias---błędy-próbkowania-i-błędy-systematyczne"><i class="fa fa-check"></i><b>2.7.1</b> Obciążenie badania (<em>bias</em>) - błędy próbkowania i błędy systematyczne</a></li>
+<li class="chapter" data-level="2.7.2" data-path="próba-losowa-wyklad-23.html"><a href="próba-losowa-wyklad-23.html#dobór-próby"><i class="fa fa-check"></i><b>2.7.2</b> Dobór próby</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="rozkłady-danych.html"><a href="rozkłady-danych.html"><i class="fa fa-check"></i><b>2.8</b> Rozkłady danych</a></li>
+<li class="chapter" data-level="2.9" data-path="podstawowe-etapy-badania-społecznegowyklad-24.html"><a href="podstawowe-etapy-badania-społecznegowyklad-24.html"><i class="fa fa-check"></i><b>2.9</b> Podstawowe etapy badania społecznego</a></li>
+<li class="chapter" data-level="2.10" data-path="badanie-statystyczne-niezbędne-kroki.html"><a href="badanie-statystyczne-niezbędne-kroki.html"><i class="fa fa-check"></i><b>2.10</b> Badanie statystyczne - niezbędne kroki</a></li>
+<li class="chapter" data-level="2.11" data-path="badania-obserwacyjne-i-eksperymentalnewyklad-25.html"><a href="badania-obserwacyjne-i-eksperymentalnewyklad-25.html"><i class="fa fa-check"></i><b>2.11</b> Badania obserwacyjne i eksperymentalne</a></li>
+<li class="chapter" data-level="2.12" data-path="statystyczny-projekt-badań-przykład-prostego-eksperymentu-wyklad-26.html"><a href="statystyczny-projekt-badań-przykład-prostego-eksperymentu-wyklad-26.html"><i class="fa fa-check"></i><b>2.12</b> Statystyczny projekt badań - przykład prostego eksperymentu </a></li>
+<li class="chapter" data-level="2.13" data-path="projekt-eksperymentu-wyklad-27.html"><a href="projekt-eksperymentu-wyklad-27.html"><i class="fa fa-check"></i><b>2.13</b> Projekt eksperymentu </a></li>
+<li class="chapter" data-level="2.14" data-path="przykłady-badań-empirycznych.html"><a href="przykłady-badań-empirycznych.html"><i class="fa fa-check"></i><b>2.14</b> Przykłady badań empirycznych</a></li>
+<li class="chapter" data-level="2.15" data-path="przykłady-badanie-1.html"><a href="przykłady-badanie-1.html"><i class="fa fa-check"></i><b>2.15</b> Przykłady - badanie 1</a></li>
+<li class="chapter" data-level="2.16" data-path="przykłady-badanie-2.html"><a href="przykłady-badanie-2.html"><i class="fa fa-check"></i><b>2.16</b> Przykłady - badanie 2</a></li>
+<li class="chapter" data-level="2.17" data-path="przykłady-badanie-3.html"><a href="przykłady-badanie-3.html"><i class="fa fa-check"></i><b>2.17</b> Przykłady - badanie 3</a></li>
+<li class="chapter" data-level="2.18" data-path="eksperyment.html"><a href="eksperyment.html"><i class="fa fa-check"></i><b>2.18</b> Eksperyment</a>
+<ul>
+<li class="chapter" data-level="2.18.1" data-path="eksperyment.html"><a href="eksperyment.html#klasyczny-plan-eksperymentalny"><i class="fa fa-check"></i><b>2.18.1</b> Klasyczny plan eksperymentalny</a></li>
+</ul></li>
+<li class="chapter" data-level="2.19" data-path="badania-quasi-eksperymentalne-eksperymenty-naturalne.html"><a href="badania-quasi-eksperymentalne-eksperymenty-naturalne.html"><i class="fa fa-check"></i><b>2.19</b> Badania <em>quasi</em>-eksperymentalne (<em>eksperymenty naturalne</em>)</a></li>
+<li class="chapter" data-level="2.20" data-path="przykłady-badanie-4.html"><a href="przykłady-badanie-4.html"><i class="fa fa-check"></i><b>2.20</b> Przykłady - badanie 4</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="wykład-3-wstęp-do-statystyki-statystyka-opisowa.html"><a href="wykład-3-wstęp-do-statystyki-statystyka-opisowa.html"><i class="fa fa-check"></i><b>3</b> Wykład 3. Wstęp do statystyki - statystyka opisowa</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="zmienne-i-stałe-1.html"><a href="zmienne-i-stałe-1.html"><i class="fa fa-check"></i><b>3.1</b> Zmienne i stałe</a></li>
+<li class="chapter" data-level="3.2" data-path="wybór-obiektówjednostek-do-badania.html"><a href="wybór-obiektówjednostek-do-badania.html"><i class="fa fa-check"></i><b>3.2</b> Wybór obiektów/jednostek do badania</a></li>
+<li class="chapter" data-level="3.3" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html"><i class="fa fa-check"></i><b>3.3</b> Badania na próbie</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html#próba-losowa-prosta-próba-reprezentatywna-1"><i class="fa fa-check"></i><b>3.3.1</b> Próba losowa prosta (próba reprezentatywna)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html#operat-losowania-1"><i class="fa fa-check"></i><b>3.3.2</b> Operat losowania</a></li>
+<li class="chapter" data-level="3.3.3" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html#podstawowe-typy-próbkowania-random-sampling-1"><i class="fa fa-check"></i><b>3.3.3</b> Podstawowe typy ‘próbkowania’ (random sampling)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="obciążenie-badania-bias.html"><a href="obciążenie-badania-bias.html"><i class="fa fa-check"></i><b>3.4</b> Obciążenie badania (<em>bias</em>)</a></li>
+<li class="chapter" data-level="3.5" data-path="pomiar-definicja.html"><a href="pomiar-definicja.html"><i class="fa fa-check"></i><b>3.5</b> Pomiar - definicja</a></li>
+<li class="chapter" data-level="3.6" data-path="trafność-i-rzetelność-pomiarów.html"><a href="trafność-i-rzetelność-pomiarów.html"><i class="fa fa-check"></i><b>3.6</b> Trafność i rzetelność pomiarów</a></li>
+<li class="chapter" data-level="3.7" data-path="trafność-i-rzetelność.html"><a href="trafność-i-rzetelność.html"><i class="fa fa-check"></i><b>3.7</b> Trafność i rzetelność</a></li>
+<li class="chapter" data-level="3.8" data-path="poziomy-pomiaru-1.html"><a href="poziomy-pomiaru-1.html"><i class="fa fa-check"></i><b>3.8</b> Poziomy pomiaru</a></li>
+<li class="chapter" data-level="3.9" data-path="zmienne-dyskretne-i-ciągłe.html"><a href="zmienne-dyskretne-i-ciągłe.html"><i class="fa fa-check"></i><b>3.9</b> Zmienne dyskretne i ciągłe</a></li>
+<li class="chapter" data-level="3.10" data-path="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"><a href="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"><i class="fa fa-check"></i><b>3.10</b> Związki przyczynowo-skutkowe i korelacyjne między zmiennymi</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"><a href="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html#zmienne-zakłócające-confounding-lub-lurking-variables"><i class="fa fa-check"></i><b>3.10.1</b> Zmienne zakłócające (‘confounding lub lurking’ variables)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="poziom-pomiaru-2.html"><a href="poziom-pomiaru-2.html"><i class="fa fa-check"></i><b>3.11</b> Poziom pomiaru (2)</a></li>
+<li class="chapter" data-level="3.12" data-path="poziom-pomiaru-3.html"><a href="poziom-pomiaru-3.html"><i class="fa fa-check"></i><b>3.12</b> Poziom pomiaru (3)</a></li>
+<li class="chapter" data-level="3.13" data-path="tabelaryczna-prezentacja-rozkładów-danych.html"><a href="tabelaryczna-prezentacja-rozkładów-danych.html"><i class="fa fa-check"></i><b>3.13</b> Tabelaryczna prezentacja rozkładów danych</a></li>
+<li class="chapter" data-level="3.14" data-path="szereg-szczegółowy.html"><a href="szereg-szczegółowy.html"><i class="fa fa-check"></i><b>3.14</b> Szereg szczegółowy</a></li>
+<li class="chapter" data-level="3.15" data-path="szereg-rozdzielczy-rozkład-częstości-punktowy.html"><a href="szereg-rozdzielczy-rozkład-częstości-punktowy.html"><i class="fa fa-check"></i><b>3.15</b> Szereg rozdzielczy (rozkład częstości) <em>punktowy</em></a></li>
+<li class="chapter" data-level="3.16" data-path="szereg-rozdzielczy-rozkład-częstości-z-przedziałami-klasowymi.html"><a href="szereg-rozdzielczy-rozkład-częstości-z-przedziałami-klasowymi.html"><i class="fa fa-check"></i><b>3.16</b> Szereg rozdzielczy (rozkład częstości) <em>z przedziałami klasowymi</em></a></li>
+<li class="chapter" data-level="3.17" data-path="szereg-rozdzielczy-rozkład-częstości-dla-danych-pogrupowanych.html"><a href="szereg-rozdzielczy-rozkład-częstości-dla-danych-pogrupowanych.html"><i class="fa fa-check"></i><b>3.17</b> Szereg rozdzielczy (Rozkład częstości dla danych pogrupowanych)</a></li>
+<li class="chapter" data-level="3.18" data-path="miary-tendencji-centralnej-miary-rozproszenia-dyspersji-oraz-mierniki-siły-związku-między-zmiennymi.html"><a href="miary-tendencji-centralnej-miary-rozproszenia-dyspersji-oraz-mierniki-siły-związku-między-zmiennymi.html"><i class="fa fa-check"></i><b>3.18</b> Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi</a></li>
+<li class="chapter" data-level="3.19" data-path="średnia.html"><a href="średnia.html"><i class="fa fa-check"></i><b>3.19</b> Średnia</a></li>
+<li class="chapter" data-level="3.20" data-path="wariancja-i-odchylenie-standardowe.html"><a href="wariancja-i-odchylenie-standardowe.html"><i class="fa fa-check"></i><b>3.20</b> Wariancja i odchylenie standardowe</a></li>
+<li class="chapter" data-level="3.21" data-path="średnia-mediana-czy-dominanta.html"><a href="średnia-mediana-czy-dominanta.html"><i class="fa fa-check"></i><b>3.21</b> Średnia, mediana, czy dominanta</a></li>
+<li class="chapter" data-level="3.22" data-path="średnia-arytmetyczna-i-odchylenie-standardowe.html"><a href="średnia-arytmetyczna-i-odchylenie-standardowe.html"><i class="fa fa-check"></i><b>3.22</b> Średnia arytmetyczna i odchylenie standardowe</a>
+<ul>
+<li class="chapter" data-level="3.22.1" data-path="średnia-arytmetyczna-i-odchylenie-standardowe.html"><a href="średnia-arytmetyczna-i-odchylenie-standardowe.html#podstawowe-formuły"><i class="fa fa-check"></i><b>3.22.1</b> Podstawowe formuły</a></li>
+<li class="chapter" data-level="3.22.2" data-path="średnia-arytmetyczna-i-odchylenie-standardowe.html"><a href="średnia-arytmetyczna-i-odchylenie-standardowe.html#parametry-populacji-i-statystyki-estymatory-z-próby---podstawowe-symbole"><i class="fa fa-check"></i><b>3.22.2</b> Parametry populacji i statystyki (estymatory) z próby - podstawowe symbole</a></li>
+</ul></li>
+<li class="chapter" data-level="3.23" data-path="obliczanie-średniej-wariancji-i-odchylenia-standardowego.html"><a href="obliczanie-średniej-wariancji-i-odchylenia-standardowego.html"><i class="fa fa-check"></i><b>3.23</b> Obliczanie średniej, wariancji i odchylenia standardowego</a></li>
+<li class="chapter" data-level="3.24" data-path="dominanta.html"><a href="dominanta.html"><i class="fa fa-check"></i><b>3.24</b> Dominanta</a></li>
+<li class="chapter" data-level="3.25" data-path="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html"><a href="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html"><i class="fa fa-check"></i><b>3.25</b> Miary pozycyjne - kwartyle, mediana oraz rozstęp międzykwartylowy</a>
+<ul>
+<li class="chapter" data-level="3.25.1" data-path="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html"><a href="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html#kwartyle"><i class="fa fa-check"></i><b>3.25.1</b> Kwartyle</a></li>
+</ul></li>
+<li class="chapter" data-level="3.26" data-path="rozstęp-międzykwartylowy.html"><a href="rozstęp-międzykwartylowy.html"><i class="fa fa-check"></i><b>3.26</b> Rozstęp międzykwartylowy</a></li>
+<li class="chapter" data-level="3.27" data-path="miary-pozycji-względnej.html"><a href="miary-pozycji-względnej.html"><i class="fa fa-check"></i><b>3.27</b> Miary pozycji względnej</a>
+<ul>
+<li class="chapter" data-level="3.27.1" data-path="miary-pozycji-względnej.html"><a href="miary-pozycji-względnej.html#percentyl-i-pozycjaranga-percentylowa-centylowa"><i class="fa fa-check"></i><b>3.27.1</b> Percentyl i pozycja/ranga percentylowa (centylowa)</a></li>
+<li class="chapter" data-level="3.27.2" data-path="miary-pozycji-względnej.html"><a href="miary-pozycji-względnej.html#wynik-standardowy-z-score-standaryzacja-zmiennych"><i class="fa fa-check"></i><b>3.27.2</b> Wynik standardowy (z-score, standaryzacja zmiennych)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="wykład-4-cz-1-wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"><a href="wykład-4-cz-1-wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"><i class="fa fa-check"></i><b>4</b> Wykład 4 (cz. 1). Wizualizacja rozkładów danych (histogramy i wykresy pudełkowe)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ważne-typy-wykresów-statystycznych.html"><a href="ważne-typy-wykresów-statystycznych.html"><i class="fa fa-check"></i><b>4.1</b> Ważne typy wykresów statystycznych:</a></li>
+<li class="chapter" data-level="4.2" data-path="wykres-słupkowy.html"><a href="wykres-słupkowy.html"><i class="fa fa-check"></i><b>4.2</b> Wykres słupkowy</a></li>
+<li class="chapter" data-level="4.3" data-path="wykres-słupkowy-2.html"><a href="wykres-słupkowy-2.html"><i class="fa fa-check"></i><b>4.3</b> Wykres słupkowy (2)</a></li>
+<li class="chapter" data-level="4.4" data-path="wykres-słupkowy-3.html"><a href="wykres-słupkowy-3.html"><i class="fa fa-check"></i><b>4.4</b> Wykres słupkowy (3)</a></li>
+<li class="chapter" data-level="4.5" data-path="wykres-słupkowy-4.html"><a href="wykres-słupkowy-4.html"><i class="fa fa-check"></i><b>4.5</b> Wykres słupkowy (4)</a></li>
+<li class="chapter" data-level="4.6" data-path="szereg-rozdzielczy-i-histogram.html"><a href="szereg-rozdzielczy-i-histogram.html"><i class="fa fa-check"></i><b>4.6</b> Szereg rozdzielczy i histogram</a></li>
+<li class="chapter" data-level="4.7" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>4.7</b> Histogram</a></li>
+<li class="chapter" data-level="4.8" data-path="histogram-gęstości.html"><a href="histogram-gęstości.html"><i class="fa fa-check"></i><b>4.8</b> Histogram gęstości</a></li>
+<li class="chapter" data-level="4.9" data-path="konstrukcja-histogramu-gęstości-1.html"><a href="konstrukcja-histogramu-gęstości-1.html"><i class="fa fa-check"></i><b>4.9</b> Konstrukcja histogramu gęstości (1)</a></li>
+<li class="chapter" data-level="4.10" data-path="konstrukcja-histogramu-gęstości-2.html"><a href="konstrukcja-histogramu-gęstości-2.html"><i class="fa fa-check"></i><b>4.10</b> Konstrukcja histogramu gęstości (2)</a></li>
+<li class="chapter" data-level="4.11" data-path="histogram-częstości-bezwzględnych.html"><a href="histogram-częstości-bezwzględnych.html"><i class="fa fa-check"></i><b>4.11</b> Histogram częstości bezwzględnych</a></li>
+<li class="chapter" data-level="4.12" data-path="histogram-częstości-względnych.html"><a href="histogram-częstości-względnych.html"><i class="fa fa-check"></i><b>4.12</b> Histogram częstości względnych</a></li>
+<li class="chapter" data-level="4.13" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><i class="fa fa-check"></i><b>4.13</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
+<li class="chapter" data-level="4.14" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><i class="fa fa-check"></i><b>4.14</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
+<li class="chapter" data-level="4.15" data-path="wykres-pudełkowy.html"><a href="wykres-pudełkowy.html"><i class="fa fa-check"></i><b>4.15</b> Wykres pudełkowy</a></li>
+<li class="chapter" data-level="4.16" data-path="wykres-pudełkowy-przykład-1.html"><a href="wykres-pudełkowy-przykład-1.html"><i class="fa fa-check"></i><b>4.16</b> Wykres pudełkowy - przykład (1)</a></li>
+<li class="chapter" data-level="4.17" data-path="wykres-pudełkowy-przykład-2.html"><a href="wykres-pudełkowy-przykład-2.html"><i class="fa fa-check"></i><b>4.17</b> Wykres pudełkowy - przykład (2)</a></li>
+<li class="chapter" data-level="4.18" data-path="wykres-pudełkowy-przykład-3.html"><a href="wykres-pudełkowy-przykład-3.html"><i class="fa fa-check"></i><b>4.18</b> Wykres pudełkowy - przykład (3)</a></li>
+<li class="chapter" data-level="4.19" data-path="wykres-pudełkowy-przykład-4.html"><a href="wykres-pudełkowy-przykład-4.html"><i class="fa fa-check"></i><b>4.19</b> Wykres pudełkowy - przykład (4)</a></li>
+<li class="chapter" data-level="4.20" data-path="histogram-a-wykres-pudełkowy-przykład-5.html"><a href="histogram-a-wykres-pudełkowy-przykład-5.html"><i class="fa fa-check"></i><b>4.20</b> Histogram a wykres pudełkowy - przykład (5)</a></li>
+<li class="chapter" data-level="4.21" data-path="wykres-pudełkowy-jeszcze-jeden-przykład.html"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html"><i class="fa fa-check"></i><b>4.21</b> Wykres pudełkowy - jeszcze jeden przykład</a></li>
+<li class="chapter" data-level="4.22" data-path="wykres-pudełkowy-a-histogram.html"><a href="wykres-pudełkowy-a-histogram.html"><i class="fa fa-check"></i><b>4.22</b> Wykres pudełkowy a histogram</a></li>
+<li class="chapter" data-level="4.23" data-path="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><a href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><i class="fa fa-check"></i><b>4.23</b> Skośność/asymetria rozkładu (skewness) - rozkłady lewostronnie i prawostronnie asymetryczne</a></li>
+<li class="chapter" data-level="4.24" data-path="miary-korelacji.html"><a href="miary-korelacji.html"><i class="fa fa-check"></i><b>4.24</b> Miary korelacji</a>
+<ul>
+<li class="chapter" data-level="4.24.1" data-path="miary-korelacji.html"><a href="miary-korelacji.html#współczynnik-korelacji-liniowej-rho-pearsona"><i class="fa fa-check"></i><b>4.24.1</b> Współczynnik korelacji liniowej <span class="math inline">\(\rho\)</span> Pearsona</a></li>
+<li class="chapter" data-level="4.24.2" data-path="miary-korelacji.html"><a href="miary-korelacji.html#test-niezależności-chi-kwadrat-chi2"><i class="fa fa-check"></i><b>4.24.2</b> Test niezależności chi-kwadrat <span class="math inline">\(\chi^2\)</span></a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STAT 101</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="histogram-częstości-względnych" class="section level2" number="4.12">
+<h2><span class="header-section-number">4.12</span> Histogram częstości względnych</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="histogram-częstości-względnych.html#cb9-1" aria-hidden="true" tabindex="-1"></a>histogram <span class="ot">&lt;-</span> <span class="fu">histogram</span>(data, <span class="at">nint =</span> <span class="dv">5</span>, <span class="at">type =</span> <span class="st">&quot;percent&quot;</span>) <span class="co"># Tworzy histogram</span></span>
+<span id="cb9-2"><a href="histogram-częstości-względnych.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(histogram) <span class="co"># Wyświetla histogram</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.svg" width="384" /></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="histogram-częstości-bezwzględnych.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "static"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
