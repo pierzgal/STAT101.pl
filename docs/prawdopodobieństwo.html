@@ -350,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="podstawowe-pojęcia-1" class="section level3" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Podstawowe pojęcia</h3>
-<p><strong>Doświadczenie losowe</strong> to eksperyment, którego wynik zależy od pewnego mechanizmu losowego. Np. rzut monetą lub kostką do gry. <strong>Przestrzeń (zbiór) zdarzeń elementarnych</strong>, oznaczamy <span class="math inline">\(S\)</span>, to zbiór wszystkich możliwych wyników doświadczenia losowego. Zdarzenia elementarne są parami rozłączne i wspólnie tworzą zbiór <span class="math inline">\(S\)</span>. <strong>Zdarzenie losowe</strong> (np. zbiór <span class="math inline">\(A\)</span>) to podzbiór przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span> składający się ze zdarzeń elementarnych. Np. <span class="math inline">\(A = \{e_1, e_2, ...\}\)</span>. <span class="math inline">\(\emptyset\)</span> - zbiór pusty, czyli <strong>zdarzenie niemożliwe</strong>. Zbiór <span class="math inline">\(A^c\)</span> zbioru <span class="math inline">\(A\)</span> zdarzeń elementarnych nazywamy <strong>zdarzeniem przeciwnym</strong> do zdarzenia <span class="math inline">\(A\)</span>.</p>
+<p><strong>Doświadczenie losowe</strong> to eksperyment, którego wynik zależy od pewnego mechanizmu losowego. Np. rzut monetą lub kostką do gry. <strong>Przestrzeń (zbiór) zdarzeń elementarnych</strong>, oznaczamy <span class="math inline">\(S\)</span> lub <span class="math inline">\(\Omega\)</span>, to zbiór wszystkich możliwych wyników doświadczenia losowego. Zdarzenia elementarne są parami rozłączne i wspólnie tworzą zbiór <span class="math inline">\(S\)</span>. <strong>Zdarzenie losowe</strong> (np. zbiór <span class="math inline">\(A\)</span>) to podzbiór przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span> składający się ze zdarzeń elementarnych. Np. <span class="math inline">\(A = \{e_1, e_2, ...\}\)</span>. <span class="math inline">\(\emptyset\)</span> - zbiór pusty, czyli <strong>zdarzenie niemożliwe</strong>. Zbiór <span class="math inline">\(A^c\)</span> zbioru <span class="math inline">\(A\)</span> zdarzeń elementarnych nazywamy <strong>zdarzeniem przeciwnym</strong> do zdarzenia <span class="math inline">\(A\)</span>.</p>
 <p><strong>Doświadczenie losowe</strong> jest to eksperyment, którego wyniku nie możemy z góry przewidzieć.</p>
 <p>Wszystkie możliwe wyniki doświadczenia losowego tworzą zbiór zwany <strong>przestrzenią zdarzeń elementarnych</strong> <span class="math inline">\(S = \{e_1, e_2, ...\}\)</span>. Ten zbiór może być: skończony; nieskończony, ale przeliczalny (zbiory nieciągłe, skokowe); lub nieskończony i nieprzeliczalny (zbiór ciągły, np. przedział liczbowy). Dowolny podzbiór zbioru <span class="math inline">\(S\)</span>, np. zbiór <span class="math inline">\(\{e_2, e_4\}\)</span>, nazywa się po prostu <strong>zdarzeniem</strong> (nie mylić ze zdarzeniem elementarnym).</p>
 <p><span class="math inline">\(A\cup B\)</span> - <strong>suma zdarzeń losowych</strong>, która odpowiada zajściu co najmniej jednego ze zdarzeń A, B (suma zbiorów A i B). <span class="math inline">\(A\cap B\)</span> - <strong>iloczyn zdarzeń losowych</strong> A i B odpowiada jednoczesnemu zajściu zdarzeń A i B (przekrój zbiorów A i B). Literą <span class="math inline">\(F\)</span> oznaczamy zbiór wszystkich podzbiorów przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span> (zbiór wszystkich zdarzeń losowych). Trójkę <span class="math inline">\((S, F, P)\)</span> nazywamy <strong>przestrzenią probabilistyczną</strong>.</p>
@@ -401,7 +401,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[P(A) = \frac{9\pi}{16\pi} =\frac{9}{16}\]</span></p>
 <p>W powyższym przykładzie, przestrzeń zdarzeń losowych <strong><em>S</em></strong> jest zbiorem <strong>dwuwymiarowym</strong>, który zawiera nieprzeliczalną liczbę elementów, dlatego prawdopodobieństwo <span class="math inline">\(&gt; 0\)</span> istnieje tylko dla zdarzeń, które też są zbiorami dwuwymiarowymi i nieprzeliczalnymi. Jeżeli <em>S</em> byłaby zbiorem nieprzeliczalnym <strong>jednowymiarowym</strong> (np. prostą lub odcinkiem), to prawdopodobieństwo <span class="math inline">\(&gt; 0\)</span> jest określone dla zdarzeń jednowymiarowych (odcinków lub przedziałów zawartych w zbiorze <em>S</em>). Podobnie jest w przypadku <strong>objętości</strong>.</p>
 <p>Wybierzmy losowo punkt we wnętrzu koła o promieniu równym 1. W tym przypadku, <span class="math inline">\(S = \{(x, y): x^2 + y^2 &lt; 1 \}\)</span> i <span class="math display">\[P(A) = \frac{\text{pole powierzchni A}}{\pi}\]</span></p>
-<p>Jeśli zbiór <em>A</em> jest tzw. singletonem (zbiór, którego jedynym elementem jest pojedynczy punkt), wówczas <span class="math inline">\(P(A) = 0\)</span>. Jeżeli przestrzeń zdarzeń elementarnych jest dwuwymiarowa, to nie możemy przyporządkować prawdopodobieństwa większego od 0 zdarzeniu <em>A</em>, którego elementem jest pojedynczy punkt lub nawet prosta, gdyż pola punktu lub dowolnej prostej są równe 0.</p>
+<p>Jeśli zbiór <em>A</em> jest tzw. singletonem (zbiór, którego jedynym elementem jest pojedynczy punkt), wówczas <span class="math inline">\(P(A) = 0\)</span>. Jeżeli przestrzeń zdarzeń elementarnych jest dwuwymiarowa, to nie możemy przyporządkować prawdopodobieństwa większego od 0 zdarzeniu <em>A</em>, którego elementem jest pojedynczy punkt lub nawet prosta, gdyż pola punktu lub dowolnej krzywej, odcinka są równe 0.</p>
 </div>
 <div id="definicja-empiryczna-lub-statystyczna" class="section level3" number="4.3.6">
 <h3><span class="header-section-number">4.3.6</span> Definicja empiryczna lub statystyczna</h3>
@@ -472,11 +472,13 @@ Let <span class="math inline">\(B = \{ (1, 6), (1, 4), (1, 2), (2, 6), (2, 4), .
 <p>You can notice that, by product rule, we have <span class="math inline">\(|B| = 6 \times 3\)</span>, Thus,</p>
 <p><span class="math display">\[P(B) = \frac{|B|}{|S|} = \frac{6 \times 3 = 18}{36} = \frac{1}{2}\]</span>
 Then,</p>
-<p><span class="math display">\[P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{3}{36} = \frac{1}{12}\]</span>
-Also,</p>
-<p><span class="math display">\[P(A)P(B) = \frac{1}{6} \times \frac{1}{2} = \frac{1}{12}\]</span></p>
-<p>Finally, employing the test for independence of events:</p>
-<p><span class="math display">\[P(A)P(B) = P(A \cap B)\]</span> - Events <em>A</em> and <em>B</em> are <strong>independent</strong>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math display">\[P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{3}{36} = \frac{1}{12}\]</span></p></li>
+<li><p><span class="math display">\[P(A)P(B) = \frac{1}{6} \times \frac{1}{2} = \frac{1}{12}\]</span></p></li>
+</ol>
+<p>Finally, from the test for independence of events, we have:</p>
+<p><span class="math display">\[P(A)P(B) = P(A \cap B)\]</span></p>
+<p>Thus, events <em>A</em> and <em>B</em> are <strong>independent</strong>.</p>
 </div>
 <div id="example-2" class="section level4" number="4.3.12.3">
 <h4><span class="header-section-number">4.3.12.3</span> Example</h4>
