@@ -351,12 +351,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>W sumie jest 9 + 6 = 15 rodzajów posiłków. Tak więc Bruce potrzebuje 15 dni.</p>
 <p>Rozszerzmy regułę sumy na dowolną liczbę zestawów:</p>
 <p>Jeśli <span class="math inline">\(A_1, \ldots, A_n\)</span> są rozłączne parami, to <span class="math inline">\(| A_1 \cup \ldots \cup A_n | = | A_1 | + | A_2 | + \ldots + | A_n |\)</span>.</p>
-<p>99 matematyki, 179 cs, 24 filozofia<br />
-Razem w matematyce, cs lub filozofii = 302</p>
+<p>Przykład. Grupa studentów: 99 matematyka, 179 informatyka (CS), 24 filozofia<br />
+Razem w matematyce, informatyce lub filozofii = 302</p>
 <div id="zasada-włączenia-wykluczenia" class="section level4" number="4.2.1.1">
 <h4><span class="header-section-number">4.2.1.1</span> Zasada włączenia-wykluczenia</h4>
-<p>Co jeśli zestawy nie są rozłączne? Np. Kierunki matematyczne i CS, gdzie niektórzy specjalizują się w obu? Najpierw rozważ dwa zestawy. Jeśli <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są dowolnymi zbiorami (niekoniecznie rozłącznymi), to <span class="math inline">\(| A \cup B | = | A | + | B | - | A \cap B |\)</span>.</p>
-<p>99 kierunków matematycznych, 179 kierunków cs, 7 na obu kierunkach. Ile kierunków z matematyki lub CS? 99 + 179 - 7 = 271</p>
+<p>Co jeśli zestawy nie są rozłączne? Np. Kierunki matematyczne i CS (informatyki), gdzie niektórzy specjalizują się w obu? Najpierw rozważ dwa zestawy. Jeśli <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są dowolnymi zbiorami (niekoniecznie rozłącznymi), to <span class="math inline">\(| A \cup B | = | A | + | B | - | A \cap B |\)</span>.</p>
+<ul>
+<li>99 kierunek matematyka, 179 kierunek informatyka, 7 na obu kierunkach. Ile osób studiuje matematykę lub CS? 99 + 179 - 7 = 271</li>
+</ul>
 <p>Zasada włączenia-wykluczenia wyraża fakt, że suma rozmiarów obu zbiorów może być zbyt duża, ponieważ niektóre elementy mogą być liczone dwukrotnie. Elementy liczone podwójnie to te, które znajdują się na przecięciu dwóch zestawów, a liczba jest korygowana przez odjęcie rozmiaru przecięcia.</p>
 <p>Zasada jest wyraźniej widoczna w przypadku trzech zbiorów, co dla zbiorów A, B i C daje</p>
 <p><span class="math inline">\(|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|\)</span></p>
