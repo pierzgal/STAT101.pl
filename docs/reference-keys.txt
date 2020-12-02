@@ -159,7 +159,7 @@ algebra-prawdopodobieństw
 niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne
 prawdopodobieństwo-warunkowe
 zdarzenia-parami-niezależne
-przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce
+przykłady-różne
 przykład-1
 przykład-2
 przykład-3

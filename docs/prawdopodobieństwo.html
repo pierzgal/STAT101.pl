@@ -316,7 +316,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.10" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne"><i class="fa fa-check"></i><b>4.3.10</b> Niezależność zdarzeń losowych a zdarzenia parami rozłączne</a></li>
 <li class="chapter" data-level="4.3.11" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#prawdopodobieństwo-warunkowe"><i class="fa fa-check"></i><b>4.3.11</b> Prawdopodobieństwo warunkowe</a></li>
 <li class="chapter" data-level="4.3.12" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#zdarzenia-parami-niezależne"><i class="fa fa-check"></i><b>4.3.12</b> Zdarzenia parami niezależne</a></li>
-<li class="chapter" data-level="4.3.13" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce"><i class="fa fa-check"></i><b>4.3.13</b> Przykłady różne (* - tłumaczenie będzie dostępne wkrótce)</a></li>
+<li class="chapter" data-level="4.3.13" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne"><i class="fa fa-check"></i><b>4.3.13</b> Przykłady różne (*)</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -470,8 +470,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Odpowiedź: Wiemy, że <span class="math inline">\(P(A) = 3/8\)</span>. Ponieważ nie jest to 0, możemy sprawdzić, czy wzór na niezależność się utrzymuje. Teraz <span class="math inline">\(H1 = \{HHH, HHT, HTH, HTT\}\)</span> zawiera dokładnie dwa wyniki <span class="math inline">\((HHT, HTH)\)</span> z A, więc mamy <span class="math inline">\(P(A | H1) = 2/4\)</span>.</p>
 <p>Ponieważ <span class="math inline">\(P(A | H1)\)</span> nie jest równe <span class="math inline">\(P(A)\)</span>, zdarzenia te nie są niezależne.</p>
 </div>
-<div id="przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce" class="section level3" number="4.3.13">
-<h3><span class="header-section-number">4.3.13</span> Przykłady różne (* - tłumaczenie będzie dostępne wkrótce)</h3>
+<div id="przykłady-różne" class="section level3" number="4.3.13">
+<h3><span class="header-section-number">4.3.13</span> Przykłady różne (*)</h3>
 <div id="przykład-1" class="section level4" number="4.3.13.1">
 <h4><span class="header-section-number">4.3.13.1</span> Przykład</h4>
 <p>Rzucamy sześciościenną kostką do gry. Jakie jest prawdopodobieństwo wyrzucenia parzystej liczby oczek?</p>
@@ -481,12 +481,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="przykład-2" class="section level4" number="4.3.13.2">
 <h4><span class="header-section-number">4.3.13.2</span> Przykład</h4>
 <p>Rzucamy dwukrotnie sześciościenną kostką do gry. Jakie jest prawdopodobieństwo, że podczas pierwszego rzutu wypadnie 1 oczko, a w drugim rzucie 2 oczka?</p>
-<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{(1, 2)\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{(1, 1), (1, 2), (2, 1), ..., (6, 5), (6, 6)\}\)</span>. Wtedy, na podstawie klasycznej definicji prawdopodobieństwa, <span class="math inline">\(P(X = (1, 2)) = \frac{1}{6} \times \frac{1}{6} = \frac{1}{36}\)</span></p>
+<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{(1, 2)\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{(1, 1), (1, 2), (2, 1), ..., (6, 5), (6, 6)\}\)</span>. Wtedy, na podstawie klasycznej definicji prawdopodobieństwa, <span class="math inline">\(P(\{(1, 2)\}) = \frac{1}{6} \times \frac{1}{6} = \frac{1}{36}\)</span></p>
 </div>
 <div id="przykład-3" class="section level4" number="4.3.13.3">
 <h4><span class="header-section-number">4.3.13.3</span> Przykład</h4>
 <p>Rzucamy dwukrotnie sześciościenną kostką do gry. Znajdź prawdopodobieństwo wyrzucenia 1 oczka i 2 oczek w dowolnej kolejności.</p>
-<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{(1, 2), (2, 1)\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{(1, 1), (1, 2), (2, 1), ..., (6, 5), (6, 6)\}\)</span>, wówczas <span class="math inline">\(P(X = \{(1, 2), (2, 1)\}) = 2 \times \frac{1}{6} \times \frac{1}{6} = \frac{2}{36} = \frac{1}{18}\)</span></p>
+<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{(1, 2), (2, 1)\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{(1, 1), (1, 2), (2, 1), ..., (6, 5), (6, 6)\}\)</span>, wówczas <span class="math inline">\(P(\{(1, 2), (2, 1)\}) = 2 \times \frac{1}{6} \times \frac{1}{6} = \frac{2}{36} = \frac{1}{18}\)</span></p>
+<blockquote>
+<p>Tłumaczenie na j. polski przykładów niżej pojawi się wkrótce.</p>
+</blockquote>
 </div>
 <div id="example" class="section level4" number="4.3.13.4">
 <h4><span class="header-section-number">4.3.13.4</span> Example</h4>
