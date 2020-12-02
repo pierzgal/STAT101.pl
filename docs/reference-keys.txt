@@ -126,7 +126,7 @@ miary-korelacji
 współczynnik-korelacji-liniowej-rho-pearsona
 współczynnik-korelacji-rangowej-rho-spearmana-i-tau_b-kendalla
 test-niezależności-chi-kwadrat-chi2
-wykład-4.-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0.2
+wykład-4.-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0.3
 wprowadzenie
 podstawowe-spójniki-logiczne
 zbiory

@@ -281,7 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.48.2" data-path="miary-korelacji.html"><a href="miary-korelacji.html#test-niezależności-chi-kwadrat-chi2"><i class="fa fa-check"></i><b>3.48.2</b> Test niezależności chi-kwadrat <span class="math inline">\(\chi^2\)</span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-2.html"><a href="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-2.html"><i class="fa fa-check"></i><b>4</b> Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.2]</a>
+<li class="chapter" data-level="4" data-path="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-3.html"><a href="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-3.html"><i class="fa fa-check"></i><b>4</b> Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.3]</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="wprowadzenie.html"><a href="wprowadzenie.html"><i class="fa fa-check"></i><b>4.1</b> Wprowadzenie</a>
 <ul>
@@ -445,7 +445,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Podobnie, prawdopodobieństwo, że wystąpi B, biorąc pod uwagę, że wystąpiło A (B uwarunkowane A) jest równe</p>
 <p><span class="math display">\[P(B|A) = \frac{P(A\cap B)}{P(A)} \text{, i } P(A) \neq 0\]</span></p>
 <blockquote>
-<p><strong>W większości przypadków P (A | B) ≠ P (B | A)</strong></p>
+<p><strong>W większości przypadków</strong> <span class="math inline">\(P(A | B) \neq P(B | A)\)</span>!!!</p>
 </blockquote>
 <p>Jeżeli zdarzenia A i B są niezależne tj. gdy prawdopodobieństwo zdarzenia A nie zmienia się bez względu na to, czy zdarzenie B zrealizowało się, czy też nie, to:</p>
 <p><span class="math display">\[P(A|B) = P(A)\]</span></p>
@@ -463,10 +463,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="zdarzenia-parami-niezależne" class="section level3" number="4.3.12">
 <h3><span class="header-section-number">4.3.12</span> Zdarzenia parami niezależne</h3>
+<p>Załóżmy, że <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> są zdarzeniami, przy czym <span class="math inline">\(P(B)&gt;0\)</span>. Wówczas zdarzenia <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> powinny być niezależne, jeśli informacja o tym, że zaszło zdarzenie <span class="math inline">\(B\)</span> nie wpływa na prawdopodobieństwo zajścia zdarzenia <span class="math inline">\(A\)</span>; tzn. niezależność powinna być równoważna równości <span class="math inline">\(P(A|B)=P(A)\)</span>, czyli <span class="math inline">\(P(A \cap B)=P(A)P(B)\)</span>. Przyjmujemy to jako definicję niezależności.</p>
 <p>Jeżeli A i B są zdarzeniami niezależnymi, to prawdopodobieństwo, że A i B wystąpią jednocześnie (przekrój zdarzeń A i B), jest równe iloczynowi prawdopodobieństwa A i prawdopodobieństwa B:</p>
 <p><span class="math display">\[P(A ∩ B) = P(A)P(B)\]</span></p>
-<p>Przykład. Rzuć uczciwą monetą 3 razy. Niech H1 = „reszka w pierwszym rzucie“, a A = „łącznie dwie reszki”. Czy H1 i A są niezależne?</p>
-<p>Odpowiedź: Wiemy, że <span class="math inline">\(P(A) = 3/8\)</span>. Ponieważ nie jest to 0, możemy sprawdzić, czy wzór na niezależność się utrzymuje. Teraz H1 = {HHH, HHT, HTH, HTT} zawiera dokładnie dwa wyniki (HHT, HTH) z A, więc mamy <span class="math inline">\(P(A | H1) = 2/4\)</span>. Ponieważ <span class="math inline">\(P(A | H1)\)</span> nie jest równe <span class="math inline">\(P(A)\)</span>, zdarzenia te nie są niezależne.</p>
+<p><strong>Przykład</strong>. Rzucamy uczciwą monetą 3 razy. Niech <span class="math inline">\(H1\)</span> = “reszka w pierwszym rzucie”, a <span class="math inline">\(A\)</span> = “łącznie wypadły dwie reszki”. Czy <span class="math inline">\(H14\)</span> i <span class="math inline">\(A\)</span> są niezależne?</p>
+<p>Odpowiedź: Wiemy, że <span class="math inline">\(P(A) = 3/8\)</span>. Ponieważ nie jest to 0, możemy sprawdzić, czy wzór na niezależność się utrzymuje. Teraz <span class="math inline">\(H1 = \{HHH, HHT, HTH, HTT\}\)</span> zawiera dokładnie dwa wyniki <span class="math inline">\((HHT, HTH)\)</span> z A, więc mamy <span class="math inline">\(P(A | H1) = 2/4\)</span>.</p>
+<p>Ponieważ <span class="math inline">\(P(A | H1)\)</span> nie jest równe <span class="math inline">\(P(A)\)</span>, zdarzenia te nie są niezależne.</p>
 </div>
 <div id="przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce" class="section level3" number="4.3.13">
 <h3><span class="header-section-number">4.3.13</span> Przykłady różne (* - tłumaczenie będzie dostępne wkrótce)</h3>
