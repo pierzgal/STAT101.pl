@@ -158,7 +158,11 @@ empiryczny-rozkład-prawdopodobieństwa
 algebra-prawdopodobieństw
 niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne
 prawdopodobieństwo-warunkowe
+zdarzenia-parami-niezależne
 przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce
+przykład-1
+przykład-2
+przykład-3
 example
 example-1
 example-2

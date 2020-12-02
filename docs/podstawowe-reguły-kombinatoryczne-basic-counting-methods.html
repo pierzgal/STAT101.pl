@@ -315,7 +315,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.9" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#algebra-prawdopodobieństw"><i class="fa fa-check"></i><b>4.3.9</b> Algebra prawdopodobieństw</a></li>
 <li class="chapter" data-level="4.3.10" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne"><i class="fa fa-check"></i><b>4.3.10</b> Niezależność zdarzeń losowych a zdarzenia parami rozłączne</a></li>
 <li class="chapter" data-level="4.3.11" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#prawdopodobieństwo-warunkowe"><i class="fa fa-check"></i><b>4.3.11</b> Prawdopodobieństwo warunkowe</a></li>
-<li class="chapter" data-level="4.3.12" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce"><i class="fa fa-check"></i><b>4.3.12</b> Przykłady różne (* - tłumaczenie będzie dostępne wkrótce)</a></li>
+<li class="chapter" data-level="4.3.12" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#zdarzenia-parami-niezależne"><i class="fa fa-check"></i><b>4.3.12</b> Zdarzenia parami niezależne</a></li>
+<li class="chapter" data-level="4.3.13" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce"><i class="fa fa-check"></i><b>4.3.13</b> Przykłady różne (* - tłumaczenie będzie dostępne wkrótce)</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -351,15 +352,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>W sumie jest 9 + 6 = 15 rodzajów posiłków. Tak więc Bruce potrzebuje 15 dni.</p>
 <p>Rozszerzmy regułę sumy na dowolną liczbę zestawów:</p>
 <p>Jeśli <span class="math inline">\(A_1, \ldots, A_n\)</span> są rozłączne parami, to <span class="math inline">\(| A_1 \cup \ldots \cup A_n | = | A_1 | + | A_2 | + \ldots + | A_n |\)</span>.</p>
-<p>Przykład. Grupa studentów: 99 matematyka, 179 informatyka (CS), 24 filozofia<br />
-Razem w matematyce, informatyce lub filozofii = 302</p>
 <div id="zasada-włączenia-wykluczenia" class="section level4" number="4.2.1.1">
 <h4><span class="header-section-number">4.2.1.1</span> Zasada włączenia-wykluczenia</h4>
 <p>Co jeśli zestawy nie są rozłączne? Np. Kierunki matematyczne i CS (informatyki), gdzie niektórzy specjalizują się w obu? Najpierw rozważ dwa zestawy. Jeśli <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są dowolnymi zbiorami (niekoniecznie rozłącznymi), to <span class="math inline">\(| A \cup B | = | A | + | B | - | A \cap B |\)</span>.</p>
-<ul>
-<li>99 kierunek matematyka, 179 kierunek informatyka, 7 na obu kierunkach. Ile osób studiuje matematykę lub CS? 99 + 179 - 7 = 271</li>
-</ul>
 <p>Zasada włączenia-wykluczenia wyraża fakt, że suma rozmiarów obu zbiorów może być zbyt duża, ponieważ niektóre elementy mogą być liczone dwukrotnie. Elementy liczone podwójnie to te, które znajdują się na przecięciu dwóch zestawów, a liczba jest korygowana przez odjęcie rozmiaru przecięcia.</p>
+<p>Przykład. Załóżmy, że ankieta obejmująca 100 osób zapyta, czy mają kota lub psa jako zwierzaka. Wyniki są następujące: 55 osób odpowiedziało tak dla kota, 58 tak dla psa, a 20 osób odpowiedziało tak zarówno dla kota, jak i psa. Ile osób ma kota lub psa? - Rozwiązanie: Ponieważ 55 ma kota, a 58 psa, na początku możesz pomyśleć, że 55 + 58 = 113 mają jedno lub drugie.</p>
+<p>To rozumowanie pomija fakt, że niektórzy ludzie - 20 - mają jedno i drugie zwierzę, a my policzyliśmy te osoby dwukrotnie, dodając 55 i 58. Aby poprawić naszą odpowiedź, mysimy odjąć od tej sumy liczbę 20: 55 + 58 - 20 = 93 mieć kota lub psa. To jest przykład zasady włączenia-wykluczenia.</p>
 <p>Zasada jest wyraźniej widoczna w przypadku trzech zbiorów, co dla zbiorów A, B i C daje</p>
 <p><span class="math inline">\(|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|\)</span></p>
 <p><img src="images/prob/Inclusion-exclusion.svg" title="Inclusion-exclusion principle" /></p>
@@ -379,13 +377,13 @@ Razem w matematyce, informatyce lub filozofii = 302</p>
 <p><strong>Ćwiczenie</strong>. Ile można utworzyć tablic rejestracyjnych formatu: [3 cyfry | 2 litery]? Składowe nie mogą się powtarzać, pierwsza cyfra różna od zera.</p>
 <p><strong>Przykład</strong>. Ile jest możliwych tablic rejestracyjnych w formacie - 3 litery i następnie 3 cyfry: <span class="math inline">\(26 \times 26 \times 26 \times 10 \times 10 \times 10\)</span>.</p>
 <p><strong>Przykład</strong>. Power set, zbiór potęgowy. Jaka jest liczba podzbiorów zestawu elementów <span class="math inline">\(n\)</span>? To jest <span class="math inline">\(2 ^n\)</span>. Każdy podzbiór odpowiada ciągowi bitów o długości <span class="math inline">\(n\)</span>, gdzie <span class="math inline">\(1\)</span> na pozycji <span class="math inline">\(k\)</span> oznacza, że <span class="math inline">\(k\)</span>-ty element znajduje się w podzbiorze.</p>
-<p><strong>Przykład </strong>. Ile jest możliwych 4-cyfrowych kodów PIN? Można to rozwiązać jako <span class="math inline">\(10 · 10 · 10 · 10 = 104 = 10000\)</span>. Tak więc istnieje jedna na dziesięć tysięcy szans, że złodziej może odgadnąć Twój kod PIN (losowo).</p>
+<p><strong>Przykład</strong> . Ile jest możliwych 4-cyfrowych kodów PIN? Można to rozwiązać jako <span class="math inline">\(10 · 10 · 10 · 10 = 104 = 10000\)</span>. Tak więc istnieje jedna na dziesięć tysięcy szans, że złodziej może odgadnąć Twój kod PIN (losowo).</p>
 <p>Rozważmy silniejszy przypadek, w którym musisz użyć każdej cyfry dokładnie raz, więc kod PIN ma dokładnie 10 różnych cyfr. Ile istnieje takich kodów PIN?</p>
 <p>Mamy 10 wyborów dla pierwszej cyfry, 9 wyborów dla drugiej cyfry i tak dalej, aż mamy tylko 2 wybory dla dziewiątej cyfry i 1 dla dziesiątej cyfry. Oznacza to, że istnieje 362880 możliwych numerów PIN w tym scenariuszu. Mamy:</p>
 <p><span class="math display">\[10 \times 9 \times \ldots  \times 2 \times 1 = \prod_{i = 1}^{n = 10} i = 362880\]</span></p>
 <p>Ogólniej:</p>
 <p><span class="math display">\[N! = N \times (N − 1) \times (N − 2) \times \ldots \times 3 \times 2 \times 1 = \prod_{j=1}^n j\]</span></p>
-<p><span class="math inline">\(N!\)</span> Jest odczytywane jako „N silnia”. Należy pamiętać, że <span class="math inline">\(0! = 1\)</span>, ponieważ istnieje jeden sposób na uporządkowanie 0 obiektów.</p>
+<p><span class="math inline">\(N!\)</span> Jest odczytywane jako „N silnia". Należy pamiętać, że <span class="math inline">\(0! = 1\)</span>, ponieważ istnieje jeden sposób na uporządkowanie 0 obiektów.</p>
 <p>Wiemy z absolutną pewnością, że <span class="math inline">\(1! = 1, (n = 1)\)</span>. W ten sposób otrzymujemy:</p>
 <p>Wiemy, że <span class="math inline">\(n! = n \times (n-1)!\)</span>, wynika z tego, że <span class="math inline">\(1! = 1 \times (1-1)!\)</span>, Wynika z tego, że <span class="math inline">\(1! = 1 \times 0!\)</span>, Więc musi być <span class="math inline">\(0! = 1\)</span>.</p>
 <p>Aby równanie było prawdziwe, musimy wymusić zerową silnię równą 1. W przeciwnym razie <span class="math inline">\(1! \neq 1\)</span> co prowadzi do sprzeczności.</p>
