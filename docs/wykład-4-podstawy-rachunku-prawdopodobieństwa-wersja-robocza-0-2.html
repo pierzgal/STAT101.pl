@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]" />
+  <title>4 Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.2] | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="4 Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.2] | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="4 Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.2] | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="4 Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.2] | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"/>
-<link rel="next" href="wykres-słupkowy-2.html"/>
+<link rel="prev" href="miary-korelacji.html"/>
+<link rel="next" href="wprowadzenie.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -335,23 +335,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wykres-słupkowy" class="section level2" number="3.29">
-<h2><span class="header-section-number">3.29</span> Wykres słupkowy</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="wykres-słupkowy.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rysowanie wykresu słupkowego z użyciem języka R</span></span>
-<span id="cb1-2"><a href="wykres-słupkowy.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="wykres-słupkowy.html#cb1-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.width=</span><span class="dv">4</span>, <span class="at">fig.height=</span><span class="dv">4</span>) <span class="co"># Ustawienia wyświetlania</span></span>
-<span id="cb1-4"><a href="wykres-słupkowy.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># Ładowanie pakietu funkcji</span></span>
-<span id="cb1-5"><a href="wykres-słupkowy.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="wykres-słupkowy.html#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">data.frame</span>( <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>) ) <span class="co"># Wektor danych</span></span>
-<span id="cb1-7"><a href="wykres-słupkowy.html#cb1-7" aria-hidden="true" tabindex="-1"></a>barplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> data) <span class="sc">+</span> <span class="fu">geom_bar</span>( <span class="fu">aes</span>(<span class="at">x =</span> x), <span class="at">stat =</span> <span class="st">&quot;count&quot;</span> ) <span class="co"># Funkcja pakietu ggplot2 tworząca wykres słupkowy</span></span></code></pre></div>
+<div id="wykład-4.-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0.2" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.2]</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="wykres-słupkowy-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="miary-korelacji.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wprowadzenie.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]" />
+  <title>4.2 Podstawowe reguły kombinatoryczne (basic counting methods) | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="4.2 Podstawowe reguły kombinatoryczne (basic counting methods) | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="4.2 Podstawowe reguły kombinatoryczne (basic counting methods) | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.29 Wykres słupkowy | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="4.2 Podstawowe reguły kombinatoryczne (basic counting methods) | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"/>
-<link rel="next" href="wykres-słupkowy-2.html"/>
+<link rel="prev" href="wprowadzenie.html"/>
+<link rel="next" href="prawdopodobieństwo.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -335,23 +335,118 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wykres-słupkowy" class="section level2" number="3.29">
-<h2><span class="header-section-number">3.29</span> Wykres słupkowy</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="wykres-słupkowy.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rysowanie wykresu słupkowego z użyciem języka R</span></span>
-<span id="cb1-2"><a href="wykres-słupkowy.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="wykres-słupkowy.html#cb1-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.width=</span><span class="dv">4</span>, <span class="at">fig.height=</span><span class="dv">4</span>) <span class="co"># Ustawienia wyświetlania</span></span>
-<span id="cb1-4"><a href="wykres-słupkowy.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># Ładowanie pakietu funkcji</span></span>
-<span id="cb1-5"><a href="wykres-słupkowy.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="wykres-słupkowy.html#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">data.frame</span>( <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>) ) <span class="co"># Wektor danych</span></span>
-<span id="cb1-7"><a href="wykres-słupkowy.html#cb1-7" aria-hidden="true" tabindex="-1"></a>barplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> data) <span class="sc">+</span> <span class="fu">geom_bar</span>( <span class="fu">aes</span>(<span class="at">x =</span> x), <span class="at">stat =</span> <span class="st">&quot;count&quot;</span> ) <span class="co"># Funkcja pakietu ggplot2 tworząca wykres słupkowy</span></span></code></pre></div>
+<div id="podstawowe-reguły-kombinatoryczne-basic-counting-methods" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Podstawowe reguły kombinatoryczne (basic counting methods)</h2>
+<p>Podstawowe reguły kombinatoryczne, które wykorzystuje się w rachunku prawdopodobieństwa do wyznaczania liczebności przestrzeni zdarzeń elementarnych (<span class="math inline">\(|S|\)</span> lub <span class="math inline">\(|\Omega|\)</span>):</p>
+<ol style="list-style-type: decimal">
+<li>Reguła sumy</li>
+<li>Reguła mnożenia</li>
+<li>Permutacje</li>
+<li>Kombinacje</li>
+</ol>
+<div id="reguła-sumy" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Reguła sumy</h3>
+<p>Jeśli istnieje n wyborów dla jednej czynności i m opcji dla innej czynności, a te dwie czynności nie mogą być wykonane w tym samym czasie, to istnieje łącznie n + m sposobów na wykonanie jednej z tych aktywności.</p>
+<p><strong>Przykład</strong>: Bruce chce każdego dnia spróbować innego posiłku. Ile czasu zajmuje mu jednorazowe spróbowanie każdego posiłku? W menu jest 9 rodzajów pizzy i 6 rodzajów makaronów.</p>
+<p>W sumie jest 9 + 6 = 15 rodzajów posiłków. Tak więc Bruce potrzebuje 15 dni.</p>
+<p>Rozszerzmy regułę sumy na dowolną liczbę zestawów:</p>
+<p>Jeśli <span class="math inline">\(A_1, \ldots, A_n\)</span> są rozłączne parami, to <span class="math inline">\(| A_1 \cup \ldots \cup A_n | = | A_1 | + | A_2 | + \ldots + | A_n |\)</span>.</p>
+<p>99 matematyki, 179 cs, 24 filozofia<br />
+Razem w matematyce, cs lub filozofii = 302</p>
+<div id="zasada-włączenia-wykluczenia" class="section level4" number="4.2.1.1">
+<h4><span class="header-section-number">4.2.1.1</span> Zasada włączenia-wykluczenia</h4>
+<p>Co jeśli zestawy nie są rozłączne? Np. Kierunki matematyczne i CS, gdzie niektórzy specjalizują się w obu? Najpierw rozważ dwa zestawy. Jeśli <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są dowolnymi zbiorami (niekoniecznie rozłącznymi), to <span class="math inline">\(| A \cup B | = | A | + | B | - | A \cap B |\)</span>.</p>
+<p>99 kierunków matematycznych, 179 kierunków cs, 7 na obu kierunkach. Ile kierunków z matematyki lub CS? 99 + 179 - 7 = 271</p>
+<p>Zasada włączenia-wykluczenia wyraża fakt, że suma rozmiarów obu zbiorów może być zbyt duża, ponieważ niektóre elementy mogą być liczone dwukrotnie. Elementy liczone podwójnie to te, które znajdują się na przecięciu dwóch zestawów, a liczba jest korygowana przez odjęcie rozmiaru przecięcia.</p>
+<p>Zasada jest wyraźniej widoczna w przypadku trzech zbiorów, co dla zbiorów A, B i C daje</p>
+<p><span class="math inline">\(|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|\)</span></p>
+<p><img src="images/prob/Inclusion-exclusion.svg" title="Inclusion-exclusion principle" /></p>
+</div>
+</div>
+<div id="reguła-iloczynu" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Reguła iloczynu</h3>
+<p>Jeśli daną czynność wykonujemy w dwóch etapach; na pierwszym etapie mamy n możliwości, a na drugim etapie m sposobów wykonania tej czynności, to cała czynność może być wykonana n * m sposobów.</p>
+<p>Ogólniej, jeśli jakaś czynność składa się z kilku etapów (np. wieloetapowy eksperyment losowy składający się z losowań z populacji <em>n</em> osób do próby), na pierwszym etapie mamy <span class="math inline">\(k_1\)</span> możliwości, na drugim <span class="math inline">\(k_2, ...,\)</span> na <em>n</em>-tym etapie <span class="math inline">\(k_n\)</span> możliwości, to wtedy łączna liczba sposobów wykonania czynności (np. łączna liczba możliwych prób) jest równa <span class="math inline">\(k = k_1 \times k_2 \times ... \times k_n\)</span></p>
+<p>Dla przykładu, jeśli rzucamy dwa razy monetą, to łączna liczba wyników jest równa 4. Gdy rzucamy dwa razy kostką sześcienną, to łączna liczba wyników jest równa 36.</p>
+<p><strong>Przykład</strong>. W New Hampshire tablice rejestracyjne składają się z dwóch liter, po których następowały 3 cyfry. Ile jest możliwych tablic rejestracyjnych?</p>
+<p>Odpowiedź: 26 opcji dla pierwszej litery, 26 dla drugiej, 10 opcji dla pierwszej liczby, drugiej liczby i trzeciej liczby:</p>
+<p>262 × 103 = 676000</p>
+<blockquote>
+<p>W przykładach niżej zakładamy, że alfabet ma 26 liter [<strong>wyłączamy</strong> polskie znaki diakrytyczne]</p>
+</blockquote>
+<p><strong>Ćwiczenie</strong>. Ile można utworzyć tablic rejestracyjnych formatu: [3 cyfry | 2 litery]? Składowe nie mogą się powtarzać, pierwsza cyfra różna od zera.</p>
+<p><strong>Przykład</strong>. Ile jest możliwych tablic rejestracyjnych w formacie - 3 litery i następnie 3 cyfry: <span class="math inline">\(26 \times 26 \times 26 \times 10 \times 10 \times 10\)</span>.</p>
+<p><strong>Przykład</strong>. Power set, zbiór potęgowy. Jaka jest liczba podzbiorów zestawu elementów <span class="math inline">\(n\)</span>? To jest <span class="math inline">\(2 ^n\)</span>. Każdy podzbiór odpowiada ciągowi bitów o długości <span class="math inline">\(n\)</span>, gdzie <span class="math inline">\(1\)</span> na pozycji <span class="math inline">\(k\)</span> oznacza, że <span class="math inline">\(k\)</span>-ty element znajduje się w podzbiorze.</p>
+<p><strong>Przykład </strong>. Ile jest możliwych 4-cyfrowych kodów PIN? Można to rozwiązać jako <span class="math inline">\(10 · 10 · 10 · 10 = 104 = 10000\)</span>. Tak więc istnieje jedna na dziesięć tysięcy szans, że złodziej może odgadnąć Twój kod PIN (losowo).</p>
+<p>Rozważmy silniejszy przypadek, w którym musisz użyć każdej cyfry dokładnie raz, więc kod PIN ma dokładnie 10 różnych cyfr. Ile istnieje takich kodów PIN?</p>
+<p>Mamy 10 wyborów dla pierwszej cyfry, 9 wyborów dla drugiej cyfry i tak dalej, aż mamy tylko 2 wybory dla dziewiątej cyfry i 1 dla dziesiątej cyfry. Oznacza to, że istnieje 362880 możliwych numerów PIN w tym scenariuszu. Mamy:</p>
+<p><span class="math display">\[10 \times 9 \times \ldots  \times 2 \times 1 = \prod_{i = 1}^{n = 10} i = 362880\]</span></p>
+<p>Ogólniej:</p>
+<p><span class="math display">\[N! = N \times (N − 1) \times (N − 2) \times \ldots \times 3 \times 2 \times 1 = \prod_{j=1}^n j\]</span></p>
+<p><span class="math inline">\(N!\)</span> Jest odczytywane jako „N silnia”. Należy pamiętać, że <span class="math inline">\(0! = 1\)</span>, ponieważ istnieje jeden sposób na uporządkowanie 0 obiektów.</p>
+<p>Wiemy z absolutną pewnością, że <span class="math inline">\(1! = 1, (n = 1)\)</span>. W ten sposób otrzymujemy:</p>
+<p>Wiemy, że <span class="math inline">\(n! = n \times (n-1)!\)</span>, wynika z tego, że <span class="math inline">\(1! = 1 \times (1-1)!\)</span>, Wynika z tego, że <span class="math inline">\(1! = 1 \times 0!\)</span>, Więc musi być <span class="math inline">\(0! = 1\)</span>.</p>
+<p>Aby równanie było prawdziwe, musimy wymusić zerową silnię równą 1. W przeciwnym razie <span class="math inline">\(1! \neq 1\)</span> co prowadzi do sprzeczności.</p>
+</div>
+<div id="reguła-iloczynu-2" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Reguła iloczynu (2)</h3>
+<p>Załóżmy, że tworzymy 10-cyfrowy kod PIN, ale teraz przynajmniej jedna cyfra musi zostać powtórzona przynajmniej raz. Ile istnieje takich kodów PIN? Niektóre przykłady tego kodu PIN to 1111111111, 01234556788 lub 9876598765, ale lista jest długa!</p>
+<p>W tym przypadku dobrym podejściem może być policzenie, ile PINów nie spełnia tej właściwości i następnie odjęcie uzyskanej liczby od łącznej liczby kodów PIN. Ta strategia nazywa się liczeniem uzupełniającym (ang. complementary counting), ponieważ liczymy wielkość dopełnienia zbioru będącego przedmiotem zainteresowania. Liczba możliwych 10-cyfrowych kodów PIN, bez żadnych zastrzeżeń, wynosi <span class="math inline">\(10^{10}\)</span> (z reguły iloczynu mnożąc przez siebie 10 wyborów dla każdej z 10 pozycji). Stwierdziliśmy powyżej, że 10-cyfrowe kody PIN bez powtórzeń mają 10! możliwości (każda cyfra używana dokładnie raz). Weź pod uwagę, że 10-cyfrowe kody PIN z co najmniej jednym powtórzeniem będą wszystkimi innymi możliwościami. Problem można rozwiązać obliczając różnicę wszystkich możliwych 10-cyfrowych PIN-ów i tych bez powtórzeń. To znaczy: <span class="math inline">\(10^{10} - 10!\)</span></p>
+</div>
+<div id="permutacje-bez-powtórzeń-bez-zwracania" class="section level3" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Permutacje bez powtórzeń (bez zwracania)</h3>
+<p>Wzór pozwalający wyznaczyć liczbę <span class="math inline">\(P_r^n\)</span> <em>r</em>-permutacji bez powtórzeń ze zbioru <em>n</em>-elementów jest następujący</p>
+<p><span class="math display">\[P_r^n = \frac{n!}{(n-r)!}\]</span></p>
+<p>przy czym <span class="math inline">\(n! = n \times (n-1) \times (n-2) \times ... \times 2 \times 1\)</span>, oraz <span class="math inline">\(0! = 1\)</span>.</p>
+<p>Ile jest dwuelementowych permutacji bez powtórzeń ze zbioru <span class="math inline">\(S = \{R, O\}\)</span>?</p>
+<p>Odpowiedź:</p>
+<p><span class="math display">\[P_2^2 = \frac{2!}{(2-2)!} = 2! = 1 \times 2 = 2\]</span></p>
+<p>Zbiór permutacji jest następujący: <span class="math inline">\(\{(R,O), (O, R)\}\)</span>. Zbiór ten liczy dwa elementy - <span class="math inline">\(|\{(R,O), (O, R)\}| = 2\)</span>.</p>
+<p>Pamiętaj, że zbiór pusty <span class="math inline">\(\emptyset\)</span> jest podzbiorem każdego zbioru, ale <span class="math inline">\(|\emptyset| = |\{\}| = 0\)</span>.</p>
+</div>
+<div id="kombinacje-bez-powtórzeń-bez-zwracania" class="section level3" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> Kombinacje bez powtórzeń (bez zwracania)</h3>
+<p>Wzór pozwalający wyznaczyć liczbę <span class="math inline">\(C_x^n\)</span> <em>x</em>-kombinacji bez powtórzeń ze zbioru <em>n</em>-elementów jest następujący:</p>
+<p><span class="math display">\[C_x^n = \binom{n}{x} = \frac{n!}{(n-x)!x!}\]</span></p>
+<p>Ile można utworzyć 6-kombinacji (6-elementowych zbiorów) ze zbioru liczb 1, …, 49?</p>
+<p><span class="math display">\[C_6^{49} = \binom{49}{6} = \frac{49!}{(49-6)!6!} = 13 983816\]</span></p>
+<p>Ile jest równe prawdopodobieństwo wylosowania dowolnego zbioru 6 liczb (kolejność jest bez znaczenia) ze zbioru 49 liczb?</p>
+<p><span class="math display">\[P(\text{6-elementowy zbiór różnych liczb ze zbioru 49 liczb}) = \frac{\binom{6}{6}}{13983816} = 1/13983816\]</span></p>
+<p>Ile jest dwuelementowych kombinacji bez powtórzeń ze zbioru <span class="math inline">\(S = \{R, O\}\)</span>?</p>
+<p>Odpowiedź:</p>
+<p><span class="math display">\[C_2^2 = \frac{2!}{(2-2)!2!} = 2!/2! = 1\]</span></p>
+<p>Zbiór kombinacji jest następujący: <span class="math inline">\(\{\{0, 1\}\}\)</span> - jest to zbiór jednoelementowy.</p>
+</div>
+<div id="permutacje-z-powtórzeniami-elementy-mogą-się-powtarzać" class="section level3" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> Permutacje z powtórzeniami (elementy mogą się powtarzać)</h3>
+<p>Wzór na liczbę <span class="math inline">\(P_r^n\)</span> <em>r</em>-permutacji (elementy mogą się powtarzać) z zbioru <em>n</em>-elementów jest jest następujący:</p>
+<p><span class="math display">\[P_r^n = n^r\]</span></p>
+<p>Liczba trójelementowych permutacji ze zbioru dwuelementowego jest równa <span class="math inline">\(2^3 = 8\)</span>.</p>
+<p><span class="math inline">\(S = \{ (R, R, R), (R, R, O), (R, O, O), (O, O, O), (O, O, R), (O, R, R), (O, R, O), (R, O, R) \}\)</span>.</p>
+</div>
+<div id="kombinacje-z-powtórzeniami" class="section level3" number="4.2.7">
+<h3><span class="header-section-number">4.2.7</span> Kombinacje z powtórzeniami</h3>
+<p>Teraz przechodzimy od permutacji z powtórzeniami do kombinacji z powtórzeniami. Niech <span class="math inline">\(S\)</span> będzie zbiorem <span class="math inline">\(\{A, B, C \}\)</span>. Ten zbiór ma trzy kombinacje dwuelementowe. Oznacza to, że istnieją trzy sposoby, aby wybrać dwa różne elementy <span class="math inline">\(S\)</span>, gdzie kolejność nie ma znaczenia. Poniżej przedstawiono trzy <span class="math inline">\(2\)</span>-kombinacje ze zbioru <span class="math inline">\(S\)</span>.</p>
+<p><span class="math display">\[\{\{ A, B \}, \{ A, C \}, \{ B, C \}\}\]</span></p>
+<p>Załóżmy, że nie musimy wybierać różnych elementów z <span class="math inline">\(S\)</span>, ale możemy wybierać wielokrotnie ten sam element. Wynikowe zbiory nazywane są <span class="math inline">\(r\)</span>-kombinacjami z powtórzeniami ze zbioru <span class="math inline">\(S\)</span>. Poniżej wymienione jest sześć kombinacji dwuelementowych z powtórzeniami z <span class="math inline">\(S\)</span>.</p>
+<p><span class="math display">\[\{\{ A, B \}, \{ A, C \}, \{ B, C \}, \{ A, A \}, \{ B, B \}, \{ C, C \}\}\]</span></p>
+<p>Ściśle mówiąc, są to multizbiory, a nie zbiory, ponieważ element może występować wielokrotnie.</p>
+<div id="obliczanie-r-kombinacji-z-powtórzeniami" class="section level4" number="4.2.7.1">
+<h4><span class="header-section-number">4.2.7.1</span> Obliczanie <span class="math inline">\(r\)</span>-kombinacji z powtórzeniami</h4>
+<p>Liczba <span class="math inline">\(r\)</span>-kombinacji z powtórzeniami ze zbioru elementów <span class="math inline">\(n\)</span> wynosi</p>
+<p><span class="math display">\[\binom{n + r - 1}{r}\]</span></p>
+<p>W powyższym przykładzie znaleźliśmy sześć sposobów wyboru dwóch elementów ze zbioru <span class="math inline">\(S = \{A, B, C\}\)</span> z dozwolonymi powtórzeniami. Oczywiście twierdzenie mówi, że liczba kombinacji 2 w zestawie 3-elementowym wynosi <span class="math inline">\(\binom{3 + 2 - 1}{2} = 6\)</span>.</p>
+<p>Dla porównania, pamiętaj, że liczba zwykłych kombinacji <span class="math inline">\(r\)</span> zestawu elementów <span class="math inline">\(n\)</span> wynosi <span class="math inline">\(\binom{n}{r}\)</span>. Każda zwykła kombinacja <span class="math inline">\(r\)</span> jest również poprawną <span class="math inline">\(r\)</span>-kombinacją z powtórzeniami.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="wykres-słupkowy-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="wprowadzenie.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prawdopodobieństwo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

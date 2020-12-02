@@ -126,7 +126,7 @@ miary-korelacji
 współczynnik-korelacji-liniowej-rho-pearsona
 współczynnik-korelacji-rangowej-rho-spearmana-i-tau_b-kendalla
 test-niezależności-chi-kwadrat-chi2
-wykład-4.-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0.1
+wykład-4.-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0.2
 wprowadzenie
 podstawowe-spójniki-logiczne
 zbiory
@@ -134,9 +134,9 @@ zbiory-przeliczalne-i-nieprzeliczalne
 podstawowe-działania-na-zbiorach-zdarzeniach
 zbiory-przeliczalne-i-nieprzeliczalne-1
 ważne
-moc-zbioru-power-set
-liczność-kardynalność-zbioru-cardinality
-podstawowe-reguły-kombinatoryczne
+zbiór-potęgowy-power-set---dla-danego-zbioru-x-zbiór-wszystkich-jego-podzbiorów
+liczność-moc-kardynalność-zbioru-ang.-cardinality
+podstawowe-reguły-kombinatoryczne-basic-counting-methods
 reguła-sumy
 zasada-włączenia-wykluczenia
 reguła-iloczynu
@@ -158,7 +158,7 @@ empiryczny-rozkład-prawdopodobieństwa
 algebra-prawdopodobieństw
 niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne
 prawdopodobieństwo-warunkowe
-przykłady
+przykłady-różne---tłumaczenie-będzie-dostępne-wkrótce
 example
 example-1
 example-2
