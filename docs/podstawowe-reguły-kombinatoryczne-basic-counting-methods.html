@@ -340,21 +340,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">4.2</span> Podstawowe reguły kombinatoryczne (basic counting methods)</h2>
 <p>Podstawowe reguły kombinatoryczne, które wykorzystuje się w rachunku prawdopodobieństwa do wyznaczania liczebności przestrzeni zdarzeń elementarnych (<span class="math inline">\(|S|\)</span> lub <span class="math inline">\(|\Omega|\)</span>):</p>
 <ol style="list-style-type: decimal">
-<li>Reguła sumy</li>
-<li>Reguła mnożenia</li>
-<li>Permutacje</li>
-<li>Kombinacje</li>
+<li>reguła sumy,</li>
+<li>reguła mnożenia,</li>
+<li>permutacje (nPk).</li>
+<li>kombinacje (nCk).</li>
 </ol>
 <div id="reguła-sumy" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Reguła sumy</h3>
-<p>Jeśli istnieje n wyborów dla jednej czynności i m opcji dla innej czynności, a te dwie czynności nie mogą być wykonane w tym samym czasie, to istnieje łącznie n + m sposobów na wykonanie jednej z tych aktywności.</p>
+<p>Jeśli pierwsze zadanie można wykonać na <span class="math inline">\(n1\)</span> sposobów (<span class="math inline">\(n1\)</span> opcji), podczas gdy drugie zadanie można wykonać na <span class="math inline">\(n2\)</span> sposoby, a dwa zadania nie mogą być wykonane jednocześnie, to wykonanie któregokolwiek z zadań można wykonać na dowolny z <span class="math inline">\(n1 + n2\)</span> sposobów.</p>
+<p><strong>Ćwiczenie</strong>: Wydział przyzna darmowy komputer studentowi lub profesorowi CS (informatyki). Ile jest różnych opcji, jeśli jest 530 studentów i 15 profesorów?</p>
 <p><strong>Przykład</strong>: Bruce chce każdego dnia spróbować innego posiłku. Ile czasu zajmuje mu jednorazowe spróbowanie każdego posiłku? W menu jest 9 rodzajów pizzy i 6 rodzajów makaronów.</p>
 <p>W sumie jest 9 + 6 = 15 rodzajów posiłków. Tak więc Bruce potrzebuje 15 dni.</p>
 <p>Rozszerzmy regułę sumy na dowolną liczbę zestawów:</p>
 <p>Jeśli <span class="math inline">\(A_1, \ldots, A_n\)</span> są rozłączne parami, to <span class="math inline">\(| A_1 \cup \ldots \cup A_n | = | A_1 | + | A_2 | + \ldots + | A_n |\)</span>.</p>
 <div id="zasada-włączenia-wykluczenia" class="section level4" number="4.2.1.1">
 <h4><span class="header-section-number">4.2.1.1</span> Zasada włączenia-wykluczenia</h4>
-<p>Co jeśli zestawy nie są rozłączne? Np. Kierunki matematyczne i CS (informatyki), gdzie niektórzy specjalizują się w obu? Najpierw rozważ dwa zestawy. Jeśli <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są dowolnymi zbiorami (niekoniecznie rozłącznymi), to <span class="math inline">\(| A \cup B | = | A | + | B | - | A \cap B |\)</span>.</p>
+<p>Co jeśli zestawy nie są rozłączne? Np. Kierunki matematyczne i CS (informatyki), gdzie niektórzy specjalizują się w obu? Najpierw rozważ dwa zbiory. Jeśli <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są dowolnymi zbiorami (niekoniecznie rozłącznymi), to <span class="math inline">\(| A \cup B | = | A | + | B | - | A \cap B |\)</span>.</p>
 <p>Zasada włączenia-wykluczenia wyraża fakt, że suma rozmiarów obu zbiorów może być zbyt duża, ponieważ niektóre elementy mogą być liczone dwukrotnie. Elementy liczone podwójnie to te, które znajdują się na przecięciu dwóch zestawów, a liczba jest korygowana przez odjęcie rozmiaru przecięcia.</p>
 <p>Przykład. Załóżmy, że ankieta obejmująca 100 osób zapyta, czy mają kota lub psa jako zwierzaka. Wyniki są następujące: 55 osób odpowiedziało tak dla kota, 58 tak dla psa, a 20 osób odpowiedziało tak zarówno dla kota, jak i psa. Ile osób ma kota lub psa? - Rozwiązanie: Ponieważ 55 ma kota, a 58 psa, na początku możesz pomyśleć, że 55 + 58 = 113 mają jedno lub drugie.</p>
 <p>To rozumowanie pomija fakt, że niektórzy ludzie - 20 - mają jedno i drugie zwierzę, a my policzyliśmy te osoby dwukrotnie, dodając 55 i 58. Aby poprawić naszą odpowiedź, mysimy odjąć od tej sumy liczbę 20: 55 + 58 - 20 = 93 mieć kota lub psa. To jest przykład zasady włączenia-wykluczenia.</p>
