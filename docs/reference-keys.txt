@@ -171,8 +171,10 @@ example-2
 example-3
 wykład-5.-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver.-0.1
 zmienna-losowa
-zmienna-losowa-dyskretna-skokowa-i-ciągła
+przykład-4
 rozkład-prawdopodobieństwa
+zmienna-losowa-dyskretna-skokowa-i-ciągła
+rozkład-prawdopodobieństwa-1
 wybrane-rozkłady-prawdopodobieństwa
 rozkład-zero-jedynkowy-bernoulliego
 rozkład-zero-jedynkowy-bernoulliego-1
@@ -195,3 +197,4 @@ przykład-1.-zmienna-losowa
 przykład-2.-rozkład-dwumianowy-i-jego-przybliżenie-rozkładem-normalnym
 przykład-3.-rozkłady-zmiennych-ciągłych---rozkład-jednostajny-i-rozkład-normalny
 podstawowe-rozkłady-prawdopodobieństwa---podsumowanie
+prawdopodobieństwo-warunkowe-tablica-korelacyjna
