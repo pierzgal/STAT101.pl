@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.4 Statystyki opisowe i wnioskowanie statystyczne | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="2.4 Statystyki opisowe i wnioskowanie statystyczne | STAT 101 [WSMiP UŁ]" />
+  <title>5.1 Zmienna losowa i rozkład prawdopodobieństwa - definicje | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="5.1 Zmienna losowa i rozkład prawdopodobieństwa - definicje | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.4 Statystyki opisowe i wnioskowanie statystyczne | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="5.1 Zmienna losowa i rozkład prawdopodobieństwa - definicje | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.4 Statystyki opisowe i wnioskowanie statystyczne | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="5.1 Zmienna losowa i rozkład prawdopodobieństwa - definicje | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="podstawowe-pojęcia.html"/>
-<link rel="next" href="metody-doboru-próbywyklad-22.html"/>
+<link rel="prev" href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html"/>
+<link rel="next" href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"/>
 <script src="assets/header-attrs-2.5/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -357,65 +357,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="statystyki-opisowe-i-wnioskowanie-statystyczne" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Statystyki opisowe i wnioskowanie statystyczne</h2>
-<p><strong>Statystyka opisowa</strong>: gałąź statystyk, która obejmuje metody porządkowania i podsumowywania danych. Narzędzia statystyczne pomagają nam analizować dane w celu opisania ich głównych cech - eksploracyjna analiza danych.</p>
-<p>Oto dwie podstawowe strategie, które pomagają nam przeprowadzić eksplorację zbioru danych:</p>
-<ul>
-<li>Zacznij od zbadania każdej zmiennej osobno. Następnie przejdź do badania zależności między zmiennymi.</li>
-<li>Rozpocznij od wykresu lub wykresów. Następnie dodaj liczbowe podsumowania określonych cech danych - np. pomiar tendencji centralnej.</li>
-</ul>
-<p><strong>Statystyka inferencyjna</strong> (wnioskowanie statystyczne): gałąź statystyki polegająca na uogólnianiu wyników z próby na populację, z której próbka została wybrana, i ocenie wiarygodności takich uogólnień.</p>
-<div id="zmienne-i-stałe" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Zmienne i stałe</h3>
-<p><span style="color:#009688">Stałe</span> - cechy, właściwości, które są niezmienne (np. stała grawitacji <span class="math inline">\(G\)</span>).</p>
-<p><span style="color:#009688">Zmienne</span> - cechy, które mogą przyjmować różne stany/poziomy/wartości (symbolicznie oznaczane zwykle z użyciem liter <span class="math inline">\(X, Y, Z\)</span>)</p>
+<div id="zmienna-losowa-i-rozkład-prawdopodobieństwa---definicje" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Zmienna losowa i rozkład prawdopodobieństwa - definicje</h2>
+<p>Wynikiem doświadczenia losowego może być np. wyrzucenie orła lub reszki podczas pojedynczego rzutu monetą. Wtedy <span class="math inline">\(S = \{O, R\}\)</span>. Zwykle, dla wygody, chcemy, wszystkim możliwym wynikom pewnego doświadczenia losowego przypisać liczby ze zbioru R. W ten sposób określamy funkcję, która nazywana jest w statystyce <strong>zmienną losową</strong>.</p>
+<blockquote>
+<p>Zmienna losowa to funkcja, która przypisuje zdarzeniom elementarnym (zbiór argumentów funkcji) liczby (zbiór wartości funkcji).</p>
+</blockquote>
+<blockquote>
+<p>Zmienna losowa jest to funkcja, która elementom przestrzeni zdarzeń
+elementarnych <em>S</em> przyporządkowuje wartości ze zbioru liczb
+rzeczywistych <em>R</em>. Zmienne losowe oznaczamy wielkimi literami alfabetu
+np. X, Y, Z, natomiast konkretne wartości, które zmienna losowa może
+przyjąć literami małymi, x, y, z.</p>
+</blockquote>
+<p>Zmienne losowe zwykle oznaczamy wielkimi literami z końca alfabetu X, Y, Z etc. Realizacje zmiennej losowej <span class="math inline">\(X\)</span> możemy oznaczyć np.: <span class="math inline">\(X = \{x_1, x_2, ...\}\)</span></p>
+<p>Zmienne losowe, w zależności od typu zbioru, który jest ich zbiorem wartości, dzielimy na <strong>skokowe</strong> lub <strong>ciągłe</strong>.</p>
+<div id="przykład-4" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Przykład</h3>
+<p>Wykonaj rzut dwiema monetami i odnotuj liczbę reszek (H). Wszystkie
+możliwe wyniki przedstawia tabela:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Wynik doświadczenia losowego</th>
+<th align="center">TT</th>
+<th align="center">HT</th>
+<th align="center">TH</th>
+<th align="center">HH</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Liczba reszek</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p>Powyższa tabela definiuje funkcję określoną na zbiorze zdarzeń
+elementarnych <span class="math inline">\(S = \{TT, HT, TH, HH\}\)</span> (dziedzina funkcji) i z
+wartościami ze zbioru <span class="math inline">\(X = \{0, 1, 2\} \subseteq R\)</span>. W ten sposób
+określona została zmienna losowa <em>X</em> - <em>liczba wyrzuconych reszek
+podczas rzutu dwiema monetami</em>. Np. dla wyniku <span class="math inline">\(e = HH\)</span> przyjmuje ona
+wartość <span class="math inline">\(x = 2\)</span>.</p>
+<p>Jeżeli teraz zdefiniujemy nową funkcję <span class="math inline">\(P(X = x)\)</span> lub po prostu <span class="math inline">\(p(x)\)</span>,
+w taki sposób, że każdej wartości zmiennej losowej <em>X</em> (argumenty nowej
+funkcji) przyporządkujemy odpowiednie prawdopodobieństwo jej zajścia, to
+powiemy, że określona została <strong>funkcja rozkładu prawdopodobieństwa</strong>
+lub po prostu rozkład prawdopodobieństwa zmiennej losowej <em>X</em>.</p>
+<p>Rozkład prawdopodobieństwa danej zmiennej losowej jest to funkcja przyporządkowująca wartościom zmiennej losowej <strong>prawdopodobieństwa</strong> przyjęcia danej wartości przez tę zmienną (zmienna skokowa) <strong>lub</strong> <strong>gęstości prawdopodobieństw</strong> odpowiadające poszczególnym wartościom zmiennej (zmienna ciągła).</p>
+<p>Rozkład prawdopodobieństwa może być dyskretny (gdy zmienna losowa jest skokowa) lub ciągły (gdy zmienna losowa jest ciągła).</p>
+<blockquote>
+<p>Rozkład prawdopodobieństwa jest to funkcja określona na zbiorze wartości pewnej zmiennej losowej, przypisująca prawdopodobieństwa lub gęstości prawdopodobieństwa wartościom tej zmiennej: <span class="math inline">\(P: X_S \rightarrow R\)</span></p>
+</blockquote>
+<p>Dla przykładu, zdarzeniom elementarnym dla rzutu <em>uczciwą</em> monetą można przypisać wartości (zdefiniować zmienną losową) : <span class="math inline">\(Reszka \rightarrow 1\)</span> i <span class="math inline">\(Orzeł \rightarrow 0\)</span>.</p>
+<p>Następnie, dla wartość <em>0</em> i <em>1</em> zmiennej losowej można określić prawdopodobienstwa (zdefiniować rozkład prawdopodobieństwa) : <span class="math inline">\(1 \rightarrow 0.5\)</span> oraz <span class="math inline">\(0 \rightarrow 0.5\)</span>.</p>
 </div>
-<div id="konstrukty-i-definicje-operacyjne-wyklad-21" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Konstrukty i definicje operacyjne <a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></h3>
-<p>Konstrukty lub pojęcia to logiczne struktury lub wyobrażenia o czymś powstałe w czyimś umyśle.</p>
-<p>Niektóre zmienne, takie jak wzrost, waga i kolor oczu, są dobrze zdefiniowanymi, konkretnymi bytami lub właściwościami obiektów, które można obserwować i mierzyć bezpośrednio. Z drugiej strony, wiele badanych zmiennyvh to jakościowe charakterystyki, których ludzie używają do opisania zjawisk lub ludzi. Na przykład mówimy, że uczeń dobrze sobie radzi w szkole, ponieważ jest inteligentny. Lub mówimy, że ktoś jest niespokojny w sytuacjach społecznych lub że ktoś wydaje się być głodny. Zmienne takie jak inteligencja, lęk i głód są nazywane konstruktami, a ponieważ są niematerialne i nie można ich bezpośrednio zaobserwować, często nazywane się je konstruktami hipotetycznymi.</p>
-<p><strong>Konstrukty</strong> to wewnętrzne atrybuty lub cechy, których nie można bezpośrednio zaobserwować, ale są przydatne do opisywania obiektów i wyjaśniania zachowań. <strong>Definicja operacyjna</strong> identyfikuje procedurę pomiarową (zestaw operacji) służącą do pomiaru zjawiska lub zachowania i wykorzystuje uzyskane pomiary jako definicję i miernik hipotetycznej konstrukcji. Zauważ, że definicja operacyjna składa się z dwóch komponentów. Po pierwsze, opisuje zestaw operacji służących do pomiaru danego konstruktu lub pojęcia. Po drugie, definiuje ten konstrukt lub pojęcie w kategoriach uzyskanych pomiarów.</p>
-<p><span style="color:#009688"><strong>Definicje operacyjne</strong></span> wyjaśniają sens danego terminu (pojęcia) przez podanie operacji, które umożliwiają precyzyjne określenie stanów/poziomów/wartości charakteryzujących dane pojęcie.</p>
-<div id="konceptualizacja-i-operacjonalizacja" class="section level4" number="2.4.2.1">
-<h4><span class="header-section-number">2.4.2.1</span> Konceptualizacja i operacjonalizacja</h4>
-<p><strong>Konceptualizacja</strong> jest procesem myślowym, za pomocą którego rozmyte i nieprecyzyjne konstrukcje (pojęcia) oraz ich składowe komponenty są definiowane w sposób konkretny i precyzyjny. Proces konceptualizacji jest ważny ze względu na nieprecyzyjność, niejasność i niejednoznaczność wielu konstruktów nauk społecznych. Definiując konstrukty, takie jak <em>uprzedzenie</em> lub <em>współczucie</em>, musimy zrozumieć, że czasami konstrukcje te nie są rzeczywiste lub mogą po prostu być wytworami w naszym umyśle.</p>
-<p>Po zdefiniowaniu konstruktu teoretycznego, można zapytać jak go zmierzyć? <strong>Operacjonalizacja</strong> odnosi się do procesu opracowywania wskaźników do pomiaru tych konstruktów. Na przykład, jeśli nieobserwowalny konstrukt teoretyczny, taki jak status społeczno-ekonomiczny, jest zdefiniowany jako poziom dochodu rodziny, można go zoperacjonalizować za pomocą następującego wskaźnika: jaki jest twój roczny dochód rodziny? Biorąc pod uwagę wysoki poziom subiektywności i nieprecyzyjność dotyczący rozmaitych konstruktów nauk społecznych, zwykle mierzymy te konstrukty (z wyjątkiem niektórych zmiennych demograficznych, takich jak wiek, płeć, wykształcenie i dochód) przy użyciu wielu wskaźników.</p>
+<div id="zmienna-losowa-dyskretna-skokowa-i-ciągła" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Zmienna losowa: dyskretna (skokowa) i ciągła</h3>
+<p><img src="images/Continuous-and-discrete-variables.jpg" /></p>
 </div>
-</div>
-<div id="zbieranie-danych" class="section level3" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> Zbieranie danych</h3>
-<p>Generalnie dane można uzyskać na różne sposoby:</p>
-<ol style="list-style-type: decimal">
-<li>Z <strong>opublikowanego źródła</strong>;</li>
-<li>Z zaprojektowanego <strong>eksperymentu</strong>;</li>
-<li>Z <strong>badania obserwacyjnego</strong> (np. <strong>sondaże</strong> opinii, <strong>quasi-eksperymenty</strong>);</li>
-<li>Z <strong>jakościowych badań terenowych</strong>: m.in. etnografia (np. etnografia włosko-ameryk. miasteczka Cornerville), wywiad jakościowy, grupy focusowe lub studium przypadku.</li>
-</ol>
-<p>Ponadto możesz uzyskać dane za pomocą <strong>symulacji</strong>:</p>
-<p><strong>Symulacja</strong> polega na zastosowaniu modelu matematycznego lub fizycznego do odtworzenia warunków sytuacji lub procesu. Zbieranie danych często wiąże się z wykorzystaniem komputerów. Symulacje pozwalają badać sytuacje, których stworzenie w prawdziwym życiu jest niepraktyczne lub wręcz niebezpieczne, a często pozwala zaoszczędzić czas i pieniądze. Na przykład producenci samochodów wykorzystują symulacje z manekinami do badania skutków wypadków na ludzi. Podczas tego kursu będziesz miał okazję korzystać z apletów, które symulują procesy statystyczne na komputerze.</p>
-<div id="dobór-jednostek-eksperymentalnych" class="section level4" number="2.4.3.1">
-<h4><span class="header-section-number">2.4.3.1</span> Dobór jednostek eksperymentalnych</h4>
-<ul>
-<li><em>random sampling</em> vs. <em>non-random sampling</em> (<strong>uzasadniony tylko w niektórych badaniach eksperymentalnych</strong>);</li>
-<li><em>random assignment</em> (przydział jednostek do grup porównawczych).</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="10">
-<li id="fn10"><p>Pobrane z: Gravetter, F.J., Wallnau, L.B., Forzano, L.A.B. i Witnauer, J.E., 2020. <em>Essentials of statistics for the Behavioral sciences</em>. Cengage Learning.<a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#fnref10" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="podstawowe-pojęcia.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="metody-doboru-próbywyklad-22.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

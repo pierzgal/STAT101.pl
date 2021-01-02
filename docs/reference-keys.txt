@@ -170,12 +170,10 @@ example-1
 example-2
 example-3
 wykład-5.-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver.-0.1
-zmienna-losowa
+zmienna-losowa-i-rozkład-prawdopodobieństwa---definicje
 przykład-4
-rozkład-prawdopodobieństwa
 zmienna-losowa-dyskretna-skokowa-i-ciągła
-rozkład-prawdopodobieństwa-1
-wybrane-rozkłady-prawdopodobieństwa
+wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa
 rozkład-zero-jedynkowy-bernoulliego
 rozkład-zero-jedynkowy-bernoulliego-1
 rozkład-bernoulliego---równanie-funkcji
