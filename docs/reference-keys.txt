@@ -195,4 +195,3 @@ przykład-1.-zmienna-losowa
 przykład-2.-rozkład-dwumianowy-i-jego-przybliżenie-rozkładem-normalnym
 przykład-3.-rozkłady-zmiennych-ciągłych---rozkład-jednostajny-i-rozkład-normalny
 podstawowe-rozkłady-prawdopodobieństwa---podsumowanie
-prawdopodobieństwo-warunkowe-tablica-korelacyjna
