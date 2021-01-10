@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-01-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -338,6 +338,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.10" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#podstawowe-rozkłady-prawdopodobieństwa---podsumowanie"><i class="fa fa-check"></i><b>5.2.10</b> Podstawowe rozkłady prawdopodobieństwa - podsumowanie</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="wykład-6-podstawy-wnioskowania-statystycznego.html"><a href="wykład-6-podstawy-wnioskowania-statystycznego.html"><i class="fa fa-check"></i><b>6</b> Wykład 6. Podstawy wnioskowania statystycznego</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
+<li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowania-średniej-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowania średniej próby</a></li>
+<li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-central-limit-theorem-clt.html"><a href="centralne-twierdzenie-graniczne-central-limit-theorem-clt.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne (Central Limit Theorem, CLT)</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -395,15 +406,15 @@ zmienna rel: 1, 2, 4, 4, 3, 5, 5, 6, 8, 7, 7, 8, 10, 9,  9, 2, 2, 1, 2, 3</code>
 <p>Oba wskaźniki przyjmują wartości z przedziału <span class="math inline">\(-1, 1\)</span>, przy czym wartości mniejsze od zera oznaczają korelację różnokierunkową, a dodatnie jednokierunkową. Im wyższa wartość bezwzględna wskaźników, tym korelacja silniejsza.</p>
 <p>Można przyjąć, że wartość wskaźnika przekraczająca, co do wartości bezwzględnej, <span class="math inline">\(0.7\)</span> oznacza silną korelację.</p>
 <p>Do policzenia wskaźników wykorzystamy instrukcje języka programowania R.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="miary-korelacji.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definiujemy zbiór danych</span></span>
-<span id="cb25-2"><a href="miary-korelacji.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="miary-korelacji.html#cb25-3" aria-hidden="true" tabindex="-1"></a>lr  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb25-4"><a href="miary-korelacji.html#cb25-4" aria-hidden="true" tabindex="-1"></a>rel <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">2</span>)</span>
-<span id="cb25-5"><a href="miary-korelacji.html#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="miary-korelacji.html#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="miary-korelacji.html#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Wyznaczamy współczynnik korelacji rangowej rho Spearmana</span></span>
-<span id="cb25-8"><a href="miary-korelacji.html#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-9"><a href="miary-korelacji.html#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(lr, rel, <span class="at">method=</span><span class="st">&quot;spearman&quot;</span>) <span class="co"># Wywołanie funkcji liczącej wskaźnik</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="miary-korelacji.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definiujemy zbiór danych</span></span>
+<span id="cb21-2"><a href="miary-korelacji.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="miary-korelacji.html#cb21-3" aria-hidden="true" tabindex="-1"></a>lr  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb21-4"><a href="miary-korelacji.html#cb21-4" aria-hidden="true" tabindex="-1"></a>rel <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb21-5"><a href="miary-korelacji.html#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="miary-korelacji.html#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="miary-korelacji.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Wyznaczamy współczynnik korelacji rangowej rho Spearmana</span></span>
+<span id="cb21-8"><a href="miary-korelacji.html#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="miary-korelacji.html#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(lr, rel, <span class="at">method=</span><span class="st">&quot;spearman&quot;</span>) <span class="co"># Wywołanie funkcji liczącej wskaźnik</span></span></code></pre></div>
 <pre><code>## Warning in cor.test.default(lr, rel, method = &quot;spearman&quot;): Cannot compute exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
@@ -414,17 +425,17 @@ zmienna rel: 1, 2, 4, 4, 3, 5, 5, 6, 8, 7, 7, 8, 10, 9,  9, 2, 2, 1, 2, 3</code>
 ## sample estimates:
 ##       rho 
 ## 0.8777174</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="miary-korelacji.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data:  lr and rel</span></span>
-<span id="cb28-2"><a href="miary-korelacji.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># S = 162.64, p-value = 3.695e-07</span></span>
-<span id="cb28-3"><a href="miary-korelacji.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hypothesis: true rho is not equal to 0</span></span>
-<span id="cb28-4"><a href="miary-korelacji.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sample estimates:</span></span>
-<span id="cb28-5"><a href="miary-korelacji.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">#       rho </span></span>
-<span id="cb28-6"><a href="miary-korelacji.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 0.8777174</span></span>
-<span id="cb28-7"><a href="miary-korelacji.html#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-8"><a href="miary-korelacji.html#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-9"><a href="miary-korelacji.html#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Wyznaczamy współczynnik korelacji tau Kendalla</span></span>
-<span id="cb28-10"><a href="miary-korelacji.html#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-11"><a href="miary-korelacji.html#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(lr, rel, <span class="at">method=</span><span class="st">&quot;kendall&quot;</span>) <span class="co"># Wywołanie funkcji liczącej wskaźnik</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="miary-korelacji.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data:  lr and rel</span></span>
+<span id="cb24-2"><a href="miary-korelacji.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># S = 162.64, p-value = 3.695e-07</span></span>
+<span id="cb24-3"><a href="miary-korelacji.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hypothesis: true rho is not equal to 0</span></span>
+<span id="cb24-4"><a href="miary-korelacji.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sample estimates:</span></span>
+<span id="cb24-5"><a href="miary-korelacji.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">#       rho </span></span>
+<span id="cb24-6"><a href="miary-korelacji.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 0.8777174</span></span>
+<span id="cb24-7"><a href="miary-korelacji.html#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="miary-korelacji.html#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="miary-korelacji.html#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Wyznaczamy współczynnik korelacji tau Kendalla</span></span>
+<span id="cb24-10"><a href="miary-korelacji.html#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="miary-korelacji.html#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(lr, rel, <span class="at">method=</span><span class="st">&quot;kendall&quot;</span>) <span class="co"># Wywołanie funkcji liczącej wskaźnik</span></span></code></pre></div>
 <pre><code>## Warning in cor.test.default(lr, rel, method = &quot;kendall&quot;): Cannot compute exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Kendall&#39;s rank correlation tau
@@ -435,12 +446,12 @@ zmienna rel: 1, 2, 4, 4, 3, 5, 5, 6, 8, 7, 7, 8, 10, 9,  9, 2, 2, 1, 2, 3</code>
 ## sample estimates:
 ##       tau 
 ## 0.7535683</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="miary-korelacji.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data:  lr and rel</span></span>
-<span id="cb31-2"><a href="miary-korelacji.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># z = 4.3882, p-value = 1.143e-05</span></span>
-<span id="cb31-3"><a href="miary-korelacji.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hypothesis: true tau is not equal to 0</span></span>
-<span id="cb31-4"><a href="miary-korelacji.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sample estimates:</span></span>
-<span id="cb31-5"><a href="miary-korelacji.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">#       tau </span></span>
-<span id="cb31-6"><a href="miary-korelacji.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 0.7535683</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="miary-korelacji.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data:  lr and rel</span></span>
+<span id="cb27-2"><a href="miary-korelacji.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># z = 4.3882, p-value = 1.143e-05</span></span>
+<span id="cb27-3"><a href="miary-korelacji.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hypothesis: true tau is not equal to 0</span></span>
+<span id="cb27-4"><a href="miary-korelacji.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sample estimates:</span></span>
+<span id="cb27-5"><a href="miary-korelacji.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co">#       tau </span></span>
+<span id="cb27-6"><a href="miary-korelacji.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 0.7535683</span></span></code></pre></div>
 <p>Raport, który język R drukuje po wywołaniu instrukcji <span class="sans-serif">corr.test</span> można zinterpretować następująco.</p>
 <p>Po pierwsze, R zwraca wartości wskaźników korelacji <span class="math inline">\(\rho\)</span> i <span class="math inline">\(\tau\)</span>, które odpowiednio wynoszą, w przybliżeniu: 0.88 i 0.75, czyli wskazują silną korelację dodatnią (jednokierunkową).</p>
 <p>Ponadto, R zwraca tzw. <em>p-value</em>. Pojęcie p-wartości (p-value) lub tzw. prawdopodobieństwa testowego nie będzie tutaj wyjaśniane, ale trzeba zapamiętać, że, zwykle, gdy p-wartość przyjmuje wartość <strong>co najmniej 0.05</strong> (jest to tzw. poziom istotności testu weryfikującego tzw. hipotezę zerową), to wówczas uprawdopodabnia się prawdziwość tzw. hipotezy alternatywnej, która zakłada, że prawdziwa wartość wskaźnika korelacji (<span class="math inline">\(\tau\)</span> lub <span class="math inline">\(\rho\)</span>) jest istotnie różna od zera (istotna statystycznie). Co to oznacza?</p>

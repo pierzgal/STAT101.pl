@@ -195,3 +195,13 @@ przykład-1.-zmienna-losowa
 przykład-2.-rozkład-dwumianowy-i-jego-przybliżenie-rozkładem-normalnym
 przykład-3.-rozkłady-zmiennych-ciągłych---rozkład-jednostajny-i-rozkład-normalny
 podstawowe-rozkłady-prawdopodobieństwa---podsumowanie
+wykład-6.-podstawy-wnioskowania-statystycznego
+rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne
+rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp.
+rozkład-próbkowania-średniej-próby
+rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum
+centralne-twierdzenie-graniczne-central-limit-theorem-clt
+centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby
+ctg-dla-estymatora-częstości-proporcji-z-próby
+estymacja-punktowa-i-przedziałowa
+prawdopodobieństwo-warunkowe-tablica-korelacyjna

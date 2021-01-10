@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.46 Wykres pudełkowy a histogram | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="3.46 Wykres pudełkowy a histogram | STAT 101 [WSMiP UŁ]" />
+  <title>6.2 Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.) | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="6.2 Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.) | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.46 Wykres pudełkowy a histogram | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="6.2 Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.) | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.46 Wykres pudełkowy a histogram | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="6.2 Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.) | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wykres-pudełkowy-jeszcze-jeden-przykład.html"/>
-<link rel="next" href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"/>
+<link rel="prev" href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"/>
+<link rel="next" href="centralne-twierdzenie-graniczne-central-limit-theorem-clt.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -366,17 +366,358 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wykres-pudełkowy-a-histogram" class="section level2" number="3.46">
-<h2><span class="header-section-number">3.46</span> Wykres pudełkowy a histogram</h2>
-<p><img src="images/log-normal.png" /></p>
+<div id="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp." class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</h2>
+<p>Statystyka z próby, taka jak średnia z próby lub odchylenie standardowe próbki, to wskaźnik obliczony na podstawie próbki. Ponieważ próbka jest losowa, każda statystyka jest zmienną losową: różni się w zależności od próby w sposób, którego nie można przewidzieć z pewnością. Jako zmienna losowa, statystyka ma wartość oczkiwaną (średnią), odchylenie standardowe i rozkład prawdopodobieństwa. Rozkład prawdopodobieństwa statystyki nazywany jest rozkładem statystyki z próby. Zwykle statystyki próby są obliczane w celu oszacowania odpowiednich parametrów populacji.</p>
+<p><em>Rozkład statystyki z próby</em> to rozkład prawdopodobieństwa statystyki z próby, który jest tworzony, gdy próbki o rozmiarze <span class="math inline">\(n\)</span> są wielokrotnie pobierane z populacji. Jeśli statystyka z próby jest średnią z próby, to rozkład jest rozkładem średnich z próby.</p>
+<blockquote>
+<p>Każda statystyka, jako zmienna losowa, ma rozkład z próby (a sampling distribution of a statistic).</p>
+</blockquote>
+<p>Rozkład statystyki z próby to rozkład tej statystyki, będącej zmienną losową, gdy pochodzi z próby losowej o rozmiarze n. Jest to rozkład statystyki dla wszystkich możliwych prób z tej samej populacji o danej wielkości próby.</p>
+<blockquote>
+<p>Odchylenie standardowe rozkładu statystyki z próby nazywane jest błędem standardowym tej statystyki</p>
+</blockquote>
+<p>Rozważ poniższy diagram Venna (rysunek 6.1).</p>
+<div class="figure">
+<img src="images/stat/IMG_1332.JPG" alt="" />
+<p class="caption">Rysunek 6.1. Pojęcie rozkładu statystyki z próby (a sampling distribution)</p>
+</div>
+<p>Prostokąt przedstawia dużą populację, a każdy okrąg reprezentuje próbkę o rozmiarze n. Ponieważ obserwacje wybrane do próby mogą się różnić, przykładowe średnie z próby również mogą się różnić. Średnia z Próbki 1 wynosi <span class="math inline">\(x1 = 3,5\)</span>; średnia z Próbki 2 wynosi <span class="math inline">\(x2\)</span>; i tak dalej. <strong>Rozkład próbkowania średnich z próby dla prób o rozmiarze n dla tej populacji</strong> składa się z <span class="math inline">\(x1, x2, x3\)</span> itd. Jeśli próbki są pobierane z wymianą, wówczas z populacji można pobrać nieskończoną liczbę próbek.</p>
+<div id="rozkład-próbkowania-średniej-próby" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Rozkład próbkowania średniej próby</h3>
+<p>Załóżmy, że populacja składa się z czterech domów (N = 4), gdzie wartość rv. X, liczba pokojów do wynajęcia w każdej jednostce, jest podana poniżej:</p>
+<ol style="list-style-type: decimal">
+<li>dom pierwszy (2 pokoje),</li>
+<li>dom drugi (3 pokoje),</li>
+<li>dom trzeci (4 pokoje),</li>
+<li>dom czwarty (5 pokojów).</li>
+</ol>
+<p><strong>Rozważ losowanie próby rozmiaru 2 (losowanie z powtórzeniami/ze zwracaniem)</strong>. Istnieją cztery możliwości przy pierwszym losowaniu z populacji, a także cztery możliwości przy drugim losowaniu z populacji. Oznacza to, że wybieramy losowo jednostkę, odkładamy ją, a następnie wybieramy losowo inną jednostkę. Oznaczmy obserwacje na zmiennej X jako X1 (wynik pierwszego losowania) i X2 (wynik drugiego losowania).</p>
+<p>Rozkład z populacji zmiennej <span class="math inline">\(X\)</span> (a population distribution of <span class="math inline">\(X\)</span>) przedstawiono w tabeli 6.1.</p>
+<table>
+<caption>Table 6.1. Rozkład X w populacji</caption>
+<thead>
+<tr class="header">
+<th>i</th>
+<th>X</th>
+<th>Prawdopodobieństwo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>2</td>
+<td>1/4</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3</td>
+<td>1/4</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+<td>1/4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>1/4</td>
+</tr>
+<tr class="odd">
+<td>Suma</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Znajdź rozkład średniej z próbki</strong> <span class="math inline">\(\bar{X} = (X1 + X2) / 2\)</span>.</p>
+<blockquote>
+<p>W praktyce z populacji zostanie pobrana tylko jedna próba losowa, a nie 16 możliwych próbek; w prawdziwym badaniu, wielkość próby byłaby bardzo mała w stosunku do znacznie większej liczebności populacji i oczywiście nie wszystkie obserwacje w populacji byłyby znane.</p>
+</blockquote>
+<p>Dla każdej z 16 możliwych próbek (patrz Tabela 6.2) również podano średnią z próby (uzyskaną przez dodanie dwóch obserwacji i podzielenie przez 2) oraz prawdopodobieństwo wystąpienia (wyrażone jako 1⁄16, ponieważ każda z 16 możliwych próbek jest jednakowo prawdopodobna). Po uwzględnieniu względnego rozkładu częstości lub prawdopodobieństwa, 16 średnich z próby tworzy rozkład średniej z próby, wcześniej zdefiniowany jako rozkład prawdopodobieństwa średnich dla wszystkich możliwych losowych próbek o danej wielkości z jakiejś populacji.</p>
+<table>
+<caption>Table 6.2. Wszystkie możliwe 2-elementowe próby</caption>
+<colgroup>
+<col width="6%" />
+<col width="45%" />
+<col width="22%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>i</th>
+<th align="left">Wszystkie możliwe próby (4 * 4 = 16)</th>
+<th align="left">Średnia (<span class="math inline">\(\bar{X}\)</span>)</th>
+<th align="left">Prawdopodobieństwo (<span class="math inline">\(P_i\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td align="left">2, 2</td>
+<td align="left">2</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td align="left">2, 3</td>
+<td align="left">2.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td align="left">2, 4</td>
+<td align="left">3</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td align="left">2, 5</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td align="left">3, 2</td>
+<td align="left">2.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td align="left">3, 3</td>
+<td align="left">3</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td align="left">3, 4</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td align="left">3, 5</td>
+<td align="left">4</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td align="left">4, 2</td>
+<td align="left">3</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td align="left">4, 3</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td align="left">4, 4</td>
+<td align="left">4</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td align="left">4, 5</td>
+<td align="left">4.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td align="left">5, 2</td>
+<td align="left">3.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td align="left">5, 3</td>
+<td align="left">4</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td align="left">5, 4</td>
+<td align="left">4.5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td align="left">5, 5</td>
+<td align="left">5</td>
+<td align="left">1/16</td>
+</tr>
+<tr class="odd">
+<td>Sum</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>Nie wszystkie wartości średniej z próby występują z równym prawdopodobieństwem, ponieważ niektóre wartości występują więcej niż raz spośród 16 możliwych próbek. Na przykład średnia próbka wynosząca 3,5 pojawia się wśród 4 z 16 możliwości i ma prawdopodobieństwo 4⁄16.</p>
+<p>W tabeli 6.3 przedstawiono rozkład losowania średniej dla prób o wielkości n = 2 z miniaturowej populacji N = 4.</p>
+<table>
+<caption>Table 6.3. Rozkład średniej z 2-elementowej próby (sampling distribution of the mean)</caption>
+<thead>
+<tr class="header">
+<th>i</th>
+<th>Średnia w próbie (<span class="math inline">\(\bar{x}\)</span>)</th>
+<th>Prawdopodobieństwo (<span class="math inline">\(p_i\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>5</td>
+<td>1/16</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4.5</td>
+<td>2/16</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+<td>3/16</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3.5</td>
+<td>4/16</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3</td>
+<td>3/16</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>2.5</td>
+<td>2/16</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>2</td>
+<td>1/16</td>
+</tr>
+<tr class="even">
+<td>Sum</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 6.2 przedstawia metodę konstrukcji rozkładu średniej z próby na przykładzie populacji liczącej 4 elementy {2, 3, 4, 5}.</p>
+<div class="figure">
+<img src="images/stat/IMG_0164.jpeg" alt="" />
+<p class="caption">Figure 6.2. Rozkład średniej z próby dla próby 2-elementowej; f oznacza częstość bezwzględną</p>
+</div>
+<hr />
+</div>
+<div id="rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</h3>
+<p>Przeprowadźmy eksperyment polegający na rzucie dwiema sześciennymi kostkami do gry. Zdefiniujmy zmienną  = suma oczek, które wypadły przy rzucie dwiema kostkami do gry.</p>
+<p>Rozkład prawdopodobieństwa zmiennej, która może przyjąć 6 wartości z identycznym prawdopodobieństwem jest rozkładem jednostajnym (rzut pojedynczą kostką sześcienną).</p>
+<p><strong>Jaki będzie rozkład prawdopodobieństwa dla sumy oczek (lub średniej arytmetycznej wyniku) przy rzucie dwiema kostkami?</strong></p>
+<p>W tabeli 6.4 przedstawiono wszystkie możliwe kombinacje wyników, czyli przestrzeń zdarzeń elementarnych:</p>
+<table>
+<caption>Table 6.4. Przestrzeń zdarzeń elementarnych dla sumy liczby oczek w doświadczeniu rzutu dwiema uczciwymi kośćmi (Sample space for the sum of outcomes in flipping two fair dice)</caption>
+<thead>
+<tr class="header">
+<th align="right"></th>
+<th align="left"><strong>Pierwsza kość (X1)</strong></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><strong>Druga kość (X2)</strong></td>
+<td align="left"><strong><em>1</em></strong></td>
+<td align="left"><strong><em>2</em></strong></td>
+<td align="left"><strong><em>3</em></strong></td>
+<td align="left"><strong><em>4</em></strong></td>
+<td align="left"><strong><em>5</em></strong></td>
+<td align="left"><strong><em>6</em></strong></td>
+</tr>
+<tr class="even">
+<td align="right"><strong><em>1</em></strong></td>
+<td align="left">S = 2</td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">7</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong><em>2</em></strong></td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">7</td>
+<td align="left">8</td>
+</tr>
+<tr class="even">
+<td align="right"><strong><em>3</em></strong></td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">4 + 3 = 7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong><em>4</em></strong></td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">3 + 4 = 7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+</tr>
+<tr class="even">
+<td align="right"><strong><em>5</em></strong></td>
+<td align="left">6</td>
+<td align="left">7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">11</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong><em>6</em></strong></td>
+<td align="left">7</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">11</td>
+<td align="left">6+6 = 12</td>
+</tr>
+</tbody>
+</table>
+<p>Rysunek 6.2 przedstawia rozkład prawdopodobieństwa sumy S z próby dwuelementowej (suma wyników dwóch rzutów sześciościenną kością), który kształtem przypomina rozkład normalny. Rozkład prawdopodobieństwa  do gry (rozkład zmiennej <span class="math inline">\(X_1\)</span>) był , ale przy rzucie dwiema (<span class="math inline">\(X_1+X_2\)</span>) lub tym bardziej, co można pokazać, większą liczbą kostek, rozkład prawdopodobieństwa sumy  wyników (<span class="math inline">\(S = X_1+X_2+ ... +X_n\)</span>), lub wartości przeciętnej wyników (<span class="math inline">\(\overline{X}\)</span>) wraz z wzrostem liczby kostek (lub liczby rzutów kostką), coraz bardziej przypomina rozkład normalny.</p>
+<div class="figure">
+<img src="images/stat/Dice_Distribution_(bar).svg" alt="" />
+<p class="caption">Figure 6.2. Rozkład z próby dla zmiennej losowej S = suma oczek uzyskanych przy rzucie dwiema kośćmi (Sampling distribution for the random variable S = sum of outcomes in flipping two fair dice (Source: Wikipedia.org))</p>
+</div>
+<hr />
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="wykres-pudełkowy-jeszcze-jeden-przykład.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="centralne-twierdzenie-graniczne-central-limit-theorem-clt.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

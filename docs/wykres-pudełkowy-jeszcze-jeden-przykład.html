@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-01-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -338,6 +338,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.10" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#podstawowe-rozkłady-prawdopodobieństwa---podsumowanie"><i class="fa fa-check"></i><b>5.2.10</b> Podstawowe rozkłady prawdopodobieństwa - podsumowanie</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="wykład-6-podstawy-wnioskowania-statystycznego.html"><a href="wykład-6-podstawy-wnioskowania-statystycznego.html"><i class="fa fa-check"></i><b>6</b> Wykład 6. Podstawy wnioskowania statystycznego</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
+<li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowania-średniej-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowania średniej próby</a></li>
+<li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-central-limit-theorem-clt.html"><a href="centralne-twierdzenie-graniczne-central-limit-theorem-clt.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne (Central Limit Theorem, CLT)</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -357,9 +368,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="wykres-pudełkowy---jeszcze-jeden-przykład" class="section level2" number="3.45">
 <h2><span class="header-section-number">3.45</span> Wykres pudełkowy - jeszcze jeden przykład</h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dla następujących danych, narysuj wykres pudełkowy</span></span>
-<span id="cb22-2"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html#cb22-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">215</span>, <span class="dv">140</span>, <span class="dv">290</span>, <span class="dv">300</span>, <span class="dv">300</span>, <span class="dv">320</span>, <span class="dv">330</span>, <span class="dv">340</span>, <span class="dv">415</span>, <span class="dv">480</span>) <span class="co"># Definiuje zbiór danych</span></span>
-<span id="cb22-3"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(X, <span class="at">horizontal =</span> T) <span class="co"># Rysuje wykres</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dla następujących danych, narysuj wykres pudełkowy</span></span>
+<span id="cb18-2"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html#cb18-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">215</span>, <span class="dv">140</span>, <span class="dv">290</span>, <span class="dv">300</span>, <span class="dv">300</span>, <span class="dv">320</span>, <span class="dv">330</span>, <span class="dv">340</span>, <span class="dv">415</span>, <span class="dv">480</span>) <span class="co"># Definiuje zbiór danych</span></span>
+<span id="cb18-3"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(X, <span class="at">horizontal =</span> T) <span class="co"># Rysuje wykres</span></span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-11-1.svg" width="384" /></p>
 </div>
             </section>
