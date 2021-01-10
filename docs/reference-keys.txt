@@ -200,7 +200,7 @@ rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne
 rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp.
 rozkład-próbkowania-średniej-próby
 rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum
-centralne-twierdzenie-graniczne-central-limit-theorem-clt
+centralne-twierdzenie-graniczne-ctg-central-limit-theorem
 centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby
 ctg-dla-estymatora-częstości-proporcji-z-próby
 estymacja-punktowa-i-przedziałowa

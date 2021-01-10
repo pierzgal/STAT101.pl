@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.18 Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="3.18 Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi | STAT 101 [WSMiP UŁ]" />
+  <title>6.3 Centralne twierdzenie graniczne, CTG (Central Limit Theorem) | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="6.3 Centralne twierdzenie graniczne, CTG (Central Limit Theorem) | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.18 Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="6.3 Centralne twierdzenie graniczne, CTG (Central Limit Theorem) | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.18 Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="6.3 Centralne twierdzenie graniczne, CTG (Central Limit Theorem) | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="szereg-rozdzielczy-rozkład-częstości-dla-danych-pogrupowanych.html"/>
-<link rel="next" href="średnia.html"/>
+<link rel="prev" href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"/>
+<link rel="next" href="estymacja-punktowa-i-przedziałowa.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -366,46 +366,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="miary-tendencji-centralnej-miary-rozproszenia-dyspersji-oraz-mierniki-siły-związku-między-zmiennymi" class="section level2" number="3.18">
-<h2><span class="header-section-number">3.18</span> Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi</h2>
-<p>W badaniach statystycznych wykorzystuje się wiele typów mierników. We wprowadzeniu do statystyki należy wspomnieć o trzech istotnych rodzajach wskaźników opisowych:</p>
-<ol style="list-style-type: decimal">
-<li><p>miary tendencji centralnej,</p></li>
-<li><p>miary rozproszenia (dyspersji),</p></li>
-<li><p>miary związku (korelacji) między zmiennymi.</p></li>
-</ol>
-<p>Należy znać następujące podstawowe miary tendencji centralnej:</p>
-<ul>
-<li><p>średnia arytmetyczna (average value)</p></li>
-<li><p>kwantyle oraz kwartyle, a w tym mediana (median)</p></li>
-<li><p>dominanta lub wartość modalna (mode)</p></li>
-</ul>
-<p>Wśród miar rozproszenia, najważniejsze są:</p>
-<ul>
-<li><p>wariancja (variance),</p></li>
-<li><p>odchylenie standardowe (standard deviation),</p></li>
-<li><p>rozstęp międzykwartylowy (Interquartile Range, IQR).</p></li>
-</ul>
-<p>Wśród mierników siły związku między zmiennymi (mierniki korelacji), podstawowe znaczenie mają:</p>
-<ul>
-<li><p>kowariancja i tzw. współczynnik korelacji liniowej Pearsona (stosowany dla zmiennych mierzonych na skali interwałowej lub stosunkowej)</p></li>
-<li><p>współczynnik korelacji rang Spearmana (zmienne porządkowe)</p></li>
-<li><p>współczynnik korelacji <span class="math inline">\(\tau_b\)</span> Kendalla (zmienne porządkowe)</p></li>
-</ul>
-<p>Inne metody badania zależności między zmiennymi, to m.in.:</p>
-<ul>
-<li><p>analiza diagramów rozproszenia</p></li>
-<li><p>modele regresyjne, w tym model regresji logistycznej - najważniejsza, ale też najbardziej skomplikowana grupa metod stosowana w analizie zależności między zmiennymi (*)</p></li>
-<li><p>test niezależności <span class="math inline">\(\chi^2\)</span> (zmienne nominalne)</p></li>
-</ul>
+<div id="centralne-twierdzenie-graniczne-ctg-central-limit-theorem" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Centralne twierdzenie graniczne, CTG (Central Limit Theorem)</h2>
+<blockquote>
+<p>Centralne twierdzenie graniczne (CTG) stwierdza, że rozkład średniej z próby (także sumy S oraz proporcji p z próby) dowolnej niezależnej zmiennej losowej będzie normalny lub prawie normalny, jeśli wielkość próby jest wystarczająco duża.</p>
+</blockquote>
+<blockquote>
+<p>„Centralne twierdzenie graniczne (CTG) jest prawdopodobnie najbardziej znanym twierdzeniem statystycznym, jest szeroko stosowane w każdej dziedzinie, która chce coś wywnioskować lub przewidzieć na podstawie zebranych danych. Pierwsza (prosta) wersja twierdzenia została wprowadzona w osiemnastym wieku, najpierw przez de Moivre, …”. - Javier Rodríguez Chatruc, Federico Carrone (czytaj więcej tutaj: <a href="https://lambdaclass.com/data_etudes/central_limit_theorem_misuse/" class="uri">https://lambdaclass.com/data_etudes/central_limit_theorem_misuse/</a>)</p>
+</blockquote>
+<p><strong>Centralne twierdzenie graniczne</strong> (CTG) stwierdza, że w wielu sytuacjach, gdy dodaje się niezależne zmienne losowe, ich odpowiednio znormalizowana suma S zmierza w kierunku rozkładu normalnego (nieformalnie krzywej dzwonowej), nawet jeśli same pierwotne zmienne nie mają rozkładu normalnego. Twierdzenie to jest kluczowym pojęciem w teorii prawdopodobieństwa, ponieważ sugeruje, że metody probabilistyczne i statystyczne, które działają dla rozkładów normalnych, mogą być stosowane do wielu problemów związanych z innymi typami rozkładów.</p>
+<p>Centralne twierdzenie graniczne stwierdza, że gdy nieskończona liczba kolejnych losowych próbek jest pobierana z populacji, rozkład średnich z tych próbek będzie w przybliżeniu normalny ze średnią <span class="math inline">\(\mu\)</span> i wariancją <span class="math inline">\(\sigma^2 / n\)</span>; przybliżenie staje się coraz lepsze wraz z wzrostem wielkości próby (n), niezależnie od kształtu rozkładu populacji.</p>
+<hr />
+<p>Z CTG wynika, że zmienna losowa <span class="math inline">\(\Sigma X = X_1 + X_2 + ... + X_n\)</span>, przy czym niech <span class="math inline">\(X_i\)</span> będą niezależne i niech mają taki sam rozkład (tj. są <em>i.i.d.</em>), dla dostatecznie dużego n, ma w przybliżeniu rozkład normalny.</p>
+<p>W praktyce podobieństwo rozkładów sum zmiennych losowych obserwuje się zwykle, gdy <strong><em>n</em></strong> <strong>jest równe co najmniej 30</strong>.</p>
+<p>Zauważ, że dowolny ciąg zmiennych losowych <span class="math inline">\(X_1, X_2, ..., X_n\)</span> można utożsamić z <em>n</em>-elementową próbą losową, gdzie <span class="math inline">\(x_1, x_2, ... x_n\)</span> są realizacjami losowej próby (obserwacjami). Np. <span class="math inline">\(x_2\)</span> może oznaczać respondenta nr 2, którego zapytano o to, czy popiera partię A lub np. zbadano jaki jest jego poziom IQ, itp.</p>
+<div id="centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby" class="section level4" number="6.3.0.1">
+<h4><span class="header-section-number">6.3.0.1</span> Centralne twierdzenie graniczne dla estymatora średniej z próby</h4>
+<p>Niech <span class="math inline">\(X_1, X_2, ..., X_n\)</span> będzie ciągiem niezależnych zmiennych losowych o dowolnym rozkładzie, i.i.d, z wartością oczekiwaną <span class="math inline">\(E(X_i) = \mu\)</span> oraz z wariancją <span class="math inline">\(Var(X_i) = \sigma^2\)</span>. Wtedy, dla dostatecznie dużego <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[\frac{\sum_{i=1}^{n} X_i}{n} = \overline{X} \sim N(\mu, \frac{\sigma^2}{\sqrt{n}}) \text{ oraz }\]</span></p>
+<p><span class="math display">\[\frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}} = \frac{\overline{X} - \mu}{\sigma/ \sqrt{n}}\longrightarrow Z, \text{gdzie } Z\sim N(0, 1)\]</span></p>
+<p>Z CTG wynika, że dla prostej próby losowej <span class="math inline">\(X_1, X_2, ..., X_n\)</span> z populacji o wartości oczekiwanej <span class="math inline">\(\mu\)</span> i odchyleniu standardowym <span class="math inline">\(\sigma\)</span>, gdy <em>n</em> rośnie w nieskończoność, rozkład średniej <span class="math inline">\(\overline{X}\)</span> z próby, wraz z wzrostem <em>n</em>, upodabnia się do rozkładu normalnego <span class="math inline">\(N(\mu, \frac{\sigma}{\sqrt{n}})\)</span>.</p>
+<p>Ponadto, <span class="math inline">\(\mu_{\overline{X}} = E(\overline{X}) = \mu\)</span>, oraz <span class="math inline">\(\sigma_{\overline{X}} = Var(\overline{X}) = \frac{\sigma}{\sqrt{n}}\)</span>.</p>
+<p>CTG dostarcza nam wiedzy o rozkładzie z próby estymatorów nieznanych wartości parametrów populacji (parametry to liczby charakteryzujące daną populację, np. średnia arytmetyczna ocen uczniów pewnej klasy). Ta wiedza pozwala ustalić na podstawie analizy prostej próby losowej, które wartości określonych parametrów populacji są bardziej, a które mniej prawdopodobne.</p>
+<p>Średnią z próby <span class="math inline">\(\overline{X}\)</span>, częstość (frakcję) <span class="math inline">\(\widehat{p}\)</span>, odchylenie standardowe z próby <span class="math inline">\(S(X)\)</span> i wiele innych estymatorów nieznanych wartości parametrów danej populacji generalnej określa się często w statystyce mianem <strong>statystyk z próby</strong>.</p>
+<p>Jak wiemy z CTG, dla dostatecznie dużych <em>n</em>, <span class="math inline">\(\overline{X} \sim N(\mu, \frac{\sigma}{\sqrt{n}})\)</span></p>
+</div>
+<div id="ctg-dla-estymatora-częstości-proporcji-z-próby" class="section level4" number="6.3.0.2">
+<h4><span class="header-section-number">6.3.0.2</span> CTG dla estymatora częstości (proporcji) z próby</h4>
+<p>CTG można, dla estymatora frakcji <span class="math inline">\(\frac{\Sigma X_i}{n} = \widehat{p}\)</span>, sformułować następująco:</p>
+<p>Jeżeli <span class="math inline">\(X_i \sim Bern(p)\)</span> oraz <span class="math inline">\(E(X_i) = p, Var(X_i) = p(1-p)\)</span> i <span class="math inline">\(\Sigma X_i \sim Bin(n, p)\)</span> oraz <span class="math inline">\(E(\Sigma X_i) = np, Var(\Sigma X_i) = np(1-p)\)</span>, to ponadto, gdy <span class="math inline">\(n \rightarrow \infty\)</span>,</p>
+<p><span class="math display">\[\Sigma X_i \sim N(\mu = np, \sigma = \sqrt{np(1-p)}) \text{ oraz }\]</span></p>
+<p><span class="math display">\[\frac{\Sigma X_i}{n} \sim N(\mu = p, \sigma = \sqrt{\frac{p(1-p)}{n}})\]</span></p>
+<p>Ponadto, dla estymatora proporcji (frakcja z próby):</p>
+<p>Niech <span class="math inline">\(X_1, X_2, ..., X_n\)</span> będzie ciągiem niezależnych zmiennych losowych o rozkładzie <span class="math inline">\(Bern(p)\)</span>, z wartością oczekiwaną <span class="math inline">\(E(X_i) = p\)</span> oraz z wariancją <span class="math inline">\(Var(X_i) = p(1-p)\)</span>. Wtedy, gdy <span class="math inline">\(n \longrightarrow \infty\)</span>, <span class="math display">\[\frac{\sum_{i=1}^{n} X_i - np}{\sqrt{np(1-p)}} = \frac{\frac{\sum_{i=1}^{n} X_i}{n} - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{\widehat{p} - p}{\sqrt{\frac{p(1-p)}{n}}}\longrightarrow Z, \text{gdzie } Z\sim N(0, 1)\]</span></p>
+<p>Ze szczególnej wersji CTG wynika, że dla dostatecznie dużych <em>n</em>, <span class="math inline">\(\widehat{p} \sim N(p, \sqrt{\frac{p(1-p)}{n}})\)</span>, czyli <span class="math inline">\(E(\widehat{p}) = p, Var(\widehat{p}) = \frac{p(1-p)}{n}\)</span></p>
+<blockquote>
+<p>Rozkład dwumianowy możemy dobrze przybliżyć rozkładem normalnym, gdy <span class="math inline">\(np \geq 5\)</span> i <span class="math inline">\(nq \geq 5\)</span></p>
+</blockquote>
+<hr />
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="szereg-rozdzielczy-rozkład-częstości-dla-danych-pogrupowanych.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="średnia.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estymacja-punktowa-i-przedziałowa.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
