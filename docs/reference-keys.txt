@@ -204,4 +204,3 @@ centralne-twierdzenie-graniczne-central-limit-theorem-clt
 centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby
 ctg-dla-estymatora-częstości-proporcji-z-próby
 estymacja-punktowa-i-przedziałowa
-prawdopodobieństwo-warunkowe-tablica-korelacyjna
