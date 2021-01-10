@@ -388,8 +388,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Z CTG wynika, że dla prostej próby losowej <span class="math inline">\(X_1, X_2, ..., X_n\)</span> z populacji o wartości oczekiwanej <span class="math inline">\(\mu\)</span> i odchyleniu standardowym <span class="math inline">\(\sigma\)</span>, gdy <em>n</em> rośnie w nieskończoność, rozkład średniej <span class="math inline">\(\overline{X}\)</span> z próby, wraz z wzrostem <em>n</em>, upodabnia się do rozkładu normalnego <span class="math inline">\(N(\mu, \frac{\sigma}{\sqrt{n}})\)</span>, czyli <span class="math inline">\(\mu_{\overline{X}} = E(\overline{X}) \rightarrow \mu\)</span> oraz <span class="math inline">\(\sigma_{\overline{X}} = Var(\overline{X}) \rightarrow \frac{\sigma}{\sqrt{n}}\)</span>.</p>
 <p>CTG dostarcza nam wiedzy o rozkładzie z próby estymatorów nieznanych wartości parametrów populacji (parametry to liczby charakteryzujące daną populację, np. średnia arytmetyczna ocen uczniów pewnej klasy). Ta wiedza pozwala ustalić na podstawie analizy prostej próby losowej, które wartości określonych parametrów populacji są bardziej, a które mniej prawdopodobne.</p>
 <p>Średnią z próby <span class="math inline">\(\overline{X}\)</span>, częstość (frakcję) <span class="math inline">\(\widehat{p}\)</span>, odchylenie standardowe z próby <span class="math inline">\(S(X)\)</span> i wiele innych estymatorów nieznanych wartości parametrów danej populacji generalnej określa się często w statystyce mianem <strong>statystyk z próby</strong>.</p>
-<p>Statystyką (z próby) nazywamy zmienną losową, np. <em>Z</em>, będącą funkcją zmiennych losowych <span class="math inline">\(X_1, X_2, ..., X_n\)</span> stanowiących prostą próbę losową.</p>
-<p>Statystyka jako funkcja zmiennych losowych sama jest zmienną losową, która posiada pewien rozkład prawdopodobieństwa.</p>
 <p>Jak wiemy z CTG, dla dostatecznie dużych <em>n</em>, <span class="math inline">\(\overline{X} \sim N(\mu, \frac{\sigma}{\sqrt{n}})\)</span></p>
 </div>
 <div id="ctg-dla-estymatora-częstości-proporcji-z-próby" class="section level4" number="6.3.0.2">
@@ -402,7 +400,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Niech <span class="math inline">\(X_1, X_2, ..., X_n\)</span> będzie ciągiem niezależnych zmiennych losowych o rozkładzie <span class="math inline">\(Bern(p)\)</span>, z wartością oczekiwaną <span class="math inline">\(E(X_i) = p\)</span> oraz z wariancją <span class="math inline">\(Var(X_i) = p(1-p)\)</span>. Wtedy, gdy <span class="math inline">\(n \longrightarrow \infty\)</span>, <span class="math display">\[\frac{\sum_{i=1}^{n} X_i - np}{\sqrt{np(1-p)}} = \frac{\frac{\sum_{i=1}^{n} X_i}{n} - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{\widehat{p} - p}{\sqrt{\frac{p(1-p)}{n}}}\longrightarrow Z, \text{gdzie } Z\sim N(0, 1)\]</span></p>
 <p>Ze szczególnej wersji CTG wynika, że dla dostatecznie dużych <em>n</em>, <span class="math inline">\(\widehat{p} \sim N(p, \sqrt{\frac{p(1-p)}{n}})\)</span>, czyli <span class="math inline">\(E(\widehat{p}) = p, Var(\widehat{p}) = \frac{p(1-p)}{n}\)</span></p>
 <blockquote>
-<p>Ogólnie, z CTG wynika, że rozkład dwumianowy możemy przybliżyć rozkładem normalnym, gdy <span class="math inline">\(np \geq 5\)</span> i <span class="math inline">\(nq \geq 5\)</span></p>
+<p>Rozkład dwumianowy możemy dobrze przybliżyć rozkładem normalnym, gdy <span class="math inline">\(np \geq 5\)</span> i <span class="math inline">\(nq \geq 5\)</span></p>
 </blockquote>
 <hr />
 </div>
