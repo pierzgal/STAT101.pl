@@ -317,7 +317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.13" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne"><i class="fa fa-check"></i><b>4.3.13</b> Przykłady różne (*)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html"><a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html"><i class="fa fa-check"></i><b>5</b> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.1)</a>
+<li class="chapter" data-level="5" data-path="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-4.html"><a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-4.html"><i class="fa fa-check"></i><b>5</b> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.4)</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><i class="fa fa-check"></i><b>5.1</b> Zmienna losowa i rozkład prawdopodobieństwa - definicje</a>
 <ul>
@@ -449,11 +449,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The general equation of the Binomial distribution is,</p>
 <p><span class="math inline">\(P\)</span>(<em>k</em> sukcesów w <em>n</em> próbach (<em>trials</em>)) = <span class="math inline">\(C_k^n(p^k \times (1-p)^{n-k})\)</span></p>
 <p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>; <span class="math inline">\(C_k^n = nCk =\)</span> liczba k-elementowych kombinacji bez powtórzeń, ze zbioru n-elementowego.</p>
-<p>Inspect Table below to understand the above general equation of the Binomial distribution.</p>
+<p>Inspect Tables A and B to understand the above general equation of the Binomial distribution.</p>
 <div class="figure">
-<img src="images/stat/IMG_0172.jpeg" alt="" />
-<p class="caption">Tabela. Rozkład dwumianowy - konstrukcja</p>
+<img src="images/stat/IMG_0173.jpeg" alt="" />
+<p class="caption">Tabela A. Konstrukcja rozkładu dwumianowego dla n = 4 i p = 0.25 - etap I</p>
 </div>
+<p>Tabela B przedstawia rozkład prawdopodobieństwa zmiennej <span class="math inline">\(Z \sim Binom(n = 4, p = 0.25)\)</span>.</p>
+<table>
+<caption>Tabela B. Konstrukcja rozkładu dwumianowego dla n = 4 i p = 0.25 - etap II</caption>
+<thead>
+<tr class="header">
+<th>i</th>
+<th>Z</th>
+<th>P(Z)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td><span class="math inline">\(1*0.3164 = 0.3164\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1</td>
+<td><span class="math inline">\(4*(0.25 * 0.75^3) = 0.4219\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>2</td>
+<td>0.2109</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3</td>
+<td>0.0469</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>4</td>
+<td>0.0039</td>
+</tr>
+<tr class="even">
+<td>∑</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="rozkład-dwumianowy---przykład-1" class="section level4" number="5.2.5.5">
 <h4><span class="header-section-number">5.2.5.5</span> Rozkład dwumianowy - przykład 1</h4>
