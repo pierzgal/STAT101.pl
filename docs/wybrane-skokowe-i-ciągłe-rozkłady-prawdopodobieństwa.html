@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-10" />
+<meta name="date" content="2021-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -416,12 +416,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(P\)</span>(<em>k</em> sukcesów w <em>n</em> próbach (<em>trials</em>)) = <span class="math inline">\(C_k^n(p^k \times (1-p)^{n-k})\)</span></p>
 <p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>), czyli np. prawdopodbieństwo wyrzucenia dwóch szóstek w pięciu rzutach kością (<span class="math inline">\(n = 5\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>.</p>
 </div>
-<div id="rozkład-dwumianowy---wykres" class="section level4" number="5.2.5.2">
-<h4><span class="header-section-number">5.2.5.2</span> Rozkład dwumianowy - wykres</h4>
+<div id="rozkład-dwumianowy---podsumowanie" class="section level4" number="5.2.5.2">
+<h4><span class="header-section-number">5.2.5.2</span> Rozkład dwumianowy - podsumowanie</h4>
+<p><strong>Criteria for a Binomial Probability Experiment</strong></p>
+<p>A <strong>binomial experiment</strong> is an experiment which satisfies these four conditions:</p>
+<ul>
+<li><p>A fixed number of trials</p></li>
+<li><p>Each trial is independent of the others</p></li>
+<li><p>There are only two outcomes</p></li>
+<li><p>The probability of each outcome remains constant from trial to trial.</p></li>
+</ul>
+<p>In short: <em>An experiment with a fixed number of independent trials, each of which can only have two possible outcomes</em>.</p>
+<p>(Since the trials are independent, the probability remains constant.)</p>
+</div>
+<div id="rozkład-dwumianowy---wykres" class="section level4" number="5.2.5.3">
+<h4><span class="header-section-number">5.2.5.3</span> Rozkład dwumianowy - wykres</h4>
 <p><img src="images/binomial.svg" /></p>
 </div>
-<div id="rozkład-dwumianowy---przykład-1" class="section level4" number="5.2.5.3">
-<h4><span class="header-section-number">5.2.5.3</span> Rozkład dwumianowy - przykład 1</h4>
+<div id="rozkład-dwumianowy---przykład-0-nieformalne-wyprowadzenie-równania-funkcji" class="section level4" number="5.2.5.4">
+<h4><span class="header-section-number">5.2.5.4</span> Rozkład dwumianowy - przykład 0 (nieformalne wyprowadzenie równania funkcji)</h4>
+<p>Once we determine that a random variable is a binomial random variable, the next question we might have would be how to calculate probabilities.</p>
+<p>Let’s consider the experiment where we take a multiple-choice quiz of four questions with four choices each, and the topic is something we have absolutely no knowledge. If we let Z = the number of correct answer, then Z is a binomial random variable because:</p>
+<ul>
+<li><p>there are a fixed number of questions (4),</p></li>
+<li><p>the questions are independent,</p></li>
+<li><p>since we’re just guessing each question has two outcomes - we’re right or wrong,</p></li>
+<li><p>the probability of being correct is constant, since we’re guessing: 1/4 = 0.25 = the probability of “success” in a single <em>Bernoulli</em> trial X_i, (i = 1, 2, 3, 4).</p></li>
+</ul>
+<p>So how can we find probabilities? Let’s look at a tree diagram of the situation:</p>
+<p>Finding the probability distribution of Z involves a couple key concepts. First, notice that there are multiple ways to get 0, 1, 2, 3 or 4 questions correct. In fact, we can use the <em>combinations without repetitions</em> (nCk) to figure out how many ways there are. For example, P(Z = 3) is the same regardless of the order in which we get 3 correct,;we can just multiply the probability of one line by 4, since there are 4 ways to get 3 correct.</p>
+<p>Not only that, since the questions are independent, we can just multiply the probability of getting each one correct or incorrect.</p>
+<p>The general equation of the Binomial distribution is,</p>
+<p><span class="math inline">\(P\)</span>(<em>k</em> sukcesów w <em>n</em> próbach (<em>trials</em>)) = <span class="math inline">\(C_k^n(p^k \times (1-p)^{n-k})\)</span></p>
+<p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>; <span class="math inline">\(C_k^n = nCk =\)</span> liczba k-elementowych kombinacji bez powtórzeń, ze zbioru n-elementowego.</p>
+<p>Inspect Table below to understand the above general equation of the Binomial distribution.</p>
+<div class="figure">
+<img src="images/stat/IMG_0172.jpeg" alt="" />
+<p class="caption">Tabela. Rozkład dwumianowy - konstrukcja</p>
+</div>
+</div>
+<div id="rozkład-dwumianowy---przykład-1" class="section level4" number="5.2.5.5">
+<h4><span class="header-section-number">5.2.5.5</span> Rozkład dwumianowy - przykład 1</h4>
 <ol style="list-style-type: decimal">
 <li><p>Jakie jest prawdopodobieństwo <span class="math inline">\(P\)</span>, że przy <strong>5</strong> rzutach <em>sześciościenną kością</em> wypadną <strong>2</strong> <em>szóstki</em>?</p></li>
 <li><p>Jakie jest prawdopodobieństwo <span class="math inline">\(P\)</span>, że przy <strong>5</strong> rzutach <em>sześciościenną kością</em> otrzymamy <strong>2</strong> <em>szóstki</em> w następującej kolejności <span class="math inline">\((6, 6&#39;, 6, 6&#39;,6&#39;)\)</span>, czyli <span class="math inline">\(P(6, 6&#39;, 6, 6&#39;,6&#39;) = ?\)</span> Przy czym, <span class="math inline">\(6&#39;\)</span> oznacza, że <strong>nie</strong> wyrzucono <span class="math inline">\(6\)</span> oczek.</p></li>
@@ -453,15 +488,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p><span class="math inline">\(P(\text{dwie 6 w pięciu próbach})\)</span> nie jest równe <span class="math inline">\(\frac{10}{32} = 0.3125\)</span>. Dlaczego?</p>
 </div>
-<div id="rozkład-dwumianowy---przykład-2" class="section level4" number="5.2.5.4">
-<h4><span class="header-section-number">5.2.5.4</span> Rozkład dwumianowy - przykład 2</h4>
+<div id="rozkład-dwumianowy---przykład-2" class="section level4" number="5.2.5.6">
+<h4><span class="header-section-number">5.2.5.6</span> Rozkład dwumianowy - przykład 2</h4>
 <p>Załóżmy, że zdarzenia <span class="math inline">\(A = 6\)</span> i <span class="math inline">\(A&#39; = 6&#39;\)</span> są <em>jednakowo prawdopodobne</em> (sześciościenna kość ma na <strong>3</strong> ścianach <strong>6</strong> i na <strong>3</strong> pozostałych <strong>6’</strong>). Wtedy:</p>
 <p><span class="math inline">\(P(\text{dwie 6 w pięciu próbach})\)</span> = <span class="math inline">\(\frac{10}{32} = 0.3125\)</span></p>
 <p>Korzystając z funkcji rozkładu dwumianowego:</p>
 <p><span class="math inline">\(P(\text{dwie 6 w pięciu próbach}) = C_2^5((\frac{1}{2})^2 \times (\frac{1}{2})^{5-2}) =\)</span> <span class="math inline">\(= 0.3125 = 10/32 = 5/16\)</span></p>
 </div>
-<div id="rozkład-dwumianowy---przykład-3" class="section level4" number="5.2.5.5">
-<h4><span class="header-section-number">5.2.5.5</span> Rozkład dwumianowy - przykład 3</h4>
+<div id="rozkład-dwumianowy---przykład-3" class="section level4" number="5.2.5.7">
+<h4><span class="header-section-number">5.2.5.7</span> Rozkład dwumianowy - przykład 3</h4>
 <p>Rzucamy <span class="math inline">\(3\)</span> razy uczciwą monetą. Dla tego eksperymentu, określono zmienną losową <strong>Y</strong> = <em>suma ‘sukcesów’</em>, przyjmując, że wyrzucenie reszki (<strong>R</strong>) to ‘sukces’ (oznaczmy to zdarzenie cyfrą <span class="math inline">\(1\)</span>). Zbuduj rozkład prawdopodbieństwa dla dla zmiennej <strong>Y</strong>.</p>
 <p><span class="math inline">\(X = \{R, O\}\)</span></p>
 <table style="width:50%;">
@@ -607,13 +642,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Wyniki z poszczególnych etapów doświadczenia są od siebie <strong>niezależne</strong> (możemy więc korzystać z metod obliczania prawdopodobieństw dla zdarzeń niezależnych); tzn., że wyniki z poszczególnych etapów nie wpływają na siebie; np. wyrzucenie orła na pierwszym etapie doświadczenia nie modyfikuje prawdopodobieństwa wyrzucenia orła/reszki na pozostałych etapach.</p></li>
 </ol>
 <p>Zacznijmy od określenia przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span>.</p>
-<p><span class="math inline">\(S = \{ (R, R, R), (R, R, O), (R, O, O), (O, O, O), (O, O, R), (O, R, R), (O, R, O), (R, O, R) \}\)</span>. Liczebność zbioru <span class="math inline">\(S\)</span> (<span class="math inline">\(|S|\)</span>) możemy wyznaczyć stosując wzór na liczbę <span class="math inline">\(r\)</span>-permutacji (liczbę r-wyrazowych ciągów) z powtórzeniami, ze zbioru <span class="math inline">\(x\)</span> możliwych wartości: <span class="math inline">\(P_r^x = x^r\)</span>. W tym przykładzie mamy <span class="math inline">\(2^3 = 8\)</span>.</p>
+<p><span class="math inline">\(S = \{ (R, R, R), (R, R, O), (R, O, O), (O, O, O), (O, O, R), (O, R, R), (O, R, O), (R, O, R) \}\)</span>. Liczebność zbioru <span class="math inline">\(S\)</span> (<span class="math inline">\(|S|\)</span>) możemy policzyć stosując <em>regułę iloczynu</em> (<em>Fundamenetal Principle of Counting</em>). W tym przykładzie, dla <span class="math inline">\(X = \{R, O}\)</span>, <span class="math inline">\(|X| = 2\)</span>, mamy <span class="math inline">\(2 \times 2 \times 2 = 2^3 = 8\)</span> (osiem zdarzeń elementarnych).</p>
 <p>Aby określić zmienną losowa na zbiorze <span class="math inline">\(S\)</span> musimy poszczególnym wynikom przypisać liczby wg pewnej reguły. Np. możemy przyjąć, że wyrzucenie 1 reszki to 1, dwóch reszek 1 + 1 itd.</p>
 <p>I tak, możemy zdefiniować zmienną Y:</p>
 <p><span class="math inline">\((R, R, R) \rightarrow 3\)</span>; <span class="math inline">\((R, R, O) \rightarrow 2\)</span>; <span class="math inline">\((O, R, R) \rightarrow 2\)</span>; <span class="math inline">\((...) \rightarrow ...\)</span>; <span class="math inline">\((O, O, O) \rightarrow 0\)</span>.</p>
 <p>Następnie, jeśli przypiszemy każdej ustalonej wartości zmiennej losowej Y odpowiednie prawdopodobieństwa, <span class="math inline">\(P(Y = ...) = ...\)</span>, zbudujemy odpowiadający tej zmiennej rozkład prawdopodobieństwa.</p>
 <p>W rozważanym przypadku, wartości prawdopodobieństwa znajdziemy korzystając z funkcji rozkładu dwumianowego z parametrami <span class="math inline">\(p = 0.5 \text{ i } n = 3\)</span> - jak wynika z opisu doświadczenia losowego, zmienna <em>Y</em> ma rozkład dwumianowy, <span class="math inline">\(Y = \{0, 1, 2, 3\}\)</span>.</p>
-<p>Możemy ten rozkład przedstawić np. tabelarycznie (Zob. tablica nr 1).</p>
+<p>Możemy ten rozkład przedstawić np. tabelarycznie (Zob. tabela niżej).</p>
 <table>
 <thead>
 <tr class="header">
@@ -656,7 +691,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Rozkład prawdopodobieństwa zmiennej Y</p>
+<p>Tabela. Rozkład prawdopodobieństwa zmiennej Y</p>
 <p>Dlaczego prawdopodobieństwo wyrzucenia, na przykład, 1 reszki (1 sukces) jest równe 3/8?</p>
 <p>W tym przykładzie, prawdopodobieństwo sukcesu <em>p</em> (wyrzucenia reszki) jest równe <span class="math inline">\(1/2\)</span>, dlatego prawdopodobieństwo porażki (zdarzenia przeciwnego) też wynosi <span class="math inline">\(1/2\)</span>, bo <span class="math inline">\(1-1/2 = 1/2\)</span>.</p>
 <p>Eksperyment losowy z przykładu jest tzw. złożonym (wieloetapowym) eksperymentem - składa się z trzech etapów (lub prób (<strong>trials</strong>)) - pierwszy rzut, drugi rzut i trzeci rzut monetą - dlatego <em>n</em> = 3 (liczba etapów/rozmiar próby (<strong>sample</strong>)).</p>
