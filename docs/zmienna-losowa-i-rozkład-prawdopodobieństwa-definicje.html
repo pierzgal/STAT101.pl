@@ -24,14 +24,14 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-10" />
+<meta name="date" content="2021-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html"/>
+<link rel="prev" href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-3.html"/>
 <link rel="next" href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
@@ -317,7 +317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.13" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne"><i class="fa fa-check"></i><b>4.3.13</b> Przykłady różne (*)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html"><a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html"><i class="fa fa-check"></i><b>5</b> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.1)</a>
+<li class="chapter" data-level="5" data-path="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-3.html"><a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-3.html"><i class="fa fa-check"></i><b>5</b> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.3)</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><i class="fa fa-check"></i><b>5.1</b> Zmienna losowa i rozkład prawdopodobieństwa - definicje</a>
 <ul>
@@ -373,18 +373,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Zmienna losowa to funkcja, która przypisuje zdarzeniom elementarnym (zbiór argumentów funkcji) liczby (zbiór wartości funkcji).</p>
 </blockquote>
 <blockquote>
-<p>Zmienna losowa jest to funkcja, która elementom przestrzeni zdarzeń
-elementarnych <em>S</em> przyporządkowuje wartości ze zbioru liczb
-rzeczywistych <em>R</em>. Zmienne losowe oznaczamy wielkimi literami alfabetu
-np. X, Y, Z, natomiast konkretne wartości, które zmienna losowa może
-przyjąć literami małymi, x, y, z.</p>
+<p>Zmienna losowa jest to funkcja, która elementom przestrzeni zdarzeń elementarnych <em>S</em> przyporządkowuje wartości ze zbioru liczb rzeczywistych <em>R</em>. Zmienne losowe oznaczamy wielkimi literami alfabetu np. X, Y, Z, natomiast konkretne wartości, które zmienna losowa może przyjąć literami małymi, x, y, z.</p>
 </blockquote>
 <p>Zmienne losowe zwykle oznaczamy wielkimi literami z końca alfabetu X, Y, Z etc. Realizacje zmiennej losowej <span class="math inline">\(X\)</span> możemy oznaczyć np.: <span class="math inline">\(X = \{x_1, x_2, ...\}\)</span></p>
 <p>Zmienne losowe, w zależności od typu zbioru, który jest ich zbiorem wartości, dzielimy na <strong>skokowe</strong> lub <strong>ciągłe</strong>.</p>
 <div id="przykład-4" class="section level3" number="5.1.1">
 <h3><span class="header-section-number">5.1.1</span> Przykład</h3>
-<p>Wykonaj rzut dwiema monetami i odnotuj liczbę reszek (H). Wszystkie
-możliwe wyniki przedstawia tabela:</p>
+<p>Wykonaj rzut dwiema monetami i odnotuj liczbę reszek (H). Wszystkie możliwe wyniki przedstawia tabela:</p>
 <table>
 <thead>
 <tr class="header">
@@ -405,17 +400,8 @@ możliwe wyniki przedstawia tabela:</p>
 </tr>
 </tbody>
 </table>
-<p>Powyższa tabela definiuje funkcję określoną na zbiorze zdarzeń
-elementarnych <span class="math inline">\(S = \{TT, HT, TH, HH\}\)</span> (dziedzina funkcji) i z
-wartościami ze zbioru <span class="math inline">\(X = \{0, 1, 2\} \subseteq R\)</span>. W ten sposób
-określona została zmienna losowa <em>X</em> - <em>liczba wyrzuconych reszek
-podczas rzutu dwiema monetami</em>. Np. dla wyniku <span class="math inline">\(e = HH\)</span> przyjmuje ona
-wartość <span class="math inline">\(x = 2\)</span>.</p>
-<p>Jeżeli teraz zdefiniujemy nową funkcję <span class="math inline">\(P(X = x)\)</span> lub po prostu <span class="math inline">\(p(x)\)</span>,
-w taki sposób, że każdej wartości zmiennej losowej <em>X</em> (argumenty nowej
-funkcji) przyporządkujemy odpowiednie prawdopodobieństwo jej zajścia, to
-powiemy, że określona została <strong>funkcja rozkładu prawdopodobieństwa</strong>
-lub po prostu rozkład prawdopodobieństwa zmiennej losowej <em>X</em>.</p>
+<p>Powyższa tabela definiuje funkcję określoną na zbiorze zdarzeń elementarnych <span class="math inline">\(S = \{TT, HT, TH, HH\}\)</span> (dziedzina funkcji) i z wartościami ze zbioru <span class="math inline">\(X = \{0, 1, 2\} \subseteq R\)</span>. W ten sposób określona została zmienna losowa <em>X</em> - <em>liczba wyrzuconych reszek podczas rzutu dwiema monetami</em>. Np. dla wyniku <span class="math inline">\(e = HH\)</span> przyjmuje ona wartość <span class="math inline">\(x = 2\)</span>.</p>
+<p>Jeżeli teraz zdefiniujemy nową funkcję <span class="math inline">\(P(X = x)\)</span> lub po prostu <span class="math inline">\(p(x)\)</span>, w taki sposób, że każdej wartości zmiennej losowej <em>X</em> (argumenty nowej funkcji) przyporządkujemy odpowiednie prawdopodobieństwo jej zajścia, to powiemy, że określona została <strong>funkcja rozkładu prawdopodobieństwa</strong> lub po prostu rozkład prawdopodobieństwa zmiennej losowej <em>X</em>.</p>
 <p>Rozkład prawdopodobieństwa danej zmiennej losowej jest to funkcja przyporządkowująca wartościom zmiennej losowej <strong>prawdopodobieństwa</strong> przyjęcia danej wartości przez tę zmienną (zmienna skokowa) <strong>lub</strong> <strong>gęstości prawdopodobieństw</strong> odpowiadające poszczególnym wartościom zmiennej (zmienna ciągła).</p>
 <p>Rozkład prawdopodobieństwa może być dyskretny (gdy zmienna losowa jest skokowa) lub ciągły (gdy zmienna losowa jest ciągła).</p>
 <blockquote>
@@ -434,7 +420,7 @@ lub po prostu rozkład prawdopodobieństwa zmiennej losowej <em>X</em>.</p>
           </div>
         </div>
       </div>
-<a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

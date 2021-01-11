@@ -169,7 +169,7 @@ example
 example-1
 example-2
 example-3
-wykład-5.-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver.-0.1
+wykład-5.-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver.-0.3
 zmienna-losowa-i-rozkład-prawdopodobieństwa---definicje
 przykład-4
 zmienna-losowa-dyskretna-skokowa-i-ciągła
@@ -181,7 +181,9 @@ rozkład-jednostajny-skokowy
 rozkład-jednostajny-skokowy---równanie-funkcji
 rozkład-dwumianowy
 rozkład-dwumianowy---równanie-funkcji
+rozkład-dwumianowy---podsumowanie
 rozkład-dwumianowy---wykres
+rozkład-dwumianowy---przykład-0-nieformalne-wyprowadzenie-równania-funkcji
 rozkład-dwumianowy---przykład-1
 rozkład-dwumianowy---przykład-2
 rozkład-dwumianowy---przykład-3
