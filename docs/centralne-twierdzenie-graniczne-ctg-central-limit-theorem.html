@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-11" />
+<meta name="date" content="2021-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,11 +343,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
 <li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowania-średniej-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowania średniej próby</a></li>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowy-średniej-rozkład-średniej-z-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowy średniej (rozkład średniej z próby)</a></li>
 <li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><a href="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne, CTG (Central Limit Theorem)</a></li>
-<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html#przykład---przedział-ufności-i-margines-błędu"><i class="fa fa-check"></i><b>6.4.1</b> Przykład - przedział ufności i margines błędu</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -372,7 +375,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Centralne twierdzenie graniczne (CTG) stwierdza, że rozkład średniej z próby (także sumy S oraz proporcji p z próby) dowolnej niezależnej zmiennej losowej będzie normalny lub prawie normalny, jeśli wielkość próby jest wystarczająco duża.</p>
 </blockquote>
 <blockquote>
-<p>„Centralne twierdzenie graniczne (CTG) jest prawdopodobnie najbardziej znanym twierdzeniem statystycznym, jest szeroko stosowane w każdej dziedzinie, która chce coś wywnioskować lub przewidzieć na podstawie zebranych danych. Pierwsza (prosta) wersja twierdzenia została wprowadzona w osiemnastym wieku, najpierw przez de Moivre, …”. - Javier Rodríguez Chatruc, Federico Carrone (czytaj więcej tutaj: <a href="https://lambdaclass.com/data_etudes/central_limit_theorem_misuse/" class="uri">https://lambdaclass.com/data_etudes/central_limit_theorem_misuse/</a>)</p>
+<p>„Centralne twierdzenie graniczne (CTG) jest prawdopodobnie najbardziej znanym twierdzeniem statystycznym, jest szeroko stosowane w każdej dziedzinie, która chce coś wywnioskować lub przewidzieć na podstawie zebranych danych. Pierwsza (prosta) wersja twierdzenia została wprowadzona w osiemnastym wieku, najpierw przez de Moivre, …". - Javier Rodríguez Chatruc, Federico Carrone (czytaj więcej tutaj: <a href="https://lambdaclass.com/data_etudes/central_limit_theorem_misuse/" class="uri">https://lambdaclass.com/data_etudes/central_limit_theorem_misuse/</a>)</p>
 </blockquote>
 <p><strong>Centralne twierdzenie graniczne</strong> (CTG) stwierdza, że w wielu sytuacjach, gdy dodaje się niezależne zmienne losowe, ich odpowiednio znormalizowana suma S zmierza w kierunku rozkładu normalnego (nieformalnie krzywej dzwonowej), nawet jeśli same pierwotne zmienne nie mają rozkładu normalnego. Twierdzenie to jest kluczowym pojęciem w teorii prawdopodobieństwa, ponieważ sugeruje, że metody probabilistyczne i statystyczne, które działają dla rozkładów normalnych, mogą być stosowane do wielu problemów związanych z innymi typami rozkładów.</p>
 <p>Centralne twierdzenie graniczne stwierdza, że gdy nieskończona liczba kolejnych losowych próbek jest pobierana z populacji, rozkład średnich z tych próbek będzie w przybliżeniu normalny ze średnią <span class="math inline">\(\mu\)</span> i wariancją <span class="math inline">\(\sigma^2 / n\)</span>; przybliżenie staje się coraz lepsze wraz z wzrostem wielkości próby (n), niezależnie od kształtu rozkładu populacji.</p>

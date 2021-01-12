@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-11" />
+<meta name="date" content="2021-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,11 +343,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
 <li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowania-średniej-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowania średniej próby</a></li>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowy-średniej-rozkład-średniej-z-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowy średniej (rozkład średniej z próby)</a></li>
 <li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><a href="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne, CTG (Central Limit Theorem)</a></li>
-<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html#przykład---przedział-ufności-i-margines-błędu"><i class="fa fa-check"></i><b>6.4.1</b> Przykład - przedział ufności i margines błędu</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -368,13 +371,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="estymacja-punktowa-i-przedziałowa" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Estymacja punktowa i przedziałowa</h2>
+<p>Wnioskowanie statystyczne obejmuje dwa podstawowe elementy:</p>
+<ul>
+<li>estymację (szacowanie),</li>
+<li>weryfikację hipotez statystycznych.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Teoria estymacji zajmuje się metodami szacowania (estymacji) nieznanego rozkładu lub nieznanych parametrów rozkładu badanej cechy X w populacji generalnej.</li>
+<li>Teoria weryfikacji hipotez zajmuje się metodami testowania dowolnego przypuszczenia dosytczącego nieznanego rozkładu lub nieznanych parametrów rozkładu badanej cechy X w populacji generalnej.</li>
+</ol>
+<p><strong>Estymacja punktowa</strong> to grupa metod statystycznych, służąca do punktowego oszacowania wartości szukanego parametru rozkładu. Punktowe oszacowanie oznacza tutaj, że uzyskujemy konkretną wartość liczbową, nie zaś przedział liczbowy, jak dzieje się to w przypadku estymacji przedziałowej.</p>
+<p>Estymacja punktowa polega na podaniu jednej wartości będącej oszacowaniem nieznanego parametru. Ilustracją takiego sposobu estymacji jest oszacowanie na podstawie wyników badania sondażowego frekwencji wyborczej w nadchodzących wyborach.</p>
+<p>Pojęcie “estymacja punktowa” bierze się stąd, że dla każdego parametru populacji znajdujemy jedną liczbę (na podstawie realizacji próby), w taki sposób, aby była ona możliwie najlepszym przybliżeniem nieznanego parametru. Jest to tzw. ocena punktowa parametru.</p>
+<p>Ocena punktowa jest wyznaczana na podstawie wartości pewnej statystyki z próby, o własnościach upoważniających do szacowania za jej pomocą danego parametru populacji. Dla przykładu, następująca statystyka z próby:</p>
+<p><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i\]</span> posiada własności uprawniające do oszacowania (estymowania) za jej pomocą nieznanej wartości średniej w populacji generalnej (<span class="math inline">\(\mu\)</span>).</p>
+<p>W praktyce najczęściej nie znamy parametrów (charakterystyk) dla całej populacji a dysponujemy jedynie próbką wylosowaną z tej populacji. Estymatory punktowe to charakterystyki otrzymane z próby losowej. Dokładność takiego estymatora określona jest przez jego błąd standardowy. Prawdziwe parametry populacji znajdują się w okolicy wyznaczonego estymatora punktowego. Np. parametr populacyjny średnia arytmetyczna <span class="math inline">\(\mu\)</span> znajduje się w okolicy estymatora z próby jakim jest <span class="math inline">\(\overline{x}\)</span>.</p>
+<p>Użytecznym uzupełnienie estymacji punktowej jest skonstruowanie przedziału, który z zadanym z góry prawdopodobieństwem, bliskim jedności, pokrywałby nieznaną wartość tego parametru. Jest to zadanie <strong>estymacji przedziałowej</strong>. Z przedziałem ufności związany jest tzw. poziom ufności <span class="math inline">\(1-\alpha\)</span>, określający prawdopodobieństwo, że przedział ufności faktycznie pokrywa wartość nieznanego parametru populacji (np. <span class="math inline">\(\mu\)</span>).</p>
+<p>Przedział ufności to podstawowe narzędzie estymacji przedziałowej. Pojęcie to zostało wprowadzone do statystyki przez matematyka polskiego pochodzenia Jerzego Spławę-Neymana. Występuje w wielu wariantach, w klasycznym wąskim rozumieniu opiera się o błąd standardowy. Szczególny przypadek przedziału ufności w badaniach ankietowych jest zwyczajowo określany marginesem błędu.</p>
+<div class="figure">
+<img src="images/stat/Confidence_intervall_normal_dist.svg" alt="" />
+<p class="caption">Figure 6.4. 100 95% - przedziałów ufności dla nieznanej wartości średniej w populacji.</p>
+</div>
+<p>Rysunek 6.4 przedstawia przedziały ufności (95%) oparte na stu symulacjach prób z tego samego rozkładu normalnego. Szerokość i położenie każdego przedziału to parametry oparte na próbie, w związku z czym cechują się one zmiennością. Można jednak oczekiwać, że w idealnej sytuacji na sto przypadków tylko około pięć (<span class="math inline">\(\alpha = 0.05\)</span>) nie będzie zawierać średniej oryginalnego rozkładu.</p>
+<p>Rysunek 6.5 przedstawia jeden z możliwych przedziałów ufności dla średniej populacyjnej.</p>
+<div class="figure">
+<img src="images/stat/IMG_1333.JPG" alt="" />
+<p class="caption">Figure 6.5. 95%-przedział ufności - przykład</p>
+</div>
+<div id="przykład---przedział-ufności-i-margines-błędu" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Przykład - przedział ufności i margines błędu</h3>
 <p>W próbie liczącej 985 wyborców, 592 zamierza głosować na kandydata Republikanów w najbliższych wyborach. Zbuduj 95% przedział ufności dla frakcji (proporcji) <em>p</em> wyborców deklarujących poparcie dla kandydata Republikanów. Podaj interpretację przedziału ufności.</p>
 <p>Rozwiązanie:</p>
 <p>Tzw. <strong>punktowym estymatorem frakcji</strong> jest oczywiście <span class="math inline">\(\hat{p} = \frac{X}{n} = \frac{592}{985} = 0.601\)</span></p>
 <p>Odchylenie standardowe estymatora zwane <strong>błędem standardowym</strong> (<span class="math inline">\(\sigma_{\hat{p}}\)</span>) obliczamy stosując znane wyrażenie <span class="math inline">\(\sqrt{\frac{p(1-p)}{n}} = 0.016\)</span>.</p>
 <p>W celu ustalenia tzw. <strong>95% przedziału ufności</strong> dla proporcji <em>p</em> wygodnie jest posłużyć się zmienną standaryzowaną <em>Z</em>.</p>
 <p>Przyjmując tzw. poziom zaufania (ufności) 95%, można powiedzieć, że 95% przedziałów ufności, wygenerowanych na podstawie dowolnie dużej liczby prób reprezentatywnych wybranych z danej populacji, pokryje nieznaną wartość parametru populacji.</p>
-<p>Dla zmiennej standaryzowanej <span class="math inline">\(Z\sim N(0, 1)\)</span>, 95% wszystkich obserwacji znajduje się w przedziale <span class="math inline">\([-1.96 &lt; Z &lt; 1.96]\)</span>. Wartości 1.96 można odczytać z tablic rozkładu normalnego szukając wartość zmiennej <em>Z</em> dla prawdopodobieństwa 0.975 = 97.5%. Dlaczego dla wartości 0.975? Otóż <span class="math inline">\(1 - 0.95 = 0.05\)</span>. Tę wartość dzielimy przez 2 i wówczas otrzymujemy 0.25 (0.25 na lewym krańcu rozkładu normalnego i 0.25 na prawym krańcu daje nam w sumie 0.05). Ostatecznie mamy <span class="math inline">\(1 - 0.25 = 0.975\)</span>. Te działania są niezbędne, żeby prawidłowo odczytać z tablic wartości zmiennej <em>Z</em>, które wyznaczą 95% przedział ufności.</p>
+<p>Dla zmiennej standaryzowanej <span class="math inline">\(Z\sim N(0, 1)\)</span>, 95% wszystkich obserwacji znajduje się w przedziale <span class="math inline">\([-1.96 &lt; Z &lt; 1.96]\)</span>. Wartości 1.96 można odczytać z tablic rozkładu normalnego szukając wartości zmiennej <em>Z</em> dla prawdopodobieństwa 0.975 = 97.5%. Dlaczego dla wartości 0.975? Otóż <span class="math inline">\(1 - 0.95 = 0.05\)</span>. Tę wartość dzielimy przez 2 i wówczas otrzymujemy 0.25 (0.25 na lewym krańcu rozkładu normalnego i 0.25 na prawym krańcu daje nam w sumie 0.05). Ostatecznie mamy <span class="math inline">\(1 - 0.25 = 0.975\)</span>.</p>
 <p>Ściślej, <strong>przedział ufności to taki przedział, że</strong></p>
 <p><span class="math display">\[P(- z_{\alpha/2} &lt; Z &lt; z_{\alpha/2}) = P(- z_{\alpha/2} &lt; \frac{\hat{p} - \mu_{\hat{p}}}{\sigma_{\hat{p}}} = \frac{\hat{p} - p}{\sqrt{ \frac{p(1-p)}{n} }} &lt; z_{\alpha/2}) = 1 - \alpha\]</span></p>
 <p>Po przekształceniach (wyprowadzamy <em>p</em> z nierówności) otrzymamy:</p>
@@ -390,6 +422,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Otrzymujemy ostatecznie, że <em>p</em> pokrywa przedział ufności <span class="math inline">\(0.5704, 0.6316\)</span>.</p>
 <p><strong>Odpowiedź</strong>: Możemy powiedzieć, że, z prawdopodobieństwem 0.95, przedziałów ufności <span class="math inline">\(0.5704, 0.6316\)</span> pokryje nieznaną wartość parametru proporcji poparcia wyborczego dla kandydata Republikanów.</p>
 
+</div>
 </div>
 <!-- </div> -->
 

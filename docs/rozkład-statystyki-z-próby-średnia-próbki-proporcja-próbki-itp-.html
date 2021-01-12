@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-11" />
+<meta name="date" content="2021-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,11 +343,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
 <li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowania-średniej-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowania średniej próby</a></li>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowy-średniej-rozkład-średniej-z-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowy średniej (rozkład średniej z próby)</a></li>
 <li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><a href="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne, CTG (Central Limit Theorem)</a></li>
-<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html#przykład---przedział-ufności-i-margines-błędu"><i class="fa fa-check"></i><b>6.4.1</b> Przykład - przedział ufności i margines błędu</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -383,8 +386,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="caption">Rysunek 6.1. Pojęcie rozkładu statystyki (np. średniej) z próby (a sampling distribution)</p>
 </div>
 <p>Prostokąt na diagramie 6.1 przedstawia dużą populację, a każdy okrąg reprezentuje próbkę o rozmiarze n. Ponieważ obserwacje wybrane do próby mogą się różnić, przykładowe średnie z próby również mogą się różnić. Średnia z Próbki 1 (S1) wynosi <span class="math inline">\(\bar{x}_1 = 3,5\)</span>; średnia z Próbki 2 wynosi <span class="math inline">\(\bar{x}_2\)</span>; i tak dalej. <strong>Rozkład średniej z próby dla prób o rozmiarze n dla tej populacji</strong> tworzą średnie z wszystkich możliwych prób <span class="math inline">\(\bar{x}_1, \bar{x}_2, \bar{x}_3\)</span> itd. Jeśli próbki są pobierane ze zwracaniem (sampling with replacement), wówczas z populacji można pobrać nieskończoną liczbę próbek.</p>
-<div id="rozkład-próbkowania-średniej-próby" class="section level3" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Rozkład próbkowania średniej próby</h3>
+<div id="rozkład-próbkowy-średniej-rozkład-średniej-z-próby" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Rozkład próbkowy średniej (rozkład średniej z próby)</h3>
 <p>Załóżmy, że populacja składa się z czterech domów (N = 4), gdzie wartość rv. X, liczba pokojów do wynajęcia w każdej jednostce, jest podana poniżej:</p>
 <ol style="list-style-type: decimal">
 <li>dom pierwszy (2 pokoje),</li>
@@ -440,9 +443,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <caption>Table 6.2. Wszystkie możliwe 2-elementowe próby</caption>
 <colgroup>
 <col width="6%" />
-<col width="45%" />
+<col width="41%" />
 <col width="22%" />
-<col width="26%" />
+<col width="29%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -614,7 +617,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Figure 6.2 przedstawia metodę konstrukcji rozkładu średniej z próby na przykładzie populacji liczącej 4 elementy {2, 3, 4, 5}.</p>
 <div class="figure">
 <img src="images/stat/IMG_0164.jpeg" alt="" />
-<p class="caption">Figure 6.2. Rozkład średniej z próby dla próby 2-elementowej; f oznacza częstość bezwzględną</p>
+<p class="caption">Figure 6.2. Rozkład średniej z próby dla próby 2-elementowej; f oznacza częstość bezwzględną (Rysunek pochodzi z: Robert S. Witte, John S. Witte. (2017) Statistics. p. 172.)</p>
 </div>
 <hr />
 </div>
@@ -703,10 +706,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Rysunek 6.2 przedstawia rozkład prawdopodobieństwa sumy S z próby dwuelementowej (suma wyników dwóch rzutów sześciościenną kością), który kształtem przypomina rozkład normalny. Rozkład prawdopodobieństwa  do gry (rozkład zmiennej <span class="math inline">\(X_1\)</span>) był , ale przy rzucie dwiema (<span class="math inline">\(X_1+X_2\)</span>) lub tym bardziej, co można pokazać, większą liczbą kostek, rozkład prawdopodobieństwa sumy  wyników (<span class="math inline">\(S = X_1+X_2+ ... +X_n\)</span>), lub wartości przeciętnej wyników (<span class="math inline">\(\overline{X}\)</span>) wraz z wzrostem liczby kostek (lub liczby rzutów kostką), coraz bardziej przypomina rozkład normalny.</p>
+<p>Rysunek 6.3 przedstawia rozkład prawdopodobieństwa sumy S z próby dwuelementowej (suma wyników dwóch rzutów sześciościenną kością), który kształtem przypomina rozkład normalny. Rozkład prawdopodobieństwa  do gry (rozkład zmiennej <span class="math inline">\(X_1\)</span>) był , ale przy rzucie dwiema (<span class="math inline">\(X_1+X_2\)</span>) lub tym bardziej, co można pokazać, większą liczbą kostek, rozkład prawdopodobieństwa sumy  wyników (<span class="math inline">\(S = X_1+X_2+ ... +X_n\)</span>), lub wartości przeciętnej wyników (<span class="math inline">\(\overline{X}\)</span>) wraz z wzrostem liczby kostek (lub liczby rzutów kostką), coraz bardziej przypomina rozkład normalny.</p>
 <div class="figure">
 <img src="images/stat/Dice_Distribution_(bar).svg" alt="" />
-<p class="caption">Figure 6.2. Rozkład z próby dla zmiennej losowej S = suma oczek uzyskanych przy rzucie dwiema kośćmi (Sampling distribution for the random variable S = sum of outcomes in flipping two fair dice (Source: Wikipedia.org))</p>
+<p class="caption">Figure 6.3. Rozkład z próby dla zmiennej losowej S = suma oczek uzyskanych przy rzucie dwiema kośćmi (Sampling distribution for the random variable S = sum of outcomes in flipping two fair dice (Source: Wikipedia.org))</p>
 </div>
 <hr />
 </div>

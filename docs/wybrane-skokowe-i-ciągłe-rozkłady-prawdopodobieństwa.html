@@ -24,7 +24,7 @@
 <meta name="author" content="Michał Pierzgalski" />
 
 
-<meta name="date" content="2021-01-11" />
+<meta name="date" content="2021-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,11 +343,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
 <li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowania-średniej-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowania średniej próby</a></li>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowy-średniej-rozkład-średniej-z-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowy średniej (rozkład średniej z próby)</a></li>
 <li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><a href="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne, CTG (Central Limit Theorem)</a></li>
-<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html#przykład---przedział-ufności-i-margines-błędu"><i class="fa fa-check"></i><b>6.4.1</b> Przykład - przedział ufności i margines błędu</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -436,67 +439,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="rozkład-dwumianowy---przykład-0-nieformalne-wyprowadzenie-równania-funkcji" class="section level4" number="5.2.5.4">
 <h4><span class="header-section-number">5.2.5.4</span> Rozkład dwumianowy - przykład 0 (nieformalne wyprowadzenie równania funkcji)</h4>
 <p>Once we determine that a random variable is a binomial random variable, the next question we might have would be how to calculate probabilities.</p>
-<p>Let’s consider the experiment where we take a multiple-choice quiz of four questions with four choices each, and the topic is something we have absolutely no knowledge. If we let Z = the number of correct answer, then Z is a binomial random variable because:</p>
+<p>Suppose that the turnout rate for the 2016 presidential election in the Chicago area is 80%. Among a miniature random sample of 3 eligible voters, find the probability that exactly 0, or 1, or 2, or 3 will vote? If we let <span class="math inline">\(X\)</span> = the number of people who voted, then <span class="math inline">\(X\)</span> is a binomial random variable because:</p>
 <ul>
-<li><p>there are a fixed number of questions (4),</p></li>
-<li><p>the questions are independent,</p></li>
-<li><p>since we’re just guessing each question has two outcomes - we’re right or wrong,</p></li>
-<li><p>the probability of being correct is constant, since we’re guessing: 1/4 = 0.25 = the probability of “success” in a single <em>Bernoulli</em> trial X_i, (i = 1, 2, 3, 4).</p></li>
+<li><p>there is a fixed number of voters (3),</p></li>
+<li><p>the decisions of eligible voters are independent,</p></li>
+<li><p>each voter has two outcomes - to vote (denoted 1) or to abstain from voting (denoted 0),</p></li>
+<li><p>the probability of voting is constant: 4/5 = 0.8 = the probability of “success” in a single <em>Bernoulli</em> trial X_i, (i = 1, 2, 3).</p></li>
 </ul>
 <p>So how can we find probabilities? Let’s look at a tree diagram of the situation:</p>
-<p>Finding the probability distribution of Z involves a couple key concepts. First, notice that there are multiple ways to get 0, 1, 2, 3 or 4 questions correct. In fact, we can use the <em>combinations without repetitions</em> (nCk) to figure out how many ways there are. For example, P(Z = 3) is the same regardless of the order in which we get 3 correct,;we can just multiply the probability of one line by 4, since there are 4 ways to get 3 correct.</p>
-<p>Not only that, since the questions are independent, we can just multiply the probability of getting each one correct or incorrect.</p>
+<p>Finding the probability distribution of X involves a couple key concepts. First, notice that there are multiple ways to get 0, 1, 2, or 3 people voted. In fact, we can use the <em>combinations without repetitions</em> (<span class="math inline">\(C(n, x)\)</span>) to figure out how many ways there are. For example, P(X = 2) is the same regardless of the order in which we get 2 correct; we can just multiply the probability of one line by 3, since there are 3 ways to have 3 “successes”.</p>
+<p>Not only that, since the decisions of eligible voters are independent, we can just multiply the probability of getting “success” or “failure”.</p>
 <p>The general equation of the Binomial distribution is,</p>
-<p><span class="math inline">\(P\)</span>(<em>k</em> sukcesów w <em>n</em> próbach (<em>trials</em>)) = <span class="math inline">\(C_k^n(p^k \times (1-p)^{n-k})\)</span></p>
-<p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>; <span class="math inline">\(C_k^n = nCk =\)</span> liczba k-elementowych kombinacji bez powtórzeń, ze zbioru n-elementowego.</p>
-<p>Inspect Tables A and B to understand the above general equation of the Binomial distribution.</p>
+<p><span class="math display">\[P(\text{x &quot;sukcesów&quot; w n próbach (trials)}) = C_x^n(p^x \times (1-p)^{n-x})\]</span></p>
+<p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>; <span class="math inline">\(C_x^n = nCx =\)</span> liczba <span class="math inline">\(x\)</span>-elementowych kombinacji bez powtórzeń, ze zbioru n-elementowego.</p>
+<p>Inspect Figures A and B to understand the above general equation of the Binomial distribution.</p>
 <div class="figure">
-<img src="images/stat/IMG_0173.jpeg" alt="" />
-<p class="caption">Tabela A. Konstrukcja rozkładu dwumianowego dla n = 4 i p = 0.25 - etap I</p>
+<img src="images/stat/IMG_0181.JPG" alt="" />
+<p class="caption">Figure A: Funkcja rozkładu dwumianowego - wyjaśnienie (etap I)</p>
 </div>
-<p>Tabela B przedstawia rozkład prawdopodobieństwa zmiennej <span class="math inline">\(Z \sim Binom(n = 4, p = 0.25)\)</span>.</p>
-<table>
-<caption>Tabela B. Konstrukcja rozkładu dwumianowego dla n = 4 i p = 0.25 - etap II</caption>
-<thead>
-<tr class="header">
-<th>i</th>
-<th>Z</th>
-<th>P(Z)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>0</td>
-<td><span class="math inline">\(1*0.3164 = 0.3164\)</span></td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>1</td>
-<td><span class="math inline">\(4*(0.25 * 0.75^3) = 0.4219\)</span></td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>2</td>
-<td>0.2109</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>3</td>
-<td>0.0469</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>4</td>
-<td>0.0039</td>
-</tr>
-<tr class="even">
-<td>∑</td>
-<td>-</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
+<div class="figure">
+<img src="images/stat/IMG_0182.JPG" alt="" />
+<p class="caption">Figure B: Funkcja rozkładu dwumianowego - wyjaśnienie (etap II)</p>
+</div>
 </div>
 <div id="rozkład-dwumianowy---przykład-1" class="section level4" number="5.2.5.5">
 <h4><span class="header-section-number">5.2.5.5</span> Rozkład dwumianowy - przykład 1</h4>
