@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5.2 Wybrane (skokowe i ciągłe) rozkłady prawdopodobieństwa | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="5.2 Wybrane (skokowe i ciągłe) rozkłady prawdopodobieństwa | STAT 101 [WSMiP UŁ]" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5.2 Wybrane (skokowe i ciągłe) rozkłady prawdopodobieństwa | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5.2 Wybrane (skokowe i ciągłe) rozkłady prawdopodobieństwa | STAT 101 [WSMiP UŁ]" />
+  
+  
+  
+
+<meta name="author" content="Michał Pierzgalski" />
+
+
+<meta name="date" content="2021-01-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"/>
+<link rel="next" href="wykład-6-podstawy-wnioskowania-statystycznego.html"/>
+<script src="assets/header-attrs-2.6/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Opis kursu</a></li>
+<li class="chapter" data-level="" data-path="o-mnie.html"><a href="o-mnie.html"><i class="fa fa-check"></i>O mnie</a>
+<ul>
+<li class="chapter" data-level="" data-path="kontakt.html"><a href="kontakt.html"><i class="fa fa-check"></i>Kontakt</a>
+<ul>
+<li class="chapter" data-level="" data-path="kontakt.html"><a href="kontakt.html#dyżur-dla-studentów-20202021"><i class="fa fa-check"></i>Dyżur dla studentów (2020/2021)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="uwagi.html"><a href="uwagi.html"><i class="fa fa-check"></i>Uwagi</a>
+<ul>
+<li class="chapter" data-level="" data-path="uwaga-dotycząca-kalkulatorów-1.html"><a href="uwaga-dotycząca-kalkulatorów-1.html"><i class="fa fa-check"></i>UWAGA dotycząca kalkulatorów (1)</a></li>
+<li class="chapter" data-level="" data-path="uwaga-dotycząca-kalkulatorów-2.html"><a href="uwaga-dotycząca-kalkulatorów-2.html"><i class="fa fa-check"></i>UWAGA dotycząca kalkulatorów (2)</a></li>
+<li class="chapter" data-level="" data-path="uwaga-dotycząca-zapisu-ułamków-dziesiętnych.html"><a href="uwaga-dotycząca-zapisu-ułamków-dziesiętnych.html"><i class="fa fa-check"></i>UWAGA dotycząca zapisu ułamków dziesiętnych</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="wykład-1-wprowadzenie.html"><a href="wykład-1-wprowadzenie.html"><i class="fa fa-check"></i><b>1</b> Wykład 1. Wprowadzenie</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="co-to-jest-statystyka.html"><a href="co-to-jest-statystyka.html"><i class="fa fa-check"></i><b>1.1</b> Co to jest statystyka?</a></li>
+<li class="chapter" data-level="1.2" data-path="motywacja-dwa-powody-dla-których-warto-uczyć-się-statystyki-i-metod-analizy-danych.html"><a href="motywacja-dwa-powody-dla-których-warto-uczyć-się-statystyki-i-metod-analizy-danych.html"><i class="fa fa-check"></i><b>1.2</b> Motywacja - dwa powody, dla których warto uczyć się statystyki i metod analizy danych?</a></li>
+<li class="chapter" data-level="1.3" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html"><i class="fa fa-check"></i><b>1.3</b> Przypomnienie niektórych pojęć z matematyki</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#przegląd-elementów-algebry"><i class="fa fa-check"></i><b>1.3.1</b> Przegląd elementów algebry</a></li>
+<li class="chapter" data-level="1.3.2" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#funkcje"><i class="fa fa-check"></i><b>1.3.2</b> Funkcje</a></li>
+<li class="chapter" data-level="1.3.3" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#trzy-podstawowe-pojęcia-rachunku-różniczkowego"><i class="fa fa-check"></i><b>1.3.3</b> Trzy podstawowe pojęcia rachunku różniczkowego</a></li>
+<li class="chapter" data-level="1.3.4" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#granica-funkcji"><i class="fa fa-check"></i><b>1.3.4</b> Granica funkcji</a></li>
+<li class="chapter" data-level="1.3.5" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#pochodna-funkcji"><i class="fa fa-check"></i><b>1.3.5</b> Pochodna funkcji</a></li>
+<li class="chapter" data-level="1.3.6" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#całka-funkcji"><i class="fa fa-check"></i><b>1.3.6</b> Całka funkcji</a></li>
+<li class="chapter" data-level="1.3.7" data-path="przypomnienie-niektórych-pojęć-z-matematyki.html"><a href="przypomnienie-niektórych-pojęć-z-matematyki.html#całka-jako-pole---intuicyjne-wyjaśnienie"><i class="fa fa-check"></i><b>1.3.7</b> Całka jako pole - intuicyjne wyjaśnienie</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="elementy-teorii-zbiorów.html"><a href="elementy-teorii-zbiorów.html"><i class="fa fa-check"></i><b>1.4</b> Elementy teorii zbiorów</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="wykład-2-wstęp-do-badań-ilościowych.html"><a href="wykład-2-wstęp-do-badań-ilościowych.html"><i class="fa fa-check"></i><b>2</b> Wykład 2. Wstęp do badań ilościowych</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="myślenie-krytyczne.html"><a href="myślenie-krytyczne.html"><i class="fa fa-check"></i><b>2.1</b> Myślenie krytyczne</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="myślenie-krytyczne.html"><a href="myślenie-krytyczne.html#myślenie-krytyczne-1"><i class="fa fa-check"></i><b>2.1.1</b> Myślenie krytyczne:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="pytanie-badawcze-i-hipotezy.html"><a href="pytanie-badawcze-i-hipotezy.html"><i class="fa fa-check"></i><b>2.2</b> Pytanie badawcze i hipotezy</a></li>
+<li class="chapter" data-level="2.3" data-path="podstawowe-pojęcia.html"><a href="podstawowe-pojęcia.html"><i class="fa fa-check"></i><b>2.3</b> Podstawowe pojęcia</a></li>
+<li class="chapter" data-level="2.4" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><i class="fa fa-check"></i><b>2.4</b> Statystyki opisowe i wnioskowanie statystyczne</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#zmienne-i-stałe"><i class="fa fa-check"></i><b>2.4.1</b> Zmienne i stałe</a></li>
+<li class="chapter" data-level="2.4.2" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#konstrukty-i-definicje-operacyjne-wyklad-21"><i class="fa fa-check"></i><b>2.4.2</b> Konstrukty i definicje operacyjne </a></li>
+<li class="chapter" data-level="2.4.3" data-path="statystyki-opisowe-i-wnioskowanie-statystyczne.html"><a href="statystyki-opisowe-i-wnioskowanie-statystyczne.html#zbieranie-danych"><i class="fa fa-check"></i><b>2.4.3</b> Zbieranie danych</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="metody-doboru-próbywyklad-22.html"><a href="metody-doboru-próbywyklad-22.html"><i class="fa fa-check"></i><b>2.5</b> Metody doboru próby</a></li>
+<li class="chapter" data-level="2.6" data-path="badania-na-próbie.html"><a href="badania-na-próbie.html"><i class="fa fa-check"></i><b>2.6</b> Badania na próbie</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="badania-na-próbie.html"><a href="badania-na-próbie.html#próba-losowa-prosta-próba-reprezentatywna"><i class="fa fa-check"></i><b>2.6.1</b> Próba losowa prosta (próba reprezentatywna)</a></li>
+<li class="chapter" data-level="2.6.2" data-path="badania-na-próbie.html"><a href="badania-na-próbie.html#podstawowe-typy-próbkowania-random-sampling"><i class="fa fa-check"></i><b>2.6.2</b> Podstawowe typy ‘próbkowania’ (random sampling)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="próba-losowa-wyklad-23.html"><a href="próba-losowa-wyklad-23.html"><i class="fa fa-check"></i><b>2.7</b> Próba losowa </a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="próba-losowa-wyklad-23.html"><a href="próba-losowa-wyklad-23.html#obciążenie-badania-bias---błędy-próbkowania-i-błędy-systematyczne"><i class="fa fa-check"></i><b>2.7.1</b> Obciążenie badania (<em>bias</em>) - błędy próbkowania i błędy systematyczne</a></li>
+<li class="chapter" data-level="2.7.2" data-path="próba-losowa-wyklad-23.html"><a href="próba-losowa-wyklad-23.html#dobór-próby"><i class="fa fa-check"></i><b>2.7.2</b> Dobór próby</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="rozkłady-danych.html"><a href="rozkłady-danych.html"><i class="fa fa-check"></i><b>2.8</b> Rozkłady danych</a></li>
+<li class="chapter" data-level="2.9" data-path="podstawowe-etapy-badania-społecznegowyklad-24.html"><a href="podstawowe-etapy-badania-społecznegowyklad-24.html"><i class="fa fa-check"></i><b>2.9</b> Podstawowe etapy badania społecznego</a></li>
+<li class="chapter" data-level="2.10" data-path="badanie-statystyczne-niezbędne-kroki.html"><a href="badanie-statystyczne-niezbędne-kroki.html"><i class="fa fa-check"></i><b>2.10</b> Badanie statystyczne - niezbędne kroki</a></li>
+<li class="chapter" data-level="2.11" data-path="badania-obserwacyjne-i-eksperymentalnewyklad-25.html"><a href="badania-obserwacyjne-i-eksperymentalnewyklad-25.html"><i class="fa fa-check"></i><b>2.11</b> Badania obserwacyjne i eksperymentalne</a></li>
+<li class="chapter" data-level="2.12" data-path="statystyczny-projekt-badań-przykład-prostego-eksperymentu-wyklad-26.html"><a href="statystyczny-projekt-badań-przykład-prostego-eksperymentu-wyklad-26.html"><i class="fa fa-check"></i><b>2.12</b> Statystyczny projekt badań - przykład prostego eksperymentu </a></li>
+<li class="chapter" data-level="2.13" data-path="projekt-eksperymentu-wyklad-27.html"><a href="projekt-eksperymentu-wyklad-27.html"><i class="fa fa-check"></i><b>2.13</b> Projekt eksperymentu </a></li>
+<li class="chapter" data-level="2.14" data-path="przykłady-badań-empirycznych.html"><a href="przykłady-badań-empirycznych.html"><i class="fa fa-check"></i><b>2.14</b> Przykłady badań empirycznych</a></li>
+<li class="chapter" data-level="2.15" data-path="przykłady-badanie-1.html"><a href="przykłady-badanie-1.html"><i class="fa fa-check"></i><b>2.15</b> Przykłady - badanie 1</a></li>
+<li class="chapter" data-level="2.16" data-path="przykłady-badanie-2.html"><a href="przykłady-badanie-2.html"><i class="fa fa-check"></i><b>2.16</b> Przykłady - badanie 2</a></li>
+<li class="chapter" data-level="2.17" data-path="przykłady-badanie-3.html"><a href="przykłady-badanie-3.html"><i class="fa fa-check"></i><b>2.17</b> Przykłady - badanie 3</a></li>
+<li class="chapter" data-level="2.18" data-path="eksperyment.html"><a href="eksperyment.html"><i class="fa fa-check"></i><b>2.18</b> Eksperyment</a>
+<ul>
+<li class="chapter" data-level="2.18.1" data-path="eksperyment.html"><a href="eksperyment.html#klasyczny-plan-eksperymentalny"><i class="fa fa-check"></i><b>2.18.1</b> Klasyczny plan eksperymentalny</a></li>
+</ul></li>
+<li class="chapter" data-level="2.19" data-path="badania-quasi-eksperymentalne-eksperymenty-naturalne.html"><a href="badania-quasi-eksperymentalne-eksperymenty-naturalne.html"><i class="fa fa-check"></i><b>2.19</b> Badania <em>quasi</em>-eksperymentalne (<em>eksperymenty naturalne</em>)</a></li>
+<li class="chapter" data-level="2.20" data-path="przykłady-badanie-4.html"><a href="przykłady-badanie-4.html"><i class="fa fa-check"></i><b>2.20</b> Przykłady - badanie 4</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="wykład-3-wstęp-do-statystyki-statystyka-opisowa.html"><a href="wykład-3-wstęp-do-statystyki-statystyka-opisowa.html"><i class="fa fa-check"></i><b>3</b> Wykład 3. Wstęp do statystyki - statystyka opisowa</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="zmienne-i-stałe-1.html"><a href="zmienne-i-stałe-1.html"><i class="fa fa-check"></i><b>3.1</b> Zmienne i stałe</a></li>
+<li class="chapter" data-level="3.2" data-path="wybór-obiektówjednostek-do-badania.html"><a href="wybór-obiektówjednostek-do-badania.html"><i class="fa fa-check"></i><b>3.2</b> Wybór obiektów/jednostek do badania</a></li>
+<li class="chapter" data-level="3.3" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html"><i class="fa fa-check"></i><b>3.3</b> Badania na próbie</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html#próba-losowa-prosta-próba-reprezentatywna-1"><i class="fa fa-check"></i><b>3.3.1</b> Próba losowa prosta (próba reprezentatywna)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html#operat-losowania-1"><i class="fa fa-check"></i><b>3.3.2</b> Operat losowania</a></li>
+<li class="chapter" data-level="3.3.3" data-path="badania-na-próbie-1.html"><a href="badania-na-próbie-1.html#podstawowe-typy-próbkowania-random-sampling-1"><i class="fa fa-check"></i><b>3.3.3</b> Podstawowe typy ‘próbkowania’ (random sampling)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="obciążenie-badania-bias.html"><a href="obciążenie-badania-bias.html"><i class="fa fa-check"></i><b>3.4</b> Obciążenie badania (<em>bias</em>)</a></li>
+<li class="chapter" data-level="3.5" data-path="pomiar-definicja.html"><a href="pomiar-definicja.html"><i class="fa fa-check"></i><b>3.5</b> Pomiar - definicja</a></li>
+<li class="chapter" data-level="3.6" data-path="trafność-i-rzetelność-pomiarów.html"><a href="trafność-i-rzetelność-pomiarów.html"><i class="fa fa-check"></i><b>3.6</b> Trafność i rzetelność pomiarów</a></li>
+<li class="chapter" data-level="3.7" data-path="trafność-i-rzetelność.html"><a href="trafność-i-rzetelność.html"><i class="fa fa-check"></i><b>3.7</b> Trafność i rzetelność</a></li>
+<li class="chapter" data-level="3.8" data-path="poziomy-pomiaru-1.html"><a href="poziomy-pomiaru-1.html"><i class="fa fa-check"></i><b>3.8</b> Poziomy pomiaru</a></li>
+<li class="chapter" data-level="3.9" data-path="zmienne-dyskretne-i-ciągłe.html"><a href="zmienne-dyskretne-i-ciągłe.html"><i class="fa fa-check"></i><b>3.9</b> Zmienne dyskretne i ciągłe</a></li>
+<li class="chapter" data-level="3.10" data-path="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"><a href="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"><i class="fa fa-check"></i><b>3.10</b> Związki przyczynowo-skutkowe i korelacyjne między zmiennymi</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html"><a href="związki-przyczynowo-skutkowe-i-korelacyjne-między-zmiennymi.html#zmienne-zakłócające-confounding-lub-lurking-variables"><i class="fa fa-check"></i><b>3.10.1</b> Zmienne zakłócające (‘confounding lub lurking’ variables)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="poziom-pomiaru-2.html"><a href="poziom-pomiaru-2.html"><i class="fa fa-check"></i><b>3.11</b> Poziom pomiaru (2)</a></li>
+<li class="chapter" data-level="3.12" data-path="poziom-pomiaru-3.html"><a href="poziom-pomiaru-3.html"><i class="fa fa-check"></i><b>3.12</b> Poziom pomiaru (3)</a></li>
+<li class="chapter" data-level="3.13" data-path="tabelaryczna-prezentacja-rozkładów-danych.html"><a href="tabelaryczna-prezentacja-rozkładów-danych.html"><i class="fa fa-check"></i><b>3.13</b> Tabelaryczna prezentacja rozkładów danych</a></li>
+<li class="chapter" data-level="3.14" data-path="szereg-szczegółowy.html"><a href="szereg-szczegółowy.html"><i class="fa fa-check"></i><b>3.14</b> Szereg szczegółowy</a></li>
+<li class="chapter" data-level="3.15" data-path="szereg-rozdzielczy-rozkład-częstości-punktowy.html"><a href="szereg-rozdzielczy-rozkład-częstości-punktowy.html"><i class="fa fa-check"></i><b>3.15</b> Szereg rozdzielczy (rozkład częstości) <em>punktowy</em></a></li>
+<li class="chapter" data-level="3.16" data-path="szereg-rozdzielczy-rozkład-częstości-z-przedziałami-klasowymi.html"><a href="szereg-rozdzielczy-rozkład-częstości-z-przedziałami-klasowymi.html"><i class="fa fa-check"></i><b>3.16</b> Szereg rozdzielczy (rozkład częstości) <em>z przedziałami klasowymi</em></a></li>
+<li class="chapter" data-level="3.17" data-path="szereg-rozdzielczy-rozkład-częstości-dla-danych-pogrupowanych.html"><a href="szereg-rozdzielczy-rozkład-częstości-dla-danych-pogrupowanych.html"><i class="fa fa-check"></i><b>3.17</b> Szereg rozdzielczy (Rozkład częstości dla danych pogrupowanych)</a></li>
+<li class="chapter" data-level="3.18" data-path="miary-tendencji-centralnej-miary-rozproszenia-dyspersji-oraz-mierniki-siły-związku-między-zmiennymi.html"><a href="miary-tendencji-centralnej-miary-rozproszenia-dyspersji-oraz-mierniki-siły-związku-między-zmiennymi.html"><i class="fa fa-check"></i><b>3.18</b> Miary tendencji centralnej, miary rozproszenia (dyspersji) oraz mierniki siły związku między zmiennymi</a></li>
+<li class="chapter" data-level="3.19" data-path="średnia.html"><a href="średnia.html"><i class="fa fa-check"></i><b>3.19</b> Średnia</a></li>
+<li class="chapter" data-level="3.20" data-path="wariancja-i-odchylenie-standardowe.html"><a href="wariancja-i-odchylenie-standardowe.html"><i class="fa fa-check"></i><b>3.20</b> Wariancja i odchylenie standardowe</a></li>
+<li class="chapter" data-level="3.21" data-path="średnia-mediana-czy-dominanta.html"><a href="średnia-mediana-czy-dominanta.html"><i class="fa fa-check"></i><b>3.21</b> Średnia, mediana, czy dominanta</a></li>
+<li class="chapter" data-level="3.22" data-path="średnia-arytmetyczna-i-odchylenie-standardowe.html"><a href="średnia-arytmetyczna-i-odchylenie-standardowe.html"><i class="fa fa-check"></i><b>3.22</b> Średnia arytmetyczna i odchylenie standardowe</a>
+<ul>
+<li class="chapter" data-level="3.22.1" data-path="średnia-arytmetyczna-i-odchylenie-standardowe.html"><a href="średnia-arytmetyczna-i-odchylenie-standardowe.html#podstawowe-formuły"><i class="fa fa-check"></i><b>3.22.1</b> Podstawowe formuły</a></li>
+<li class="chapter" data-level="3.22.2" data-path="średnia-arytmetyczna-i-odchylenie-standardowe.html"><a href="średnia-arytmetyczna-i-odchylenie-standardowe.html#parametry-populacji-i-statystyki-estymatory-z-próby---podstawowe-symbole"><i class="fa fa-check"></i><b>3.22.2</b> Parametry populacji i statystyki (estymatory) z próby - podstawowe symbole</a></li>
+</ul></li>
+<li class="chapter" data-level="3.23" data-path="obliczanie-średniej-wariancji-i-odchylenia-standardowego.html"><a href="obliczanie-średniej-wariancji-i-odchylenia-standardowego.html"><i class="fa fa-check"></i><b>3.23</b> Obliczanie średniej, wariancji i odchylenia standardowego</a></li>
+<li class="chapter" data-level="3.24" data-path="dominanta.html"><a href="dominanta.html"><i class="fa fa-check"></i><b>3.24</b> Dominanta</a></li>
+<li class="chapter" data-level="3.25" data-path="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html"><a href="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html"><i class="fa fa-check"></i><b>3.25</b> Miary pozycyjne - kwartyle, mediana oraz rozstęp międzykwartylowy</a>
+<ul>
+<li class="chapter" data-level="3.25.1" data-path="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html"><a href="miary-pozycyjne-kwartyle-mediana-oraz-rozstęp-międzykwartylowy.html#kwartyle"><i class="fa fa-check"></i><b>3.25.1</b> Kwartyle</a></li>
+</ul></li>
+<li class="chapter" data-level="3.26" data-path="rozstęp-międzykwartylowy.html"><a href="rozstęp-międzykwartylowy.html"><i class="fa fa-check"></i><b>3.26</b> Rozstęp międzykwartylowy</a></li>
+<li class="chapter" data-level="3.27" data-path="miary-pozycji-względnej.html"><a href="miary-pozycji-względnej.html"><i class="fa fa-check"></i><b>3.27</b> Miary pozycji względnej</a>
+<ul>
+<li class="chapter" data-level="3.27.1" data-path="miary-pozycji-względnej.html"><a href="miary-pozycji-względnej.html#percentyl-i-pozycjaranga-percentylowa-centylowa"><i class="fa fa-check"></i><b>3.27.1</b> Percentyl i pozycja/ranga percentylowa (centylowa)</a></li>
+<li class="chapter" data-level="3.27.2" data-path="miary-pozycji-względnej.html"><a href="miary-pozycji-względnej.html#wynik-standardowy-z-score-standaryzacja-zmiennych"><i class="fa fa-check"></i><b>3.27.2</b> Wynik standardowy (z-score, standaryzacja zmiennych)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.28" data-path="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"><a href="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"><i class="fa fa-check"></i><b>3.28</b> Wizualizacja rozkładów danych (histogramy i wykresy pudełkowe)</a>
+<ul>
+<li class="chapter" data-level="3.28.1" data-path="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html"><a href="wizualizacja-rozkładów-danych-histogramy-i-wykresy-pudełkowe.html#ważne-typy-wykresów-statystycznych"><i class="fa fa-check"></i><b>3.28.1</b> Ważne typy wykresów statystycznych:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.29" data-path="wykres-słupkowy.html"><a href="wykres-słupkowy.html"><i class="fa fa-check"></i><b>3.29</b> Wykres słupkowy</a></li>
+<li class="chapter" data-level="3.30" data-path="wykres-słupkowy-2.html"><a href="wykres-słupkowy-2.html"><i class="fa fa-check"></i><b>3.30</b> Wykres słupkowy (2)</a></li>
+<li class="chapter" data-level="3.31" data-path="wykres-słupkowy-3.html"><a href="wykres-słupkowy-3.html"><i class="fa fa-check"></i><b>3.31</b> Wykres słupkowy (3)</a></li>
+<li class="chapter" data-level="3.32" data-path="wykres-słupkowy-4.html"><a href="wykres-słupkowy-4.html"><i class="fa fa-check"></i><b>3.32</b> Wykres słupkowy (4)</a></li>
+<li class="chapter" data-level="3.33" data-path="szereg-rozdzielczy-i-histogram.html"><a href="szereg-rozdzielczy-i-histogram.html"><i class="fa fa-check"></i><b>3.33</b> Szereg rozdzielczy i histogram</a></li>
+<li class="chapter" data-level="3.34" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>3.34</b> Histogram</a></li>
+<li class="chapter" data-level="3.35" data-path="histogram-gęstości.html"><a href="histogram-gęstości.html"><i class="fa fa-check"></i><b>3.35</b> Histogram gęstości</a></li>
+<li class="chapter" data-level="3.36" data-path="konstrukcja-histogramu-gęstości.html"><a href="konstrukcja-histogramu-gęstości.html"><i class="fa fa-check"></i><b>3.36</b> Konstrukcja histogramu gęstości</a></li>
+<li class="chapter" data-level="3.37" data-path="histogram-częstości-bezwzględnych.html"><a href="histogram-częstości-bezwzględnych.html"><i class="fa fa-check"></i><b>3.37</b> Histogram częstości bezwzględnych</a></li>
+<li class="chapter" data-level="3.38" data-path="histogram-częstości-względnych.html"><a href="histogram-częstości-względnych.html"><i class="fa fa-check"></i><b>3.38</b> Histogram częstości względnych</a></li>
+<li class="chapter" data-level="3.39" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-1.html"><i class="fa fa-check"></i><b>3.39</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (1)</a></li>
+<li class="chapter" data-level="3.40" data-path="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><a href="histogram-dla-funkcji-prawdopodobieństwa-rozkład-dwumianowy-2.html"><i class="fa fa-check"></i><b>3.40</b> Histogram dla funkcji prawdopodobieństwa - rozkład dwumianowy (2)</a></li>
+<li class="chapter" data-level="3.41" data-path="wykres-pudełkowy.html"><a href="wykres-pudełkowy.html"><i class="fa fa-check"></i><b>3.41</b> Wykres pudełkowy</a></li>
+<li class="chapter" data-level="3.42" data-path="wykres-pudełkowy-przykład-1.html"><a href="wykres-pudełkowy-przykład-1.html"><i class="fa fa-check"></i><b>3.42</b> Wykres pudełkowy - przykład (1)</a></li>
+<li class="chapter" data-level="3.43" data-path="wykres-pudełkowy-przykład-2.html"><a href="wykres-pudełkowy-przykład-2.html"><i class="fa fa-check"></i><b>3.43</b> Wykres pudełkowy - przykład (2)</a></li>
+<li class="chapter" data-level="3.44" data-path="histogram-a-wykres-pudełkowy-przykład-3.html"><a href="histogram-a-wykres-pudełkowy-przykład-3.html"><i class="fa fa-check"></i><b>3.44</b> Histogram a wykres pudełkowy - przykład (3)</a></li>
+<li class="chapter" data-level="3.45" data-path="wykres-pudełkowy-jeszcze-jeden-przykład.html"><a href="wykres-pudełkowy-jeszcze-jeden-przykład.html"><i class="fa fa-check"></i><b>3.45</b> Wykres pudełkowy - jeszcze jeden przykład</a></li>
+<li class="chapter" data-level="3.46" data-path="wykres-pudełkowy-a-histogram.html"><a href="wykres-pudełkowy-a-histogram.html"><i class="fa fa-check"></i><b>3.46</b> Wykres pudełkowy a histogram</a></li>
+<li class="chapter" data-level="3.47" data-path="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><a href="skośnośćasymetria-rozkładu-skewness-rozkłady-lewostronnie-i-prawostronnie-asymetryczne.html"><i class="fa fa-check"></i><b>3.47</b> Skośność/asymetria rozkładu (skewness) - rozkłady lewostronnie i prawostronnie asymetryczne</a></li>
+<li class="chapter" data-level="3.48" data-path="miary-korelacji.html"><a href="miary-korelacji.html"><i class="fa fa-check"></i><b>3.48</b> Miary korelacji</a>
+<ul>
+<li class="chapter" data-level="3.48.1" data-path="miary-korelacji.html"><a href="miary-korelacji.html#współczynnik-korelacji-liniowej-rho-pearsona"><i class="fa fa-check"></i><b>3.48.1</b> Współczynnik korelacji liniowej <span class="math inline">\(\rho\)</span> Pearsona</a></li>
+<li class="chapter" data-level="3.48.2" data-path="miary-korelacji.html"><a href="miary-korelacji.html#test-niezależności-chi-kwadrat-chi2"><i class="fa fa-check"></i><b>3.48.2</b> Test niezależności chi-kwadrat <span class="math inline">\(\chi^2\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-3.html"><a href="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-3.html"><i class="fa fa-check"></i><b>4</b> Wykład 4. Podstawy rachunku prawdopodobieństwa [wersja robocza, 0.3]</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="wprowadzenie.html"><a href="wprowadzenie.html"><i class="fa fa-check"></i><b>4.1</b> Wprowadzenie</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="wprowadzenie.html"><a href="wprowadzenie.html#podstawowe-spójniki-logiczne"><i class="fa fa-check"></i><b>4.1.1</b> Podstawowe spójniki logiczne</a></li>
+<li class="chapter" data-level="4.1.2" data-path="wprowadzenie.html"><a href="wprowadzenie.html#zbiory"><i class="fa fa-check"></i><b>4.1.2</b> Zbiory</a></li>
+<li class="chapter" data-level="4.1.3" data-path="wprowadzenie.html"><a href="wprowadzenie.html#podstawowe-działania-na-zbiorach-zdarzeniach"><i class="fa fa-check"></i><b>4.1.3</b> Podstawowe działania na zbiorach (zdarzeniach)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="wprowadzenie.html"><a href="wprowadzenie.html#zbiory-przeliczalne-i-nieprzeliczalne-1"><i class="fa fa-check"></i><b>4.1.4</b> Zbiory przeliczalne i nieprzeliczalne</a></li>
+<li class="chapter" data-level="4.1.5" data-path="wprowadzenie.html"><a href="wprowadzenie.html#zbiór-potęgowy-power-set---dla-danego-zbioru-x-zbiór-wszystkich-jego-podzbiorów"><i class="fa fa-check"></i><b>4.1.5</b> Zbiór potęgowy (<em>Power set</em>) - dla danego zbioru X zbiór wszystkich jego podzbiorów</a></li>
+<li class="chapter" data-level="4.1.6" data-path="wprowadzenie.html"><a href="wprowadzenie.html#liczność-moc-kardynalność-zbioru-ang.-cardinality"><i class="fa fa-check"></i><b>4.1.6</b> Liczność (moc, kardynalność) zbioru [ang. cardinality]</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><i class="fa fa-check"></i><b>4.2</b> Podstawowe reguły kombinatoryczne (basic counting methods)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#reguła-sumy"><i class="fa fa-check"></i><b>4.2.1</b> Reguła sumy</a></li>
+<li class="chapter" data-level="4.2.2" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#reguła-iloczynu"><i class="fa fa-check"></i><b>4.2.2</b> Reguła iloczynu</a></li>
+<li class="chapter" data-level="4.2.3" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#reguła-iloczynu-2"><i class="fa fa-check"></i><b>4.2.3</b> Reguła iloczynu (2)</a></li>
+<li class="chapter" data-level="4.2.4" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#permutacje-bez-powtórzeń-bez-zwracania"><i class="fa fa-check"></i><b>4.2.4</b> Permutacje bez powtórzeń (bez zwracania)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#kombinacje-bez-powtórzeń-bez-zwracania"><i class="fa fa-check"></i><b>4.2.5</b> Kombinacje bez powtórzeń (bez zwracania)</a></li>
+<li class="chapter" data-level="4.2.6" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#permutacje-z-powtórzeniami-elementy-mogą-się-powtarzać"><i class="fa fa-check"></i><b>4.2.6</b> Permutacje z powtórzeniami (elementy mogą się powtarzać)</a></li>
+<li class="chapter" data-level="4.2.7" data-path="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"><a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html#kombinacje-z-powtórzeniami"><i class="fa fa-check"></i><b>4.2.7</b> Kombinacje z powtórzeniami</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html"><i class="fa fa-check"></i><b>4.3</b> Prawdopodobieństwo</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#definicja-prawdopodobieństwa"><i class="fa fa-check"></i><b>4.3.1</b> Definicja prawdopodobieństwa</a></li>
+<li class="chapter" data-level="4.3.2" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#podstawowe-pojęcia-1"><i class="fa fa-check"></i><b>4.3.2</b> Podstawowe pojęcia</a></li>
+<li class="chapter" data-level="4.3.3" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#zmienna-losowa-i-rozkład-prawdopodobieństwa---wprowadzenie"><i class="fa fa-check"></i><b>4.3.3</b> Zmienna losowa i rozkład prawdopodobieństwa - wprowadzenie</a></li>
+<li class="chapter" data-level="4.3.4" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#aksjomaty-pewniki-teorii-prawdopodobieństwa"><i class="fa fa-check"></i><b>4.3.4</b> Aksjomaty (pewniki) teorii prawdopodobieństwa</a></li>
+<li class="chapter" data-level="4.3.5" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#klasyczna-definicja-prawdopodobieństwa"><i class="fa fa-check"></i><b>4.3.5</b> Klasyczna definicja prawdopodobieństwa</a></li>
+<li class="chapter" data-level="4.3.6" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#definicja-empiryczna-lub-statystyczna"><i class="fa fa-check"></i><b>4.3.6</b> Definicja empiryczna lub statystyczna</a></li>
+<li class="chapter" data-level="4.3.7" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#prawdopodobieństwo-subiektywne"><i class="fa fa-check"></i><b>4.3.7</b> Prawdopodobieństwo subiektywne</a></li>
+<li class="chapter" data-level="4.3.8" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#empiryczny-rozkład-prawdopodobieństwa"><i class="fa fa-check"></i><b>4.3.8</b> Empiryczny rozkład prawdopodobieństwa</a></li>
+<li class="chapter" data-level="4.3.9" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#algebra-prawdopodobieństw"><i class="fa fa-check"></i><b>4.3.9</b> Algebra prawdopodobieństw</a></li>
+<li class="chapter" data-level="4.3.10" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne"><i class="fa fa-check"></i><b>4.3.10</b> Niezależność zdarzeń losowych a zdarzenia parami rozłączne</a></li>
+<li class="chapter" data-level="4.3.11" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#prawdopodobieństwo-warunkowe"><i class="fa fa-check"></i><b>4.3.11</b> Prawdopodobieństwo warunkowe</a></li>
+<li class="chapter" data-level="4.3.12" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#zdarzenia-parami-niezależne"><i class="fa fa-check"></i><b>4.3.12</b> Zdarzenia parami niezależne</a></li>
+<li class="chapter" data-level="4.3.13" data-path="prawdopodobieństwo.html"><a href="prawdopodobieństwo.html#przykłady-różne"><i class="fa fa-check"></i><b>4.3.13</b> Przykłady różne (*)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-5.html"><a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-5.html"><i class="fa fa-check"></i><b>5</b> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.5)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><i class="fa fa-check"></i><b>5.1</b> Zmienna losowa i rozkład prawdopodobieństwa - definicje</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html#przykład-4"><i class="fa fa-check"></i><b>5.1.1</b> Przykład</a></li>
+<li class="chapter" data-level="5.1.2" data-path="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"><a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html#zmienna-losowa-dyskretna-skokowa-i-ciągła"><i class="fa fa-check"></i><b>5.1.2</b> Zmienna losowa: dyskretna (skokowa) i ciągła</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><i class="fa fa-check"></i><b>5.2</b> Wybrane (skokowe i ciągłe) rozkłady prawdopodobieństwa</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-zero-jedynkowy-bernoulliego"><i class="fa fa-check"></i><b>5.2.1</b> Rozkład zero-jedynkowy (Bernoulliego)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-zero-jedynkowy-bernoulliego-1"><i class="fa fa-check"></i><b>5.2.2</b> Rozkład zero-jedynkowy (Bernoulliego)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-bernoulliego---równanie-funkcji"><i class="fa fa-check"></i><b>5.2.3</b> Rozkład Bernoulliego - równanie funkcji</a></li>
+<li class="chapter" data-level="5.2.4" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-jednostajny-skokowy"><i class="fa fa-check"></i><b>5.2.4</b> Rozkład jednostajny (skokowy)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-dwumianowy"><i class="fa fa-check"></i><b>5.2.5</b> Rozkład dwumianowy</a></li>
+<li class="chapter" data-level="5.2.6" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-jednostajny-ciągły"><i class="fa fa-check"></i><b>5.2.6</b> Rozkład jednostajny ciągły</a></li>
+<li class="chapter" data-level="5.2.7" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-jednostajny-ciągły---równanie-funkcji"><i class="fa fa-check"></i><b>5.2.7</b> Rozkład jednostajny ciągły - równanie funkcji</a></li>
+<li class="chapter" data-level="5.2.8" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#rozkład-normalny"><i class="fa fa-check"></i><b>5.2.8</b> Rozkład normalny</a></li>
+<li class="chapter" data-level="5.2.9" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#zmienna-losowa-i-jej-rozkład-prawdopodobieństwa---przykłady"><i class="fa fa-check"></i><b>5.2.9</b> Zmienna losowa i jej rozkład prawdopodobieństwa - przykłady</a></li>
+<li class="chapter" data-level="5.2.10" data-path="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html"><a href="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa.html#podstawowe-rozkłady-prawdopodobieństwa---podsumowanie"><i class="fa fa-check"></i><b>5.2.10</b> Podstawowe rozkłady prawdopodobieństwa - podsumowanie</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="wykład-6-podstawy-wnioskowania-statystycznego.html"><a href="wykład-6-podstawy-wnioskowania-statystycznego.html"><i class="fa fa-check"></i><b>6</b> Wykład 6. Podstawy wnioskowania statystycznego</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><a href="rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne.html"><i class="fa fa-check"></i><b>6.1</b> Rozkład statystyki z próby i centralne twierdzenie graniczne</a></li>
+<li class="chapter" data-level="6.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><i class="fa fa-check"></i><b>6.2</b> Rozkład statystyki z próby (średnia próbki, proporcja próbki itp.)</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-próbkowy-średniej-rozkład-średniej-z-próby"><i class="fa fa-check"></i><b>6.2.1</b> Rozkład próbkowy średniej (rozkład średniej z próby)</a></li>
+<li class="chapter" data-level="6.2.2" data-path="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html"><a href="rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp-.html#rozkład-z-próby-dla-sumy-zmiennych-losowych-s-sampling-distribution-for-a-sample-sum"><i class="fa fa-check"></i><b>6.2.2</b> Rozkład z próby dla sumy zmiennych losowych (<span class="math inline">\(S\)</span>) (Sampling distribution for a sample sum)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><a href="centralne-twierdzenie-graniczne-ctg-central-limit-theorem.html"><i class="fa fa-check"></i><b>6.3</b> Centralne twierdzenie graniczne, CTG (Central Limit Theorem)</a></li>
+<li class="chapter" data-level="6.4" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html"><i class="fa fa-check"></i><b>6.4</b> Estymacja punktowa i przedziałowa</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="estymacja-punktowa-i-przedziałowa.html"><a href="estymacja-punktowa-i-przedziałowa.html#przykład---przedział-ufności-i-margines-błędu"><i class="fa fa-check"></i><b>6.4.1</b> Przykład - przedział ufności i margines błędu</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STAT 101 [WSMiP UŁ]</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="wybrane-skokowe-i-ciągłe-rozkłady-prawdopodobieństwa" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Wybrane (skokowe i ciągłe) rozkłady prawdopodobieństwa</h2>
+<p>W badaniach statystycznych stosuje się dwa podstawowe rodzaje rozkładów prawdopodobieństwa zmiennych losowych, a mianowicie <strong>rozkłady skokowe</strong> i <strong>rozkłady ciągłe</strong>.</p>
+<ol style="list-style-type: decimal">
+<li>Rozkład zero-jedynkowy/Bernoulliego (skokowy)</li>
+<li>Rozkład jednostajny (skokowy lub ciągły)</li>
+<li>Rozkład dwumianowy (skokowy)</li>
+<li>Rozkład normalny (ciągły)</li>
+</ol>
+<div id="rozkład-zero-jedynkowy-bernoulliego" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Rozkład zero-jedynkowy (Bernoulliego)</h3>
+<p><img src="images/bernoulli.png" /></p>
+</div>
+<div id="rozkład-zero-jedynkowy-bernoulliego-1" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Rozkład zero-jedynkowy (Bernoulliego)</h3>
+<p>Jest on związany z rezultatem doświadczenia (zwanego próbą <em>Bernoulliego</em>), w wyniku którego określone zdarzenie A wystąpi (1 = ‘sukces’) lub nie wystąpi (0 = ‘porażka’).</p>
+<p>Rozkład dwupunktowy jest funkcją przyporzadkowującą prawdopodobieństwa wynikom próby <em>Bernoulliego</em>.</p>
+<p>Rozkład ma jeden parametr <em>p</em> oznaczający prawdopodobieństwo ‘sukcesu’ : <span class="math inline">\(X \sim Bern(p)\)</span></p>
+</div>
+<div id="rozkład-bernoulliego---równanie-funkcji" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Rozkład Bernoulliego - równanie funkcji</h3>
+<p><span class="math display">\[f(k;p)=p^{k}(1-p)^{1-k} \text{ dla } k\in \{0,1\}\]</span></p>
+</div>
+<div id="rozkład-jednostajny-skokowy" class="section level3" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Rozkład jednostajny (skokowy)</h3>
+<p><img src="images/Uniform_discrete_pmf_svg.svg" /></p>
+<div id="rozkład-jednostajny-skokowy---równanie-funkcji" class="section level4" number="5.2.4.1">
+<h4><span class="header-section-number">5.2.4.1</span> Rozkład jednostajny skokowy - równanie funkcji</h4>
+<p>Jeśli <span class="math inline">\(X \sim U(a, b)\)</span>,</p>
+<p><span class="math inline">\(a\)</span> i <span class="math inline">\(b\)</span> <span class="math inline">\(\in \{\dots,-2,-1,0,1,2,\dots\}\)</span></p>
+<p><span class="math inline">\(b \geq a\)</span></p>
+<p><span class="math inline">\(f(x) = \frac{1}{n}\)</span>, przy czym: <span class="math inline">\(n=b-a+1\)</span></p>
+</div>
+</div>
+<div id="rozkład-dwumianowy" class="section level3" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Rozkład dwumianowy</h3>
+<p>Jest to dyskretny rozkład prawdopodobieństwa opisujący prawdopodobieństwo liczby <em>k</em> ‘sukcesów’ w ciągu <em>n</em> niezależnych prób, z których każda ma stałe prawdopodobieństwo sukcesu równe <em>p</em>. Pojedynczy eksperyment nosi nazwę próby <em>Bernoulliego</em>.</p>
+<p>Rozkład ma dwa parametry : <span class="math inline">\(X \sim Bin(n, p)\)</span>, przy czym <em>n</em> = liczba niezależnych prób, <em>p</em> = prawdopodobieństwo ‘sukcesu’.</p>
+<p>Zmienna losowa ma rozkład dwumianowy w następujących warunkach:</p>
+<ul>
+<li>wieoetapowy eksperyment losowy złożony ze skończonej liczby <span class="math inline">\(n \geq 1\)</span> prób (etapów),</li>
+<li>dokładnie dwa możliwe wyniki, zwyczajowo określane jako <em>sukces</em> (1) i <em>porażka</em> (0),</li>
+<li>prawdopodobieństwo <em>sukcesu</em>/<em>porażki</em> jest stałe na wszystkich etapach doświadczenia.</li>
+</ul>
+<div id="rozkład-dwumianowy---równanie-funkcji" class="section level4" number="5.2.5.1">
+<h4><span class="header-section-number">5.2.5.1</span> Rozkład dwumianowy - równanie funkcji</h4>
+<p>Jeśli zmienna losowa ma rozkład dwumianowy: <span class="math inline">\(X \sim Bin(n, p)\)</span>,</p>
+<p><span class="math inline">\(P\)</span>(<em>k</em> sukcesów w <em>n</em> próbach (<em>trials</em>)) = <span class="math inline">\(C_k^n(p^k \times (1-p)^{n-k})\)</span></p>
+<p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>), czyli np. prawdopodbieństwo wyrzucenia dwóch szóstek w pięciu rzutach kością (<span class="math inline">\(n = 5\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>.</p>
+</div>
+<div id="rozkład-dwumianowy---podsumowanie" class="section level4" number="5.2.5.2">
+<h4><span class="header-section-number">5.2.5.2</span> Rozkład dwumianowy - podsumowanie</h4>
+<p><strong>Criteria for a Binomial Probability Experiment</strong></p>
+<p>A <strong>binomial experiment</strong> is an experiment which satisfies these four conditions:</p>
+<ul>
+<li><p>A fixed number of trials</p></li>
+<li><p>Each trial is independent of the others</p></li>
+<li><p>There are only two outcomes</p></li>
+<li><p>The probability of each outcome remains constant from trial to trial.</p></li>
+</ul>
+<p>In short: <em>An experiment with a fixed number of independent trials, each of which can only have two possible outcomes</em>.</p>
+<p>(Since the trials are independent, the probability remains constant.)</p>
+</div>
+<div id="rozkład-dwumianowy---wykres" class="section level4" number="5.2.5.3">
+<h4><span class="header-section-number">5.2.5.3</span> Rozkład dwumianowy - wykres</h4>
+<p><img src="images/binomial.svg" /></p>
+</div>
+<div id="rozkład-dwumianowy---przykład-0-nieformalne-wyprowadzenie-równania-funkcji" class="section level4" number="5.2.5.4">
+<h4><span class="header-section-number">5.2.5.4</span> Rozkład dwumianowy - przykład 0 (nieformalne wyprowadzenie równania funkcji)</h4>
+<p>Once we determine that a random variable is a binomial random variable, the next question we might have would be how to calculate probabilities.</p>
+<p>Suppose that the turnout rate for the 2016 presidential election in the Chicago area is 80%. Among a miniature random sample of 3 eligible voters, find the probability that exactly 0, or 1, or 2, or 3 will vote? If we let <span class="math inline">\(X\)</span> = the number of people who voted, then <span class="math inline">\(X\)</span> is a binomial random variable because:</p>
+<ul>
+<li><p>there is a fixed number of voters (3),</p></li>
+<li><p>the decisions of eligible voters are independent,</p></li>
+<li><p>each voter has two outcomes - to vote (denoted 1) or to abstain from voting (denoted 0),</p></li>
+<li><p>the probability of voting is constant: 4/5 = 0.8 = the probability of “success” in a single <em>Bernoulli</em> trial X_i, (i = 1, 2, 3).</p></li>
+</ul>
+<p>So how can we find probabilities? Let’s look at a tree diagram of the situation:</p>
+<p>Finding the probability distribution of X involves a couple key concepts. First, notice that there are multiple ways to get 0, 1, 2, or 3 people voted. In fact, we can use the <em>combinations without repetitions</em> (<span class="math inline">\(C(n, x)\)</span>) to figure out how many ways there are. For example, P(X = 2) is the same regardless of the order in which we get 2 correct; we can just multiply the probability of one line by 3, since there are 3 ways to have 3 “successes”.</p>
+<p>Not only that, since the decisions of eligible voters are independent, we can just multiply the probability of getting “success” or “failure”.</p>
+<p>The general equation of the Binomial distribution is,</p>
+<p><span class="math display">\[P(\text{x &quot;sukcesów&quot; w n próbach (trials)}) = C_x^n(p^x \times (1-p)^{n-x})\]</span></p>
+<p>gdzie: <span class="math inline">\(p\)</span> = prawdopodobieństwo tzw. ‘sukcesu’ (oznaczane zwykle cyfrą <span class="math inline">\(1\)</span>); <span class="math inline">\((1-p) = q\)</span> = prawdopodobieństwo tzw. ‘porażki’, oznaczane cyfrą <span class="math inline">\(0\)</span>; <span class="math inline">\(C_x^n = nCx =\)</span> liczba <span class="math inline">\(x\)</span>-elementowych kombinacji bez powtórzeń, ze zbioru n-elementowego.</p>
+<p>Inspect Figures A and B to understand the above general equation of the Binomial distribution.</p>
+<div class="figure">
+<img src="images/stat/IMG_0181.JPG" alt="" />
+<p class="caption">Figure A: Funkcja rozkładu dwumianowego - wyjaśnienie (etap I)</p>
+</div>
+<div class="figure">
+<img src="images/stat/IMG_0182.JPG" alt="" />
+<p class="caption">Figure B: Funkcja rozkładu dwumianowego - wyjaśnienie (etap II)</p>
+</div>
+</div>
+<div id="rozkład-dwumianowy---przykład-1" class="section level4" number="5.2.5.5">
+<h4><span class="header-section-number">5.2.5.5</span> Rozkład dwumianowy - przykład 1</h4>
+<ol style="list-style-type: decimal">
+<li><p>Jakie jest prawdopodobieństwo <span class="math inline">\(P\)</span>, że przy <strong>5</strong> rzutach <em>sześciościenną kością</em> wypadną <strong>2</strong> <em>szóstki</em>?</p></li>
+<li><p>Jakie jest prawdopodobieństwo <span class="math inline">\(P\)</span>, że przy <strong>5</strong> rzutach <em>sześciościenną kością</em> otrzymamy <strong>2</strong> <em>szóstki</em> w następującej kolejności <span class="math inline">\((6, 6&#39;, 6, 6&#39;,6&#39;)\)</span>, czyli <span class="math inline">\(P(6, 6&#39;, 6, 6&#39;,6&#39;) = ?\)</span> Przy czym, <span class="math inline">\(6&#39;\)</span> oznacza, że <strong>nie</strong> wyrzucono <span class="math inline">\(6\)</span> oczek.</p></li>
+</ol>
+<blockquote>
+<p>Odpowiedź na <strong>drugie</strong> (2.) pytanie:</p>
+</blockquote>
+<p><span class="math display">\[P(6, 6&#39;, 6, 6&#39;,6&#39;) = \frac{1}{6} \times \frac{5}{6} \times \frac{1}{6} \times \frac{5}{6} \times \frac{5}{6} = 0.0161\]</span></p>
+<p><span class="math display">\[P(6, 6&#39;, 6, 6&#39;,6&#39;) = (\frac{1}{6})^2 \times (\frac{5}{6})^3 = 0.0161\]</span></p>
+<blockquote>
+<p>Odpowiedź na <strong>pierwsze</strong> (1.) pytanie:</p>
+</blockquote>
+<p>Na ile możliwych sposobów można wyrzucić 2 <em>szóstki</em> w 5 rzutach kością (innymi słowy, w tzw. 5 próbach <em>Bernoulliego</em>)?</p>
+<p><span class="math inline">\(A = \{(6&#39;, 6&#39;, 6, 6, 6), (6&#39;, 6, 6&#39;, 6, 6), (6&#39;, 6, 6, 6&#39;, 6), (6&#39;, 6, 6, 6, 6&#39;), (6, 6&#39;, 6&#39;, 6, 6), (6, 6&#39;, 6, 6&#39;, 6), (6, 6&#39;, 6, 6, 6&#39;), (6, 6, 6&#39;, 6&#39;, 6), (6, 6, 6&#39;, 6, 6&#39;), (6, 6, 6, 6&#39;, 6&#39;)\}\)</span></p>
+<p><span class="math display">\[C_{2}^{5} = |\{\{1,2\},\{1,3\},\{1,4\},\{1,5\},\]</span></p>
+<p><span class="math display">\[\{2,3\},\{2,4\},\{2,5\},\{3,4\},\{3,5\},\{4,5\}\}| = 10\]</span></p>
+<p><span class="math display">\[P(\text{dwie 6 w pięciu próbach}) = C_2^5((\frac{1}{6})^2 \times (\frac{5}{6})^{5-2}) = \]</span> <span class="math display">\[= 10 \times 0.0161 = 0.161\]</span></p>
+<blockquote>
+<p>UWAGA (a)</p>
+</blockquote>
+<p>Zauważ, że ze zbioru <span class="math inline">\(\{6, 6&#39;\}\)</span> można utworzyć <span class="math inline">\(2^5 = 32\)</span> ciągów <em>5</em>-wyrazowch. Zatem, <em>zbiór zdarzeń elemenatrynych</em> (<span class="math inline">\(\Omega\)</span>) w eksperycmecie polegającym na <em>5</em>-krotnym rzucie sześciościenną kością do gry zawiera 32 elementy (np. <span class="math inline">\((1,2,3,3,6) = (6&#39;,6&#39;,6&#39;,6&#39;,6)\)</span> t.j. wyrzucono jedną ‘szóstkę’ na pozycji nr 5).</p>
+<blockquote>
+<p>UWAGA (b)</p>
+</blockquote>
+<p>Rzucamy sześciościenną kością 2-razy. Ile jest wszystkich możliwych wyników?</p>
+<p><span class="math inline">\(6^2 = 36\)</span> (np. <span class="math inline">\((1,6)\)</span>)</p>
+<blockquote>
+<p>UWAGA (c)</p>
+</blockquote>
+<p><span class="math inline">\(P(\text{dwie 6 w pięciu próbach})\)</span> nie jest równe <span class="math inline">\(\frac{10}{32} = 0.3125\)</span>. Dlaczego?</p>
+</div>
+<div id="rozkład-dwumianowy---przykład-2" class="section level4" number="5.2.5.6">
+<h4><span class="header-section-number">5.2.5.6</span> Rozkład dwumianowy - przykład 2</h4>
+<p>Załóżmy, że zdarzenia <span class="math inline">\(A = 6\)</span> i <span class="math inline">\(A&#39; = 6&#39;\)</span> są <em>jednakowo prawdopodobne</em> (sześciościenna kość ma na <strong>3</strong> ścianach <strong>6</strong> i na <strong>3</strong> pozostałych <strong>6’</strong>). Wtedy:</p>
+<p><span class="math inline">\(P(\text{dwie 6 w pięciu próbach})\)</span> = <span class="math inline">\(\frac{10}{32} = 0.3125\)</span></p>
+<p>Korzystając z funkcji rozkładu dwumianowego:</p>
+<p><span class="math inline">\(P(\text{dwie 6 w pięciu próbach}) = C_2^5((\frac{1}{2})^2 \times (\frac{1}{2})^{5-2}) =\)</span> <span class="math inline">\(= 0.3125 = 10/32 = 5/16\)</span></p>
+</div>
+<div id="rozkład-dwumianowy---przykład-3" class="section level4" number="5.2.5.7">
+<h4><span class="header-section-number">5.2.5.7</span> Rozkład dwumianowy - przykład 3</h4>
+<p>Rzucamy <span class="math inline">\(3\)</span> razy uczciwą monetą. Dla tego eksperymentu, określono zmienną losową <strong>Y</strong> = <em>suma ‘sukcesów’</em>, przyjmując, że wyrzucenie reszki (<strong>R</strong>) to ‘sukces’ (oznaczmy to zdarzenie cyfrą <span class="math inline">\(1\)</span>). Zbuduj rozkład prawdopodbieństwa dla dla zmiennej <strong>Y</strong>.</p>
+<p><span class="math inline">\(X = \{R, O\}\)</span></p>
+<table style="width:50%;">
+<colgroup>
+<col width="8%" />
+<col width="27%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em>i</em></th>
+<th><span class="math inline">\(X_1, X_2, X_3\)</span></th>
+<th><span class="math inline">\(P_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>ROO</td>
+<td>0.125</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>ORO</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>OOR</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>ORR</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>RRO</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>ROR</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>RRR</td>
+<td>0.125</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>OOO</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Rozkład prawdopodobieństwa zmiennej Y przedstawia tabela:</p>
+<table style="width:31%;">
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em>i</em></th>
+<th><em>Y</em></th>
+<th><span class="math inline">\(P_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>3</td>
+<td>0.125</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1</td>
+<td>0.375</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="rozkład-jednostajny-ciągły" class="section level3" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> Rozkład jednostajny ciągły</h3>
+<p><img src="images/Uniform_Distribution_PDF_SVG.svg" /></p>
+</div>
+<div id="rozkład-jednostajny-ciągły---równanie-funkcji" class="section level3" number="5.2.7">
+<h3><span class="header-section-number">5.2.7</span> Rozkład jednostajny ciągły - równanie funkcji</h3>
+<p>Jeśli: <span class="math inline">\(X \sim U(a, b)\)</span>,</p>
+<p><span class="math inline">\(f(x)={\begin{cases}{\frac {1}{b-a}} &amp;\mathrm {dla} \ a\leq x\leq b, \\0 &amp;\mathrm {dla} \ x&lt;a\ \mathrm {lub} \ x&gt;b\end{cases}}\)</span></p>
+<div id="rozkład-jednostajny-ciągły---zadanie" class="section level4" number="5.2.7.1">
+<h4><span class="header-section-number">5.2.7.1</span> Rozkład jednostajny ciągły - zadanie</h4>
+<p>Można przyjąć, że rozkład prawdopodobieństwa zmiennej losowej <em>X</em> = czas oczekiwania na odjazd pociągu metra, jest <em>rozkładem jednostajnym ciągłym</em>.</p>
+<p>Jeśli pociąg metra linii <em>A</em> odjeżdża z przystanku dokładnie co 5 minut, to <strong>jakie jest prawdopodobieństwo, że pasażer po przybyciu na przystanek będzie czekał na odjazd więcej niż 3 minuty</strong>.</p>
+</div>
+</div>
+<div id="rozkład-normalny" class="section level3" number="5.2.8">
+<h3><span class="header-section-number">5.2.8</span> Rozkład normalny</h3>
+<p><img src="images/Probability_distribution_functions_for_normal_distribution.svg" /></p>
+<div id="rozkład-normalny---równanie-funkcji" class="section level4" number="5.2.8.1">
+<h4><span class="header-section-number">5.2.8.1</span> Rozkład normalny - równanie funkcji</h4>
+<p>Jeśli <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, gdzie: <span class="math inline">\(\mu\)</span> - wartość oczekiwana zmiennej, <span class="math inline">\(\sigma^2\)</span> - wariancja zmiennej,</p>
+<p><span class="math display">\[f(x; \mu, \sigma^2) = \frac{1}{{\sigma \sqrt {2\pi } }}e^{-\frac{(x - \mu)^2}{2\sigma^2}}\]</span></p>
+</div>
+</div>
+<div id="zmienna-losowa-i-jej-rozkład-prawdopodobieństwa---przykłady" class="section level3" number="5.2.9">
+<h3><span class="header-section-number">5.2.9</span> Zmienna losowa i jej rozkład prawdopodobieństwa - przykłady</h3>
+<div id="przykład-1.-zmienna-losowa" class="section level4" number="5.2.9.1">
+<h4><span class="header-section-number">5.2.9.1</span> Przykład 1. Zmienna losowa</h4>
+<p>W doświadczeniu losowym obejmującym rzut trzema uczciwymi monetami (<span class="math inline">\(n = 3\)</span>), chcemy zapytać o prawdopodobieństwo wyrzucenia <span class="math inline">\(k\)</span> reszek (R) - przyjmujemy umownie, że wyrzucenie reszki jest sukcesem, a wyrzucenie orła jest porażką.</p>
+<p><strong>Zdefiniuj przestrzeń zdarzeń elementarnych i określ na tej przestrzeni zmienną losową Y</strong>. <span class="math inline">\(Y\)</span> = suma wyników (“sukces” lub “porażka”) pojedynczych rzutów monetą oraz jej rozkład prawdopodobieństwa.</p>
+<p>Zauważ, że doświadczenie losowe z przykładu to tzw. doświadczenie (eksperyment) dwumianowy. Zmienna losowa, którą zdefiniujemy będzie zmienną dwumianową, a w konsekwencji powstanie dwumianowy rozkład prawdopodobieństwa.</p>
+<p><strong>Eksperyment dwumianowy ma następujące cechy</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Eksperyment składa się z <em>n</em> etapów (trials) - z tzw. prób (<strong>Bernoullego</strong>). Dwumianowa zmienna losowa (zmienna o rozkładzie dwumianowym) jest sumą zmiennych Bernoullego (zmiennych o rozkładzie Bernoullego/rozkładzie zero-jedynkowym z parametrem <em>p</em> = prawdopodobieństwo sukcesu): <span class="math inline">\(Y = X_1 + X_2 + ... + X_n\)</span></p></li>
+<li><p>Każda pojedyncza próba Bernoullego (pojedynczy rzut monetą, losowanie z populacji wyborców jednego wyborcy itp.) ma <strong>tylko dwa możliwe wyniki</strong> - sukces (1) i porażkę (0).</p></li>
+<li><p>Prawdopodobieństwo sukcesu oznaczamy <em>p</em>, jest identyczne na każdym etapie doświadczenia.</p></li>
+<li><p>Wyniki z poszczególnych etapów doświadczenia są od siebie <strong>niezależne</strong> (możemy więc korzystać z metod obliczania prawdopodobieństw dla zdarzeń niezależnych); tzn., że wyniki z poszczególnych etapów nie wpływają na siebie; np. wyrzucenie orła na pierwszym etapie doświadczenia nie modyfikuje prawdopodobieństwa wyrzucenia orła/reszki na pozostałych etapach.</p></li>
+</ol>
+<p>Zacznijmy od określenia przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span>.</p>
+<p><span class="math inline">\(S = \{ (R, R, R), (R, R, O), (R, O, O), (O, O, O), (O, O, R), (O, R, R), (O, R, O), (R, O, R) \}\)</span>. Liczebność zbioru <span class="math inline">\(S\)</span> (<span class="math inline">\(|S|\)</span>) możemy policzyć stosując <em>regułę iloczynu</em> (<em>Fundamenetal Principle of Counting</em>). W tym przykładzie, dla <span class="math inline">\(X = \{R, O}\)</span>, <span class="math inline">\(|X| = 2\)</span>, mamy <span class="math inline">\(2 \times 2 \times 2 = 2^3 = 8\)</span> (osiem zdarzeń elementarnych).</p>
+<p>Aby określić zmienną losowa na zbiorze <span class="math inline">\(S\)</span> musimy poszczególnym wynikom przypisać liczby wg pewnej reguły. Np. możemy przyjąć, że wyrzucenie 1 reszki to 1, dwóch reszek 1 + 1 itd.</p>
+<p>I tak, możemy zdefiniować zmienną Y:</p>
+<p><span class="math inline">\((R, R, R) \rightarrow 3\)</span>; <span class="math inline">\((R, R, O) \rightarrow 2\)</span>; <span class="math inline">\((O, R, R) \rightarrow 2\)</span>; <span class="math inline">\((...) \rightarrow ...\)</span>; <span class="math inline">\((O, O, O) \rightarrow 0\)</span>.</p>
+<p>Następnie, jeśli przypiszemy każdej ustalonej wartości zmiennej losowej Y odpowiednie prawdopodobieństwa, <span class="math inline">\(P(Y = ...) = ...\)</span>, zbudujemy odpowiadający tej zmiennej rozkład prawdopodobieństwa.</p>
+<p>W rozważanym przypadku, wartości prawdopodobieństwa znajdziemy korzystając z funkcji rozkładu dwumianowego z parametrami <span class="math inline">\(p = 0.5 \text{ i } n = 3\)</span> - jak wynika z opisu doświadczenia losowego, zmienna <em>Y</em> ma rozkład dwumianowy, <span class="math inline">\(Y = \{0, 1, 2, 3\}\)</span>.</p>
+<p>Możemy ten rozkład przedstawić np. tabelarycznie (Zob. tabela niżej).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">y</th>
+<th align="left">f(y) = p</th>
+<th align="left">formuła</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{0}0.5^0(1-0.5)^3\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">3/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{1}0.5^1(1-0.5)^2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">2</td>
+<td align="left">3/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{2}0.5^2(1-0.5)^1\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">3</td>
+<td align="left">1/8</td>
+<td align="left"><span class="math inline">\(f(x; n=3, p=0.5) = \binom{3}{3}0.5^3(1-0.5)^0\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+<p>Tabela. Rozkład prawdopodobieństwa zmiennej Y</p>
+<p>Dlaczego prawdopodobieństwo wyrzucenia, na przykład, 1 reszki (1 sukces) jest równe 3/8?</p>
+<p>W tym przykładzie, prawdopodobieństwo sukcesu <em>p</em> (wyrzucenia reszki) jest równe <span class="math inline">\(1/2\)</span>, dlatego prawdopodobieństwo porażki (zdarzenia przeciwnego) też wynosi <span class="math inline">\(1/2\)</span>, bo <span class="math inline">\(1-1/2 = 1/2\)</span>.</p>
+<p>Eksperyment losowy z przykładu jest tzw. złożonym (wieloetapowym) eksperymentem - składa się z trzech etapów (lub prób (<strong>trials</strong>)) - pierwszy rzut, drugi rzut i trzeci rzut monetą - dlatego <em>n</em> = 3 (liczba etapów/rozmiar próby (<strong>sample</strong>)).</p>
+<p>W przypadku eksperymentu złożonego, stosujemy <strong>regułę mnożenia</strong> (w tym przykładzie możemy użyć reguły mnożenia dla niezależnych zdarzeń losowych) do obliczenia prawdopodobieństw.</p>
+<p>Rozpocznijmy od obliczenia prawdopodobieństwa otrzymania w eksperymencie 3-etapowym jednej reszki <strong>w pewnym z góry ustalonym porządku</strong> (np. prawdopodobieństwo pojawienia się ciągu (R,O,O)):</p>
+<p><span class="math display">\[P((R,O,O)) = P((1,0,0)) = p^1 \times (1-p)^2 = (1/2)^1 \times (1/2)^2 = 1/8\]</span></p>
+<p>Ponadto,</p>
+<p><span class="math display">\[P((O,R,O)) = P((0,1,0)) = (1-p) \times p \times (1-p) = (1/2) \times (1/2) \times (1/2) = 1/8\]</span></p>
+<p><span class="math display">\[P((O,O,R)) = P((0,0,1)) = (1-p)^2 \times p^1 = (1/2)^2 \times (1/2)^1 = 1/8\]</span></p>
+<p>Wtedy, prawdopodobieństwo wyrzucenia reszki na jednym z 3 etapów <strong>w dowolnej kolejności</strong> wynosi:</p>
+<p><span class="math display">\[P(\{(R,O,O), (O,R,O), (O,O,R)\}) = P((R,O,O)) + P((O,R,O)) + P((O,O,R)) =\]</span></p>
+<p><span class="math display">\[= 1/8 + 1/8 + 1/8 = 3/8 =\]</span></p>
+<p><span class="math display">\[= \binom{3}{1} \times (1/2)^1 \times (1/2)^2 = 3 \times (1/2)^1 \times (1/2)^2 = 3/8\]</span></p>
+<p>Ogólnie, prawdopodobieństwo wylosowania <em>x</em> reszek w <em>n</em> próbach (trials) <strong>w dowolnej kolejności</strong> jest równe:</p>
+<p><span class="math display">\[P(X = x) = f(x; n = \text{liczba prób}, p = \text{prawdopodobieństwo sukcesu}) = \\ = \binom{n}{x} p^x(1-p)^{n-x} = \frac{n!}{(n-x)!x!} p^x(1-p)^{n-x}, \text{ dla } x = 0, 1, 2, ..., n\]</span></p>
+<p>Zauważ, że <span class="math inline">\(\binom{3}{1} = |\{\{1\}, \{2\}, \{3\}\}| = 3\)</span> - jest to liczba 1-elementowych kombinacji ze zbioru 3-elementowego.</p>
+<p>W przypadku tzw. eksperymentu dwumianowego, można myśleć o każdej pojedynczej kombinacji ze zbioru <em>n</em>-elementów jak o zbiorze zawierającym współrzędne wskazujące miejsce sukcesu/sukcesów w ciągu wyników.</p>
+<p>W analizowanym przykładzie, zbiory <span class="math inline">\(\{1\}, \{2\}, \{3\}\)</span> wskazują, że sukces (reszka) może się pojawić tylko na pierwszym, tylko na drugim lub tylko na trzecim etapie.</p>
+<p>Jeśli mielibyśmy współczynnik dwumianowy <span class="math inline">\(\binom{3}{2} = 3 = |\{\{1,2\}, \{1,3\}, \{2,3\}\}|\)</span>, to elementy zbiorów <span class="math inline">\(\{1,2\}, \{1,3\}, \{2,3\}\)</span> wskazują, że reszka (sukces) może się pojawić tylko na pierwszym <strong>i</strong> jednocześnie na drugim etapie, tylko na pierwszym <strong>i</strong> trzecim, albo tylko na drugim <strong>i</strong> trzecim etapie.</p>
+<p>Nie wolno mylić ciągu np. <span class="math inline">\((H, T, H)\)</span> ze zbiorem <span class="math inline">\(\{H, T, H\} = \{H, T\} = \{T, H\}\)</span>.</p>
+</div>
+<div id="przykład-2.-rozkład-dwumianowy-i-jego-przybliżenie-rozkładem-normalnym" class="section level4" number="5.2.9.2">
+<h4><span class="header-section-number">5.2.9.2</span> Przykład 2. Rozkład dwumianowy i jego przybliżenie rozkładem normalnym</h4>
+<p>Zmienna losowa <em>X</em> - liczba wyrzuconych reszek w <em>n</em> rzutach dobrze wywarzoną monetą - ma rozkład dwumianowy. Jeżeli prawdopodobieństwo wyrzucenia reszki <span class="math inline">\(p\)</span> jest równe <span class="math inline">\(0.5\)</span>, to jakie jest prawdopodobieństwo, że w 10 rzutach monetą wypadnie co najmniej 7 reszek.</p>
+<p><strong>Dane:</strong></p>
+<p><span class="math inline">\(X \sim Bin(10, 0.5)\)</span></p>
+<p><strong>Rozwiązanie:</strong></p>
+<p>Stosujemy równanie funkcji rozkładu dwumianowego: <span class="math display">\[P(X = x) = f(x; n, p) = \binom{n}{x} p^x(1-p)^{n-x}, \text{dla } x = 0, 1, 2, ..., n\]</span></p>
+<p>Skumulowana postać funkcji rozkładu dwumianowego dana jest równaniem:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = \sum_{a=0}^x \binom{n}{a} p^a(1-p)^{n-a}, \text{dla } x = 0, 1, 2, ..., n\]</span></p>
+<p><strong>Podstawiając do wzoru odpowiednie wartości otrzymujemy:</strong></p>
+<p><span class="math display">\[P(X \geq 7 | n = 10, p = 0.5) = P(X = 7) + P(X = 8) + P(X = 9) + P(X = 10) =\]</span></p>
+<p><span class="math display">\[= \sum_{a = 7}^{10} \binom{10}{a} 0.5^a(1-0.5)^{10-a} =\]</span></p>
+<p><span class="math display">\[\binom{10}{7}(\frac{1}{2})^7(\frac{1}{2})^3 + \binom{10}{8}(\frac{1}{2})^8(\frac{1}{2})^2 + \binom{10}{9}(\frac{1}{2})^9(\frac{1}{2})^1 + \binom{10}{10}(\frac{1}{2})^{10}(\frac{1}{2})^0 = \frac{176}{1024}\]</span></p>
+<p>Jeżeli zmienna losowa <span class="math inline">\(X \sim Bin(100, 0.6)\)</span>. Jakie jest <span class="math inline">\(P(X \geq 65) = P(\frac{X}{n} \geq 0.65)\)</span>?</p>
+<p>Z teorii statystyki wiadomo, że rozkład zmiennej <em>X</em> można przybliżyć rozkładem normalnym z parametrami <span class="math inline">\(\mu = np\)</span> i <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span>, co zapisujemy <span class="math inline">\(N(np, \sqrt{np(1-p)})\)</span>. Ogólnie mówiąc, z twierdzeń rachunku prawdopodobieństwa (tzw. twierdzeń granicznych) wynika, że im większa jest wartość <em>n</em>, tym bardziej kształt rozkładu dwumianowego przypomina kształt rozkładu normalnego, przy założeniu, że <span class="math inline">\(np &gt; 5\)</span> i <span class="math inline">\(n(1-p) &gt; 5\)</span>.</p>
+<p>Dla proporcji <span class="math inline">\(\frac{X}{n}\)</span>, przy czym <em>X</em> ma rozkład dwumianowy, mamy następujący układ parametrów: <span class="math inline">\(\mu = p\)</span> i <span class="math inline">\(\sigma = \sqrt{\frac{p(1-p)}{n}}\)</span>, co zapisujemy <span class="math inline">\(N(p, \sqrt{\frac{p(1-p)}{n}})\)</span>.</p>
+<p>W przykładzie mamy <span class="math inline">\(p = 0.6\)</span> i <span class="math inline">\(n = 100\)</span>, więc <span class="math inline">\(\frac{X}{n} \sim N(0.6, 0.0489)\)</span>.</p>
+<p>Teraz możemy zastosować przybliżenie rozkładu dwumianowego (rozkład zmiennej dyskretnej) rozkładem normalnym (rozkład zmiennej ciągłej). Wartości prawdopodobieństw obliczonych dla zmiennych o rozkładzie normalnym z parametrami <span class="math inline">\(\mu = 0\)</span> i <span class="math inline">\(\sigma = 1\)</span> zostały stablicowane, dlatego łatwo można szukane prawdopodobieństwa znaleźć. Jednak, żeby wykorzystać tablice i nie liczyć wartości całek funkcji gęstości rozkładu normalnego musimy wartości zmiennej <span class="math inline">\(\frac{X}{n} \sim N(0.6, 0.0489)\)</span> przekształcić w taki sposób, aby utworzona w wyniku tego przekształcenia zmienna pomocnicza, zwyczajowo określana jako zmienna <em>Z</em>, miała rozkład <span class="math inline">\(N(0, 1)\)</span>. Takie przekształcenie nazywamy <strong>standaryzacją zmiennej</strong> losowej.</p>
+<p>Korzystamy z faktu, że jeśli zmienna <span class="math inline">\(X \sim N(\mu, \sigma)\)</span>, to zmienna <span class="math inline">\(Z = \frac{(X-\mu)}{\sigma} \sim N(0, 1)\)</span>.</p>
+<p>Czyli, dla rozważanego przykładu mamy <span class="math inline">\(Z = \frac{\frac{X}{n} – p}{\sqrt{\frac{p(1-p)}{n}}}\)</span>, a konkretnie dla wartości <span class="math inline">\(\frac{X}{n} = 0.65\)</span> otrzymujemy wartość <span class="math inline">\(Z = 1.02\)</span>, czyli <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = P(Z \geq 1.02)\)</span>. Po standaryzacji można teraz prawidłową wartość odczytać z tablic rozkładu normalnego. Otrzymujemy ostatecznie, że <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = P(Z \geq 1.02) = 1 – P(Z \leq 1.02)\)</span>, odczytując bezpośrednio z tablic otrzymujemy wynik <span class="math inline">\(= 1 – 0.8461 = 0.1539 = 15.39\%\)</span>.</p>
+<p>Odp.: <span class="math inline">\(P(\frac{X}{n} \geq 0.65) = 15.39\%\)</span></p>
+<p>Uzyskane przybliżenie jest dość dobre, ale z praktyki i teorii statystyki wynika, że lepsze przybliżenie uzyskamy jeżeli zamiast poszukiwać <span class="math inline">\(P(X \geq 65) = P(\frac{X}{n} \geq 0.65)\)</span>, obliczymy <span class="math inline">\(P(X \geq 64.5) = P(\frac{X}{n} \geq 0.645)\)</span>. Taka korekta zadania gwarantuje uzyskanie lepszego przybliżenia.</p>
+<p><strong>Ogólnie, przybliżając (aproksymując) rozkład dwumianowy rozkładem normalnym, do wartości zmiennej np.</strong> <span class="math inline">\(X\)</span> dodajemy (gdy szukamy np. <span class="math inline">\(P(X \leq x)\)</span>) lub odejmujemy 0.5 (gdy poszukujemy <span class="math inline">\(P(X \geq x)\)</span>).</p>
+<p><strong>Sprawdź</strong>, czy rzeczywiście wynik będzie bardziej dokładny, jeżeli wiadomo, że prawidłowa szukana wartość prawdopodobieństwa dla <span class="math inline">\(X \geq 65\)</span> i obliczona za pomocą funkcji rozkładu dwumianowego <span class="math inline">\(= 0.1795\)</span>.</p>
+<p>Badania na reprezentatywnych próbach pozwoliły ustalić, że 55% ankietowanych deklaruje chęć oddania głosu na polityka <strong>A</strong> w zbliżających się wyborach do rady miejskiej. Kandydat jednak prognozuje lepszy wynik wyborczy i uważa, że poprze go co najmniej 65% wyborców. Przyjmując, że zmienna losowa <span class="math inline">\(X\sim Binom(n, 0.55)\)</span>, jakie jest prawdopodobieństwo, że poparcie polityka w grupie liczącej 100 losowo wybranych wyborców wyniesie przynajmniej 65% = 0.65 (tj. prawdopodobieństwo, że <span class="math inline">\(X \geq 65\)</span>)?</p>
+<p><strong>Dane</strong>: <span class="math inline">\(X\sim Binom(100, 0.55)\)</span></p>
+<p><strong>Rozwiązanie</strong>: Szukamy prawdopodobieństwa <span class="math inline">\(P(\frac{X}{n}\geq 0.65) = P(X\geq 65)\)</span>.</p>
+<p><span class="math display">\[P(X \geq 65 | n = 100, p = 0.55) = \sum_{a = 65}^{100} \binom{100}{a} 0.55^a(1-0.55)^{100-a} = 0.0272\]</span></p>
+<p>Niestety, jeżeli nie mamy dostępu do dobrego oprogramowania statystycznego, wyznaczenie wartości szukanego prawdopodobieństwa z zastosowaniem rozkładu dwumianowego może się okazać bardzo uciążliwe. Należy pamiętać, że rozkład zmiennych o rozkładzie dwumianowym oraz rozkład proporcji <span class="math inline">\(\frac{X}{n}\)</span> można przybliżyć rozkładem normalnym, gdy <span class="math inline">\(np\)</span> i <span class="math inline">\(n(1-p) \geq 5\)</span>. Wówczas <span class="math inline">\(X \sim N(\mu = np, \sigma = \sqrt{np(1-p)})\)</span> lub <span class="math inline">\(\widehat{p} = \frac{X}{n} \sim N(\mu = p, \sigma = \sqrt{\frac{p(1-p)}{n}})\)</span>.</p>
+<p>W celu skorzystania z rozkładu normalnego należy na podstawie dostępnych danych ustalić wartość parametrów tego rozkładu, a więc wartość średniej <span class="math inline">\(\mu\)</span> i odchylenia standardowego <span class="math inline">\(\sigma\)</span>.</p>
+<p>Żeby obliczyć wartość prawdopodobieństwa dokonujemy standaryzacji zmiennej <em>X</em>. Nie wiemy ile wynosi <em>p</em>, więc korzystamy z oszacowania na podstawie wcześniejszych badań. Otrzymujemy <span class="math inline">\(Z = \frac{0.65-0.55}{\sqrt{\frac{0.55(1-0.55)}{100}}} = 2.01\)</span>. Otrzymana liczba, to wartość 65 na skali zmiennej <span class="math inline">\(Z \sim N(0, 1)\)</span>.</p>
+<p>Ostatni krok to odczytanie wartości całki funkcji gęstości rozkładu normalnego dla zmiennej standaryzowanej <em>Z</em> w przedziale <span class="math inline">\((2.01, +\infty)\)</span>. Całka ta jest równa 1 - 0.9778 = 0.0222. Szukane <em>P</em> wynosi ok. 2.2%.</p>
+<p>Warto pamiętać, że lepsze przybliżenie otrzymamy, gdy od wartości zmiennej dwumianowej odejmiemy 0.5, czyli, gdy będziemy szukać prawdopodobieństwa w rozkładzie normalnym dla liczby 64.5 zamiast 65. Wtedy mamy <span class="math inline">\(Z = 1.91\)</span> i <span class="math inline">\(P = 2.8\%\)</span>.</p>
+<p>Na podstawie wcześniejszych badań na reprezentatywnej próbie ustalono, że proporcja (frakcja, częstość względna) Polaków, którzy mają zaufanie do prezydenta RP wynosi 0.6 = 60%. Przyjmując, że zmienna losowa <em>X</em> = liczba osób ufająca urzędującemu prezydentowi, ma rozkład dwumianowy, <span class="math inline">\(X \sim Bin(n, 0.6)\)</span>, jakie jest prawdopodobieństwo, że w 15 osobowej grupie losowo wybranych Polaków, co najwyżej 3 (czyli <span class="math inline">\(\widehat{p} = 0.2 = \frac{3}{15}\)</span>) ufa prezydentowi RP?</p>
+<p><strong>Dane:</strong></p>
+<p><span class="math inline">\(X \sim Bin(15, 0.6)\)</span></p>
+<p><strong>Rozwiązanie:</strong></p>
+<p>Ponieważ zmienna ma rozkład dwumianowy, więc korzystamy w obliczeniach z równania funkcji rozkładu dwumianowego. W tym przypadku nie jest konieczne korzystanie z przybliżenia rozkładu dwumianowego rozkładem normalnym (chociaż spełniony jest dla danych z przykładu warunek <span class="math inline">\(np\)</span> i <span class="math inline">\(n(1-p) &gt; 5\)</span>), gdyż dla rozważanego przykładu obliczenia można wykonać przy użyciu kalkulatora naukowego. Jeżeli zdecydujemy się wykonać dokładne obliczenia za pomocą rozkładu dwumianowego, to dla rozważanego przykładu należy stosować przybliżenie otrzymywanych w obliczeniach wartości do co najmniej 7 miejsca po przecinku, gdyż otrzymywane prawdopodobieństwa są bardzo małe i licząc z mniejszą dokładnością wynik nie będzie wystarczająco dokładny.</p>
+<p>Ponieważ szukamy sumy wartości funkcji dla <em>X</em> = 0, 1, 2 i 3, to wykorzystujemy tzw. skumulowaną postać funkcji rozkładu:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = \sum_{a=0}^x \binom{n}{a} p^a(1-p)^{n-a}, \text{dla } x = 0, 1, 2, ..., n\]</span></p>
+<p><strong>Podstawiając otrzymujemy:</strong></p>
+<p><span class="math display">\[P(X \leq 3 | n = 15, p = 0.6) = \sum_{x=0}^{3}\binom{15}{x}0.6^x(1-0.6)^{15-x} =\]</span> <span class="math display">\[= \sum_{x=0}^{3}\frac{15!}{(15-x)!x!}0.6^x(1-0.6)^{15-x} =\]</span> <span class="math display">\[= \binom{15}{0}0.6^0(1-0.6)^{15-0} + \binom{15}{1}0.6^1(1-0.6)^{15-1} +\]</span> <span class="math display">\[+ \binom{15}{2}0.6^2(1-0.6)^{15-2} + \binom{15}{3}0.6^3(1-0.6)^{15-3} =\]</span> <span class="math display">\[= \frac{15!}{(15)!0!}0.6^0(0.4)^{15-0} + \binom{15}{1}0.6^1(0.4)^{15-1} +\]</span> <span class="math display">\[+ \binom{15}{2}0.6^2(0.4)^{15-2} +\]</span> <span class="math display">\[\frac{1\times2\times3\times...\times15}{(1\times2\times3\times...\times12)1\times2\times3}0.6^3(1-0.6)^{15-3} =\]</span> <span class="math display">\[= \frac{15!}{(15)!0!}0.6^0(0.4)^{15-0} + \binom{15}{1}0.6^1(0.4)^{15-1} +\]</span> <span class="math display">\[+ \binom{15}{2}0.6^2(0.4)^{15-2} + \frac{13\times14\times15}{1\times2\times3}0.6^3(0.4)^{15-3} = 0.0019.\]</span></p>
+<p>Inna metoda* pozwalająca obliczyć szukane prawdopodobieństwo polega na wykorzystaniu rozkładu normalnego.</p>
+<p>Stosując metodę przybliżenia rozkładu dwumianowego rozkładem normalnym musimy skorygować wartość zmiennej <span class="math inline">\(X\)</span> i dodać liczbę <span class="math inline">\(\frac{1}{2}\)</span>. Zamiast <span class="math inline">\(X = 3\)</span>, obliczenia wykonujemy dla <span class="math inline">\(X = 3.5\)</span> lub dla <span class="math inline">\(\widehat{p} = 0.233(3) = \frac{7}{30}\)</span>.</p>
+<p><span class="math display">\[P(X \leq 3.5 | n = 15, p = 0.6) = \int_{t_0(-\infty)}^{t_1(x = 3.5)}\frac{1}{\sigma \sqrt{2\pi}}e^{-(t-\mu)^2/(2 \sigma^2)}dt =\]</span></p>
+<p><span class="math display">\[= P(Z &lt; \frac{3.5-np}{\sqrt{p(1-p)n}}) = P(Z &lt; -2.9) = \int_{t_0(-\infty)}^{t_1(z = -2.9)}\frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-t^2}{2}}dt = 0.0019.\]</span></p>
+<p>Dla zmiennych ciągłych <span class="math inline">\(P(Z &lt; z) = P(Z \leq z)\)</span> oraz <span class="math inline">\(P(Z &gt; z) = P(Z \geq z)\)</span>.</p>
+<p>Możemy też zmienną <em>X</em> przekształcić dzieląc przez <em>n</em> i wykonywać obliczenia dla frakcji z próby <span class="math inline">\(\frac{X}{n} = \widehat{p}\)</span>. Wynik nie ulegnie zmianie. Trzeba jedynie pamiętać o modyfikacji wzorów dla <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\sigma\)</span>.</p>
+<p><span class="math display">\[P(\frac{X}{n} \leq \frac{3.5}{15} = \frac{7}{30} | n = 15, p = 0.6) = \int_{t_0(-\infty)}^{t_1(\frac{7}{30})}\frac{1}{\sigma \sqrt{2\pi}}e^{-(t-\mu)^2/(2 \sigma^2)}dt =\]</span> <span class="math display">\[= P(Z &lt; \frac{\frac{7}{30}-p}{\sqrt{\frac{p(1-p)}{n}}}) = P(Z &lt; -2.9) = P(Z &gt; 2.9) = 1 - P(Z &lt; 2.9) = 0.0019.\]</span></p>
+<p>Otrzymane przybliżenie jest bardzo dokładne. Oczywiście nie musimy liczyć całek funkcji gęstości prawdopodobieństwa rozkładu normalnego. Wartości te dla zmiennej standaryzowanej <em>Z</em> zostały stablicowane i szukane prawdopodobieństwo odczytujemy z tablic mając świadomość, że rozkład normalny jest rozkładem symetrycznym (oś symetrii wyznacza wartość <span class="math inline">\(\mu\)</span>).</p>
+<p>Odp.: Prawdopodobieństwo, że w 15 osobowej grupie losowo wybranych Polaków, co najwyżej 3 ufa prezydentowi RP wynosi w przybliżeniu 0.0019 = 0.19%, czyli jest bardzo małe.</p>
+</div>
+<div id="przykład-3.-rozkłady-zmiennych-ciągłych---rozkład-jednostajny-i-rozkład-normalny" class="section level4" number="5.2.9.3">
+<h4><span class="header-section-number">5.2.9.3</span> Przykład 3. Rozkłady zmiennych ciągłych - rozkład jednostajny i rozkład normalny</h4>
+<p>Przybywasz na peron metra w pewnym mieście nie znając rozkładu jazdy. Jeżeli zmienna losowa <em>X</em> - czas oczekiwania na pociąg metra w minutach - ma <strong>rozkład jednostajny</strong> z parametrami <span class="math inline">\(a = 0\)</span> i <span class="math inline">\(b = 6\)</span>, <span class="math inline">\(X \sim U(0, 6)\)</span>, jakie jest prawdopodobieństwo, że czas oczekiwania na przyjazd wyniesie co najmniej 4 minuty?</p>
+<p><strong>Rozwiązanie:</strong></p>
+<p>Z treści zadania wiadomo, że czas oczekiwania na pociąg metra może wynieść maksymalnie 6 minut. W najlepszym przypadku pociąg wjedzie na peron dokładnie w chwili, gdy ty się na nim pojawisz - czas oczekiwania = 0.</p>
+<p>Równanie funkcji gęstości rozkładu jednostajnego:</p>
+<p><span class="math display">\[P(X = x) = f(x; a, b) = \frac{1}{b - a}, \text{ dla } 0 \leq x \leq 6\]</span></p>
+<p>Całkując funkcję gęstości w przedziale <span class="math inline">\([0, x]\)</span>, otrzymujemy: <span class="math inline">\(P(X &lt; x) = \frac{x}{b-a}\)</span>, dlatego,</p>
+<p><span class="math display">\[P(X \geq 4) = 1 - P(Z &lt; 4) = 1 - \frac{4}{6-0} = \frac{1}{3}\]</span></p>
+<p>Odp: Prawdopodobieństwo, że czas oczekiwania na przyjazd wyniesie co najmniej 4 minuty = <span class="math inline">\(\frac{1}{3}\)</span>.</p>
+<p>Dla <em>X</em> będącej zmienną losową mającą normalny rozkład gęstości prawdopodobieństwa z parametrami <span class="math inline">\(E(X) = 72\)</span> i <span class="math inline">\(Var(X) = 144\)</span>, oblicz:</p>
+<ul>
+<li><p><span class="math inline">\(P(X &lt; 84)\)</span></p></li>
+<li><p><span class="math inline">\(P(60 &lt; X &lt; 69)\)</span></p></li>
+<li><p><span class="math inline">\(P(X \geq 102)\)</span></p></li>
+</ul>
+<p><strong>Rozwiązanie</strong>:</p>
+<p>Ponieważ chcemy rozwiązać zadanie korzystając z tablicy wartości całki funkcji gęstości rozkładu normalnego, to wpierw wartości zmiennej <em>X</em>, dla których prawdopodobieństwo chcemy wyznaczyć musimy poddać standaryzacji tworząc pomocniczą zmienną losową <em>Z</em>.</p>
+<p>Stosujemy ogólną formułę: <span class="math inline">\(Z = \frac{Y - \mu_Y}{\sigma_Y}\)</span> i obliczamy wartości zmiennej <em>Z</em> dla poszczególnych wartości <em>Y</em>.</p>
+<p><strong>a)</strong> Jest mniejsza od 84 <span class="math inline">\([P(X &lt; 84)]\)</span>.</p>
+<p>Oblicz <span class="math inline">\(P(X &lt; x) = P(Z &lt; \frac{X – \mu_X}{\sigma_X}) \rightarrow P(Z &lt; z)\)</span> – w tym przypadku bezpośrednio odczytujemy z tablic prawdopodobieństwo dla <em>Z</em> = jakaś liczba <em>z</em> uzyskana w wyniku standaryzacji <span class="math inline">\(Z = \frac{X – \mu_X}{\sigma_X}\)</span>.</p>
+<p>Trzeba tutaj napisać, że <span class="math inline">\(P(X &lt; 84) = P(Z &lt; [(84 – 72) / 12] = 1)\)</span> i wówczas odczytujemy wartość z tablic dla <em>Z</em> = 1.</p>
+<p>Otrzymujemy 0.8413.</p>
+<p><strong>b)</strong> Należy do przedziału (60, 69).</p>
+<p>Oblicz <span class="math inline">\(P(x_1 &lt; X &lt; x_2) \rightarrow P(z_1 &lt; Z &lt; z_2)\)</span>, czyli <em>Z</em> należy do przedziału <span class="math inline">\((z_1, z_2)\)</span> – w tym przypadku liczymy w następujący sposób: <span class="math inline">\(P(Z &lt; z_2) – P(Z &lt; z_1)\)</span>.</p>
+<p>Zatem, <span class="math inline">\(P(60 &lt; X &lt; 69) = P(-1 &lt; Z &lt; -0.25) = P(Z &lt; -0.25) – P(Z &lt; -1)\)</span>, odczytujemy wartości prawdopodobieństwa z tablic i mamy 0.4013 – 0.1587 = 0.2426.</p>
+<p><strong>c)</strong> Jest większa lub równa od 102.</p>
+<p>Oblicz <span class="math inline">\(P(X &gt; x) \rightarrow P(Z &gt; z)\)</span> – w tym przypadku przekształcamy zadanie do postaci <span class="math inline">\(1 – P(Z &lt; z)\)</span>.</p>
+<p>Zatem, <span class="math inline">\(P(X &lt; 102) = P(Z &lt; 2.5)\)</span>, odczytujemy z tablic prawdopodobieństwo dla <span class="math inline">\(Z = 2.5\)</span> i mamy 0.9938, dalej mamy <span class="math inline">\(1 – 0.9938 = 0.0062\)</span>.</p>
+</div>
+</div>
+<div id="podstawowe-rozkłady-prawdopodobieństwa---podsumowanie" class="section level3" number="5.2.10">
+<h3><span class="header-section-number">5.2.10</span> Podstawowe rozkłady prawdopodobieństwa - podsumowanie</h3>
+<p>Dwa podstawowe <strong>rozkłady skokowe</strong> to:</p>
+<ol style="list-style-type: decimal">
+<li><p>rozkład Bernoulliego (dwupunktowy), <span class="math display">\[X\sim Bern(\text{parametr: p = prawdopodobieństwo sukcesu})\]</span></p>
+<p>Dla <em>X</em>, która ma rozkład dwupunktowy prawdziwe są następujące wzory: <span class="math display">\[E(X) = p\]</span> <span class="math display">\[Var(X) = p(1-p)\]</span></p></li>
+<li><p>rozkład dwumianowy,</p>
+<p><span class="math display">\[X\sim Bin(\text{parametry: p = prawdopodobieństwo sukcesu, n = liczba prób (trials)})\]</span></p>
+<p>Dla <em>Y</em>, która ma rozkład dwumianowy prawdziwe są następujące wzory: <span class="math display">\[E(Y) = np\]</span> <span class="math display">\[Var(Y) = np(1-p)\]</span> Ponadto, jeżeli <span class="math inline">\(Y = X_1 + X_2 + ... + X_n\)</span>, gdy zmienne <span class="math inline">\(X_i \sim Bern(p)\)</span> oraz <span class="math inline">\(\mu_{X_i} = p, \sigma_{X_i} = \sqrt{p(1-p)}\)</span>, to dla zmiennej</p>
+<p><span class="math display">\[\bar{Y} = \frac{Y}{n} = \hat{p}\]</span></p>
+<p>prawdziwe są wzory</p>
+<p><span class="math display">\[E(\hat{p}) = \mu_{\hat{p}} = p\]</span> <span class="math display">\[\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}\]</span></p></li>
+</ol>
+<p>Dwa podstawowe <strong>rozkłady ciągłe</strong> to:</p>
+<ol style="list-style-type: decimal">
+<li><p>rozkład jednostajny,</p>
+<p><span class="math display">\[X\sim U(\text{parametry: a = wartość najmniejsza zmiennej, b = wartość największa zmiennej})\]</span></p></li>
+<li><p>rozkład normalny,</p>
+<p><span class="math display">\[X\sim N(\text{parametry}: \mu = \text{wartość przeciętna}, \sigma = \text{odchylenie standardowe})\]</span></p></li>
+</ol>
+<p>Należy też pamiętać, że rozkład jednostajny występuje też w postaci skokowej, np. rozkład zmiennej losowej <em>X</em> = liczba oczek, które wypadły podczas rzutu sześcienną, symetryczną kością.</p>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wykład-6-podstawy-wnioskowania-statystycznego.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "static"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
