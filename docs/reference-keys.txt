@@ -197,7 +197,7 @@ przykład-1.-zmienna-losowa
 przykład-2.-rozkład-dwumianowy-i-jego-przybliżenie-rozkładem-normalnym
 przykład-3.-rozkłady-zmiennych-ciągłych---rozkład-jednostajny-i-rozkład-normalny
 podstawowe-rozkłady-prawdopodobieństwa---podsumowanie
-wykład-6.-podstawy-wnioskowania-statystycznego
+wykład-6.-podstawy-wnioskowania-statystycznego-ver.-0.2
 rozkład-statystyki-z-próby-i-centralne-twierdzenie-graniczne
 rozkład-statystyki-z-próby-średnia-próbki-proporcja-próbki-itp.
 rozkład-próbkowy-średniej-rozkład-średniej-z-próby
