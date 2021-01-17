@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.3 Prawdopodobieństwo | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="4.3 Prawdopodobieństwo | STAT 101 [WSMiP UŁ]" />
+  <title>5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.51) | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.51) | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.3 Prawdopodobieństwo | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.51) | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.3 Prawdopodobieństwo | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.51) | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"/>
-<link rel="next" href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-51.html"/>
+<link rel="prev" href="prawdopodobieństwo.html"/>
+<link rel="next" href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -369,303 +369,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="prawdopodobieństwo" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Prawdopodobieństwo</h2>
-<div id="definicja-prawdopodobieństwa" class="section level3" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Definicja prawdopodobieństwa</h3>
-<p>Jak można interpretować pojęcie prawdopodobieństwa?</p>
-<p>Są trzy podstawowe interpretacje pojęcia prawdopodobieństwa:</p>
-<ul>
-<li><p>prawdopodobieństwo klasyczne (logiczne), lub prawdopodobieństwo <em>a priori</em>,</p></li>
-<li><p>prawdopodobieństwo statystyczne, częstościowe (doświadczalne), lub <em>a posteriori</em>,</p></li>
-<li><p>prawdopodobieństwo subiektywne.</p></li>
-</ul>
-<p>Intuicyjnie, prawdopodobieństwo utożsamiamy z szansą zrealizowania się określonego zdarzenia losowego, np. z szansą wyrzucenia 3 oczek na symetrycznej kostce do gry.</p>
+<div id="wykład-5.-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver.-0.51" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.51)</h1>
 </div>
-<div id="podstawowe-pojęcia-1" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Podstawowe pojęcia</h3>
-<p><strong>Doświadczenie losowe</strong> to eksperyment, którego wynik zależy od pewnego mechanizmu losowego. Np. rzut monetą lub kostką do gry. <strong>Przestrzeń (zbiór) zdarzeń elementarnych</strong>, oznaczamy <span class="math inline">\(S\)</span> lub <span class="math inline">\(\Omega\)</span>, to zbiór wszystkich możliwych wyników doświadczenia losowego. Zdarzenia elementarne są parami rozłączne i wspólnie tworzą zbiór <span class="math inline">\(S\)</span>. <strong>Zdarzenie losowe</strong> (np. zbiór <span class="math inline">\(A\)</span>) to podzbiór przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span> składający się ze zdarzeń elementarnych. Np. <span class="math inline">\(A = \{e_1, e_2, ...\}\)</span>. <span class="math inline">\(\emptyset\)</span> - zbiór pusty, czyli <strong>zdarzenie niemożliwe</strong>. Zbiór <span class="math inline">\(A^c\)</span> zbioru <span class="math inline">\(A\)</span> zdarzeń elementarnych nazywamy <strong>zdarzeniem przeciwnym</strong> do zdarzenia <span class="math inline">\(A\)</span>.</p>
-<p><strong>Doświadczenie losowe</strong> jest to eksperyment, którego wyniku nie możemy z góry przewidzieć.</p>
-<p>Wszystkie możliwe wyniki doświadczenia losowego tworzą zbiór zwany <strong>przestrzenią zdarzeń elementarnych</strong> <span class="math inline">\(S = \{e_1, e_2, ...\}\)</span>. Ten zbiór może być: skończony; nieskończony, ale przeliczalny (zbiory nieciągłe, skokowe); lub nieskończony i nieprzeliczalny (zbiór ciągły, np. przedział liczbowy). Dowolny podzbiór zbioru <span class="math inline">\(S\)</span>, np. zbiór <span class="math inline">\(\{e_2, e_4\}\)</span>, nazywa się po prostu <strong>zdarzeniem</strong> (nie mylić ze zdarzeniem elementarnym).</p>
-<p><span class="math inline">\(A\cup B\)</span> - <strong>suma zdarzeń losowych</strong>, która odpowiada zajściu co najmniej jednego ze zdarzeń A, B (suma zbiorów A i B). <span class="math inline">\(A\cap B\)</span> - <strong>iloczyn zdarzeń losowych</strong> A i B odpowiada jednoczesnemu zajściu zdarzeń A i B (przekrój zbiorów A i B).</p>
-<p>Literą <span class="math inline">\(F\)</span> oznaczamy zbiór wszystkich podzbiorów przestrzeni zdarzeń elementarnych <span class="math inline">\(S\)</span> (zbiór wszystkich zdarzeń losowych) - dla przeliczalnych przestrzeni zdarzeń będzie to ich <em>Power set</em> (<span class="math inline">\(2^{|S|}\)</span>). Trójkę <span class="math inline">\((S, F, P)\)</span> nazywamy <strong>przestrzenią probabilistyczną</strong>.</p>
-<p>Często nie interesuje nas konkretne <em>zdarzenie elementarne</em> (np. wyciągnięcie <em>asa</em> ze standardowej talii 52 kart), ale ich pewien zbiór, czyli pewne <em>zdarzenie losowe</em> (np. prawdopodobieństwo otrzymania <em>fulla</em> w pokera, prawdopodobieństwo prawidłowego wytypowanie <em>szóstki</em> w Lotto itp.).</p>
-<p>Mówimy, że zaszło zdarzenie A, gdy wynik doświadczenia losowego należy do zbioru zdarzeń elementarnych A, przy czym zbiór <span class="math inline">\(A \subseteq S\)</span>.</p>
-<p>W rachunku prawdopodobieństwa zdarzenia losowe są utożsamiane ze zbiorami, dlatego rachunek zdarzeń jest tożsamy z rachunkiem zbiorów. Podstawowe operacje na zdarzeniach, czyli np. sumę, iloczyn lub dopełnienie zbioru (podobnie jak operacje na zbiorach) możemy przedstawić graficznie za pomocą tzw. <strong>diagramów Venna</strong>.</p>
-<p><img src="images/prob/figsetop-mbxpdft.svg" title="Venn" /></p>
-<p>Prawdopodobieństwo zdarzenia <span class="math inline">\(A =\)</span> wyrzucenie co najmniej 4 oczek na kostce do gry oznaczamy <span class="math inline">\(P(A) = P(\{e_1 = 4, e_2 = 5, e_3 = 6\})\)</span>.</p>
-</div>
-<div id="zmienna-losowa-i-rozkład-prawdopodobieństwa---wprowadzenie" class="section level3" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Zmienna losowa i rozkład prawdopodobieństwa - wprowadzenie</h3>
-<p><strong>Zmienna losowa</strong> jest to funkcja określona na zbiorze zdarzeń elementarnych <em>S</em> i odwzorowująca elementy tego zbioru w zbiór liczb rzeczywistych <em>R</em>. Zmienne losowe, podobnie jak zbiory, oznaczamy wielkimi literami. Np. dla eksperymentu polegającego na rzucie dwiema sześciennymi kostkami możemy zdefiniować zmienne: <em>X</em> = liczba oczek na pierwszej kostce + liczba oczek na drugiej lub np. <em>Y</em> = średnia liczba oczek, które wyrzucono podczas rzutu dwiema kostkami.</p>
-<p><strong>Funkcja rozkładu prawdopodobieństwa</strong> (rozkład prawdopodobieństwa) - odwzorowanie przyporządkowujące wszystkim wartościom zmiennej losowej, odpowiadające tym wartościom prawdopodobieństwa <em>P</em>.</p>
-<p><strong>Doświadczenie losowe</strong>: Rzut monetą;</p>
-<p><span class="math display">\[S = \{R, O\}\]</span> <span class="math display">\[f: S \rightarrow X \in \{0, 1\}\]</span> <span class="math display">\[R \rightarrow 0, O \rightarrow 1\]</span></p>
-<p><strong>Rozkład prawdopodobieństwa</strong>: <span class="math inline">\(0 \rightarrow 0.5 \wedge 1 \rightarrow 0.5\)</span></p>
-<p>Podobnie jak wiele innych funkcji, rozkład prawdopodobieństwa można też obrazowo przedstawić na wykresie w układzie współrzędnych.</p>
-<p>Innym przykładem rozkładu prawdopodobieństwa zmiennej losowej będzie rozkład zmiennej X = liczba oczek, które wypadły podczas rzutu sześcienną kostką.</p>
-<p>Przedstawione wyżej rozkłady prawdopodobieństwa są rozkładami zmiennej skokowej. W statystyce duże znaczenie mają też rozkłady prawdopodobieństwa zmiennych ciągłych. Funkcje rozkładu prawdopodobieństwa dla zmiennych ciągłych nazywamy funkcjami gęstości prawdopodobieństwa.</p>
-<p>W przypadku zmiennych skokowych, wartości funkcji rozkładu prawdopodobieństwa są prawdopodobieństwami odpowiadającymi argumentom funkcji (wartościom zmiennej losowej). W przypadku zmiennych ciągłych wartości funkcji rozkładu są wielkościami określanymi mianem <strong>gęstości prawdopodobieństwa</strong>, natomiast <strong>prawdopodobieństwa</strong> liczymy wyznaczając pola powierzchni pod krzywą funkcji gęstości rozkładu prawdopodobieństwa dla wybranych przedziałów. Np. dla powyższego przykładu, gęstość prawdopodobieństwa jest stała (funkcja prawdopodobieństwa jest stała) i równa <span class="math inline">\(\frac{1}{6}\)</span>, a przedział zmienności <span class="math inline">\(X = [0, 6]\)</span>.</p>
-<p>Wprowadzenie funkcji gęstości i pojęcia gęstości jest niezbędne dla wyznaczenia prawdopodobieństw, gdy badamy zmienne ciągłe, gdyż w ich przypadku nie jest możliwe wyznaczanie prawdopodobieństw w taki sam sposób jak np. w przykładach dotyczących rzutów monetą lub kostką do gry (przeliczalny zbiór zdarzeń elementarnych), co wynika z faktu, że <strong>zmienne ciągłe przyjmują nieskończoną i nieprzeliczalną liczbę wartości z pewnych przedziałów zbioru R</strong>. Nie wolno mylić pojęcia gęstości prawdopodobieństwa z pojęciem prawdopodobieństwa.</p>
-</div>
-<div id="aksjomaty-pewniki-teorii-prawdopodobieństwa" class="section level3" number="4.3.4">
-<h3><span class="header-section-number">4.3.4</span> Aksjomaty (pewniki) teorii prawdopodobieństwa</h3>
-<p>Funkcja rozkładu prawdopodobieństwa jest to metoda przyporządkowania prawdopodobieństw zdarzeniom losowym w taki sposób, aby spełnione były następujące aksjomaty:</p>
-<ul>
-<li><p><span class="math inline">\(P(A) \geq 0\)</span>, dla dowolnego zdarzenia <span class="math inline">\(A\)</span>,</p></li>
-<li><p><span class="math inline">\(P(S) = 1\)</span>,</p></li>
-<li><p><span class="math inline">\(P(A_1\cup A_2 \cup A_3 \cup ...) = P(A_1) + P(A_2) + P(A_3) + ...\)</span>, dla wykluczających się zdarzeń <span class="math inline">\(A_1, A_2, A_3, ...\)</span> Ogólniej możemy napisać: <span class="math inline">\(P(\bigcup_{i=1}^\infty A_i) = \Sigma_{i=1}^{\infty} P(A_i)\)</span>.</p></li>
-</ul>
-</div>
-<div id="klasyczna-definicja-prawdopodobieństwa" class="section level3" number="4.3.5">
-<h3><span class="header-section-number">4.3.5</span> Klasyczna definicja prawdopodobieństwa</h3>
-<p>Definicja klasyczna ma zastosowanie, wtedy, gdy każde zdarzenie elementarne jest jednakowo prawdopodobne, np. w przypadku doświadczeń z kośćmi do gry lub monetą.</p>
-<p><span class="math inline">\(P(A) = \frac{\text{Liczba wyników sprzyjających zdarzeniu A}}{\text{Liczba wszystkich możliwych wyników w S}} = \frac{n(A)}{n(S)} = \frac{|A|}{|S|}\)</span></p>
-<p>Doświadczenie losowe: Rzut dwiema sześciennymi kostkami do gry. Zbiór zdarzeń elementarnych: <span class="math inline">\(S = \{(1, 1), (1, 2), ..., (6, 6)\}\)</span>. Zdarzenie losowe <span class="math inline">\(A\)</span>: Na kostkach wypadły liczby 1 i 6. Zdarzeniu <span class="math inline">\(A\)</span> sprzyjają dwa wyniki (dwa zdarzenia elementarne), <span class="math inline">\(A = \{(1, 6), (6, 1)\}\)</span>.</p>
-<p><span class="math inline">\(P(A) = \frac{2}{36} = \frac{1}{18}\)</span>.</p>
-<p>Zdarzenie losowe <span class="math inline">\(B\)</span>: Suma wyrzuconych oczek jest równa 1. Zdarzeniu <span class="math inline">\(B\)</span> nie sprzyja żaden wynik, dlatego <span class="math inline">\(B = \emptyset\)</span>.</p>
-<p><span class="math inline">\(P(B) = \frac{0}{36} = 0\)</span>.</p>
-<p><strong>Klasyczna definicja prawdopodobieństwa</strong> może być zastosowana dla <strong>dyskretnych przestrzeni zdarzeń elementarnych</strong>, gdy wszystkie zdarzenia elementarne są jednakowoprawdopodobne i zbiór zdarzeń elementarnych jest skończony. Jednak, gdy zbiór zdarzeń elementrnych jest <strong>zbiorem ciągłym</strong>, podejście klasyczne (“naiwne”) nie działa poprawnie.</p>
-<p>Narysujmy koło o promieniu <em>r</em> = 4 i <span class="math inline">\(S(0, 0)\)</span> oraz drugie koło o promieniu 3 i środku również <span class="math inline">\(S(0, 0)\)</span>. Jakie jest prawdopodobieństwo, że zrealizuje się zdarzenie losowe polegające na tym, że losowo wybrany punkt w obszarze koła o promieniu 4, należy jednocześnie do koła o promieniu <em>r</em> = 3? Oba koła to zbiory punktów, możemy pierwszy zbiór oznaczyć literą <em>S</em>, a drugi literą <em>A</em>, naszemu zdarzeniu losowemu sprzyja wynik doświadczenia losowego polegający na wylosowaniu dowolnego punktu należącego do zbioru <em>A</em>, wówczas <strong>zgodnie z prawdopodobieństwem klasycznym:</strong></p>
-<p><span class="math display">\[P(A) = \frac{|A|}{|S|}\]</span></p>
-<p>Niestety, zarówno, liczba wyników sprzyjających, jak i liczba wszystkich możliwych wyników doświadczenia jest nieskończona i nieprzeliczalna. Nie jesteśmy w stanie w powyższy sposób wyznaczyć poszukiwanego <span class="math inline">\(P(A)\)</span>.</p>
-<p><strong>Jak rozwiązać ten problem</strong>? Zamiast rozważać liczebność nieprzeliczalnych zbiorów punktów, wykorzystajmy ich pola powierzchni. Wzory na pole koła i wielu innych figur geometrycznych są znane. Możemy też posłużyć się całkami do wyznaczenia pól bardziej skomplikowanych figur.</p>
-<p><span class="math display">\[P(A) = \frac{\text{pole powierzchni }A}{\text{pole powierzchni }S}\]</span></p>
-<p><span class="math display">\[P(A) = \frac{9\pi}{16\pi} =\frac{9}{16}\]</span></p>
-<p>W powyższym przykładzie, przestrzeń zdarzeń losowych <strong><em>S</em></strong> jest zbiorem <strong>dwuwymiarowym</strong>, który zawiera nieprzeliczalną liczbę elementów, dlatego prawdopodobieństwo <span class="math inline">\(&gt; 0\)</span> istnieje tylko dla zdarzeń, które też są zbiorami dwuwymiarowymi i nieprzeliczalnymi. Jeżeli <em>S</em> byłaby zbiorem nieprzeliczalnym <strong>jednowymiarowym</strong> (np. prostą lub odcinkiem), to prawdopodobieństwo <span class="math inline">\(&gt; 0\)</span> jest określone dla zdarzeń jednowymiarowych (odcinków lub przedziałów zawartych w zbiorze <em>S</em>). Podobnie jest w przypadku <strong>objętości</strong>.</p>
-<p>Wybierzmy losowo punkt we wnętrzu koła o promieniu równym 1. W tym przypadku, <span class="math inline">\(S = \{(x, y): x^2 + y^2 &lt; 1 \}\)</span> i <span class="math display">\[P(A) = \frac{\text{pole powierzchni A}}{\pi}\]</span></p>
-<p>Jeśli zbiór <em>A</em> jest tzw. singletonem (zbiór, którego jedynym elementem jest pojedynczy punkt), wówczas <span class="math inline">\(P(A) = 0\)</span>. Jeżeli przestrzeń zdarzeń elementarnych jest dwuwymiarowa, to nie możemy przyporządkować prawdopodobieństwa większego od 0 zdarzeniu <em>A</em>, którego elementem jest pojedynczy punkt lub nawet prosta, gdyż pola punktu lub dowolnej krzywej, odcinka są równe 0.</p>
-</div>
-<div id="definicja-empiryczna-lub-statystyczna" class="section level3" number="4.3.6">
-<h3><span class="header-section-number">4.3.6</span> Definicja empiryczna lub statystyczna</h3>
-<p>Prawdopodobieństwo statystyczne jest wyznaczane na podstawie obserwacji. Empiryczne prawdopodobieństwo zdarzenia A, to względna częstość występowania w ciągu doświadczeń losowych wyników, które sprzyjają zdarzeniu A. Np. jeśli w 100 rzutach monetą 55 razy wypadł orzeł, to częstość wypadania orła w 100 próbach wyniosła <span class="math inline">\(0,55 = 55\%\)</span>.</p>
-<p><span class="math inline">\(P(A) = \frac{\text{Częstość wyników sprzyjających A}}{\text{Liczba wszystkich obserwacji}} = \frac{Fr(A)}{n}\)</span></p>
-<p><strong>Prawo wielkich liczb</strong> mówi, że wraz ze wzrostem liczby obserwacji (powtórzeń eksperymentu), prawdopodobieństwo empiryczne zbliża się do prawdopodobieństwa teoretycznego (faktycznego).</p>
-<p>Jeśli będziemy wielokrotnie powtarzać rzut kostką do gry i odnotowywać wyniki, to po bardzo wielu doświadczeniach okaże się, że częstość względna występowania poszczególnych wyników stopniowo zbliża się do <span class="math inline">\(\frac{1}{6}\)</span>, czyli do prawdopodobieństwa klasycznego.</p>
-<p><strong>Prawdopodobieństwo empiryczne</strong> jest metodą szacowania (estymacji) prawdopodobieństwa teoretycznego, którego wartość może być nieznana, np. w przypadku, gdy liczba możliwych wyników doświadczenia jest bardzo duża.</p>
-<p>W ciągu 100 rzutów monetą odnotowano następujące częstości wypadania orła (O) i reszki (R): odpowiednio 60 i 40.</p>
-<p>Jakie jest prawdopodobieństwo (w sensie empirycznym) zdarzenia <span class="math inline">\(A = \{\text{wypadł orzeł}\}\)</span> w doświadczeniu polegającym na rzucie monetą?</p>
-<p>Odpowiedź: <span class="math inline">\(P(A = \{O\}) = \frac{60}{100} = 0.6\)</span></p>
-<p>Empiryczną definicję prawdopodobieństwa można wykorzystać do <strong>oszacowania rozkładu prawdopodobieństwa</strong> zmiennej losowej (empiryczny rozkład prawdopodobieństwa zmiennej losowej). Estymatorami prawdopodobieństw są <strong>częstości (liczebności) względne</strong>. Oszacowanie jest tym lepsze, im większa jest liczba przeprowadzonych doświadczeń losowych <em>n</em>.</p>
-</div>
-<div id="prawdopodobieństwo-subiektywne" class="section level3" number="4.3.7">
-<h3><span class="header-section-number">4.3.7</span> Prawdopodobieństwo subiektywne</h3>
-<p>Prawdopodobieństwo subiektywne jest oparte na intuicji. Np. lekarz może przypisać pacjentowi prawdopodobieństwo wyleczenia na podstawie swojej wiedzy, doświadczenia i intuicji.</p>
-</div>
-<div id="empiryczny-rozkład-prawdopodobieństwa" class="section level3" number="4.3.8">
-<h3><span class="header-section-number">4.3.8</span> Empiryczny rozkład prawdopodobieństwa</h3>
-<p>Jeżeli do przyporządkowania prawdopodobieństw wartościom zmiennej losowej możemy użyć klasycznej definicji prawdopodobieństwa, to znamy prawdziwy rozkład zmiennej losowej. Często analizujemy jednak zmienne losowe, których zbiór wartości jest bardzo duży lub nieskończony. Wtedy, możemy zwykle jedynie oszacować rozkład zmiennej wykorzystując <strong>statystyczne (częstościowe) rozumienie prawdopodobieństwa</strong>.</p>
-<p>Rozkład zmiennej <em>X</em> - wynik rzutu sześcienną kością do gry jest znany. Aby określić rozkład zmiennej <em>Y</em> - liczba osób popierających liberalizację prawa antyaborcyjnego w Polsce, musimy skorzystać z metod statystyki, wybrać losowo próbę z populacji Polaków i na tej podstawie określić jakie jest prawdopodobieństwo, że losowo wybrany Polak popiera liberalizację. Wskutek takiego badania otrzymujemy tzw. <strong>rozkład empiryczny</strong> (rozkład częstości względnej), który jest oszacowaniem prawdziwego rozkładu zmiennej.</p>
-<p>Jeżeli na podstawie badań empirycznych na losowych próbach wybranych z populacji uda się ustalić przybliżony kształt wykresu funkcji rozkładu prawdopodobieństwa, to na tej podstawie można do kształtu wykresu dopasować równanie funkcji, które dobrze modeluje prawdziwy rozkład pewnej zmiennej losowej. Np. rozkłady wielu zmiennych społecznych, np. zmiennej poziom IQ, modeluje się za pomocą funkcji tzw. <strong>rozkładu normalnego</strong>, której wykres przypomina kształtem dzwon.</p>
-</div>
-<div id="algebra-prawdopodobieństw" class="section level3" number="4.3.9">
-<h3><span class="header-section-number">4.3.9</span> Algebra prawdopodobieństw</h3>
-<p><strong>Prawdopodobieństwo iloczynu dwóch niezależnych zdarzeń</strong> <span class="math inline">\(A\cap B\)</span> jest równe prawdopodobieństwu zdarzenia składającego się z wyników doświadczenia, które sprzyjają jednocześnie zdarzeniu <span class="math inline">\(A\)</span> i zdarzeniu <span class="math inline">\(B\)</span> - iloczyn zbiorów A i B. <span class="math inline">\(P(A\cap B) = P(A)P(B)\)</span>.</p>
-<p><strong>Prawdopodobieństwo sumy zdarzeń</strong> jest równe prawdopodobieństwu zdarzenia składającego się z wyników doświadczenia, które sprzyjają zdarzeniu <span class="math inline">\(A\)</span> lub/i zdarzeniu <span class="math inline">\(B\)</span> - suma zbiorów A i B. <span class="math inline">\(P(A\cup B) = P(A) + P(B) - P(A\cap B)\)</span>.</p>
-<p><strong>Prawdopodobieństwo zdarzenia przeciwnego</strong> dla dowolnego zdarzenia A jest równe <span class="math inline">\(P(A^c) = 1 - P(A)\)</span>.</p>
-</div>
-<div id="niezależność-zdarzeń-losowych-a-zdarzenia-parami-rozłączne" class="section level3" number="4.3.10">
-<h3><span class="header-section-number">4.3.10</span> Niezależność zdarzeń losowych a zdarzenia parami rozłączne</h3>
-<p>Kiedy dwa zdarzenia A i B wzajemnie się wykluczają (zdarzenia rozłączne), nie mogą one zrealizować się jednocześnie. Zajście zdarzenia A wyklucza możliwość jednoczesnego zajścia zdarzenia B. Np. gdy w doświadczeniu polegającym na rzucie sześcienną kostką zdarzenie A polegałoby na wyrzuceniu parzystej liczby oczek, a zdarzenie B na wyrzuceniu nieparzystej liczby oczek, to te zdarzenia wykluczają się.</p>
-<p>Kiedy dwa zdarzenia wykluczają się wzajemnie, to: <span class="math inline">\(P(A\cap B) = 0\)</span> i <span class="math inline">\(P(A \cup B) = P(A) + P(B)\)</span>.</p>
-<p><strong>Pojęcie zdarzeń wykluczających się</strong> należy odróżnić od pojęcia <strong>niezależności zdarzeń losowych</strong>. Często interesuje nas prawdopodobieństwo zdarzenia, np. zdarzenia B, gdy wiemy, że zaszło pewne zdarzenie A. Prawdopodobieństwo takie oznaczamy <span class="math inline">\(P(B|A)\)</span>.</p>
-<p>Jeżeli dwa zdarzenia są zależne, to wówczas realizacja jednego ze zdarzeń modyfikuje prawdopodobieństwo zajścia drugiego zdarzenia i odwrotnie.</p>
-</div>
-<div id="prawdopodobieństwo-warunkowe" class="section level3" number="4.3.11">
-<h3><span class="header-section-number">4.3.11</span> Prawdopodobieństwo warunkowe</h3>
-<p>Prawdopodobieństwo warunkowe zdarzenia A pod warunkiem zajścia zdarzenia B jest równe</p>
-<p><span class="math display">\[P(A|B) = \frac{P(A\cap B)}{P(B)} \text{, i } P(B) \neq 0\]</span></p>
-<p>Podobnie, prawdopodobieństwo, że wystąpi B, biorąc pod uwagę, że wystąpiło A (B uwarunkowane A) jest równe</p>
-<p><span class="math display">\[P(B|A) = \frac{P(A\cap B)}{P(A)} \text{, i } P(A) \neq 0\]</span></p>
-<blockquote>
-<p><strong>W większości przypadków</strong> <span class="math inline">\(P(A | B) \neq P(B | A)\)</span>!!!</p>
-</blockquote>
-<p>Jeżeli zdarzenia A i B są niezależne tj. gdy prawdopodobieństwo zdarzenia A nie zmienia się bez względu na to, czy zdarzenie B zrealizowało się, czy też nie, to:</p>
-<p><span class="math display">\[P(A|B) = P(A)\]</span></p>
-<p><span class="math display">\[P(B|A) = P(B)\]</span></p>
-<p>Ponadto, mamy:</p>
-<p><span class="math display">\[P(A\cap B) = P(A)P(B)\]</span></p>
-<p><span class="math display">\[P(A\cup B) = P(A) + P(B) - P(A)P(B)\]</span></p>
-<p>Zauważ, że <strong>dla wykluczających się zdarzeń A i B</strong> otrzymujemy <span class="math inline">\(P(A|B) = 0\)</span> oraz <span class="math inline">\(P(A\cap B) = 0\)</span> i <span class="math inline">\(P(A\cup B) = P(A) + P(B)\)</span></p>
-<p>W przypadku zdarzeń rozłącznych, realizacja jednego spośród zdarzeń wyklucza możliwość jednoczesnego zajścia drugiego zdarzenia, co dowodzi, że <strong>zdarzenia rozłączne są zawsze zdarzeniami wzajemnie zależnymi</strong>.</p>
-<p>Przekształcając formułę dla prawdopodobieństwa warunkowego, możemy obliczyć prawdopodobieństwo, że jednocześnie zaszły zdarzenia A i B (<em>prawdopodobieństwo iloczynu zdarzeń</em>), które wyraża sie ogólnie wzorem:</p>
-<p><span class="math display">\[P(A\cap B) = P(A)P(B|A)\]</span> lub</p>
-<p><span class="math display">\[P(A\cap B) = P(B)P(A|B)\]</span></p>
-<p>Stąd, mamy ponadto</p>
-<p><span class="math display">\[P(A|B) · P(B) = P(B|A) · P(A)\]</span>
-### Prawdopodobieństwo warunkowe (tablica korelacyjna)</p>
-<p>Tabela 4.1: Wykształcenie a płeć (K, M)</p>
-<table style="width:83%;">
-<colgroup>
-<col width="15%" />
-<col width="20%" />
-<col width="16%" />
-<col width="15%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><em>Podstawowe</em></th>
-<th><em>Średnie</em></th>
-<th><em>Wyższe</em></th>
-<th><strong>Suma</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>M</strong></td>
-<td>38</td>
-<td>28</td>
-<td>22</td>
-<td><strong>88</strong></td>
-</tr>
-<tr class="even">
-<td><strong>K</strong></td>
-<td>45</td>
-<td>50</td>
-<td>17</td>
-<td><strong>112</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>Suma</strong></td>
-<td><strong>83</strong></td>
-<td><strong>78</strong></td>
-<td><strong>39</strong></td>
-<td><em>200</em></td>
-</tr>
-</tbody>
-</table>
-<p>Prawdopodobieństwo zdarzenia <em>A</em>, pod warunkiem, że zaszło zdarzenie <em>B</em> jest równe:</p>
-<p><span class="math display">\[P(A | B) = \frac{P(A \cap
-B)}{P(B)}\]</span></p>
-<p>Z określenia prawdopodobieństwa warunkowego mamy definicję iloczynu (części wspólnej) zdarzeń <em>A</em> i <em>B</em>, t.j. <span class="math inline">\(P(A \cap B)\)</span>:</p>
-<p><span class="math inline">\(P(A \cap B) = P(A)\times P(B|A) = P(B)\times P(A|B)\)</span></p>
-<p>Jakie jest prawdopodobieństwo, że kobieta ukończyła szkołę wyższą (dane z tablicy korelacyjnej), czyli</p>
-<p><em>P(A = Wyższe | B = Kobieta)</em>?</p>
-<p><span class="math inline">\(P(A | B) = \frac{17}{112} = 0.152 = \frac{17/200}{112/200} = 0.152\)</span></p>
-</div>
-<div id="zdarzenia-parami-niezależne" class="section level3" number="4.3.12">
-<h3><span class="header-section-number">4.3.12</span> Zdarzenia parami niezależne</h3>
-<p>Załóżmy, że <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> są zdarzeniami, przy czym <span class="math inline">\(P(B)&gt;0\)</span>. Wówczas zdarzenia <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> powinny być niezależne, jeśli informacja o tym, że zaszło zdarzenie <span class="math inline">\(B\)</span> nie wpływa na prawdopodobieństwo zajścia zdarzenia <span class="math inline">\(A\)</span>; tzn. niezależność powinna być równoważna równości <span class="math inline">\(P(A|B)=P(A)\)</span>, czyli <span class="math inline">\(P(A \cap B)=P(A)P(B)\)</span>. Przyjmujemy to jako definicję niezależności.</p>
-<p>Jeżeli A i B są zdarzeniami niezależnymi, to prawdopodobieństwo, że A i B wystąpią jednocześnie (przekrój zdarzeń A i B), jest równe iloczynowi prawdopodobieństwa A i prawdopodobieństwa B:</p>
-<p><span class="math display">\[P(A ∩ B) = P(A)P(B)\]</span></p>
-<p><strong>Przykład</strong>. Rzucamy uczciwą monetą 3 razy. Niech <span class="math inline">\(H1\)</span> = “reszka w pierwszym rzucie”, a <span class="math inline">\(A\)</span> = “łącznie wypadły dwie reszki”. Czy <span class="math inline">\(H14\)</span> i <span class="math inline">\(A\)</span> są niezależne?</p>
-<p>Odpowiedź: Wiemy, że <span class="math inline">\(P(A) = 3/8\)</span>. Ponieważ nie jest to 0, możemy sprawdzić wynik testu na niezależność. Teraz <span class="math inline">\(H1 = \{HHH, HHT, HTH, HTT\}\)</span> zawiera dokładnie dwa wyniki <span class="math inline">\((HHT, HTH)\)</span> z A, więc mamy <span class="math inline">\(P(A | H1) = 2/4\)</span>.</p>
-<p>Ponieważ <span class="math inline">\(P(A | H1)\)</span> nie jest równe <span class="math inline">\(P(A)\)</span>, zdarzenia te nie są niezależne.</p>
-<blockquote>
-<p>UWAGA: Tzw. zdarzenia wykluczające się są zawsze zależne.</p>
-</blockquote>
-<p>Np. Zdarzenia <em>A - wyrzucenie reszki</em>, <em>B - wyrzucenie orła</em>, wykluczają się, więc są zależne:</p>
-<p><span class="math display">\[P(orzeł | reszka) = \frac{P(orzeł \cap
-reszka)}{P(reszka)} = \frac{0}{0.5} = 0\]</span></p>
-<p>Na podstawie danych z tabeli korelacyjnej 4.1, ustal czy wykształcenie jest niezależne od płci.</p>
-<ol style="list-style-type: decimal">
-<li><strong>Pierwszy sposób</strong>: Ponieważ <em>P(Wyższe) =</em> <span class="math inline">\(\frac{39}{200} = 0.195 \neq\)</span> <em>P(Wyższe | Kobieta) =</em> <span class="math inline">\(0.152\)</span>,</li>
-</ol>
-<p>to stwierdzamy, że <em>wykształcenie</em> i <em>płeć</em> są zależne.</p>
-<ol style="list-style-type: decimal">
-<li><strong>Drugi sposób</strong>: <span class="math display">\[P(A \cap B) =
-17/200 = 0.085 \neq\]</span> <span class="math display">\[P(A)\times P(B) = 39/200 \times 112/200 =
-0.109\]</span> Ponieważ <span class="math inline">\(P(A \cap B) \neq P(A) \times P(B)\)</span> to konkludujemy, że zdarzenia są zależne.</li>
-</ol>
-<div id="zdarzenia-niezależne---zadanie-1" class="section level4" number="4.3.12.1">
-<h4><span class="header-section-number">4.3.12.1</span> Zdarzenia niezależne - zadanie 1</h4>
-<p>Rrzucamy kością sześciościenną i zakładamy, że wszystkie zdarzenia elementarne są jednakowo prawdopodobne. Jakie jest prawdopodobieństwo, że otrzymamy <strong>parzystą liczbę oczek</strong> (<em>A</em>) i jednocześnie <strong>większą lub równą 4</strong> (<em>B</em>)? Czy zdarzenia <em>A</em> i <em>B</em> są niezależne?</p>
-<p><strong>Rozwiązanie:</strong></p>
-<p><span class="math inline">\(A = \{2, 4, 6\}, B = \{4, 5, 6\}\)</span>, więc <strong>iloczyn</strong> <span class="math inline">\(A \cap B = \{4, 6\}\)</span>.</p>
-<p><span class="math display">\[ P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{2}{6} = \frac{1}{3} \]</span></p>
-<p>Ponadto,</p>
-<p><span class="math display">\[ P(A) = \frac{|A|}{|S|} = \frac{3}{6} = \frac{1}{2}, P(B) = \frac{|B|}{|S|} = \frac{3}{6} = \frac{1}{2} \]</span></p>
-<p><span class="math display">\[ P(A)P(B) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4} \]</span></p>
-<p>Stwierdzamy więc, że <em>A</em> i <em>B</em> są <strong>zależne</strong>, ponieważ: <span class="math inline">\(P(A)P(B) \neq P(A \cap B)\)</span></p>
-</div>
-<div id="zdarzenia-niezależne---zadanie-2" class="section level4" number="4.3.12.2">
-<h4><span class="header-section-number">4.3.12.2</span> Zdarzenia niezależne - zadanie 2</h4>
-<p>Rzucamy dwiema sześciościennymi kośćmi (<em>n1</em> i <em>n2</em>).</p>
-<p>Jakie jest prawdopodobieństwo otrzymania <strong>sumy oczek równej 7</strong> (<span class="math inline">\(A\)</span>) <em>i</em> <strong>parzystej liczby oczek na drugiej kości</strong> (<span class="math inline">\(B\)</span>)?</p>
-<p><span class="math display">\[ P(A) = \frac{|A|}{|S|} = \frac{6}{36} = \frac{1}{6} \]</span></p>
-<p><span class="math display">\[ P(B) = \frac{|B|}{|S|} = \frac{6 \times 3 = 18}{36} = \frac{1}{2} \]</span></p>
-<p><span class="math display">\[ P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{3}{36} = \frac{1}{12} \]</span></p>
-<p><span class="math display">\[ P(A)P(B) = \frac{1}{6} \times \frac{1}{2} = \frac{1}{12} \]</span></p>
-<p>więc,</p>
-<p><span class="math inline">\(P(A)P(B) = P(A \cap B)\)</span>, co dowodzi, że zdarzenia <em>A</em> i <em>B</em> są <strong>niezależne</strong>.</p>
-</div>
-</div>
-<div id="przykłady-różne" class="section level3" number="4.3.13">
-<h3><span class="header-section-number">4.3.13</span> Przykłady różne (*)</h3>
-<div id="przykład-1" class="section level4" number="4.3.13.1">
-<h4><span class="header-section-number">4.3.13.1</span> Przykład</h4>
-<p>Rzucamy sześciościenną kostką do gry. Jakie jest prawdopodobieństwo wyrzucenia parzystej liczby oczek?</p>
-<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{2, 4, 6\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{1, 2, 3, 4, 5, 6\}\)</span>, wtedy</p>
-<p><span class="math display">\[P(E) = \frac{3}{6} = \frac{1}{2}\]</span></p>
-</div>
-<div id="przykład-2" class="section level4" number="4.3.13.2">
-<h4><span class="header-section-number">4.3.13.2</span> Przykład</h4>
-<p>Rzucamy dwukrotnie sześciościenną kostką do gry. Jakie jest prawdopodobieństwo, że podczas pierwszego rzutu wypadnie 1 oczko, a w drugim rzucie 2 oczka?</p>
-<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{(1, 2)\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{(1, 1), (1, 2), (2, 1), ..., (6, 5), (6, 6)\}\)</span>. Wtedy, na podstawie klasycznej definicji prawdopodobieństwa, <span class="math inline">\(P(\{(1, 2)\}) = \frac{1}{6} \times \frac{1}{6} = \frac{1}{36}\)</span></p>
-</div>
-<div id="przykład-3" class="section level4" number="4.3.13.3">
-<h4><span class="header-section-number">4.3.13.3</span> Przykład</h4>
-<p>Rzucamy dwukrotnie sześciościenną kostką do gry. Znajdź prawdopodobieństwo wyrzucenia 1 oczka i 2 oczek w dowolnej kolejności.</p>
-<p><strong>Rozwiązanie.</strong> Szukamy prawdopodobieństwa zdarzenia <span class="math inline">\(E = \{(1, 2), (2, 1)\}\)</span>. Przestrzeń zdarzeń elementarnych <span class="math inline">\(S = \{(1, 1), (1, 2), (2, 1), ..., (6, 5), (6, 6)\}\)</span>, wówczas <span class="math inline">\(P(\{(1, 2), (2, 1)\}) = 2 \times \frac{1}{6} \times \frac{1}{6} = \frac{2}{36} = \frac{1}{18}\)</span></p>
-<blockquote>
-<p>Tłumaczenie na j. polski przykładów niżej pojawi się wkrótce.</p>
-</blockquote>
-</div>
-<div id="example" class="section level4" number="4.3.13.4">
-<h4><span class="header-section-number">4.3.13.4</span> Example</h4>
-<p>You roll a fair die. What is the probability of getting an even number? Solution. <span class="math inline">\(E = E_1 \cup E_2 \cup E_3\)</span>. You can see that events <span class="math inline">\(E_1, E_2, E_3\)</span> are disjoint, then <span class="math inline">\(P(E = E_1 \cup E_2 \cup E_3) = P(E_1) + P(E_2) + P(E_3) = \frac{3}{6}\)</span></p>
-<p>You roll a fair die. What is the probability of getting an even number (<em>A</em>) <strong>and</strong> the number greater or equal to 4 (<em>B</em>)? Are events <em>A</em> and <em>B</em> independent?</p>
-<p><strong>Solution</strong>. Let’s find the intersection of events <em>A</em> and <em>B</em>, <span class="math inline">\(A \cap B\)</span>. <span class="math inline">\(A = \{2, 4, 6\}, B = \{4, 5, 6\}\)</span>, then <span class="math inline">\(A \cap B = \{4, 6\}\)</span>. <span class="math display">\[P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{2}{6} = \frac{1}{3}\]</span></p>
-<p>Also,</p>
-<p><span class="math display">\[P(A) = \frac{|A|}{|S|} = \frac{3}{6} = \frac{1}{2}, P(B) = \frac{|B|}{|S|} = \frac{3}{6} = \frac{1}{2}\]</span></p>
-<p>then,</p>
-<p><span class="math display">\[P(A)P(B) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}\]</span></p>
-<p>We conclude that events <em>A</em> and <em>B</em> are <strong>dependent</strong>, on the basis of the test for independence: <span class="math display">\[P(A)P(B) \neq P(A \cap B)\]</span></p>
-</div>
-<div id="example-1" class="section level4" number="4.3.13.5">
-<h4><span class="header-section-number">4.3.13.5</span> Example</h4>
-<p>Roll two fair dice. What is the probability of getting the sum of the two dice equal 7 <strong>and</strong> an even number on the second die?</p>
-<p>Let <span class="math inline">\(A = \{ (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) \}\)</span></p>
-<p><span class="math display">\[P(A) = \frac{|A|}{|S|} = \frac{6}{36} = \frac{1}{6}\]</span> Let <span class="math inline">\(B = \{ (1, 6), (1, 4), (1, 2), (2, 6), (2, 4), ... \}\)</span></p>
-<p>You can notice that, by product rule, we have <span class="math inline">\(|B| = 6 \times 3\)</span>, Thus,</p>
-<p><span class="math display">\[P(B) = \frac{|B|}{|S|} = \frac{6 \times 3 = 18}{36} = \frac{1}{2}\]</span> Then,</p>
-<ol style="list-style-type: decimal">
-<li><p><span class="math display">\[P(A \cap B) = \frac{|A \cap B|}{|S|} = \frac{3}{36} = \frac{1}{12}\]</span></p></li>
-<li><p><span class="math display">\[P(A)P(B) = \frac{1}{6} \times \frac{1}{2} = \frac{1}{12}\]</span></p></li>
-</ol>
-<p>Finally, from the test for independence of events, we have:</p>
-<p><span class="math display">\[P(A)P(B) = P(A \cap B)\]</span></p>
-<p>Thus, events <em>A</em> and <em>B</em> are <strong>independent</strong>.</p>
-</div>
-<div id="example-2" class="section level4" number="4.3.13.6">
-<h4><span class="header-section-number">4.3.13.6</span> Example</h4>
-<p>You roll three fair dice. What is the probability of rolling a combination of the numbers 1, 3, 5?</p>
-<p><strong>Solution.</strong> We need to answer two questions. “What are the odds of getting any particular combination, in order, on three dice?”. The second is “How many orderings are there of the numbers 1, 3, and 5?”.</p>
-<p>The answer to the first question is that there is a 1 in 216 chance of getting a specific, particular ordering of results from three dice. For <span class="math inline">\((1,3,5)\)</span>, you have to get 1 on the first die (1 in 6 chance), 3 on the second (1 in 6 chance), and 5 on the third (1 in 6 chance). For <span class="math inline">\((3,1,5)\)</span>, the odds are the same. And so on.</p>
-<p>The answer to the second question is that there are 6 possible orderings of three distinct digits: <span class="math inline">\((1,3,5), (1,5,3), (3,1,5), (3,5,1), (5,1,3), \text{and } (5,3,1)\)</span>. That’s because there are 3 possible choices for the first digit, 2 possible choices for the second digit, and 1 possible choice for the last digit.</p>
-<p>Combining these two answers, we find that for each of the 6 possible orderings, there is a 1 in 216 chance of getting that specific result. Since each possibility is distinct, we can just add them together to get a 6 in 216 chance of getting the numbers <span class="math inline">\({1, 3, 5}\)</span> in some order on three dice.</p>
-<p>Finally, the probability is <span class="math inline">\((1/6 \times 1/6 \times 1/6) \times (3 \times 2 \times 1)\)</span></p>
-</div>
-<div id="example-3" class="section level4" number="4.3.13.7">
-<h4><span class="header-section-number">4.3.13.7</span> Example</h4>
-<p>Three dice are thrown. What is the probability that the same number appears on exactly two of the three dice?</p>
-<p><strong>Solution.</strong> Since you need exactly two to be the same, there are three possibilities: (1) First and second, not third, (2) First and third, not second, (3) Second and third, not first.</p>
-<p>For the first possibility (1): The first die, you have probability of 6/6. The second die needs to be equal to the first, so you have probability of 1/6. Then the third die can’t be equal to the first and second die, so it’s 5/6. Finally you get <span class="math inline">\(1\times \frac{1}{6} \times \frac{5}{6}\)</span>. And <strong>since the next two possibilities (2) and (3) yield the same result</strong>, then the probability that the same number appears on exactly two of the three dice is</p>
-<p><span class="math display">\[3 \times (1 \times \frac{1}{6} \times \frac{5}{6}) = \binom{3}{2}(1 \times \frac{1}{6} \times \frac{5}{6}) = \frac{5}{12}\]</span></p>
-
-</div>
-</div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="wykład-5-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver-0-51.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="prawdopodobieństwo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
