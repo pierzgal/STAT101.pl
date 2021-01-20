@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.22 Średnia arytmetyczna i odchylenie standardowe | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="3.22 Średnia arytmetyczna i odchylenie standardowe | STAT 101 [WSMiP UŁ]" />
+  <title>5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.52) | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.52) | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.22 Średnia arytmetyczna i odchylenie standardowe | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.52) | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.22 Średnia arytmetyczna i odchylenie standardowe | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="5 Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.52) | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="średnia-mediana-czy-dominanta.html"/>
-<link rel="next" href="obliczanie-średniej-wariancji-i-odchylenia-standardowego.html"/>
+<link rel="prev" href="prawdopodobieństwo.html"/>
+<link rel="next" href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -369,96 +369,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="średnia-arytmetyczna-i-odchylenie-standardowe" class="section level2" number="3.22">
-<h2><span class="header-section-number">3.22</span> Średnia arytmetyczna i odchylenie standardowe</h2>
-<div id="podstawowe-formuły" class="section level3" number="3.22.1">
-<h3><span class="header-section-number">3.22.1</span> Podstawowe formuły</h3>
-<table>
-<colgroup>
-<col width="0%" />
-<col width="24%" />
-<col width="13%" />
-<col width="61%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Lp.</th>
-<th align="left">Szereg (rozkład) szczegółowy (dane nieuporządkowane)</th>
-<th align="left">Dane - częstości względne lub absolutne</th>
-<th align="left">Szereg rozdzielczy (rozkład częstości)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i\]</span> <span class="math inline">\(n\)</span> = liczba obserwacji; <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-<td align="left">Częstości absolutne - <span class="math inline">\(f_i\)</span> lub <span class="math inline">\(n_i\)</span></td>
-<td align="left"><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^{k}x_if_i\]</span> <span class="math inline">\(n\)</span> = liczba obserwacji; <span class="math inline">\(k\)</span> = liczba wyróżnionych wartości. <span class="math display">\[S^2(X) = \frac{1}{n}\sum_{i=1}^{k}(x_i - \bar{x})^2f_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span> <strong>lub (gdy mamy częstości absolutne możemy obliczyć odpowiednie proporcje)</strong> <span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="left">-</td>
-<td align="left">Dane są tylko częstości względne (proporcje, frakcje) - <span class="math inline">\(p_i = \frac{f_i}{n}\)</span></td>
-<td align="left"><span class="math display">\[\bar{x} = \sum_{i=1}^{k}x_ip_i\]</span> <span class="math inline">\(n\)</span> = liczba obserwacji; <span class="math inline">\(k\)</span> = liczba wyróżnionych wartości <span class="math display">\[S^2(X) = \sum_{i=1}^{k}(x_i - \bar{x})^2p_i\]</span> <span class="math display">\[S(X) = \sqrt{S^2(X)}\]</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="parametry-populacji-i-statystyki-estymatory-z-próby---podstawowe-symbole" class="section level3" number="3.22.2">
-<h3><span class="header-section-number">3.22.2</span> Parametry populacji i statystyki (estymatory) z próby - podstawowe symbole</h3>
-<div id="table:symbols">
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Populacja</strong> (Population - P)</th>
-<th><strong>Próba</strong> (Sample - S)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>średnia</td>
-<td><span class="math inline">\(E(X)\)</span>, <span class="math inline">\(\mu_X\)</span>, <span class="math inline">\(m_X\)</span></td>
-<td><span class="math inline">\(\bar{X}\)</span></td>
-</tr>
-<tr class="even">
-<td>odchylenie standardowe</td>
-<td><span class="math inline">\(\sigma_X\)</span></td>
-<td><span class="math inline">\(s_X\)</span>, <span class="math inline">\(S(X)\)</span></td>
-</tr>
-<tr class="odd">
-<td>wariancja</td>
-<td><span class="math inline">\(\sigma^2_X\)</span>, <span class="math inline">\(Var_X\)</span></td>
-<td><span class="math inline">\(s^2_X\)</span>, <span class="math inline">\(S^2(X)\)</span></td>
-</tr>
-<tr class="even">
-<td>proporcja (frakcja, częstość względna)</td>
-<td><span class="math inline">\(p_X\)</span>, <span class="math inline">\(P(X)\)</span></td>
-<td><span class="math inline">\(\hat{p}_X\)</span></td>
-</tr>
-<tr class="odd">
-<td>mediana</td>
-<td><span class="math inline">\(Md_X\)</span></td>
-<td><span class="math inline">\(\hat{Md}_X\)</span></td>
-</tr>
-<tr class="even">
-<td>dominanta</td>
-<td><span class="math inline">\(Mo_X\)</span></td>
-<td><span class="math inline">\(\hat{Mo}_X\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Popularne symbole statystyczne stosowane do oznaczania ważnych miar statystycznych</p>
-</div>
-</div>
+<div id="wykład-5.-zmienne-losowe-i-rozkłady-prawdopodobieństwa-ver.-0.52" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Wykład 5. Zmienne losowe i rozkłady prawdopodobieństwa (ver. 0.52)</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="średnia-mediana-czy-dominanta.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="obliczanie-średniej-wariancji-i-odchylenia-standardowego.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="prawdopodobieństwo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="zmienna-losowa-i-rozkład-prawdopodobieństwa-definicje.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
