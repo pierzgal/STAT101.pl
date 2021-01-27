@@ -207,3 +207,11 @@ centralne-twierdzenie-graniczne-dla-estymatora-średniej-z-próby
 ctg-dla-estymatora-częstości-proporcji-z-próby
 estymacja-punktowa-i-przedziałowa
 przykład---przedział-ufności-i-margines-błędu
+wykład-7.-testowanie-weryfikacja-hipotez-statystycznych---wprowadzenie
+hipoteza-statystyczna-i-testowanie-hipotez
+błędy-podczas-weryfikacji-hipotez
+rodzaje-błędów
+p-wartość-p-value
+logika-testowania-hipotez-statystycznych---podsumowanie
+przykłady
+przykład-1-1
