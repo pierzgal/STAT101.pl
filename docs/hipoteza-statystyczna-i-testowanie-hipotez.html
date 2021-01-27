@@ -357,7 +357,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="hipoteza-statystyczna-i-testowanie-hipotez.html"><a href="hipoteza-statystyczna-i-testowanie-hipotez.html"><i class="fa fa-check"></i><b>7.1</b> Hipoteza statystyczna i testowanie hipotez</a></li>
 <li class="chapter" data-level="7.2" data-path="przykłady.html"><a href="przykłady.html"><i class="fa fa-check"></i><b>7.2</b> Przykłady</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="przykłady.html"><a href="przykłady.html#przykład-1-1"><i class="fa fa-check"></i><b>7.2.1</b> Przykład 1</a></li>
+<li class="chapter" data-level="7.2.1" data-path="przykłady.html"><a href="przykłady.html#przykład."><i class="fa fa-check"></i><b>7.2.1</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.2" data-path="przykłady.html"><a href="przykłady.html#przykład.-1"><i class="fa fa-check"></i><b>7.2.2</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.3" data-path="przykłady.html"><a href="przykłady.html#przykład.-2"><i class="fa fa-check"></i><b>7.2.3</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.4" data-path="przykłady.html"><a href="przykłady.html#przykład.-3"><i class="fa fa-check"></i><b>7.2.4</b> Przykład.</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -387,26 +390,27 @@ populacji są stochastycznie niezależne?”.</p>
 <p>Hipoteza to oparte na wiedzy przypuszczenie na jakiś temat.</p>
 </blockquote>
 <p>Aby przypuszczenie stało się hipotezą, musi być sprawdzalne - to główny warunek.</p>
-<blockquote>
-<p>Testowanie hipotez statystycznych rozpoczyna się od sformułowania układu hipotez statystycznych.</p>
-</blockquote>
 <p>Hipoteza statystyczna to stwierdzenie dotyczące rozkładu populacji. Może dotyczyć albo jej postaci funkcyjnej (czyli jaki rozkład ma populacja statystyczna – np. rozkład normalny, dwumianowy itp.) albo wartości parametrów (najczęściej średniej lub frakcji (proporcji)).</p>
 <p>Przez hipotezę statystyczną rozumiemy, najogólniej mówiąc, pewną wypowiedź na temat rozkładu prawdopodobieństwa „rządzącego” zjawiskiem, które nas interesuje. Rozważamy pewien ustalony rozkład prawdopodobieństwa P. Pytamy, czy opisuje on poprawnie przebieg doświadczenia losowego.</p>
-<p>Stawiamy hipotezę: nasz model probabilistyczny jest zgodny z rzeczywistością.</p>
-<p>Ogólna zasada jest następująca: powinniśmy odrzucić hipotezę, jeśli rezultaty doświadczenia okażą się sprzeczne z przewidywaniami wynikającymi z modelu. Specyfika modeli probabilistycznych polega jednak na tym, że potrafimy przewidzieć tylko prawdopodobieństwo poszczególnych wyników. Zmodyfikujemy więc ogólną regułę Powinniśmy odrzucić hipotezę, jeśli wynik doświadczenia jest bardzo mało prawdopodobny, to znaczy model przewiduje dany wynik z małym prawdopodobieństwem. Innymi słowy, wybieramy pewien zbiór <span class="math inline">\(K \subseteq S_X\)</span> (<span class="math inline">\(S_X =\)</span> zbiór wartości zmiennej <span class="math inline">\(X\)</span>) taki, że <span class="math inline">\(P(X \in K) \le \alpha\)</span>, gdzie <span class="math inline">\(\alpha\)</span> jest odpowiednio „małą” liczbą, zwaną poziomem istotności. Jeśli w wyniku doświadczenia stwierdzimy, że zaszło zdarzenie „<span class="math inline">\(X \in K\)</span>”, to powinniśmy zwątpić w poprawność naszego modelu, czyli „odrzucić postawioną przez nas hipotezę statystyczną”. Zbiór K nazywamy obszarem krytycznym testu, zaś cała procedura nosi nazwę testu istotności.</p>
 <blockquote>
-<p>Testowanie hipotezy, że kobiety spędzają więcej czasu na oglądaniu telewizji niż mężczyźni.
-Załóżmy, że w badaniu wzięło udział 70 mężczyzn i 60 kobiet. Średni czas oglądania wynosił 120 minut dziennie dla mężczyzn i 150 minut dla kobiet. Na pierwszy rzut oka różnice są oczywiste, a wyniki potwierdzają hipotezę. Jednak taki wynik można uzyskać przypadkowo, nawet jeśli nie ma różnic w populacji. W związku z tym pojawia się pytanie - czy jest uzasadnione twierdzenie, że generalnie kobiety spędzają średnio więcej czasu na oglądaniu telewizji niż mężczyźni? Jakie jest prawdopodobieństwo, że tak jest? Czy różnica jest istotna statystycznie?</p>
+<p>Testowanie hipotez statystycznych rozpoczyna się od sformułowania układu hipotez statystycznych.</p>
 </blockquote>
 <p>Pierwszym krokiem w testowaniu hipotez jest postawienie dwóch konkurujących ze sobą hipotez.
 Te dwie hipotezy nazywane są hipotezą zerową i hipotezą alternatywną.</p>
 <p>Celem testowania hipotezy jest sprawdzenie, czy istnieje wystarczająca ilość dowodów przeciwko hipotezie zerowej.</p>
 <p>Innymi słowy, aby sprawdzić, czy jest wystarczająco dużo dowodów, aby odrzucić hipotezę zerową. Jeśli nie ma wystarczających dowodów, nie odrzucamy hipotezy zerowej.</p>
+<blockquote>
 <p>Decyzja w procedurze testowania hipotez:</p>
+</blockquote>
 <ul>
 <li>odrzucić hipotezę zerową albo …</li>
 <li>nie odrzucić hipotezy zerowej.</li>
 </ul>
+<p>Ogólna zasada jest następująca: powinniśmy odrzucić hipotezę, jeśli rezultaty doświadczenia okażą się sprzeczne z przewidywaniami wynikającymi z modelu. Specyfika modeli probabilistycznych polega jednak na tym, że potrafimy przewidzieć tylko prawdopodobieństwo poszczególnych wyników. Zmodyfikujemy więc ogólną regułę Powinniśmy odrzucić hipotezę, jeśli wynik doświadczenia jest bardzo mało prawdopodobny, to znaczy model przewiduje dany wynik z małym prawdopodobieństwem. Innymi słowy, wybieramy pewien zbiór <span class="math inline">\(K \subseteq S_X\)</span> (<span class="math inline">\(S_X =\)</span> zbiór wartości zmiennej <span class="math inline">\(X\)</span>) taki, że <span class="math inline">\(P(X \in K) \le \alpha\)</span>, gdzie <span class="math inline">\(\alpha\)</span> jest odpowiednio „małą” liczbą, zwaną poziomem istotności. Jeśli w wyniku doświadczenia stwierdzimy, że zaszło zdarzenie „<span class="math inline">\(X \in K\)</span>”, to powinniśmy zwątpić w poprawność naszego modelu, czyli „odrzucić postawioną przez nas hipotezę statystyczną”. Zbiór K nazywamy obszarem krytycznym testu, zaś cała procedura nosi nazwę testu istotności.</p>
+<blockquote>
+<p>Testowanie hipotezy, że kobiety spędzają więcej czasu na oglądaniu telewizji niż mężczyźni.
+Załóżmy, że w badaniu wzięło udział 70 mężczyzn i 60 kobiet. Średni czas oglądania wynosił 120 minut dziennie dla mężczyzn i 150 minut dla kobiet. Na pierwszy rzut oka różnice są oczywiste, a wyniki potwierdzają hipotezę. Jednak taki wynik można uzyskać przypadkowo, nawet jeśli nie ma różnic w populacji. W związku z tym pojawia się pytanie - czy jest uzasadnione twierdzenie, że generalnie kobiety spędzają średnio więcej czasu na oglądaniu telewizji niż mężczyźni? Jakie jest prawdopodobieństwo, że tak jest? Czy różnica jest istotna statystycznie?</p>
+</blockquote>
 <blockquote>
 <p>Metodę testowania hipotez statystycznych opracowali Jerzy Neyman (polski statystyk) i Egon Pearson (Brytyjczyk).</p>
 </blockquote>
@@ -443,10 +447,31 @@ Jeśli wyniki są różne, badacz stara się dojść do wniosku, z pewnym stopni
 </div>
 <div id="rodzaje-błędów" class="section level4" number="7.1.0.2">
 <h4><span class="header-section-number">7.1.0.2</span> Rodzaje błędów</h4>
-<p>Błąd typu I (fałszywie dodatni)
+<p>Błąd typu I (wynik fałszywie dodatni)
 Kiedy odrzucamy hipotezę zerową, gdy hipoteza zerowa jest prawdziwa.</p>
-<p>Błąd typu II (fałszywie ujemny)
+<p>Błąd typu II (wynik fałszywie ujemny)
 Kiedy nie odrzucamy hipotezy zerowej, gdy hipoteza zerowa jest fałszywa.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Decyzja/Prawdziwość H0</th>
+<th align="center"><span class="math inline">\(H_0\)</span> is true</th>
+<th align="center"><span class="math inline">\(H_0\)</span> is false</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Odrzucamy <span class="math inline">\(H_0\)</span></td>
+<td align="center">Type I error</td>
+<td align="center">Correct decision</td>
+</tr>
+<tr class="even">
+<td align="center">Nie odrzucamy <span class="math inline">\(H_0\)</span></td>
+<td align="center">Correct decision</td>
+<td align="center">Type II error</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="p-wartość-p-value" class="section level4" number="7.1.0.3">
 <h4><span class="header-section-number">7.1.0.3</span> P-wartość (p-value)</h4>

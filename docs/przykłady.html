@@ -357,7 +357,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="hipoteza-statystyczna-i-testowanie-hipotez.html"><a href="hipoteza-statystyczna-i-testowanie-hipotez.html"><i class="fa fa-check"></i><b>7.1</b> Hipoteza statystyczna i testowanie hipotez</a></li>
 <li class="chapter" data-level="7.2" data-path="przykłady.html"><a href="przykłady.html"><i class="fa fa-check"></i><b>7.2</b> Przykłady</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="przykłady.html"><a href="przykłady.html#przykład-1-1"><i class="fa fa-check"></i><b>7.2.1</b> Przykład 1</a></li>
+<li class="chapter" data-level="7.2.1" data-path="przykłady.html"><a href="przykłady.html#przykład."><i class="fa fa-check"></i><b>7.2.1</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.2" data-path="przykłady.html"><a href="przykłady.html#przykład.-1"><i class="fa fa-check"></i><b>7.2.2</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.3" data-path="przykłady.html"><a href="przykłady.html#przykład.-2"><i class="fa fa-check"></i><b>7.2.3</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.4" data-path="przykłady.html"><a href="przykłady.html#przykład.-3"><i class="fa fa-check"></i><b>7.2.4</b> Przykład.</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -379,24 +382,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="przykłady" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Przykłady</h2>
-<div id="przykład-1-1" class="section level3" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Przykład 1</h3>
+<div id="przykład." class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Przykład.</h3>
+<p><strong>Czy prawdopodobieństwo wyrzucenia „jednego oczka” na sześciościennej kości jest równe 1/6?</strong>.</p>
+<p>Wykonujemy 300 rzutów kostką do gry. Jeśli kostka jest symetryczna i rzuty wykonujemy rzetelnie, to zmienna losowa <span class="math inline">\(X = k_1\)</span> równa liczbie wyrzuconych “jedynek” ma rozkład dwumianowy <span class="math inline">\(Bin(n = 300, p = 1/6)\)</span>.</p>
+<p>Przyjmijmy, że mamy pewne wątpliwości, czy kostka, którą rzucamy jest uczciwa i podejrzewamy, że wyrzucenie jednego oczka (<span class="math inline">\(X = 1\)</span>) ma prawdopodobieństwo mniejsze niż 1/6. Jeśli w wyniku doświadczenia ani ani razu nie otrzymamy jedynki, musimy podejrzewać, że coś jest nie w porządku. A może kostka w ogóle nie ma ściany oznaczonej jedną kropką? Wprawdzie zdarzenie „X = 0” w modelu symetrycznej/uczciwej kostki jest możliwe ale skrajnie mało prawdopodobne, <span class="math inline">\(P(X = 0) = (5/6)^{300} ≈ 1.76∗10^{−24}\)</span>. Nie jesteśmy skłonni wierzyć w tak wyjątkowy traf. Odrzucamy, bez wielkiego wahania, hipotezę o zgodności modelu.</p>
+<p>Jak postąpić jeśli otrzymamy, powiedzmy, 33 jedynki, nie jest już tak oczywiste. Czy to wynik zgodny z hipotezą o rzetelności kostki, czy też może być podstawą do odrzucenia tej hipotezy?</p>
+<p>Rozważmy problem bardziej systematycznie.</p>
+<p>Stawiamy następującą hipotezę:</p>
+<ul>
+<li>H0: <span class="math inline">\(X ∼ Bin(300, 1/6)\)</span>, i.e. <span class="math inline">\(P(X = 1) = 1/6\)</span>.</li>
+<li>H1: <span class="math inline">\(P(X = 1) &lt; 1/6\)</span></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Przyjmijmy zastępującą regułę decyzyjną:</li>
+</ol>
+<ul>
+<li>jeśli <span class="math inline">\(X &lt; c\)</span> to odrzucamy H0;</li>
+<li>jeśli <span class="math inline">\(X &gt;= c\)</span> to pozostajemy przy H0.</li>
+</ul>
+<p>dla pewnej liczby „progowej” C, testu.</p>
+<p>Próg C ustalimy w następujący sposób. Wybierzmy poziom istotności, powiedzmy <span class="math inline">\(\alpha = 0.01\)</span>. Uznamy, że zajście zdarzenia o prawdopodobieństwie mniejszym niż <span class="math inline">\(\alpha\)</span> jest dostatecznym powodem do odrzucenia H0. Powinniśmy więc wybrać C tak, aby <span class="math inline">\(P(X &lt; C) &lt;= 0.01\)</span>. Mamy przy tym na myśli prawdopodobieństwo obliczone przy założeniu, że H0 jest prawdziwa. Można sprawdzić, że dla <span class="math inline">\(X = 36\)</span>, mamy <span class="math inline">\(P(X &lt; 36) = 0.00995 &lt;= 0.01\)</span>, a więc ostatecznie nasz test na poziomie istotności 0.01 jest następujący:</p>
+<ul>
+<li>Odrzucamy H0 jeśli <span class="math inline">\(X &lt; 36\)</span>.</li>
+</ul>
+<p>Obszarem krytycznym naszego testu jest podzbiór <span class="math inline">\(K = \{0, 1, . . . , 35\}\)</span> zbioru obserwacji na zmiennej losowej <span class="math inline">\(S_X = \{0, 1, . . . , 300\}\)</span>.</p>
+<p>Jeżeli wynikiem doświadczenia są 33 jedynki, to opisana powyżej reguła decyzyjna odrzuca H0.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Inna metoda weryfikacji powyższego układu hipotez statystycznych wykorzystuje pojęcie p-wartości (<span class="math inline">\(p-value\)</span>). Obliczamy prawdopodobieństwo otrzymania wyniku takiego jak <span class="math inline">\(X = 33\)</span> lub gorszego (za „gorszy” uznajemy zbyt małą liczbę jedynek), przy założeniu H0. Mówimy, że p-wartość (lub poziom krytyczny testu) jest w naszym przypadku równa <span class="math inline">\(P = P(X &lt;= 33) = 0.00379\)</span>. Następnie, porównujemy obliczoną p-wartość z założonym poziomem istotności.</li>
+</ol>
+<ul>
+<li>Odrzucamy H0 jeśli <span class="math inline">\(p-wartość &lt; 0.01\)</span> (przyjęty poziom istotności testu).</li>
+</ul>
+<p>Obie reguły są równoważne, to znaczy prowadzą do takiej samej decyzji. Niemniej, obliczanie p-wartości stwarza dodatkowo możliwość „pomiaru stopnia przekonania” o nieprawdziwości H0.</p>
+<p>Zwróćmy uwagę, że nasz test „reaguje na odstępstwa od prawdopodobieństwa 1/6 tylko w dół”. Mówimy, że jest to test hipotezy zerowej:</p>
+<ul>
+<li>H0: prawdopodobieństwo jedynki = 1/6 przeciwko hipotezie alternatywnej,</li>
+<li>H1: prawdopodobieństwo jedynki &lt; 1/6.</li>
+</ul>
+</div>
+<div id="przykład.-1" class="section level3" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Przykład.</h3>
+<p>Ania rzuciła monetą 15 razy i 13 razy uzyskała reszkę. Ania zauważyła, że wygląda na to, że moneta jest obciążona i “preferuje” reszki. Przetestuj hipotezę, że moneta jest uczciwa, na poziomie istotności 1%.</p>
+<p>(…)</p>
+</div>
+<div id="przykład.-2" class="section level3" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Przykład.</h3>
 <p>Dotychczas obserwowane w badaniach poparcie dla wejścia do strefy EURO w Polsce wynosiło ok. 60%. W najnowszym badaniu na reprezentatywnej próbie <em>n</em> = 300 osób, na pytanie, czy popierasz wejście Polski do strefy EURO, 200 respondentów udzieliło odpowiedzi twierdzącej. Czy ten wynik stanowi dostateczny dowód na to, że nastąpił wzrost poparcia dla przystąpienia do strefy EURO w populacji Polaków?</p>
 <p><strong>Rozwiązanie</strong>:</p>
 <p>Treść zadania sugeruje sposób rozwiązania polegający na weryfikacji następującego układu hipotez statystycznych:</p>
 <ol style="list-style-type: decimal">
-<li><p><span class="math inline">\(H_0: p = 0.6\)</span> (właściwie <span class="math inline">\(p \leq 0.6\)</span>),</p></li>
-<li><p><span class="math inline">\(H_1: p &gt; 0.6\)</span>.</p></li>
+<li><span class="math inline">\(H_0: p = 0.6\)</span> (właściwie <span class="math inline">\(p \leq 0.6\)</span>),</li>
+<li><span class="math inline">\(H_1: p &gt; 0.6\)</span>.</li>
 </ol>
 <p><span class="math inline">\(H_0\)</span> - jest to tzw. hipoteza zerowa, którą trzeba poddać weryfikacji. <span class="math inline">\(H_1\)</span> - jest to pomocnicza hipoteza alternatywna, którą formułujemy tak, aby była sprzeczna z hipotezą zerową. Załóżmy, że <span class="math inline">\(H_0\)</span> <strong>jest prawdziwa</strong>, wtedy <span class="math inline">\(X\sim Bin(300, 0.6)\)</span>. Ponadto, ponieważ <em>np</em> i <span class="math inline">\(n(1-p) &gt; 5\)</span>, to stwierdzamy, że <span class="math inline">\(X \sim N(np, \sqrt{np(1-p)})\)</span>, oraz <span class="math inline">\(\frac{X}{n} \sim N( p = 0.6, \sqrt{\frac{p(1-p)}{n}} = 0.0283 )\)</span>.</p>
 <p>Zatem, przy założeniu prawdziwości hipotezy zerowej (dlatego przyjmujemy, że <em>p</em> = 0.6) i stosując przybliżenie normalne,</p>
 <p><span class="math display">\[P(X \geq 200) = P(\frac{X}{n} \geq 0.6667 = \frac{2}{3}) = P(Z \geq \frac{\frac{2}{3} - 0.6}{0.0283}) =\]</span> <span class="math display">\[= P(Z \geq 2.3557) =  1 - P(Z \leq 2.36) = 1 - 0.990863 = 0.009137 = 0.9\%\]</span></p>
 <p><strong>Odpowiedź</strong>: Otrzymane prawdopodobieństwo jest bardzo małe, otrzymaliśmy wynik z próby, który jest sprzeczny z założeniem hipotezy zerowej, dlatego <strong>tę hipotezę odrzucamy</strong> (zwykle przyjmuje się, że odrzucamy hipotezę zerową, gdy otrzymane prawdopodobieństwo jest mniejsze od 0.05 = 5%. Tę ostatnią wartość nazywa się poziomem istotności testu statystycznego). Ostatecznie stwierdzamy, że <strong>istnieją podstawy do uznania, że poparcie dla przystąpienia do strefy EURO wzrosło w populacji</strong>.</p>
-<p>(por. z przykładem nr 2 z rozdziału 1.1.1) Jeden z kandydatów w wyborach do rady miejskiej (kandydat <strong>A</strong>) prognozuje, że jego poparcie wyborcze w najbliższych wyborach wyniesie co najmniej <strong>65%</strong>. Bezpośrednio przed wyborami, jeden z ośrodków badania opinii publicznej przeprowadził sondaż w próbie reprezentatywnej liczącej <strong>100</strong> respondentów, na którego podstawie oszacowano spodziewane poparcie wyborcze kandydata A. Ustalono, że frakcja poparcia wyborczego <span class="math inline">\(\hat{p} = 0.55 = 55\%\)</span> (55 respondentów na 100 zadeklarowało poparcie polityka (<em>X</em> = 55). Czy w świetle wyników badań na podstawie próby możemy przyjąć, że przypuszczenie kandydata A jest fałszywe na poziomie istotności = 0.05?</p>
+</div>
+<div id="przykład.-3" class="section level3" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Przykład.</h3>
+<p>Jeden z kandydatów w wyborach do rady miejskiej (kandydat <strong>A</strong>) prognozuje, że jego poparcie wyborcze w najbliższych wyborach wyniesie co najmniej <strong>65%</strong>. Bezpośrednio przed wyborami, jeden z ośrodków badania opinii publicznej przeprowadził sondaż w próbie reprezentatywnej liczącej <strong>100</strong> respondentów, na którego podstawie oszacowano spodziewane poparcie wyborcze kandydata A. Ustalono, że frakcja poparcia wyborczego <span class="math inline">\(\hat{p} = 0.55 = 55\%\)</span> (55 respondentów na 100 zadeklarowało poparcie polityka (<em>X</em> = 55). Czy w świetle wyników badań na podstawie próby możemy przyjąć, że przypuszczenie kandydata A jest fałszywe na poziomie istotności = 0.05?</p>
 <p><strong>Rozwiązanie</strong>: Zadanie polega na weryfikacji następującego układu hipotez statystycznych:</p>
 <ol style="list-style-type: decimal">
-<li><p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(p = 0.65\)</span> lub <span class="math inline">\(p &gt; 0.65\)</span></p></li>
-<li><p><span class="math inline">\(H_1\)</span>: <span class="math inline">\(p &lt; 0.65\)</span></p></li>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(p = 0.65\)</span> lub <span class="math inline">\(p &gt; 0.65\)</span></li>
+<li><span class="math inline">\(H_1\)</span>: <span class="math inline">\(p &lt; 0.65\)</span></li>
 </ol>
 <p>Możemy zadanie rozwiązać na dwa sposoby (Na potrzeby kursu ze statystyki i demografii wystarczy zapoznać się z pierwszą metodą.).</p>
 <p><strong>Metoda nr 1</strong>:</p>
@@ -422,8 +472,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[P( 0.55 - 1.96\sqrt{\frac{0.55(1-0.55)}{100}} &lt; p &lt; 0.55 + 1.96\sqrt{\frac{0.55(1-0.55)}{100}} ) = 0.95\]</span> <span class="math display">\[P( 0.55 - 0.0975 &lt; p &lt; 0.55 + 0.0975 ) = 0.95\]</span></p>
 <p>Ostatecznie, przedział ufności dla frakcji <em>p</em> z zadania to <span class="math inline">\(0.4525, 0.6475\)</span>. Ponieważ, ustalony przedział ufności nie pokrywa wartości hipotetycznej 0.65, to odrzucamy hipotezę zerową. Interpretując 95% przedział ufności powiemy, że w 95 przypadkach na 100 pokrywa on nieznaną wartość parametru populacji <em>p</em>.</p>
 <p><strong>Metoda nr 2</strong>:</p>
-<p>W testowaniu hipotez statystycznych wykorzystuje sie logikę dowodu przez sprowadzenie do sprzeczności. Tzn. zakładamy prawdziwość pewnej hipotezy zerowej i następnie wykonując odpowiednie badania empiryczne testujemy, czy wyniki są w sprzeczności z przyjętą hipotezą zerową. Jeżeli otrzymany wynik jest wyraźnie sprzeczny z hipotezą zerową, to wówczas mówimy, że odrzucamy hipotezę zerową (w tym przykładzie <span class="math inline">\(p \geq 0.65\)</span>). Jeżeli sprzeczności nie dostrzeżemy, to mówimy, że nie ma podstaw do odrzucenia hipotezy zerowej.</p>
-<p>W zadaniach dotyczących testowania hipotez statystycznych jest istotne ustalenie pewnego kryterium, którym kierować sie będziemy podejmując decyzję, czy dany wynik jest, czy nie jest wyraźnie w sprzeczności z testowaną hipotezą. Tym kryterium jest tzw. poziom istotności testu <span class="math inline">\(\alpha\)</span>. Zwykle przyjmujemy, że <span class="math inline">\(\alpha = 0.05 = 5\%\)</span></p>
+<p>W testowaniu hipotez statystycznych wykorzystuje się logikę dowodu przez sprowadzenie do sprzeczności. Tzn. zakładamy prawdziwość pewnej hipotezy zerowej i następnie wykonując odpowiednie badania empiryczne testujemy, czy wyniki są w sprzeczności z przyjętą hipotezą zerową. Jeżeli otrzymany wynik jest wyraźnie sprzeczny z hipotezą zerową, to wówczas mówimy, że odrzucamy hipotezę zerową (w tym przykładzie <span class="math inline">\(p \geq 0.65\)</span>). Jeżeli sprzeczności nie dostrzeżemy, to mówimy, że nie ma podstaw do odrzucenia hipotezy zerowej.</p>
+<p>W zadaniach dotyczących testowania hipotez statystycznych jest istotne ustalenie pewnego kryterium, którym kierować się będziemy podejmując decyzję, czy dany wynik jest, czy nie jest wyraźnie w sprzeczności z testowaną hipotezą. Tym kryterium jest tzw. poziom istotności testu <span class="math inline">\(\alpha\)</span>. Zwykle przyjmujemy, że <span class="math inline">\(\alpha = 0.05 = 5\%\)</span></p>
 <p>Po sformułowaniu układu hipotez i rozpoznaniu, że zmienna losowa <span class="math inline">\(\hat{p}\approx N( p, \sqrt{ \frac{p(1-p)}{n} } )\)</span>, obliczamy parametry rozkładu (w rzeczywistości nie znamy wartości <em>p</em>, ale ponieważ przyjęliśmy logikę dowodu przez sprowadzenie do sprzeczności, to przyjmujemy <em>p</em> = granicznej wartość przedziału wyznaczonego przez hipotezę zerową, czyli <span class="math inline">\(p = 0.65\)</span> - założyliśmy, że kandydat ma rację. Otrzymujemy ostatecznie <span class="math inline">\(N(0.65, 0.0497)\)</span>. Znając parametry rozkładu normalnego przy założeniu prawdziwości hipotezy zerowej możemy teraz sprawdzić jak bardzo różni się wartość z próby od wartości 0.65 (Należy pamiętać, że frakcja <em>p</em> jest to jednocześnie wartość przeciętna <span class="math inline">\((\mu = p)\)</span> w rozkładzie normalnym, a więc znajduje się dokładnie w środku i jest to wartość, dla której gęstość prawdopodobieństwa jest największa). W procedurze testowania hipotez statystycznych przyjmuje się, że sprzeczność między założeniem a wynikiem badania empirycznego jest wystarczająca do odrzucenia hipotezy zerowej wtedy, gdy:</p>
 <ul>
 <li><p><span class="math inline">\(P(Z \leq z = \frac{\hat{p} - p}{\sqrt{\frac{p(1-p)}{n}}}) &lt; \alpha\)</span></p>

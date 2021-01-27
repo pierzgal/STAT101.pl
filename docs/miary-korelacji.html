@@ -357,7 +357,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="hipoteza-statystyczna-i-testowanie-hipotez.html"><a href="hipoteza-statystyczna-i-testowanie-hipotez.html"><i class="fa fa-check"></i><b>7.1</b> Hipoteza statystyczna i testowanie hipotez</a></li>
 <li class="chapter" data-level="7.2" data-path="przykłady.html"><a href="przykłady.html"><i class="fa fa-check"></i><b>7.2</b> Przykłady</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="przykłady.html"><a href="przykłady.html#przykład-1-1"><i class="fa fa-check"></i><b>7.2.1</b> Przykład 1</a></li>
+<li class="chapter" data-level="7.2.1" data-path="przykłady.html"><a href="przykłady.html#przykład."><i class="fa fa-check"></i><b>7.2.1</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.2" data-path="przykłady.html"><a href="przykłady.html#przykład.-1"><i class="fa fa-check"></i><b>7.2.2</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.3" data-path="przykłady.html"><a href="przykłady.html#przykład.-2"><i class="fa fa-check"></i><b>7.2.3</b> Przykład.</a></li>
+<li class="chapter" data-level="7.2.4" data-path="przykłady.html"><a href="przykłady.html#przykład.-3"><i class="fa fa-check"></i><b>7.2.4</b> Przykład.</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -426,7 +429,8 @@ zmienna rel: 1, 2, 4, 4, 3, 5, 5, 6, 8, 7, 7, 8, 10, 9,  9, 2, 2, 1, 2, 3</code>
 <span id="cb21-7"><a href="miary-korelacji.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Wyznaczamy współczynnik korelacji rangowej rho Spearmana</span></span>
 <span id="cb21-8"><a href="miary-korelacji.html#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-9"><a href="miary-korelacji.html#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(lr, rel, <span class="at">method=</span><span class="st">&quot;spearman&quot;</span>) <span class="co"># Wywołanie funkcji liczącej wskaźnik</span></span></code></pre></div>
-<pre><code>## Warning in cor.test.default(lr, rel, method = &quot;spearman&quot;): Cannot compute exact p-value with ties</code></pre>
+<pre><code>## Warning in cor.test.default(lr, rel, method = &quot;spearman&quot;): Cannot
+## compute exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
 ## 
@@ -447,7 +451,8 @@ zmienna rel: 1, 2, 4, 4, 3, 5, 5, 6, 8, 7, 7, 8, 10, 9,  9, 2, 2, 1, 2, 3</code>
 <span id="cb24-9"><a href="miary-korelacji.html#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Wyznaczamy współczynnik korelacji tau Kendalla</span></span>
 <span id="cb24-10"><a href="miary-korelacji.html#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-11"><a href="miary-korelacji.html#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(lr, rel, <span class="at">method=</span><span class="st">&quot;kendall&quot;</span>) <span class="co"># Wywołanie funkcji liczącej wskaźnik</span></span></code></pre></div>
-<pre><code>## Warning in cor.test.default(lr, rel, method = &quot;kendall&quot;): Cannot compute exact p-value with ties</code></pre>
+<pre><code>## Warning in cor.test.default(lr, rel, method = &quot;kendall&quot;): Cannot
+## compute exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Kendall&#39;s rank correlation tau
 ## 

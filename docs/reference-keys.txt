@@ -214,4 +214,7 @@ rodzaje-błędów
 p-wartość-p-value
 logika-testowania-hipotez-statystycznych---podsumowanie
 przykłady
-przykład-1-1
+przykład.
+przykład.-1
+przykład.-2
+przykład.-3
