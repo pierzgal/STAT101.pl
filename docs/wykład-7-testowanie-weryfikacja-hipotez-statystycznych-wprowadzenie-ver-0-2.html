@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.1 Wprowadzenie | STAT 101 [WSMiP UŁ]</title>
-  <meta name="description" content="4.1 Wprowadzenie | STAT 101 [WSMiP UŁ]" />
+  <title>7 Wykład 7. Testowanie (weryfikacja) hipotez statystycznych - wprowadzenie (ver. 0.2) | STAT 101 [WSMiP UŁ]</title>
+  <meta name="description" content="7 Wykład 7. Testowanie (weryfikacja) hipotez statystycznych - wprowadzenie (ver. 0.2) | STAT 101 [WSMiP UŁ]" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.1 Wprowadzenie | STAT 101 [WSMiP UŁ]" />
+  <meta property="og:title" content="7 Wykład 7. Testowanie (weryfikacja) hipotez statystycznych - wprowadzenie (ver. 0.2) | STAT 101 [WSMiP UŁ]" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.1 Wprowadzenie | STAT 101 [WSMiP UŁ]" />
+  <meta name="twitter:title" content="7 Wykład 7. Testowanie (weryfikacja) hipotez statystycznych - wprowadzenie (ver. 0.2) | STAT 101 [WSMiP UŁ]" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-3.html"/>
-<link rel="next" href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html"/>
+<link rel="prev" href="estymacja-punktowa-i-przedziałowa.html"/>
+<link rel="next" href="hipoteza-statystyczna-i-testowanie-hipotez.html"/>
 <script src="assets/header-attrs-2.6/header-attrs.js"></script>
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -380,185 +380,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wprowadzenie" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Wprowadzenie</h2>
-<div id="podstawowe-spójniki-logiczne" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Podstawowe spójniki logiczne</h3>
-<ul>
-<li>Negacja, oznaczamy <span class="math inline">\(\sim\)</span>,</li>
-<li>Alternatywa (suma logiczna), oznaczamy <span class="math inline">\(\vee\)</span>,</li>
-<li>Koniunkcja (iloczyn logiczny), oznaczamy <span class="math inline">\(\wedge\)</span>,</li>
-<li>Implikacja, oznaczamy symbolem <span class="math inline">\(\Longrightarrow\)</span> lub <span class="math inline">\(\longrightarrow\)</span>, np. <span class="math inline">\(p \longrightarrow q\)</span>, czytamy <span class="math inline">\(p\)</span> implikuje <span class="math inline">\(q\)</span>,</li>
-<li>Równoważność, oznaczamy <span class="math inline">\(\Longleftrightarrow\)</span>.</li>
-</ul>
-</div>
-<div id="zbiory" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Zbiory</h3>
-<p>Zbiory są oznaczane nawiasami klamrowymi <span class="math inline">\(\{ \}\)</span>, na przykład <span class="math inline">\(A = \{0, 1\}\)</span>.</p>
-<p>Zbiór jest dowolną kolekcją składającą się z dobrze określonych i rozróżnialnych elementów.</p>
-<p>Zbiory oznaczamy wielkimi literami alfabetu, np. <span class="math inline">\(A, B, C,\)</span> natomiast elementy zbioru małymi literami, np. <span class="math inline">\(x, y, z\)</span>.</p>
-<p>Elementy zbioru wypisujemy w nawiasach klamrowych, np. <span class="math inline">\(A = \{1, 2, 3, 4, ...\}\)</span> lub <span class="math inline">\(X = \{x \in N: x &gt; 5\}\)</span>.</p>
-<p>Zbiór jednoelementowy nazywamy singletonem, a zbiór dwuelementowy, np. <span class="math inline">\(\{a, b\}\)</span> <strong>parą nieuporządkowaną</strong>. Zbiory <span class="math inline">\(\{a, b\}\)</span> i <span class="math inline">\(\{b, a\}\)</span> są równe, gdyż w przypadku zbiorów kolejność występowania elementów nie jest istotna.</p>
-<p>Zbiór <span class="math inline">\(\{a, b\}\)</span> należy odróżnić od ciągu <span class="math inline">\(\langle a, b \rangle\)</span>. Ciągi <span class="math inline">\(\langle a, b \rangle\)</span> i <span class="math inline">\(\langle b, a \rangle\)</span> są różne i dlatego ciąg dwuelementowy można nazwać <strong>parą uporządkowaną</strong>.</p>
-<p>Jeśli element <span class="math inline">\(x\)</span> należy do zbioru <span class="math inline">\(X\)</span> to piszemy <span class="math inline">\(x \in X\)</span>.</p>
-<p>Dwa zbiory są równe, jeśli zawierają dokładnie te same elementy.</p>
-<p>Zbiór, który nie zawiera żadnych elementów, nazywany jest zbiorem zerowym lub zbiorem pustym, <span class="math inline">\(\emptyset\)</span> lub <span class="math inline">\(\{\}\)</span>.</p>
-<p>Jeśli każdy element w zbiorze A jest również w zbiorze B, to zbiór A jest podzbiorem zbioru B.</p>
-<p>Jeżeli <em>a</em> jest elementem (należy do) zbioru <em>A</em>, to wówczas piszemy symbolicznie: <span class="math inline">\(a \in A\)</span>, natomiast, gdy chcemy wskazać, że <em>a</em> nie należy do zbioru <em>A</em>, to napiszemy <span class="math inline">\(a \notin A\)</span>.</p>
-<p>Zbiór lub podzbiór liczb rzeczywistych <span class="math inline">\(R\)</span> może być wyrażony jako przedział <span class="math inline">\((-\infty, \infty)\)</span>.</p>
-<p><strong>Przedział (oznaczony nawiasami zwykłymi) to zbiór liczb rzeczywistych z tą właściwością, że każda liczba znajdująca się między dwiema liczbami w zbiorze jest również zawarta w tym zbiorze.</strong></p>
-<p><strong>Przedział liczb między a i b, zawierający liczby a i b, jest często oznaczany jako</strong> <span class="math inline">\([a, b]\)</span> (nawias kwadratowy). Te dwie liczby nazywane są punktami końcowymi przedziału.</p>
-<p>Singleton to zbiór zawierający dokładnie jeden element.</p>
-<p><strong>UWAGA</strong>: W kontekście rachunku prawdopodobieństwa, upewnij się, że rozumiesz różnicę między wynikiem (an outcome) -8 a zdarzeniem (an event) {- 8}, które jest zbiorem składającym się z pojedynczego wyniku −8.</p>
-<p>**Liczność* (lub rozmiar) zbioru <span class="math inline">\(A\)</span>, oznaczona <span class="math inline">\(|A|\)</span>, to liczba elementów zbioru. Ta liczba może być skończona lub nieskończona.</p>
-<p>Zbiór skończony to zbiór, który ma skończoną liczbę elementów. Innymi słowy, jest to albo</p>
-<ol style="list-style-type: lower-roman">
-<li><p>zbiór pusty,</p></li>
-<li><p>singleton lub</p></li>
-<li><p>zbiór, którego elementy można wymienić w postaci <span class="math inline">\({a1, a2, . . . , an}\)</span> dla <span class="math inline">\(n \in N\)</span>.</p></li>
-</ol>
-<p>Zbiór, który nie jest skończony, nazywany jest nieskończonym. Te zbiory mają więcej niż <span class="math inline">\(n\)</span> elementów dla dowolnej liczby całkowitej <span class="math inline">\(n\)</span>.</p>
-<p><strong>Podstawowe zbiory liczbowe</strong>:</p>
-<ul>
-<li>zbiór liczb naturalnych <span class="math inline">\(N = \{0, 1, 2, 3, ...\}\)</span>,</li>
-<li>zbiór liczb naturalnych dodatnich <span class="math inline">\(N^{+} = \{1, 2, 3, ...\}\)</span>,</li>
-<li>zbiór liczb całkowitych <span class="math inline">\(Z = \{..., -2, -1, 0, 1, 2, 3, ...\}\)</span>,</li>
-<li>zbiór liczb wymiernych <span class="math inline">\(Q =\)</span> wszystkie liczby, które możemy przedstawić w postaci ułamka zwykłego <span class="math inline">\(\frac{p}{q}\)</span> i <span class="math inline">\(q\)</span> jest różne od <span class="math inline">\(0\)</span>,</li>
-<li>zbiór liczb niewymiernych <span class="math inline">\(NQ =\)</span> wszystkie ułamki, które mają rozwinięcie dziesiętne nieskończone i nieokresowe, np. liczba <span class="math inline">\(\pi \approx 3,141592...\)</span>, lub liczba oznaczana literą <span class="math inline">\(e \approx 2,718...\)</span>,</li>
-<li>zbiór liczb rzeczywistych <span class="math inline">\(R = Q + NQ\)</span>.</li>
-</ul>
-<div id="zbiory-przeliczalne-i-nieprzeliczalne" class="section level4" number="4.1.2.1">
-<h4><span class="header-section-number">4.1.2.1</span> Zbiory przeliczalne i nieprzeliczalne</h4>
-<p>Bardzo ważne jest rozróżnienie między zbiorami nieskończonymi, ale <strong>przeliczalnymi</strong>, a zbiorami nieskończonymi, ale <strong>nieprzeliczalnymi</strong>. Co to oznacza?</p>
-<p>W przypadku zbiorów przeliczalnych, ich wszystkie elementy możemy ponumerować liczbami naturalnymi. Jednakże, istnieją zbiory, np. zbiór liczb niewymiernych, zbiór liczb <em>R</em>, które są bardziej liczne od zbioru liczb naturalnych, dlatego nie jest możliwe, aby ich elementy ponumerować liczbami 1, 2, 3, 4, …, <em>n</em>.</p>
-<p>Niezależnie od tego, czy są one skończone, czy nieskończone, elementy zbioru policzalnego można zawsze policzyć pojedynczo i, chociaż liczenie może nigdy się nie zakończyć, każdy element zbioru jest powiązany z liczbą naturalną. Zbiory policzalne stanowią podstawę gałęzi matematyki zwanej matematyką dyskretną.</p>
-<p>Tabela 1.1. Terminologia teorii zbiorów i teorii prawdopodobieństwa (analogie)</p>
-<table>
-<thead>
-<tr class="header">
-<th>Teoria zbiorów</th>
-<th>Prawdopodobieństwo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Zbiór</td>
-<td>Zdarzenie</td>
-</tr>
-<tr class="even">
-<td>Uniwersum</td>
-<td>Przestrzeń zdarzeń elementarnych</td>
-</tr>
-<tr class="odd">
-<td>Element</td>
-<td>Zdarzenie elementarne (Outcome, simple event)</td>
-</tr>
-</tbody>
-</table>
-<p>Tabela 1.2. Terminologia rachunku prawdopodobieństwa oparta na teorii zbiorów</p>
-<table>
-<thead>
-<tr class="header">
-<th>-</th>
-<th>Język zdarzeń</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(A\)</span></td>
-<td>Zaszło zdarzenie A</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(A^c\)</span></td>
-<td>Zaszło zdarzenie przeciwne do A</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(A \cup B\)</span></td>
-<td>Zrealizowało się zdarzenie A lub B (suma zdarzeń)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(A \cap B\)</span></td>
-<td>Zaszło zdarzenie A i B (iloczyn zdarzeń)</td>
-</tr>
-</tbody>
-</table>
-<p>Zbiór, którego nie można policzyć, nazywany jest zbiorem niepoliczalnym (lub zbiorem niepoliczalnie nieskończonym, lub zbiorem ciągłym). Zawiera zbyt wiele elementów, aby można je było policzyć, np. przedział o dodatniej długości: <span class="math inline">\([0, 1]\)</span>.</p>
-</div>
-</div>
-<div id="podstawowe-działania-na-zbiorach-zdarzeniach" class="section level3" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Podstawowe działania na zbiorach (zdarzeniach)</h3>
-<p>Na zbiorach można wykonywać różne działania.</p>
-<p>Przede wszystkim, definiujemy:</p>
-<ul>
-<li>sumę (<span class="math inline">\(A\cup B\)</span>), <img src="images/prob/image-10.svg" alt="Suma" /></li>
-<li>iloczyn lub przekrój (<span class="math inline">\(A\cap B\)</span>), <img src="images/prob/image-11.svg" alt="Iloczyn" /></li>
-<li>różnicę zbiorów (<span class="math inline">\(B \setminus A\)</span>). <img src="images/prob/image-9.svg" alt="Różnica" /></li>
-</ul>
-<p>Niech X będzie ustalonym zbiorem. Dopełnieniem zbioru <span class="math inline">\(A \subseteq U\)</span> do przestrzeni (uniwersum) <span class="math inline">\(U\)</span> nazywamy zbiór <span class="math inline">\(A^c = U \setminus A\)</span>. <img src="images/prob/image-8.svg" alt="Dopełnienie" /></p>
-<p>Ponadto, zbiory rozłączne można przedstawić następująco:</p>
-<div class="figure">
-<img src="images/prob/image-12.svg" alt="" />
-<p class="caption">Zbiory rozłączne</p>
-</div>
-<p>Np. dla zbiorów <span class="math inline">\(A = \{\emptyset\} \text{ i } B = \{\{\emptyset\}\}\)</span> powiemy, że zbiór <span class="math inline">\(A \in B\)</span></p>
-<p>Zbiór <span class="math inline">\(A\)</span> jest podzbiorem zbioru (zawiera się w zbiorze) <span class="math inline">\(B\)</span>, wtedy i tylko wtedy, gdy każdy element zbioru <span class="math inline">\(A\)</span> jest jednocześnie elementem zbioru <span class="math inline">\(B\)</span> (należy do zbioru <em>B</em>). Piszemy wtedy <span class="math inline">\(A \subseteq B\)</span>.</p>
-<div class="figure">
-<img src="images/prob/image-7.svg" alt="" />
-<p class="caption">A zawiera się w B</p>
-</div>
-<p>Jeżeli zbiór <span class="math inline">\(A = \{1, \{2, 3\}, 4\}\)</span> i zbiór <span class="math inline">\(B = \{\{2, 3\}, 1\}\)</span>, to zbiór <span class="math inline">\(B \subseteq A\)</span>.</p>
-<p>Natomiast, zbiór <span class="math inline">\(B = \{\{2, 3\}, 1\} \notin A\)</span></p>
-<p><strong>Za pomocą zbiorów możemy określić zbiory będące przedziałami liczbowymi</strong>.</p>
-<p>Przedział otwarty: <span class="math inline">\((a, b) = \{x\in R: x&gt;a \wedge x&lt;b\}\)</span>, przedział otwarty lewostronnie: <span class="math inline">\((a, b] = \{x\in R: x&gt;a \wedge x\leq b\}\)</span>.</p>
-</div>
-<div id="zbiory-przeliczalne-i-nieprzeliczalne-1" class="section level3" number="4.1.4">
-<h3><span class="header-section-number">4.1.4</span> Zbiory przeliczalne i nieprzeliczalne</h3>
-<p><strong>Typy zbiorów</strong>: przeliczalne i skończone: np. <span class="math inline">\(A = \{1, 2, 3\}\)</span>; przeliczalne i nieskończone, np. zbiór liczb naturalnych N; nieskończone i nieprzeliczalne, np. przedziały liczbowe <span class="math inline">\((A = [0, 1] = \{x: 0\leq x \leq 1\})\)</span>.</p>
-<p><strong>Różnica między policzalnymi i niepoliczalnymi zbiorami jest ważna dla statystyki i prawdopodobieństwa.</strong></p>
-<p>Bardzo ważne jest rozróżnienie między zbiorami nieskończonymi, ale <strong>przeliczalnymi</strong>, a zbiorami nieskończonymi, ale <strong>nieprzeliczalnymi</strong>. Co to oznacza?</p>
-<p>Ze względu na matematykę wymaganą do określenia prawdopodobieństw, metody probabilistyczne dzielą się na dwa różne typy, dyskretne i ciągłe. <strong>Podejście dyskretne</strong> jest stosowane, gdy liczba wyników eksperymentu jest skończona (lub nieskończona, ale policzalna). Podejście <strong>ciągłe</strong> jest stosowane, gdy wyniki są ciągłe (a zatem nieskończone).</p>
-<p>W przypadku zbiorów przeliczalnych, ich wszystkie elementy możemy ponumerować liczbami naturalnymi. Jednakże, istnieją zbiory, np. zbiór liczb niewymiernych, zbiór liczb <em>R</em>, które są bardziej liczne od zbioru liczb naturalnych, dlatego nie jest możliwe, aby ich elementy ponumerować liczbami 1, 2, 3, 4, …, <em>n</em>.</p>
-<p>Jeżeli jakaś zmienna statystyczna przyjmuje wartości z dowolnych przedziałów zbioru liczb <em>R</em>, to tę zmienną określamy jako zmienną ciągłą przedziałami. Zmienne, które nie są ciągłe nazywa się zmiennymi dyskretnymi lub skokowymi.</p>
-<div id="ważne" class="section level4" number="4.1.4.1">
-<h4><span class="header-section-number">4.1.4.1</span> WAŻNE</h4>
-<p>Bycie <strong>podzbiorem</strong> zbioru (<span class="math inline">\(\subseteq\)</span> lub <span class="math inline">\(\subset\)</span>) <em>nie</em> jest tym samym co bycie <strong>elementem</strong> zbioru (<span class="math inline">\(\in\)</span>):</p>
-<p><span class="math inline">\(\subseteq\)</span> <span class="math inline">\(\neq\)</span> <span class="math inline">\(\in\)</span></p>
-<p><span class="math inline">\(\emptyset \subseteq \emptyset\)</span>,</p>
-<p><strong>ale</strong> <span class="math inline">\(\emptyset \notin \emptyset\)</span></p>
-<p><span class="math inline">\(\emptyset \subseteq \{1,2,3,4,5\}\)</span>, <span class="math inline">\(\emptyset \notin \{1,2,3,4,5\}\)</span></p>
-<p><span class="math inline">\(\{3\} \subseteq \{1,2,3,4,5\}\)</span>, <span class="math inline">\(3 \nsubseteq \{1,2,3,4,5\}\)</span>,</p>
-<p><strong>ale</strong> <span class="math inline">\(3 \in \{1,2,3,4,5\}\)</span></p>
-</div>
-</div>
-<div id="zbiór-potęgowy-power-set---dla-danego-zbioru-x-zbiór-wszystkich-jego-podzbiorów" class="section level3" number="4.1.5">
-<h3><span class="header-section-number">4.1.5</span> Zbiór potęgowy (<em>Power set</em>) - dla danego zbioru X zbiór wszystkich jego podzbiorów</h3>
-<p>Ile podzbiorów ma zbiór A = {a, b, c}?</p>
-<p>Liczbę podzbiorów zbioru S określa następująca formuła:</p>
-<p><span class="math display">\[2^n\]</span></p>
-<p>gdzie: <span class="math inline">\(n = |S| =\)</span> liczba elementów zbioru (moc tego zbioru).</p>
-<p>Zatem, liczba podzbiorów A jest równa <span class="math inline">\(2^3 = 8\)</span></p>
-<p>Mamy następujący zbiór (przestrzeń) podzbiorów A:</p>
-<p><span class="math display">\[\{ \emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\} \}\]</span></p>
-</div>
-<div id="liczność-moc-kardynalność-zbioru-ang.-cardinality" class="section level3" number="4.1.6">
-<h3><span class="header-section-number">4.1.6</span> Liczność (moc, kardynalność) zbioru [ang. cardinality]</h3>
-<p>W matematyce liczność zbioru jest miarą „liczby elementów" zbioru. Na przykład zbiór <span class="math inline">\(A = \{2,4,6\}\)</span> zawiera 3 elementy, a zatem A ma liczność 3. Począwszy od końca XIX wieku pojęcie to zostało uogólnione na zbiory nieskończone, co pozwala rozróżnić różne typy nieskończoności i wykonywać na nich działania arytmetyczne. Kardynalność zbioru nazywana jest również jego rozmiarem.</p>
-<p>Liczność (moc) zbioru A jest zwykle oznaczana jako <span class="math inline">\(|A|\)</span>, z pionową kreską po każdej stronie; jest to ta sama notacja, co wartość bezwzględna, a znaczenie zależy od kontekstu. Liczność zbioru A można alternatywnie oznaczyć np. <span class="math inline">\(n(A)\)</span>, <span class="math inline">\(\#A\)</span>.</p>
-<p>Jeśli zachodzi tak zwany aksjomat wyboru, prawo trychotomii obowiązuje dla kardynalności:</p>
-<ol style="list-style-type: decimal">
-<li>Każdy zbiór X o liczności mniejszej niż liczebność liczb naturalnych jest zbiorem skończonym.</li>
-<li>Każdy zbiór X, który ma taką samą liczność jak zbiór liczb naturalnych, jest zbiorem policzalnym nieskończonym.</li>
-<li>Każdy zbiór X o mocy większej niż liczebność liczb naturalnych jest nazywany nieprzeliczalnym.</li>
-</ol>
-</div>
+<div id="wykład-7.-testowanie-weryfikacja-hipotez-statystycznych---wprowadzenie-ver.-0.2" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Wykład 7. Testowanie (weryfikacja) hipotez statystycznych - wprowadzenie (ver. 0.2)</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="wykład-4-podstawy-rachunku-prawdopodobieństwa-wersja-robocza-0-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="podstawowe-reguły-kombinatoryczne-basic-counting-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estymacja-punktowa-i-przedziałowa.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hipoteza-statystyczna-i-testowanie-hipotez.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
